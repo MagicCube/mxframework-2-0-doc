@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.CheckUtilClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">CheckUtilClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.CheckUtilClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>CheckUtilClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>CheckUtilClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\CheckUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个检查字符串格式的工具类。该类在运行时唯一静态实例是 <b>mx.utils.CheckUtil</b> 对象。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#CheckUtilClass">CheckUtilClass()
+    </a></td>
+                <td>构建 CheckUtilClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#isAcsii">isAcsii(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否仅ACSII字符。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isChinese">isChinese(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否仅中文。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isDate">isDate(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否合法日期。
+该方法可匹配的值类型包括：
+<ul>
+     <li><b>yyyy-MM-dd</b></li>
+     <li><b>yyyy-MM</b></li>
+</ul></td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isDateTime">isDateTime(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否是合法日期时间
+该方法可匹配的值类型包括：
+<ul>
+     <li><b>yyyy-MM-dd hh:mm:ss</b></li>
+     <li><b>yyyy-MM-dd hh:mm</b></li>
+</ul></td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isDigit">isDigit(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否全是数字。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isEmail">isEmail(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否电邮地址。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isFloat">isFloat(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否为浮点数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isIDCard">isIDCard(p_str)
+    </a></td>
+                <td>提供一个方法，判断字符串是否为身份证号码。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isInteger">isInteger(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否是整数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isIP">isIP(p_str)
+    </a></td>
+                <td>提供一个方法，判断字符串是否为 IP 地址。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isLetter">isLetter(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否仅英文字母。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMaxLength">isMaxLength(p_str, p_maxLength)
+    </a></td>
+                <td>检查给定字符串参数是否小于指定长度。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMaxValue">isMaxValue(p_str, p_maxValue, p_isFloat)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMinLength">isMinLength(p_str, p_minLength)
+    </a></td>
+                <td>检查给定字符串参数是否大于指定长度。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMinusFloat">isMinusFloat(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否为负浮点数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMinusInteger">isMinusInteger(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否为负整数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMinValue">isMinValue(p_str, p_minValue, p_isFloat)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isMobile">isMobile(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否手机号码。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isNull">isNull(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否为空。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isPhone">isPhone(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否电话号码。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isPlusFloat">isPlusFloat(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否为正浮点数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isPlusInteger">isPlusInteger(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否为正整数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isSqlInjection">isSqlInjection(p_str)
+    </a></td>
+                <td>提供一个方法，判断 SQL WHERE 从句中参数是否包含 SQL 关键字，用于防止 SQL 注入攻击。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isTime">isTime(p_str)
+    </a></td>
+                <td>提供一个方法，半段参数是否为合法时间 (hh:mm:ss)</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isUrl">isUrl(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否URL地址。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isZipCode">isZipCode(p_str)
+    </a></td>
+                <td>提供一个方法，判断参数是否邮编。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="CheckUtilClass"></a><div id="method" class="detail">
+            <h3>CheckUtilClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 CheckUtilClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="isAcsii"></a><div id="method" class="detail">
+            <h3>isAcsii(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否仅ACSII字符。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isChinese"></a><div id="method" class="detail">
+            <h3>isChinese(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否仅中文。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isDate"></a><div id="method" class="detail">
+            <h3>isDate(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否合法日期。
+该方法可匹配的值类型包括：
+<ul>
+     <li><b>yyyy-MM-dd</b></li>
+     <li><b>yyyy-MM</b></li>
+</ul></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isDateTime"></a><div id="method" class="detail">
+            <h3>isDateTime(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否是合法日期时间
+该方法可匹配的值类型包括：
+<ul>
+     <li><b>yyyy-MM-dd hh:mm:ss</b></li>
+     <li><b>yyyy-MM-dd hh:mm</b></li>
+</ul></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isDigit"></a><div id="method" class="detail">
+            <h3>isDigit(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否全是数字。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isEmail"></a><div id="method" class="detail">
+            <h3>isEmail(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否电邮地址。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isFloat"></a><div id="method" class="detail">
+            <h3>isFloat(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否为浮点数。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isIDCard"></a><div id="method" class="detail">
+            <h3>isIDCard(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断字符串是否为身份证号码。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isInteger"></a><div id="method" class="detail">
+            <h3>isInteger(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否是整数。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isIP"></a><div id="method" class="detail">
+            <h3>isIP(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断字符串是否为 IP 地址。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isLetter"></a><div id="method" class="detail">
+            <h3>isLetter(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否仅英文字母。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMaxLength"></a><div id="method" class="detail">
+            <h3>isMaxLength(p_str, p_maxLength)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">检查给定字符串参数是否小于指定长度。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">, 一个字符串，表示待检查的字符串。</div>
+                </li>
+                <li><b class="paramName">p_maxLength</b><div class="paramSummary">, 一个数字，表示字符串的最大长度。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMaxValue"></a><div id="method" class="detail">
+            <h3>isMaxValue(p_str, p_maxValue, p_isFloat)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_maxValue</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_isFloat</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMinLength"></a><div id="method" class="detail">
+            <h3>isMinLength(p_str, p_minLength)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">检查给定字符串参数是否大于指定长度。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">, 一个字符串，表示待检查的字符串。</div>
+                </li>
+                <li><b class="paramName">p_minLength</b><div class="paramSummary">, 一个数字，表示字符串的最小长度。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMinusFloat"></a><div id="method" class="detail">
+            <h3>isMinusFloat(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否为负浮点数。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMinusInteger"></a><div id="method" class="detail">
+            <h3>isMinusInteger(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否为负整数。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMinValue"></a><div id="method" class="detail">
+            <h3>isMinValue(p_str, p_minValue, p_isFloat)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_minValue</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_isFloat</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isMobile"></a><div id="method" class="detail">
+            <h3>isMobile(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否手机号码。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isNull"></a><div id="method" class="detail">
+            <h3>isNull(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否为空。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isPhone"></a><div id="method" class="detail">
+            <h3>isPhone(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否电话号码。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isPlusFloat"></a><div id="method" class="detail">
+            <h3>isPlusFloat(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否为正浮点数。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isPlusInteger"></a><div id="method" class="detail">
+            <h3>isPlusInteger(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否为正整数。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isSqlInjection"></a><div id="method" class="detail">
+            <h3>isSqlInjection(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断 SQL WHERE 从句中参数是否包含 SQL 关键字，用于防止 SQL 注入攻击。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isTime"></a><div id="method" class="detail">
+            <h3>isTime(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，半段参数是否为合法时间 (hh:mm:ss)</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isUrl"></a><div id="method" class="detail">
+            <h3>isUrl(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否URL地址。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isZipCode"></a><div id="method" class="detail">
+            <h3>isZipCode(p_str)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断参数是否邮编。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">要检查的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

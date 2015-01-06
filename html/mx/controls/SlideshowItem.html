@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.SlideshowItem 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">SlideshowItem 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.SlideshowItem</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>SlideshowItem</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>SlideshowItem</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\Slideshow.js</td>
+            </tr>
+          </table>
+          <div class="summary"></div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#SlideshowItem">SlideshowItem()
+    </a></td>
+                <td>构建 SlideshowItem 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#play">play(p_speed, p_fromStyle, p_animateStyle, p_complete)
+    </a></td>
+                <td>向 <a href="../../../html/mx/datacontainers/EntityContainer.html">EntityContainer</a> 滑动。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#_init">_init()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#isPlaying">isPlaying</a></td>
+                <td>获取一个 Boolean 值，表示 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a> 是否在滑动。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#src">src</a></td>
+                <td>设置或者获取一个字符串，表示幻灯片预览的图片路径，请在初始化之前设置该字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onplayed">onplayed</a></td>
+                <td>幻灯片滑动完成时，将触发该事件。调用 <a href="#paly">paly</a> 方法时会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onplaying">onplaying</a></td>
+                <td>幻灯片开始滑动时，将触发该事件。调用 <a href="#paly">paly</a> 方法时会触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="SlideshowItem"></a><div id="method" class="detail">
+            <h3>SlideshowItem()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 SlideshowItem 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="play"></a><div id="method" class="detail">
+            <h3>play(p_speed, p_fromStyle, p_animateStyle, p_complete)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="../../../html/mx/datacontainers/EntityContainer.html">EntityContainer</a> 滑动。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_speed</b><div class="paramSummary">一个数字，表示幻灯片滑动的速度，单位为毫秒。</div>
+                </li>
+                <li><b class="paramName">p_fromStyle</b><div class="paramSummary">一个 JSON 对象，表示幻灯片滑动的开始位置。</div>
+                </li>
+                <li><b class="paramName">p_animateStyle</b><div class="paramSummary">一个 JSON 对象，表示幻灯片滑动的终止位置。</div>
+                </li>
+                <li><b class="paramName">p_complete</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="_init"></a><div id="method" class="detail">
+            <h3>_init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="isPlaying"></a><div id="field" class="detail">
+            <h3>isPlaying 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a> 是否在滑动。</div>
+            </div>
+            <hr>
+          </div><a name="src"></a><div id="field" class="detail">
+            <h3>src 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或者获取一个字符串，表示幻灯片预览的图片路径，请在初始化之前设置该字段的值。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onplayed"></a><div id="event" class="detail">
+            <h3>onplayed 事件
+            </h3>
+            <div class="content">
+              <div class="summary">幻灯片滑动完成时，将触发该事件。调用 <a href="#paly">paly</a> 方法时会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a> 对象，表示当前滑动的幻灯片。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="onplaying"></a><div id="event" class="detail">
+            <h3>onplaying 事件
+            </h3>
+            <div class="content">
+              <div class="summary">幻灯片开始滑动时，将触发该事件。调用 <a href="#paly">paly</a> 方法时会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">可通过设置 cancel 参数为 true 来取消当前操作。默认为 false。</div>
+                </li>
+                <li><b class="paramName">item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a> 对象，表示当前滑动的幻灯片。</div>
+                </li>
+                <li><b class="paramName">fromStyle</b><div class="paramSummary">一个 JSON 对象，表示幻灯片滑动的开始位置。</div>
+                </li>
+                <li><b class="paramName">animateStyle</b><div class="paramSummary">一个 JSON 对象，表示幻灯片滑动的终止位置。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

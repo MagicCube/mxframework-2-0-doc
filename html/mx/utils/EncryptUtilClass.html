@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.EncryptUtilClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">EncryptUtilClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.EncryptUtilClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>EncryptUtilClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>EncryptUtilClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\EncryptUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供加密算法的工具类。该类在运行时唯一静态实例是 <b>mx.utils.EncryptUtil</b> 对象。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个通过 <b>mx.utils.EncryptUtil</b> 对一个字符串进行 MD5 加密的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">
+//对一个文本进行 MD5 加密
+var encrypStr = mx.utils.EncryptUtil.encryptMD5("我是要加密的文本");
+</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#EncryptUtilClass">EncryptUtilClass()
+    </a></td>
+                <td>构建 EncryptUtilClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#decryptAES">decryptAES(p_key, p_text)
+    </a></td>
+                <td>将指定的文本进行 AES 算法加密，并将解密后的值其返回。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#encryptAES">encryptAES(p_key, p_text)
+    </a></td>
+                <td>将指定的文本进行 AES 算法加密，并将加密后的值其返回。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#encryptMD5">encryptMD5(p_text)
+    </a></td>
+                <td>将指定的文本进行 MD5 哈希算法加密，并将加密后的值其返回。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="EncryptUtilClass"></a><div id="method" class="detail">
+            <h3>EncryptUtilClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 EncryptUtilClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="decryptAES"></a><div id="method" class="detail">
+            <h3>decryptAES(p_key, p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将指定的文本进行 AES 算法加密，并将解密后的值其返回。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">一个字符串，表示加密密钥。</div>
+                </li>
+                <li><b class="paramName">p_text</b><div class="paramSummary">一个字符串，表示需要解密的文本。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="encryptAES"></a><div id="method" class="detail">
+            <h3>encryptAES(p_key, p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将指定的文本进行 AES 算法加密，并将加密后的值其返回。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">一个字符串，表示加密密钥。</div>
+                </li>
+                <li><b class="paramName">p_text</b><div class="paramSummary">一个字符串，表示需要加密的文本。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="encryptMD5"></a><div id="method" class="detail">
+            <h3>encryptMD5(p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将指定的文本进行 MD5 哈希算法加密，并将加密后的值其返回。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_text</b><div class="paramSummary">一个字符串，表示需要加密的文本。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

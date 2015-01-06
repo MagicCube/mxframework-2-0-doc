@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.types.HashMap 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/types/index.html">mx.types</a><h1 id="class">HashMap 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.types.HashMap</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/types/index.html">mx.types</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>HashMap</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>HashMap</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\types\HashMap.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个哈希表对象。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个创建 <a href="../../../html/mx/types/HashMap.html">HashMap</a> 的示例。 该示例将说明如何创建一个
+         <a href="../../../html/mx/types/HashMap.html">HashMap</a>，以及如何向其中添加数据、获取数据和删除数据。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">//创建 hashMap 对象
+var hashMap = new mx.types.HashMap();
+//向 hsahMap 中添加数据。
+hashMap.setItem("zs","500");
+//hashMap中可以添加任意对象
+ var button = new mx.controls.Button({
+    text: "按钮名称"
+});
+hashMap.setItem("button",button);
+
+//获取 hashMap 中的对象
+var buttonTemp = hashMap.getItem("button");
+
+//删除 hashMap 中的对象
+hashMap.removeItem("button");</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#HashMap">HashMap()
+    </a></td>
+                <td>构建 HashMap 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#clear">clear()
+    </a></td>
+                <td>清除哈希表。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#each">each(p_fn)
+    </a></td>
+                <td>遍历处理哈希表。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getItem">getItem(p_key)
+    </a></td>
+                <td>获取哈希表元素。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#hasItem">hasItem(p_key)
+    </a></td>
+                <td>获取一个 Boolean 值，判断哈希表是否包含哈希元素。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#keys">keys()
+    </a></td>
+                <td>获取由哈希表的键组成的一个数组。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeItem">removeItem(p_key)
+    </a></td>
+                <td>删除哈希表元素。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setItem">setItem(p_key, p_value)
+    </a></td>
+                <td>设置哈希表元素。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#values">values()
+    </a></td>
+                <td>获取由哈希表的值组成的一个数组。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#items">items</a></td>
+                <td>获取数据集。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#length">length</a></td>
+                <td>元素个数。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="HashMap"></a><div id="method" class="detail">
+            <h3>HashMap()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 HashMap 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="clear"></a><div id="method" class="detail">
+            <h3>clear()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">清除哈希表。</div>
+            </div>
+            <hr>
+          </div><a name="each"></a><div id="method" class="detail">
+            <h3>each(p_fn)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">遍历处理哈希表。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fn</b><div class="paramSummary">每个哈希表元素的处理方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getItem"></a><div id="method" class="detail">
+            <h3>getItem(p_key)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取哈希表元素。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">键。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="hasItem"></a><div id="method" class="detail">
+            <h3>hasItem(p_key)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，判断哈希表是否包含哈希元素。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">键。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="keys"></a><div id="method" class="detail">
+            <h3>keys()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取由哈希表的键组成的一个数组。</div>
+            </div>
+            <hr>
+          </div><a name="removeItem"></a><div id="method" class="detail">
+            <h3>removeItem(p_key)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">删除哈希表元素。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">键。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setItem"></a><div id="method" class="detail">
+            <h3>setItem(p_key, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置哈希表元素。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">键。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">值，可以是任意对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="values"></a><div id="method" class="detail">
+            <h3>values()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取由哈希表的值组成的一个数组。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="items"></a><div id="field" class="detail">
+            <h3>items 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据集。</div>
+            </div>
+            <hr>
+          </div><a name="length"></a><div id="field" class="detail">
+            <h3>length 字段
+            </h3>
+            <div class="content">
+              <div class="summary">元素个数。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">0</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.ValidatorClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">ValidatorClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.ValidatorClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>ValidatorClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>ValidatorClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\Validator.js</td>
+            </tr>
+          </table>
+          <div class="summary">校验器工具类。根据指定的校验规则类型和相应校验选项校验指定数据是否合规。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/utils/ValidatorClass.html">ValidatorClass</a> 的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">mx.utils.Validator = new mx.utils.ValidatorClass();
+
+// 校验身份证码，给出提示。
+var result = mx.utils.Validator.validate("310212334466", "IDCARD");
+if (!result.successful)
+{
+	   mx.indicate("info", result.hint);
+}
+
+// 校验数字。
+mx.utils.Validator.validate(32, "DIGIT", { minValue: 10, maxValue: 50});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#ValidatorClass">ValidatorClass()
+    </a></td>
+                <td>构建 ValidatorClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#validate">validate(p_str, p_validType, p_options)
+    </a></td>
+                <td>提供一个方法执行校验。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#required">required</a></td>
+                <td>设置校验器是否需要进行非空校验。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#rules">rules</a></td>
+                <td>获取校验的校验规则。
+
+规则类型包含以下几种。
+<ul>
+    <li>NOTNULL</li> 非空
+    <li>DIGIT</li> 数字
+    <li>INTEGER</li> 整形
+    <li>FLOAT</li> 浮点型
+    <li>MINUSINTEGER</li> 负整数
+    <li>MINUSFLOAT</li> 负浮点数
+    <li>PLUSINTEGER</li> 正整数
+    <li>PLUSFLOAT</li> 正浮点数
+    <li>CHINESE</li> 中文
+    <li>LETTER</li> 字母
+    <li>ASCII</li>
+    <li>DATE</li> 日期。例如：2007-07-01
+    <li>DATETIME</li> 日期时间。例如：2007-07-01 14:28:32
+    <li>TIME</li>  时间。例如：14:28:32
+    <li>EMAIL</li> 邮件
+    <li>IP</li> IP地址
+    <li>MOBILE</li> 手机号码
+    <li>PHONE</li> 电话号码
+    <li>URL</li> 统一资源地址
+    <li>ZIPCODE</li> 邮编
+    <li>SQL</li>
+    <li>IDCARD</li> 身份证
+    <li>REGEXP</li> 正则表达式，支持通过指定正则表达式进行校验。
+</ul></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="ValidatorClass"></a><div id="method" class="detail">
+            <h3>ValidatorClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 ValidatorClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="validate"></a><div id="method" class="detail">
+            <h3>validate(p_str, p_validType, p_options)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法执行校验。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_str</b><div class="paramSummary">表示待校验的字符串。</div>
+                </li>
+                <li><b class="paramName">p_validType</b><div class="paramSummary">表示校验类型， 该值为字符串。</div>
+                </li>
+                <li><b class="paramName">p_options</b><div class="paramSummary">表示校验参数。常用校验参数有：maxValue, minValue, maxLength, minLength, expression。
+					maxValue 表示数字的最大值。该参数在 p_validType 为 DIGIT、INTEGER、MINUSINTEGER、PLUSINTEGER、FLOAT、MINUSFLOAT、PLUSFLOAT 时使用。
+					minValue 表示数字的最小值。该参数在 p_validType 为 DIGIT、INTEGER、MINUSINTEGER、PLUSINTEGER、FLOAT、MINUSFLOAT、PLUSFLOAT 时使用。
+					expression 表示正则表达式。该参数在 p_validType 为 REGEXP 时使用。
+					maxLength 表示字符串的最大长度。
+					minLength 表示字符串的最小长度。
+					validateMessage 表示验证无效时的提示信息。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="required"></a><div id="field" class="detail">
+            <h3>required 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置校验器是否需要进行非空校验。</div>
+            </div>
+            <hr>
+          </div><a name="rules"></a><div id="field" class="detail">
+            <h3>rules 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取校验的校验规则。
+
+规则类型包含以下几种。
+<ul>
+    <li>NOTNULL</li> 非空
+    <li>DIGIT</li> 数字
+    <li>INTEGER</li> 整形
+    <li>FLOAT</li> 浮点型
+    <li>MINUSINTEGER</li> 负整数
+    <li>MINUSFLOAT</li> 负浮点数
+    <li>PLUSINTEGER</li> 正整数
+    <li>PLUSFLOAT</li> 正浮点数
+    <li>CHINESE</li> 中文
+    <li>LETTER</li> 字母
+    <li>ASCII</li>
+    <li>DATE</li> 日期。例如：2007-07-01
+    <li>DATETIME</li> 日期时间。例如：2007-07-01 14:28:32
+    <li>TIME</li>  时间。例如：14:28:32
+    <li>EMAIL</li> 邮件
+    <li>IP</li> IP地址
+    <li>MOBILE</li> 手机号码
+    <li>PHONE</li> 电话号码
+    <li>URL</li> 统一资源地址
+    <li>ZIPCODE</li> 邮编
+    <li>SQL</li>
+    <li>IDCARD</li> 身份证
+    <li>REGEXP</li> 正则表达式，支持通过指定正则表达式进行校验。
+</ul></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

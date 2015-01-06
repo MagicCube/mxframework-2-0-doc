@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datas.DataColumn 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datas/index.html">mx.datas</a><h1 id="class">DataColumn 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datas.DataColumn</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datas/index.html">mx.datas</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>DataColumn</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>DataColumn</span><span id="inherit"></span><a href="../../../html/mx/datas/DataObject.html">DataObject</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datas\DataTable.js</td>
+            </tr>
+          </table>
+          <div class="summary">表示数据表 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 的示例。<b>说明了如何创建一个 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a>。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">
+  var c =new mx.datas.DataColumn();
+  var c2 =new mx.datas.DataColumn("name", "名字", "string");
+  var c3 =new mx.datas.DataColumn("name", "名字", "string","yyyy-MM-dd");
+  var c4 =new mx.datas.DataColumn({id:"name", label:"名字", type:"string"});
+  var c5 =new mx.datas.DataColumn(["name", "名字", "string","yyyy-MM-dd"]);</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#DataColumn">DataColumn()
+    </a></td>
+                <td>构建 DataColumn 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#getCustomProperties">getCustomProperties()
+    </a></td>
+                <td>获取客户端数据对象的自定义属性集合。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getCustomProperty">getCustomProperty(p_key)
+    </a></td>
+                <td>获取客户端数据对象指定自定义属性的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getId">getId()
+    </a></td>
+                <td>获取数据列的字段名称。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getLabel">getLabel()
+    </a></td>
+                <td>获取数据列的中文标题。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getPattern">getPattern()
+    </a></td>
+                <td>获取数据列的格式化字符串。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getType">getType()
+    </a></td>
+                <td>获取数据列的数据类型。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCustomeProperty">setCustomeProperty(p_propertyKey, p_propertyValue)
+    </a></td>
+                <td>设置客户端数据对象指定属性的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCustomProperties">setCustomProperties(p_properties)
+    </a></td>
+                <td>设置客户端数据对象的自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setId">setId(p_id)
+    </a></td>
+                <td>获取数据列的字段名称。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setLabel">setLabel(p_label)
+    </a></td>
+                <td>获取数据列的中文标题。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setPattern">setPattern(p_pattern)
+    </a></td>
+                <td>设置数据列的格式化字符串。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setType">setType(p_type)
+    </a></td>
+                <td>设置数据列的数据类型。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#id">id</a></td>
+                <td>获取或设置数据列的字段名称。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#label">label</a></td>
+                <td>获取或设置数据列的中文标题。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#pattern">pattern</a></td>
+                <td>获取或设置数据列的格式化字符串。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#type">type</a></td>
+                <td>获取或设置数据列的数据类型。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="DataColumn"></a><div id="method" class="detail">
+            <h3>DataColumn()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 DataColumn 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="getCustomProperties"></a><div id="method" class="detail" override="true">
+            <h3>getCustomProperties()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取客户端数据对象的自定义属性集合。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#getCustomProperties">mx.datas.DataObject.getCustomProperties</a></div>
+            </div>
+            <hr>
+          </div><a name="getCustomProperty"></a><div id="method" class="detail" override="true">
+            <h3>getCustomProperty(p_key)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取客户端数据对象指定自定义属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">客户端数据对象指定自定义属性名称。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#getCustomProperty">mx.datas.DataObject.getCustomProperty</a></div>
+            </div>
+            <hr>
+          </div><a name="getId"></a><div id="method" class="detail">
+            <h3>getId()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据列的字段名称。</div>
+            </div>
+            <hr>
+          </div><a name="getLabel"></a><div id="method" class="detail">
+            <h3>getLabel()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据列的中文标题。</div>
+            </div>
+            <hr>
+          </div><a name="getPattern"></a><div id="method" class="detail">
+            <h3>getPattern()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据列的格式化字符串。</div>
+            </div>
+            <hr>
+          </div><a name="getType"></a><div id="method" class="detail">
+            <h3>getType()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据列的数据类型。</div>
+            </div>
+            <hr>
+          </div><a name="setCustomeProperty"></a><div id="method" class="detail" override="true">
+            <h3>setCustomeProperty(p_propertyKey, p_propertyValue)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置客户端数据对象指定属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_propertyKey</b><div class="paramSummary">自定义属性的名称</div>
+                </li>
+                <li><b class="paramName">p_propertyValue</b><div class="paramSummary">自定义属性的值</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#setCustomeProperty">mx.datas.DataObject.setCustomeProperty</a></div>
+            </div>
+            <hr>
+          </div><a name="setCustomProperties"></a><div id="method" class="detail" override="true">
+            <h3>setCustomProperties(p_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置客户端数据对象的自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_properties</b><div class="paramSummary">客户端数据对象的自定义属性集合.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#setCustomProperties">mx.datas.DataObject.setCustomProperties</a></div>
+            </div>
+            <hr>
+          </div><a name="setId"></a><div id="method" class="detail">
+            <h3>setId(p_id)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据列的字段名称。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_id</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setLabel"></a><div id="method" class="detail">
+            <h3>setLabel(p_label)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据列的中文标题。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_label</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setPattern"></a><div id="method" class="detail">
+            <h3>setPattern(p_pattern)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置数据列的格式化字符串。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_pattern</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setType"></a><div id="method" class="detail">
+            <h3>setType(p_type)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置数据列的数据类型。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_type</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="id"></a><div id="field" class="detail">
+            <h3>id 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置数据列的字段名称。</div>
+            </div>
+            <hr>
+          </div><a name="label"></a><div id="field" class="detail">
+            <h3>label 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置数据列的中文标题。</div>
+            </div>
+            <hr>
+          </div><a name="pattern"></a><div id="field" class="detail">
+            <h3>pattern 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置数据列的格式化字符串。</div>
+            </div>
+            <hr>
+          </div><a name="type"></a><div id="field" class="detail">
+            <h3>type 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置数据列的数据类型。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

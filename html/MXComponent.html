@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>MXComponent 类</title>
+    <link rel="stylesheet" href="../css/common.css"><script src="../scripts/jquery.js"></script><script src="../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../html//index.html"></a><h1 id="class">MXComponent 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>MXComponent</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../html//index.html"></a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>MXComponent</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>MXComponent</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\MXComponent.js</td>
+            </tr>
+          </table>
+          <div class="summary"><b title="不能在程序中直接构造该类的新实例。">抽象类</b>。表示 MX 框架中所有组件的基类。 在 MX
+框架中控件、编辑器、容器控件、视图、视图控制器等均为组件。通常组件向外暴露出属性、方法和事件，并有自己的生命周期。
+组件的生命周期包括实例化、初始化，通常在实例化的过程中会自动初始化； 也可以通过将 <a href="#autoInit">autoInit</a> 属性设置为
+false，在实例化过程中不自动初始化，而是在程序中手动调用 <a href="#init">init</a> 方法进行初始化。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#MXComponent">MXComponent()
+    </a></td>
+                <td>构建 MXComponent 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#dispose">dispose()
+    </a></td>
+                <td>释放对象运行时动态生成的内容（属性、方法、事件）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#hasBound">hasBound(p_eventType)
+    </a></td>
+                <td>返回一个 Boolean 值，表示指定的 p_eventType 类型的事件是否已订购。返回值为 true，表示已订购；反之则没有。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#instanceOf">instanceOf(p_class)
+    </a></td>
+                <td>返回一个 Boolean 值，表示组件是否为指定的类型的子类或本身。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#off">off(p_eventType, p_function)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method">
+                <td><a href="#trigger">trigger(p_eventType, p_args)
+    </a></td>
+                <td>触发事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#autoInit">autoInit</a></td>
+                <td>获取一个 Boolean 值，表示是否需要在实例化时自动调用 <a href="#init">init</a> 方法。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#id">id</a></td>
+                <td>获取组件的唯一标识。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#initialized">initialized</a></td>
+                <td>获取一个 Boolean 值，表示是否已经初始化。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="MXComponent"></a><div id="method" class="detail">
+            <h3>MXComponent()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 MXComponent 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="dispose"></a><div id="method" class="detail">
+            <h3>dispose()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">释放对象运行时动态生成的内容（属性、方法、事件）。</div>
+            </div>
+            <hr>
+          </div><a name="hasBound"></a><div id="method" class="detail">
+            <h3>hasBound(p_eventType)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，表示指定的 p_eventType 类型的事件是否已订购。返回值为 true，表示已订购；反之则没有。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_eventType</b><div class="paramSummary">事件类型。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="instanceOf"></a><div id="method" class="detail">
+            <h3>instanceOf(p_class)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，表示组件是否为指定的类型的子类或本身。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_class</b><div class="paramSummary">指定的类型。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="off"></a><div id="method" class="detail">
+            <h3>off(p_eventType, p_function)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_eventType</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_function</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="trigger"></a><div id="method" class="detail">
+            <h3>trigger(p_eventType, p_args)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">触发事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_eventType</b><div class="paramSummary">事件类型。</div>
+                </li>
+                <li><b class="paramName">p_args</b><div class="paramSummary">事件参数。事件参数中默认有两个属性“target”和“type”，分别表示事件触发者和触发的事件类型。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="autoInit"></a><div id="field" class="detail">
+            <h3>autoInit 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示是否需要在实例化时自动调用 <a href="#init">init</a> 方法。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="id"></a><div id="field" class="detail">
+            <h3>id 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取组件的唯一标识。</div>
+            </div>
+            <hr>
+          </div><a name="initialized"></a><div id="field" class="detail">
+            <h3>initialized 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示是否已经初始化。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

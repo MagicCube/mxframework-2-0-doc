@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.SymbolUtilClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">SymbolUtilClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.SymbolUtilClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>SymbolUtilClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>SymbolUtilClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\SymbolUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个工具类，用来将指定的英文单词转换为对应的 Mono 风格图标。该类在运行时唯一静态实例是 <b>mx.utils.SymbolUtil</b> 对象。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个通过 <b>mx.utils.SymbolUtil</b> 将一个英文单词转换为对应 Mono 风格图标的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var $span = $("&lt;span/&gt;");
+var symbol = mx.utils.SymbolUtil.getSymbol("add");
+if (symbol != null)
+{
+    $span.css("fontFamily", symbol.font);
+    $span.css("fontSize", "16px");
+    $span.text(symbol.text);
+}</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#SymbolUtilClass">SymbolUtilClass()
+    </a></td>
+                <td>构建 SymbolUtilClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#getSymbol">getSymbol(p_name)
+    </a></td>
+                <td>返回一个 JSON 对象，用来表示指定的文本对应的图标字体和字符。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="SymbolUtilClass"></a><div id="method" class="detail">
+            <h3>SymbolUtilClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 SymbolUtilClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="getSymbol"></a><div id="method" class="detail">
+            <h3>getSymbol(p_name)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JSON 对象，用来表示指定的文本对应的图标字体和字符。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_name</b><div class="paramSummary">一个字符串，指定的图标字符名称：
+<p>
+  <ul>
+    <li>left</li>
+    <li>right</li>
+    <li>up</li>
+    <li>down</li>
+    <li>list</li>
+    <li>listview</li>
+    <li>detail</li>
+    <li>add</li>
+    <li>plus</li>
+    <li>remove</li>
+    <li>minus</li>
+    <li>upload</li>
+    <li>download</li>
+    <li>search</li>
+    <li>setting</li>
+    <li>settings</li>
+    <li>tool</li>
+    <li>tools</li>
+    <li>home</li>
+    <li>fav</li>
+    <li>favorite</li>
+    <li>favourite</li>
+    <li>star</li>
+    <li>question</li>
+    <li>help</li>
+    <li>cloud</li>
+    <li>user</li>
+    <li>role</li>
+    <li>time</li>
+    <li>clock</li>
+    <li>date</li>
+    <li>calendar</li>
+    <li>meter</li>
+    <li>performance</li>
+    <li>tag</li>
+    <li>tags</li>
+    <li>feed</li>
+    <li>rss</li>
+    <li>key</li>
+    <li>password</li>
+    <li>love</li>
+    <li>heart</li>
+    <li>welcome</li>
+    <li>cube</li>
+    <li>object</li>
+    <li>shop</li>
+    <li>file</li>
+    <li>doc</li>
+    <li>document</li>
+    <li>folder</li>
+    <li>image</li>
+    <li>picture</li>
+    <li>chart</li>
+    <li>curve</li>
+    <li>mail</li>
+    <li>message</li>
+    <li>info</li>
+    <li>warn</li>
+    <li>warning</li>
+    <li>error</li>
+    <li>forbid</li>
+    <li>forbidden</li>
+    <li>loading</li>
+    <li>busy</li>
+    <li>waiting</li>
+    <li>alarm</li>
+    <li>new</li>
+    <li>create</li>
+    <li>delete</li>
+    <li>send</li>
+    <li>refresh</li>
+    <li>ok</li>
+    <li>save</li>
+    <li>check</li>
+    <li>complete</li>
+    <li>finish</li>
+    <li>edit</li>
+    <li>lock</li>
+    <li>unlock</li>
+    <li>dialog</li>
+  </ul>
+</p></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

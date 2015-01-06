@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.PrintUtil 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">PrintUtil 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.PrintUtil</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>PrintUtil</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>PrintUtil</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\PrintUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供局部元素打印功能：目前仅支持 DataForm 和 单层 DataGrid 打印。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个通过 <b>mx.utils.PrintUtil</b> 实现局部元素打印。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript"> var printCon = new mx.utils.PrintUtil({
+   	dataControl : dataControl,
+   	maxCols : 2,
+   	printHideFields : true
+  });
+  printCon.printControl();</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#PrintUtil">PrintUtil()
+    </a></td>
+                <td>构建 PrintUtil 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#printControl">printControl(p_preview)
+    </a></td>
+                <td>提供一个方法，打印表单内容。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#dataControl">dataControl</a></td>
+                <td>一个control对象，需要根据此对象生成新的html代码。
+目前仅支持 DataForm 和 单层 DataGrid 打印，传入的参数需提前执行加载方法。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#maxCols">maxCols</a></td>
+                <td>获取和设置单行中元素列数。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#printHideFields">printHideFields</a></td>
+                <td>是否打印默认隐藏的字段。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="PrintUtil"></a><div id="method" class="detail">
+            <h3>PrintUtil()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 PrintUtil 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="printControl"></a><div id="method" class="detail">
+            <h3>printControl(p_preview)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，打印表单内容。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_preview</b><div class="paramSummary">:
+           true | false 一个 Boolean 值，表示是否启用打印预览功能，默认 true
+           true : 表示显示打印预览
+           false : 表示不显示打印预览，直接打印</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="dataControl"></a><div id="field" class="detail">
+            <h3>dataControl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个control对象，需要根据此对象生成新的html代码。
+目前仅支持 DataForm 和 单层 DataGrid 打印，传入的参数需提前执行加载方法。</div>
+            </div>
+            <hr>
+          </div><a name="maxCols"></a><div id="field" class="detail">
+            <h3>maxCols 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置单行中元素列数。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">默认显示2个元素列</div>
+            </div>
+            <hr>
+          </div><a name="printHideFields"></a><div id="field" class="detail">
+            <h3>printHideFields 字段
+            </h3>
+            <div class="content">
+              <div class="summary">是否打印默认隐藏的字段。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

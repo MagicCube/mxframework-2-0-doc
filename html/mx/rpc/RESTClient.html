@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.rpc.RESTClient 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/rpc/index.html">mx.rpc</a><h1 id="class">RESTClient 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.rpc.RESTClient</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/rpc/index.html">mx.rpc</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>RESTClient</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>RESTClient</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\rpc\RESTClient.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个 REST 风格服务的客户端工具类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        下列代码将以异步 POST 方法访问 REST 服务，并且将 appSuite 对象以 JSON 字符串形式作为 POST 消息体进行传递。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var client = new mx.rpc.RESTClient();
+var appSuiteID = "abcd123";
+var appSuite = { id: "abcd123", name: "应用套件1", owner: "admin" };
+client.post(
+    "/appsuites/create",
+    JSON.stringify({ "appSuite": appSuite }), // 将 appSuite 先转换为 JSON 字符串，然后作为 POST 参数传递到服务端
+    function(p_context) // 回调函数
+    {
+        if (p_context.successful)
+        {
+            alert(p_context.resultValue);
+        }
+        else
+        {
+            alert("REST 服务调用失败，请参考: " + p_context.resultHint);
+        }
+    } // End of callback function
+); // End of client.post</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#RESTClient">RESTClient()
+    </a></td>
+                <td>构建 RESTClient 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#get">get(p_path, [p_data], [p_callback])
+    </a></td>
+                <td>使用 HTTP GET 方法，以异步方式进行 REST 服务调用。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getSync">getSync(p_path, [p_data])
+    </a></td>
+                <td>使用 HTTP GET 方法，以同步方式进行 REST 服务调用，并返回服务端的响应结果，通常是一个字符串或一个 JSON 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#post">post(p_path, [p_data], [p_callback])
+    </a></td>
+                <td>使用 HTTP POST 方法，以异步方式进行 REST 服务调用。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#put">put(p_path, [p_data], [p_callback])
+    </a></td>
+                <td>使用 HTTP PUT 方法，以异步方式进行 REST 服务调用。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#remove">remove(p_path, [p_data], [p_callback])
+    </a></td>
+                <td><b>说明：由于 delete 是 JavaScript 关键字，所以该方法名称改为 remove。</b>
+使用 HTTP DELETE 方法，以异步方式进行 REST 服务调用。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#send">send(p_path, p_method, [p_data], [p_async], [p_callback])
+    </a></td>
+                <td>以异步或同步方式进行 REST 服务调用。当确定使用 HTTP 方法时，建议直接使用 <a href="#get">get</a> 和 <a href="#post">post</a> 等方法。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#sendSync">sendSync(p_path, p_method, [p_data])
+    </a></td>
+                <td>以同步方式进行 REST 服务调用，并返回服务端的响应结果，通常是一个字符串或一个 JSON 对象。当确定使用 HTTP 方法时，建议直接使用 <a href="#getSync">getSync</a> 和 <a href="#postSync">postSync</a> 等方法。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setBaseUrl">setBaseUrl(p_baseUrl)
+    </a></td>
+                <td>设置 <a href="#baseUrl">baseUrl</a> 字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#async">async</a></td>
+                <td>获取或设置一个布尔值，表示请求是否使用同步。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#baseUrl">baseUrl</a></td>
+                <td>获取 RESTClient 的基 URL。通常以“~”开头，表示相对于网站的根路径，并以“/”结尾；如“~/rest/is/”；如果以“~/../”开头，表示相对于模块的根路径，并以“/”结尾。
+如果设置了基 URL，则所有方法中传递的 path 都会以该 URL 为相对路径。如根路径是“~/rest/is/”，调用 <a href="#send">send</a> 方法时使用“appsuites/create”为 p_path 参数，则最终路径会被自动拼合为“~/rest/is/appsuites/create”。
+如果设置 baseUrl 为 null，则在调用 send、get、post 等方法时，p_path 参数必须为完整的 URL 路径，如“~/rest/is/appsuites/create”。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#mode">mode</a></td>
+                <td>获取或者设置服务请求的模式。
+<p>
+该参数常见值包括:
+<ul>
+    <li>default</li>
+    <li>queue</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#timeout">timeout</a></td>
+                <td>获取或设置一个数字，表示超时时间，以毫秒为单位。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="RESTClient"></a><div id="method" class="detail">
+            <h3>RESTClient()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 RESTClient 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="get"></a><div id="method" class="detail">
+            <h3>get(p_path, [p_data], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">使用 HTTP GET 方法，以异步方式进行 REST 服务调用。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为参数拼入 URL，其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调方法。方法的原型为 function(p_context)，其中 p_context 是一个 JSON 对象，其中 successful 表示调用是否成功，如果成功则返回 true，并且可通过 result 字段获取返回值；如果失败则返回 false，并且可通过 error 字段获取失败的异常对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getSync"></a><div id="method" class="detail">
+            <h3>getSync(p_path, [p_data])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">使用 HTTP GET 方法，以同步方式进行 REST 服务调用，并返回服务端的响应结果，通常是一个字符串或一个 JSON 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为参数拼入 URL，其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="post"></a><div id="method" class="detail">
+            <h3>post(p_path, [p_data], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">使用 HTTP POST 方法，以异步方式进行 REST 服务调用。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为 POST 内容传递，其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调方法。方法的原型为 function(p_context)，其中 p_context 是一个 JSON 对象，其中 successful 表示调用是否成功，如果成功则返回 true，并且可通过 result 字段获取返回值；如果失败则返回 false，并且可通过 error 字段获取失败的异常对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="put"></a><div id="method" class="detail">
+            <h3>put(p_path, [p_data], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">使用 HTTP PUT 方法，以异步方式进行 REST 服务调用。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为参数拼入 URL，其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调方法。方法的原型为 function(p_context)，其中 p_context 是一个 JSON 对象，其中 successful 表示调用是否成功，如果成功则返回 true，并且可通过 result 字段获取返回值；如果失败则返回 false，并且可通过 error 字段获取失败的异常对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail">
+            <h3>remove(p_path, [p_data], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"><b>说明：由于 delete 是 JavaScript 关键字，所以该方法名称改为 remove。</b>
+使用 HTTP DELETE 方法，以异步方式进行 REST 服务调用。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为 POST 内容传递，其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调方法。方法的原型为 function(p_context)，其中 p_context 是一个 JSON 对象，其中 successful 表示调用是否成功，如果成功则返回 true，并且可通过 result 字段获取返回值；如果失败则返回 false，并且可通过 error 字段获取失败的异常对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="send"></a><div id="method" class="detail">
+            <h3>send(p_path, p_method, [p_data], [p_async], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">以异步或同步方式进行 REST 服务调用。当确定使用 HTTP 方法时，建议直接使用 <a href="#get">get</a> 和 <a href="#post">post</a> 等方法。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_method</b><div class="paramSummary">指定 HTTP 方法的名称。如“GET”、“POST”等。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为参数拼入 URL（使用 HTTP POST 方法时，是作为内容传递），其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+                <li><b class="paramName">p_async</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，表示是否采用异步调用。true 表示异步调用；false 表示同步调用。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调方法。方法的原型为 function(p_context)，其中 p_context 是一个 JSON 对象，其中 successful 表示调用是否成功，如果成功则返回 true，并且可通过 result 字段获取返回值；如果失败则返回 false，并且可通过 error 字段获取失败的异常对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="sendSync"></a><div id="method" class="detail">
+            <h3>sendSync(p_path, p_method, [p_data])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">以同步方式进行 REST 服务调用，并返回服务端的响应结果，通常是一个字符串或一个 JSON 对象。当确定使用 HTTP 方法时，建议直接使用 <a href="#getSync">getSync</a> 和 <a href="#postSync">postSync</a> 等方法。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">指定的 REST 服务路径，可以是以“~/”开头的绝对路径，如“~/rest/is/appsuites”；也可以是相对于 <a href="#baseUrl">baseUrl</a> 的相对路径，如 baseUrl 字段的值是“~/rest/is/”，这时 p_path 参数可被简写为“/appsuites”或“appsuites”。</div>
+                </li>
+                <li><b class="paramName">p_method</b><div class="paramSummary">指定 HTTP 方法的名称。如“GET”、“POST”等。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。指定传入的参数信息。通常是一个 JSON 对象。如 { id: 1984, name: "中文" } 会被转换成“id=1984&name=%E4%B8%AD%E6%96%87”作为参数拼入 URL（使用 HTTP POST 方法时，是作为内容传递），其中中文部分会使用 UTF-8 进行编码。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setBaseUrl"></a><div id="method" class="detail">
+            <h3>setBaseUrl(p_baseUrl)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#baseUrl">baseUrl</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_baseUrl</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="async"></a><div id="field" class="detail">
+            <h3>async 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个布尔值，表示请求是否使用同步。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null, 表示异步。</div>
+            </div>
+            <hr>
+          </div><a name="baseUrl"></a><div id="field" class="detail">
+            <h3>baseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取 RESTClient 的基 URL。通常以“~”开头，表示相对于网站的根路径，并以“/”结尾；如“~/rest/is/”；如果以“~/../”开头，表示相对于模块的根路径，并以“/”结尾。
+如果设置了基 URL，则所有方法中传递的 path 都会以该 URL 为相对路径。如根路径是“~/rest/is/”，调用 <a href="#send">send</a> 方法时使用“appsuites/create”为 p_path 参数，则最终路径会被自动拼合为“~/rest/is/appsuites/create”。
+如果设置 baseUrl 为 null，则在调用 send、get、post 等方法时，p_path 参数必须为完整的 URL 路径，如“~/rest/is/appsuites/create”。</div>
+            </div>
+            <hr>
+          </div><a name="mode"></a><div id="field" class="detail">
+            <h3>mode 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置服务请求的模式。
+<p>
+该参数常见值包括:
+<ul>
+    <li>default</li>
+    <li>queue</li>
+</ul>
+</p></div>
+              <h4>默认值</h4>
+              <div class="h4Content">default</div>
+            </div>
+            <hr>
+          </div><a name="timeout"></a><div id="field" class="detail">
+            <h3>timeout 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个数字，表示超时时间，以毫秒为单位。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">60000</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

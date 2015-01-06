@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.Slideshow 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">Slideshow 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.Slideshow</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>Slideshow</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>Slideshow</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\Slideshow.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个幻灯片预览控件的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个创建 <a href="../../../html/mx/controls/Slideshow.html">Slideshow</a> 的示例。
+该示例将说明如何创建一个 <a href="../../../html/mx/controls/Slideshow.html">Slideshow</a>。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var slider = new mx.controls.Slideshow({
+		auto:true,
+		direction: "toLeft",
+		items:[{src:"http://gsky:8080/mxframe/dbm/resources/images/workbench.png"},
+				{src:"http://gsky:8080/mxframe/dbm/resources/images/login.png"},
+				{src:"http://gsky:8080/mxframe/dbm/resources/images/mx.png"}]
+});
+var button = new mx.controls.Button({
+      text: "show",
+      onclick: function(){
+      slider.show();
+      }
+  });</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#Slideshow">Slideshow()
+    </a></td>
+                <td>构建 Slideshow 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#setAuto">setAuto([p_auto])
+    </a></td>
+                <td>设置 <a href="#auto">auto</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setPause">setPause(p_pause)
+    </a></td>
+                <td>设置 <a href="#pause">pause</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#show">show(p_startIndex)
+    </a></td>
+                <td>提供一个方法，开始预览。本方法是幻灯片预览的入口。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#showNext">showNext(p_startIndex)
+    </a></td>
+                <td>提供一个方法，预览下一张幻灯片。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#showPre">showPre()
+    </a></td>
+                <td>提供一个方法，预览上一张幻灯片。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#slide">slide([p_slide])
+    </a></td>
+                <td>提供一个方法，滑动预览，或者停止预览，当 <a href="#auto">auto</a> 字段的值为 true 时可以滑动预览。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#auto">auto</a></td>
+                <td>获取一个 Boolean 值，表示幻灯片是否自动滑动。请使用 <a href="#setAuto">setAuto</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#currentItem">currentItem</a></td>
+                <td>获取一个 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a> 对象，
+表示当前滑动的幻灯片，如果一个滑入，一个滑出，则表示滑入的。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#direction">direction</a></td>
+                <td>设置一个字符串，表示幻灯片滑动的方向。
+
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>toRight</b></li>
+     <li><b>toLeft</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#items">items</a></td>
+                <td>获取和设置一个集合，用于创建含控件中要展示的 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a>。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#pause">pause</a></td>
+                <td>获取一个数字，表示幻灯片滑动的停留时间，单位为毫秒。请使用 <a href="#setPause">setPause</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#pauseTimes">pauseTimes</a></td>
+                <td>获取一个数组，表示是否显示播放按钮可选择的幻灯片停留时间，请在初始化之前设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#playButton">playButton</a></td>
+                <td>获取一个 Boolean 值，表示是否显示播放按钮，请在初始化之前设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#speed">speed</a></td>
+                <td>获取或设置一个数字，表示幻灯片滑动的速度，单位为毫秒。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#wizardButton">wizardButton</a></td>
+                <td>获取一个 Boolean 值，表示是否显示左右按钮，请在初始化之前设置该字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="Slideshow"></a><div id="method" class="detail">
+            <h3>Slideshow()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 Slideshow 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="setAuto"></a><div id="method" class="detail">
+            <h3>setAuto([p_auto])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#auto">auto</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_auto</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，表示幻灯片是否自动滑动。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setPause"></a><div id="method" class="detail">
+            <h3>setPause(p_pause)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#pause">pause</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_pause</b><div class="paramSummary">一个数字，表示幻灯片停留的时间，单位为毫秒。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail">
+            <h3>show(p_startIndex)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，开始预览。本方法是幻灯片预览的入口。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_startIndex</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="showNext"></a><div id="method" class="detail">
+            <h3>showNext(p_startIndex)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，预览下一张幻灯片。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_startIndex</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="showPre"></a><div id="method" class="detail">
+            <h3>showPre()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，预览上一张幻灯片。</div>
+            </div>
+            <hr>
+          </div><a name="slide"></a><div id="method" class="detail">
+            <h3>slide([p_slide])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，滑动预览，或者停止预览，当 <a href="#auto">auto</a> 字段的值为 true 时可以滑动预览。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_slide</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，值为 true 时，开始滑动预览；为 false 时，停止滑动。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="auto"></a><div id="field" class="detail">
+            <h3>auto 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示幻灯片是否自动滑动。请使用 <a href="#setAuto">setAuto</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="currentItem"></a><div id="field" class="detail">
+            <h3>currentItem 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a> 对象，
+表示当前滑动的幻灯片，如果一个滑入，一个滑出，则表示滑入的。</div>
+            </div>
+            <hr>
+          </div><a name="direction"></a><div id="field" class="detail">
+            <h3>direction 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置一个字符串，表示幻灯片滑动的方向。
+
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>toRight</b></li>
+     <li><b>toLeft</b></li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="items"></a><div id="field" class="detail">
+            <h3>items 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个集合，用于创建含控件中要展示的 <a href="../../../html/mx/controls/SlideshowItem.html">SlideshowItem</a>。</div>
+            </div>
+            <hr>
+          </div><a name="pause"></a><div id="field" class="detail">
+            <h3>pause 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个数字，表示幻灯片滑动的停留时间，单位为毫秒。请使用 <a href="#setPause">setPause</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">2000</div>
+            </div>
+            <hr>
+          </div><a name="pauseTimes"></a><div id="field" class="detail">
+            <h3>pauseTimes 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个数组，表示是否显示播放按钮可选择的幻灯片停留时间，请在初始化之前设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="playButton"></a><div id="field" class="detail">
+            <h3>playButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示是否显示播放按钮，请在初始化之前设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="speed"></a><div id="field" class="detail">
+            <h3>speed 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个数字，表示幻灯片滑动的速度，单位为毫秒。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">1000</div>
+            </div>
+            <hr>
+          </div><a name="wizardButton"></a><div id="field" class="detail">
+            <h3>wizardButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示是否显示左右按钮，请在初始化之前设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

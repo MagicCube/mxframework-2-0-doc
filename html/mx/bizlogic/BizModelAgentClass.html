@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.bizlogic.BizModelAgentClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/bizlogic/index.html">mx.bizlogic</a><h1 id="class">BizModelAgentClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.bizlogic.BizModelAgentClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/bizlogic/index.html">mx.bizlogic</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>BizModelAgentClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>BizModelAgentClass</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\bizlogic\BizModelAgentClass.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供业务逻辑处理的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个创建 <a href="../../../html/mx/bizlogic/BizModelAgent.html">BizModelAgent</a> 的示例。 该示例将说明如何保存自定义模型数据。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">mx.bizlogic.BizModelAgent.validate(
+    "~/testservice/project/", //资源服务路径
+    p_data,
+    p_callback
+);</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#BizModelAgentClass">BizModelAgentClass()
+    </a></td>
+                <td>构建 BizModelAgentClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#saveOne2Many">saveOne2Many(p_baseUrl, p_srcEntity, p_tgtEntityName, p_tgtEntityCols, p_callBack, p_validateCallBack)
+    </a></td>
+                <td>保存一对多模型的数据。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#validate">validate(p_baseUrl, p_validateOptions)
+    </a></td>
+                <td>校验已编辑的数据。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#validate">validate(p_baseUrl, [p_data], p_validateOptions)
+    </a></td>
+                <td>校验已编辑的数据。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onsaved">onsaved</a></td>
+                <td>数据保存之后，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onsaving">onsaving</a></td>
+                <td>数据保存之前，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onvalidate">onvalidate</a></td>
+                <td>数据保存校验后将触发此事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="BizModelAgentClass"></a><div id="method" class="detail">
+            <h3>BizModelAgentClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 BizModelAgentClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="saveOne2Many"></a><div id="method" class="detail">
+            <h3>saveOne2Many(p_baseUrl, p_srcEntity, p_tgtEntityName, p_tgtEntityCols, p_callBack, p_validateCallBack)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">保存一对多模型的数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_baseUrl</b><div class="paramSummary">一个 RESTFUL 风格服务地址，表示资源服务路径。</div>
+                </li>
+                <li><b class="paramName">p_srcEntity</b><div class="paramSummary">一个 JSON 对象，表示主表待保存的记录。</div>
+                </li>
+                <li><b class="paramName">p_tgtEntityName</b><div class="paramSummary">一个字符串，表示从表模型实体名。</div>
+                </li>
+                <li><b class="paramName">p_tgtEntityCols</b><div class="paramSummary">一个数组，表示从表中和主表对象逻辑关联的记录集合。</div>
+                </li>
+                <li><b class="paramName">p_callBack</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_validateCallBack</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="validate"></a><div id="method" class="detail">
+            <h3>validate(p_baseUrl, p_validateOptions)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">校验已编辑的数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_baseUrl</b><div class="paramSummary">一个 RESTFUL 风格服务地址，表示校验服务路径。</div>
+                </li>
+                <li><b class="paramName">p_validateOptions</b><div class="paramSummary">校验选项，表示待校验的表单或字段信息，格式为：
+           {dataForm: p_dataForm, fieldName: p_fieldName}。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="validate"></a><div id="method" class="detail">
+            <h3>validate(p_baseUrl, [p_data], p_validateOptions)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">校验已编辑的数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_baseUrl</b><div class="paramSummary">一个 RESTFUL 风格服务地址，表示校验服务路径。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。一个 JSON 对象，表示待校验的记录。格式为：
+           如果校验的数据对象字段为 age 和 idcard，则格式为
+           "items:[{"age": 10, idcard: "32010001000"}]"
+           如果待校验数据是表格记录，格式为
+           "items:[{mxVirtualId: "5587EFAA-465F-F9E2-B4DF-758B96918074","age": 10, idcard: "32010001000"},
+           {pk: "402894263fad184a013fad2dad800002", "age": 22, idcard: "41010001000"}]"，
+           其中 mxVirtualId 或者 pk（主键字段名）是必须项。</div>
+                </li>
+                <li><b class="paramName">p_validateOptions</b><div class="paramSummary">校验选项，表示待校验的表单或字段信息，格式为：
+           {dataForm: p_dataForm, fieldName: p_fieldName}。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onsaved"></a><div id="event" class="detail">
+            <h3>onsaved 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据保存之后，将触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onsaving"></a><div id="event" class="detail">
+            <h3>onsaving 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据保存之前，将触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onvalidate"></a><div id="event" class="detail">
+            <h3>onvalidate 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据保存校验后将触发此事件。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

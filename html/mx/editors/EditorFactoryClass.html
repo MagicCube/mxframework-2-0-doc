@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.editors.EditorFactoryClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/editors/index.html">mx.editors</a><h1 id="class">EditorFactoryClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.editors.EditorFactoryClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/editors/index.html">mx.editors</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>EditorFactoryClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>EditorFactoryClass</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\editors\EditorFactory.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供编辑器工厂类。该类在运行时唯一静态实例是 <b>mx.editors.EditorFactory</b> 对象。详见 <a href="../../../html/mx/editors/EditorFactoryClass.html#createEditor">EditorFactoryClass.createEditor</a> 方法示例。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#EditorFactoryClass">EditorFactoryClass()
+    </a></td>
+                <td>构建 EditorFactoryClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#createEditor">createEditor(p_editorType, [p_options])
+    </a><a class="exampleIcon" href="#createEditor"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>根据指定的类型和选项创建编辑器。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="EditorFactoryClass"></a><div id="method" class="detail">
+            <h3>EditorFactoryClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 EditorFactoryClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="createEditor"></a><div id="method" class="detail">
+            <h3>createEditor(p_editorType, [p_options])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">根据指定的类型和选项创建编辑器。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_editorType</b><div class="paramSummary">一个字符串，表示编辑器类型（区分大小写）。如果该类型属于 <a href="../../../html/mx/editors/index.html">mx.editors</a> 命名空间，可以省略为类型名称（如 mx.editors.CheckEditor 可简称为“CheckEditor”）；否则需要给出完整的类型名称（如“mx.editors.CheckEditor”），详见<b>示例 1</b>。
+此外，该参数也可以为一个类型对象，详见<b>示例 2</b>。
+
+<p>
+该参数常见值包括:
+<ul>
+    <li><a href="../../../html/mx/editors/CheckEditor.html">CheckEditor</a></li>
+    <li><a href="../../../html/mx/editors/DateTimeEditor.html">DateTimeEditor</a></li>
+    <li><a href="../../../html/mx/editors/DropDownEditor.html">DropDownEditor</a></li>
+    <li><a href="../../../html/mx/editors/ListEditor.html">ListEditor</a></li>
+    <li><a href="../../../html/mx/editors/NumberEditor.html">NumberEditor</a></li>
+    <li><a href="../../../html/mx/editors/TextEditor.html">TextEditor</a></li>
+    <li><a href="../../../html/mx/editors/TimeEditor.html">TimeEditor</a></li>
+</ul>
+</p></div>
+                </li>
+                <li><b class="paramName">p_options</b><div class="paramSummary">可选的。一个 JSON 对象，包含创建编辑器的参数及初始值。如“{ dataType: "number", max: 10, min: 0 }”。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">var editor = null;
+
+// 使用类型的全名称创建编辑器
+editor = mx.editors.EditorFactory.createEditor("mx.editors.CheckEditor", { checkedValue: "T", uncheckedValue: "F" });
+
+// mx.editors 命名空间下的编辑器，可直接使用类型名称
+editor = mx.editors.EditorFactory.createEditor("CheckEditor", { checkedValue: "T", uncheckedValue: "F" });</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+              <p></p>
+              <h4>示例 2</h4>
+              <div class="h4Content">
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">// 在代码开头需要显示导入类型
+$import("sample.editors.MyEditor");
+
+...
+
+// 可以将类型对象直接作为 p_editorType 参数传递。
+var editor = mx.editors.EditorFactory.createEditor(
+    sample.editors.MyEditor,
+    { myProperty1: "some value", myProperty2: "some value" }
+);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

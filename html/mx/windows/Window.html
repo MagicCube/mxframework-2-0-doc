@@ -1,0 +1,1770 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.windows.Window 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/windows/index.html">mx.windows</a><h1 id="class">Window 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.windows.Window</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/windows/index.html">mx.windows</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>Window</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>Window</span><span id="inherit"></span><a href="../../../html/mx/views/ViewPort.html">ViewPort</a><span id="inherit"></span><a href="../../../html/mx/containers/Container.html">Container</a><span id="inherit"></span><a href="../../../html/mx/controls/Control.html">Control</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\windows\Window.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供所有窗体的基类。通常请使用 <a href="../../../html/mx/windows/WindowManager.html#create">WindowManager.create</a> 方法来创建窗体。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#Window">Window()
+    </a></td>
+                <td>构建 Window 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化窗体。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#activate">activate()
+    </a></td>
+                <td>将当前窗体置为激活状态。在该方法中会自动调用 <a href="#bringToFront">bringToFront</a> 方法，并会触发 <a href="#onactivate">onactivate</a> 事件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#addControl">addControl(p_control, p_islinebreak)
+    </a></td>
+                <td>将 <a href="../../../html/mx/controls/Control.html">Control</a> 对象添加到集合 <a href="#controls">controls</a> 中。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#addControls">addControls(p_controls)
+    </a></td>
+                <td>将一组 <a href="../../../html/mx/controls/Control.html">Control</a> 对象添加到集合 <a href="#controls">controls</a> 中。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#append">append($p_element)
+    </a></td>
+                <td>向当前窗体追加指定的 JQuery 对象、元素或控件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#bringToFront">bringToFront()
+    </a></td>
+                <td>将当前窗体置为最上层窗体。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#close">close()
+    </a></td>
+                <td>关闭当前窗体，并销毁其中的所有元素，请参见 <a href="#reusable">reusable</a> 字段。该方法会自动调用 <a href="#hide">hide</a> 方法，并会依次触发 <a href="#onclosing">onclosing</a>、<a href="#onhiding">onhiding</a>、 <a href="#onhide">onhide</a> 和 <a href="#onclose">onclose</a> 事件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#contains">contains($p_target)
+    </a></td>
+                <td>返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#dispose">dispose()
+    </a></td>
+                <td>释放对象运行时动态生成的内容（属性、方法、事件）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#findControl">findControl(p_alias)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#findControlByPermissionID">findControlByPermissionID(p_permissionID)
+    </a></td>
+                <td>根据指定的权限标识查找当前视图中对应的控件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getContext">getContext()
+    </a></td>
+                <td>获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEl">getEl()
+    </a></td>
+                <td>获取控件容器对应的 HTML DOM 元素对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hide">hide([p_callback])
+    </a></td>
+                <td>将当前窗体隐藏，但不关闭，请参见 <a href="#reusable">reusable</a> 字段。该事件将依次触发 <a href="#onhiding">onhiding</a>、<a href="#onhide">onhide</a> 事件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#indicate">indicate(p_type, p_message, [p_options])
+    </a></td>
+                <td>在当前窗体中显示一个快速提示，通常该提示会在数秒后自动消失。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_left, p_top)
+    </a></td>
+                <td>移动控件到指定位置。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#removeControl">removeControl(p_control, p_deep)
+    </a></td>
+                <td>从 <a href="#controls">controls</a> 集合中移除指定的 <a href="../../../html/mx/controls/Control.html">Control</a> 对象。
+从集合中移除控件时，该控件会被从上下文的 DOM 中移除，但仍驻留在内存中，可以重用。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#resizeTo">resizeTo(p_width, p_height)
+    </a></td>
+                <td>重设控件的大小。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBorder">setBorder(p_border)
+    </a></td>
+                <td>设置控件的边框样式。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBottom">setBottom(p_bottom)
+    </a></td>
+                <td>设置 <a href="#bottom">bottom</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setBusy">setBusy(p_busy, p_indication)
+    </a></td>
+                <td>设置 <a href="#isBusy">isBusy</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCss">setCss(p_css)
+    </a></td>
+                <td>设置 <a href="#css">css</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCssClass">setCssClass(p_cssClass)
+    </a></td>
+                <td>设置 <a href="#cssClass">cssClass</a>} 字段的值</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setDialogResult">setDialogResult(p_dialogResult)
+    </a></td>
+                <td>设置 <a href="#dialogResult">dialogResult</a> 字段的值。在调用该方法后，会自动关闭对话框（当 <a href="#reusable">reusable</a> 字段为 true 时，将调用 <a href="#hide">hide</a> 方法；否则调用 <a href="#close">close</a> 方法）。请参见 <a href="#showDialog">showDialog</a> 方法。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplay">setDisplay(p_display)
+    </a></td>
+                <td>设置 <a href="#display">display</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>设置 <a href="#enabled">enabled</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHeight">setHeight(p_height)
+    </a></td>
+                <td>设置 <a href="#height">height</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setLeft">setLeft(p_left)
+    </a></td>
+                <td>设置 <a href="#left">left</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setLoading">setLoading(p_isLoading)
+    </a></td>
+                <td>设置 <a href="#isLoading">isLoading</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPadding">setPadding(p_padding)
+    </a></td>
+                <td>设置 {@lilnk padding} 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPosition">setPosition(p_position)
+    </a></td>
+                <td>设置 <a href="#position">position</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setStatus">setStatus(p_status, [p_isBusy])
+    </a></td>
+                <td>设置窗体的状态 <a href="#status">status</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setTitle">setTitle(p_title)
+    </a></td>
+                <td>设置 <a href="#title">title</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setTop">setTop(p_top)
+    </a></td>
+                <td>设置 <a href="#top">top</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setView">setView(p_view)
+    </a></td>
+                <td>设置视图。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setViewController">setViewController(p_viewController)
+    </a></td>
+                <td>设置视图的视图控制器。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setWindowState">setWindowState(p_windowState)
+    </a></td>
+                <td>设置 <a href="#windowState">windowState</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#show">show()
+    </a></td>
+                <td>打开当前窗口，同时会被默认置为激活状态。该方法会依次触发 <a href="#onactivate">onactivate</a> 和 <a href="#onshown">onshown</a> 事件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#showDialog">showDialog([p_owner], [p_dialogCallback])
+    </a></td>
+                <td>将当前窗口以独占对话框的形式打开。该方法会依次触发 <a href="#onactivate">onactivate</a> 和 <a href="#onshown">onshown</a> 事件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$">$(p_expression)
+    </a></td>
+                <td>该方法与 me.$e.find(p_expression) 等同。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$wrap">$wrap([p_obj])
+    </a></td>
+                <td>返回一个 JQuery 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#__createTempMark">__createTempMark()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#__removeTempMark">__removeTempMark()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#activated">activated</a></td>
+                <td>获取或设置一个 Boolean 值，表示窗体是否处于激活状态。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#alias">alias</a></td>
+                <td>获取或设置一个字符串，表示控件的别名。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#border">border</a></td>
+                <td>获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#bottom">bottom</a></td>
+                <td>获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#context">context</a></td>
+                <td>详见 <a href="../../../html/mx/controls/Control.html#getContext">Control.getContext</a> 方法。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#contextMenu">contextMenu</a></td>
+                <td>获取或设置容器的上下文菜单。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#controls">controls</a></td>
+                <td>获取容器包含的控件集合。集合中的单个控件也可能是一个容器。请使用 <a href="#addControl">addControl</a> 和
+<a href="#removeControl">removeControl</a> 方法向集合中添加或移除控件。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssClass">cssClass</a></td>
+                <td>指定css伪类名称，设置控件显示样式</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#dialogResult">dialogResult</a></td>
+                <td>获取当前窗体作为对话框时返回的值。请使用 <a href="#setDialogResult">setDialogResult</a> 方法设置该字段的值。请参见 <a href="#showDialog">showDialog</a> 方法。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#display">display</a></td>
+                <td>获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayCloseButton">displayCloseButton</a></td>
+                <td>获取或设置是否显示“关闭”按钮。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayControlBox">displayControlBox</a></td>
+                <td>获取或设置是否显示“最大化”、“关闭”等控制按钮。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayHead">displayHead</a></td>
+                <td>获取一个 Boolean 值，表示窗体是否显示标题栏。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayMaxButton">displayMaxButton</a></td>
+                <td>获取或设置是否显示“最大化”按钮。当 <a href="#resizable">resizable</a> 字段为 false 时，该字段会被自动置为 false。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayMinButton">displayMinButton</a></td>
+                <td>获取或设置是否显示“最小化”按钮。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayStatus">displayStatus</a></td>
+                <td>获取或设置是否显示状态栏。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#eTag">eTag</a></td>
+                <td>获取控件的标签。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#frameBorder">frameBorder</a></td>
+                <td>获取或设置窗体的边框样式。该字段必须在初始化前设置。
+<p>
+该字段的可选值包括:
+<ul>
+    <li><b>normal</b> - 正常状态。</li>
+    <li><b>borderless</b> 或 <b>none</b> - 没有标题栏、边框和状态栏。</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#height">height</a></td>
+                <td>获取窗体的高度，可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a>、<a href="#resizeTo">resizeTo</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#isBusy">isBusy</a></td>
+                <td>获取窗体是否正处于忙碌状态，如果该值为 true，则会自动将 <a href="#isLoading">isLoading</a> 字段设置为 true，并且窗体会变暗，同时阻止用户对该窗体的所有操作。请使用 <a href="#setBusy">setBusy</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#isLoaded">isLoaded</a></td>
+                <td>获取一个值，表示当前窗体是否已完成加载。请参考 <a href="#onload">onload</a> 事件。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#isLoading">isLoading</a></td>
+                <td>获取窗体是否正处于正在加载状态，如果该值为 true，则窗体的状态栏中会显示一个正在加载的图标。请使用 <a href="#setStatus">setStatus</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layout">layout</a></td>
+                <td>获取和设置一个容器控件的布局器。详见 <a href="../../../html/mx/layouts/LayoutFactoryClass.html#createLayout">LayoutFactoryClass.createLayout</a> 方法的 p_layout参数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutConfigs">layoutConfigs</a></td>
+                <td>获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutOptions">layoutOptions</a></td>
+                <td>获取和设置布局参数，该属性是一个 JSON 对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#left">left</a></td>
+                <td>获取窗体的左边缘与浏览器左边缘之间的距离，除使用数字（如 100）或字符串（如“100px”、“50%”）等绝对位置外，还可以使用“center”字符串来表示水平方位居中显示。请使用 <a href="#moveTo">moveTo</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#movable">movable</a></td>
+                <td>获取一个 Boolean 值，表示窗体是否可拖动。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#owner">owner</a></td>
+                <td>获取一个 <a href="../../../html/mx/windows/Window.html">Window</a> 对象，表示当前窗体的父窗体对象。通常当一个窗体通过 <a href="#showDialog">showDialog</a> 方法作为对话框打开时，会带入一个 p_owner 参数表示该对话框的父窗体。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#padding">padding</a></td>
+                <td>获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#parent">parent</a></td>
+                <td>获取控件所属的父对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#permissionID">permissionID</a></td>
+                <td>获取或设置一个字符串，表示控件的权限标识。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#resizable">resizable</a></td>
+                <td>获取是否可以由用户自定义窗体大小。如果为 false，则 <a href="#displayMaxButton">displayMaxButton</a> 字段会被设置为 false。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#reusable">reusable</a></td>
+                <td>获取或设置当前窗体是否可被重复使用。当用户点击“关闭”按钮时，如果该值为 true，会调用 <a href="#hide">hide</a> 方法隐藏窗体；如果为 false，则会调用 <a href="#close">close</a> 方法关闭窗体，并销毁其中的所有元素。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#right">right</a></td>
+                <td>获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#status">status</a></td>
+                <td>获取窗体状态栏中的文本。请使用 <a href="#setStatus">setStatus</a> 方法设置该字段的值。stuats 字段仅当 <a href="#displayStatus">displayStatus</a> 字段为 true 时，才能看见状态栏中的内容。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#title">title</a></td>
+                <td>获取窗体标题栏中的文本。请使用 <a href="#setTitle">setTitle</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#top">top</a></td>
+                <td>获取窗体的上边缘与浏览器上边缘之间的距离，除使用数字（如 100）或字符串（如“100px”、“50%”）等绝对位置外，还可以使用“center”字符串来表示水平方位居中显示。请使用 <a href="#moveTo">moveTo</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#view">view</a></td>
+                <td>获取视图。参见 <a href="../../../html/mx/views/View.html">View</a>。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#viewController">viewController</a></td>
+                <td>获取视图控制器。参见 <a href="../../../html/mx/views/ViewController.html">ViewController</a>。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td>获取窗体的宽度，可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a>、<a href="#resizeTo">resizeTo</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#windowState">windowState</a></td>
+                <td>获取一个字符串，表示当前窗体的状态。请使用 <a href="#setWindowState">setWindowState</a> 方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+    <li><b>normal</b> - 正常状态。窗体的大小取决于 <a href="#width">width</a> 和 <a href="#height">height</a> 字段的值。</li>
+    <li><b>maximize</b> - 最大化状态。窗体自动撑满父容器。</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$body">$body</a></td>
+                <td>表示窗体主体部分的 JQuery 对象（不包含标题栏、状态栏的部分）。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$container">$container</a></td>
+                <td>获取容器控件中用来包含控件 DOM 元素的占位符。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取该控件的占位符，该占位符为一个 JQuery 对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$head">$head</a></td>
+                <td>表示标题栏的 JQuery 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onactivate">onactivate</a></td>
+                <td>当窗体被激活后将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onclose">onclose</a></td>
+                <td>当前窗体被关闭后将触发该事件。通常调用 <a href="#close">close</a> 方法后会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onclosing">onclosing</a></td>
+                <td>当窗体被关闭前将触发该事件。通常调用 <a href="#close">close</a> 等方法前会触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onctrladded">onctrladded</a></td>
+                <td>当添加控件到容器后，将触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onctrlremoved">onctrlremoved</a></td>
+                <td>当从容器移除控件后，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onhide">onhide</a></td>
+                <td>当窗体被隐藏或关闭后将触发该事件。通常调用 <a href="#hide">hide</a> 和 <a href="#close">close</a> 等方法后会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onhiding">onhiding</a></td>
+                <td>当窗体被隐藏或关闭前将触发该事件。通常调用 <a href="#hide">hide</a> 和 <a href="#close">close</a> 等方法前会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onload">onload</a></td>
+                <td>当窗体加载后将触发该事件。当窗体被实例化并调用 <a href="#init">init</a> 进行初始化后，第一次显示在浏览器之前，将触发该事件。该事件在 Window 的全生命周期中仅会触发一次，通常第一次调用 <a href="#show">show</a>、<a href="#showDialog">showDialog</a> 方法后首先会触发该事件，然后才会触发 <a href="#onshown">onshown</a> 事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onresize">onresize</a></td>
+                <td>当窗体重置大小后将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onshown">onshown</a></td>
+                <td>当窗体在客户端展现后将触发该事件。通常调用 <a href="#show">show</a> 和 <a href="#showDialog">showDialog</a> 等方法后会触发该事件。通常第一次调用 <a href="#show">show</a>、<a href="#showDialog">showDialog</a> 方法后首先会触发该事件，然后才会触发 <a href="#onshown">onshown</a> 事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="Window"></a><div id="method" class="detail">
+            <h3>Window()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 Window 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化窗体。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#init">mx.views.ViewPort.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="activate"></a><div id="method" class="detail">
+            <h3>activate()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前窗体置为激活状态。在该方法中会自动调用 <a href="#bringToFront">bringToFront</a> 方法，并会触发 <a href="#onactivate">onactivate</a> 事件。</div>
+            </div>
+            <hr>
+          </div><a name="addControl"></a><div id="method" class="detail" override="true">
+            <h3>addControl(p_control, p_islinebreak)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将 <a href="../../../html/mx/controls/Control.html">Control</a> 对象添加到集合 <a href="#controls">controls</a> 中。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_control</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/Control.html">Control</a> 对象。</div>
+                </li>
+                <li><b class="paramName">p_islinebreak</b><div class="paramSummary">一个布尔值，表示添加新控件时是否先换行。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#addControl">mx.containers.Container.addControl</a></div>
+            </div>
+            <hr>
+          </div><a name="addControls"></a><div id="method" class="detail" override="true">
+            <h3>addControls(p_controls)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将一组 <a href="../../../html/mx/controls/Control.html">Control</a> 对象添加到集合 <a href="#controls">controls</a> 中。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_controls</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/Control.html">Control</a> 控件数组。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#addControls">mx.containers.Container.addControls</a></div>
+            </div>
+            <hr>
+          </div><a name="append"></a><div id="method" class="detail" override="true">
+            <h3>append($p_element)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向当前窗体追加指定的 JQuery 对象、元素或控件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">$p_element</b><div class="paramSummary">需要追加的对象。该对象可以是一个 JQuery 对象、HTML 元素（如 DIV 元素）或所有派生自 <a href="../../../html/mx/controls/Control.html">Control</a> 类型的控件（如 DataGrid、DataTree 等控件）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#append">mx.containers.Container.append</a></div>
+            </div>
+            <hr>
+          </div><a name="bringToFront"></a><div id="method" class="detail">
+            <h3>bringToFront()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前窗体置为最上层窗体。</div>
+            </div>
+            <hr>
+          </div><a name="close"></a><div id="method" class="detail">
+            <h3>close()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">关闭当前窗体，并销毁其中的所有元素，请参见 <a href="#reusable">reusable</a> 字段。该方法会自动调用 <a href="#hide">hide</a> 方法，并会依次触发 <a href="#onclosing">onclosing</a>、<a href="#onhiding">onhiding</a>、 <a href="#onhide">onhide</a> 和 <a href="#onclose">onclose</a> 事件。</div>
+            </div>
+            <hr>
+          </div><a name="contains"></a><div id="method" class="detail" override="true">
+            <h3>contains($p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">$p_target</b><div class="paramSummary">一个 JQuery 对象，或 JQuery 选择器对应的字符串（如“#container”），或 HTML DOM 元素。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#contains">mx.controls.Control.contains</a></div>
+            </div>
+            <hr>
+          </div><a name="dispose"></a><div id="method" class="detail" override="true">
+            <h3>dispose()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">释放对象运行时动态生成的内容（属性、方法、事件）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#dispose">mx.views.ViewPort.dispose</a></div>
+            </div>
+            <hr>
+          </div><a name="findControl"></a><div id="method" class="detail" override="true">
+            <h3>findControl(p_alias)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_alias</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#findControl">mx.containers.Container.findControl</a></div>
+            </div>
+            <hr>
+          </div><a name="findControlByPermissionID"></a><div id="method" class="detail" override="true">
+            <h3>findControlByPermissionID(p_permissionID)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">根据指定的权限标识查找当前视图中对应的控件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_permissionID</b><div class="paramSummary">一个字符串，表示控件的权限标识。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#findControlByPermissionID">mx.containers.Container.findControlByPermissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="getContext"></a><div id="method" class="detail" override="true">
+            <h3>getContext()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getContext">mx.controls.Control.getContext</a></div>
+            </div>
+            <hr>
+          </div><a name="getEl"></a><div id="method" class="detail" override="true">
+            <h3>getEl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件容器对应的 HTML DOM 元素对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getEl">mx.controls.Control.getEl</a></div>
+            </div>
+            <hr>
+          </div><a name="hide"></a><div id="method" class="detail" override="true">
+            <h3>hide([p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前窗体隐藏，但不关闭，请参见 <a href="#reusable">reusable</a> 字段。该事件将依次触发 <a href="#onhiding">onhiding</a>、<a href="#onhide">onhide</a> 事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示窗体隐藏后的回调方法。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#hide">mx.controls.Control.hide</a></div>
+            </div>
+            <hr>
+          </div><a name="indicate"></a><div id="method" class="detail">
+            <h3>indicate(p_type, p_message, [p_options])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在当前窗体中显示一个快速提示，通常该提示会在数秒后自动消失。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_type</b><div class="paramSummary">一个字符串，表示提示的类型。如“info”、“warn”、“error”等，请参见 <a href="../../../html/mx/utils/SymbolUtilClass.html#getSymbol">SymbolUtilClass.getSymbol</a> 类。</div>
+                </li>
+                <li><b class="paramName">p_message</b><div class="paramSummary">指定提示的信息。</div>
+                </li>
+                <li><b class="paramName">p_options</b><div class="paramSummary">可选的。目前暂未使用。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_left, p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移动控件到指定位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">一个数字，表示 css 样式的 left 属性。</div>
+                </li>
+                <li><b class="paramName">p_top</b><div class="paramSummary">一个数字，表示 css 样式的 top 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#moveTo">mx.controls.Control.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="removeControl"></a><div id="method" class="detail" override="true">
+            <h3>removeControl(p_control, p_deep)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">从 <a href="#controls">controls</a> 集合中移除指定的 <a href="../../../html/mx/controls/Control.html">Control</a> 对象。
+从集合中移除控件时，该控件会被从上下文的 DOM 中移除，但仍驻留在内存中，可以重用。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_control</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/Control.html">Control</a> 对象。</div>
+                </li>
+                <li><b class="paramName">p_deep</b><div class="paramSummary">表示是否从内存中删除指定控件。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#removeControl">mx.containers.Container.removeControl</a></div>
+            </div>
+            <hr>
+          </div><a name="resizeTo"></a><div id="method" class="detail" override="true">
+            <h3>resizeTo(p_width, p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重设控件的大小。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的宽度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#resizeTo">mx.controls.Control.resizeTo</a></div>
+            </div>
+            <hr>
+          </div><a name="setBorder"></a><div id="method" class="detail" override="true">
+            <h3>setBorder(p_border)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的边框样式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_border</b><div class="paramSummary">一个字符串，表示css样式的 border 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBorder">mx.controls.Control.setBorder</a></div>
+            </div>
+            <hr>
+          </div><a name="setBottom"></a><div id="method" class="detail" override="true">
+            <h3>setBottom(p_bottom)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#bottom">bottom</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_bottom</b><div class="paramSummary">控件的下边界与父容器下边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBottom">mx.controls.Control.setBottom</a></div>
+            </div>
+            <hr>
+          </div><a name="setBusy"></a><div id="method" class="detail">
+            <h3>setBusy(p_busy, p_indication)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#isBusy">isBusy</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_busy</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_indication</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setCss"></a><div id="method" class="detail" override="true">
+            <h3>setCss(p_css)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#css">css</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_css</b><div class="paramSummary">一个 JSON 对象，表示控件的 CSS 样式。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCss">mx.controls.Control.setCss</a></div>
+            </div>
+            <hr>
+          </div><a name="setCssClass"></a><div id="method" class="detail" override="true">
+            <h3>setCssClass(p_cssClass)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#cssClass">cssClass</a>} 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_cssClass</b><div class="paramSummary">一个String 对象，样式classname</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCssClass">mx.controls.Control.setCssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="setDialogResult"></a><div id="method" class="detail">
+            <h3>setDialogResult(p_dialogResult)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#dialogResult">dialogResult</a> 字段的值。在调用该方法后，会自动关闭对话框（当 <a href="#reusable">reusable</a> 字段为 true 时，将调用 <a href="#hide">hide</a> 方法；否则调用 <a href="#close">close</a> 方法）。请参见 <a href="#showDialog">showDialog</a> 方法。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dialogResult</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setDisplay"></a><div id="method" class="detail" override="true">
+            <h3>setDisplay(p_display)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#display">display</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_display</b><div class="paramSummary">css 样式的 display 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setDisplay">mx.controls.Control.setDisplay</a></div>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#enabled">enabled</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setEnabled">mx.controls.Control.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setHeight"></a><div id="method" class="detail" override="true">
+            <h3>setHeight(p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#height">height</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setHeight">mx.controls.Control.setHeight</a></div>
+            </div>
+            <hr>
+          </div><a name="setLeft"></a><div id="method" class="detail" override="true">
+            <h3>setLeft(p_left)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#left">left</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">控件的左边界与父容器左边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setLeft">mx.controls.Control.setLeft</a></div>
+            </div>
+            <hr>
+          </div><a name="setLoading"></a><div id="method" class="detail">
+            <h3>setLoading(p_isLoading)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#isLoading">isLoading</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_isLoading</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setPadding"></a><div id="method" class="detail" override="true">
+            <h3>setPadding(p_padding)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 {@lilnk padding} 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_padding</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#setPadding">mx.containers.Container.setPadding</a></div>
+            </div>
+            <hr>
+          </div><a name="setPosition"></a><div id="method" class="detail" override="true">
+            <h3>setPosition(p_position)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#position">position</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_position</b><div class="paramSummary">一个字符串，表示 css 样式的 position 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPosition">mx.controls.Control.setPosition</a></div>
+            </div>
+            <hr>
+          </div><a name="setStatus"></a><div id="method" class="detail">
+            <h3>setStatus(p_status, [p_isBusy])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置窗体的状态 <a href="#status">status</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_status</b><div class="paramSummary">: 窗体的状态状态栏显示的文本</div>
+                </li>
+                <li><b class="paramName">p_isBusy</b><div class="paramSummary">可选的。<a href="#isBusy">isBusy</a>字段饿值，设置窗体是否处于忙碌状态</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setTitle"></a><div id="method" class="detail">
+            <h3>setTitle(p_title)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#title">title</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_title</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setTop"></a><div id="method" class="detail" override="true">
+            <h3>setTop(p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#top">top</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_top</b><div class="paramSummary">控件的上边界与父容器上边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setTop">mx.controls.Control.setTop</a></div>
+            </div>
+            <hr>
+          </div><a name="setView"></a><div id="method" class="detail" override="true">
+            <h3>setView(p_view)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置视图。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_view</b><div class="paramSummary">一个 <a href="../../../html/mx/views/View.html">View</a> 对象.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#setView">mx.views.ViewPort.setView</a></div>
+            </div>
+            <hr>
+          </div><a name="setViewController"></a><div id="method" class="detail" override="true">
+            <h3>setViewController(p_viewController)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置视图的视图控制器。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_viewController</b><div class="paramSummary">一个<a href="../../../html/mx/views/ViewController.html">ViewController</a> 对象.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#setViewController">mx.views.ViewPort.setViewController</a></div>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示控件是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setVisible">mx.controls.Control.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的高度,可以是数字（如 500）、字符串（如“500px”或“50%”）.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setWidth">mx.controls.Control.setWidth</a></div>
+            </div>
+            <hr>
+          </div><a name="setWindowState"></a><div id="method" class="detail">
+            <h3>setWindowState(p_windowState)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#windowState">windowState</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_windowState</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail" override="true">
+            <h3>show()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">打开当前窗口，同时会被默认置为激活状态。该方法会依次触发 <a href="#onactivate">onactivate</a> 和 <a href="#onshown">onshown</a> 事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#show">mx.controls.Control.show</a></div>
+            </div>
+            <hr>
+          </div><a name="showDialog"></a><div id="method" class="detail">
+            <h3>showDialog([p_owner], [p_dialogCallback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前窗口以独占对话框的形式打开。该方法会依次触发 <a href="#onactivate">onactivate</a> 和 <a href="#onshown">onshown</a> 事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_owner</b><div class="paramSummary">可选的。指定对话框的父窗体。对象类型为mx.windows.Window或者为mx.windows.Window对象的子类</div>
+                </li>
+                <li><b class="paramName">p_dialogCallback</b><div class="paramSummary">可选的。一个 Function 对象，表示对话框的回调方法。当对话框关闭后，将调用 p_dialogCallback 代表的方法，并将当前窗体作为参数传递，方法的原型为 function(p_dialog)，p_dialog 参数即为当前窗体对象，可通过 p_dialog.dialogResult 字段获取对话框的返回值，该返回值是通过 <a href="#setDialogResult">setDialogResult</a>} 设置的。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="$"></a><div id="method" class="detail" override="true">
+            <h3>$(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">该方法与 me.$e.find(p_expression) 等同。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$">mx.controls.Control.$</a></div>
+            </div>
+            <hr>
+          </div><a name="$wrap"></a><div id="method" class="detail" override="true">
+            <h3>$wrap([p_obj])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_obj</b><div class="paramSummary">可选的。默认值为“me.$e”。一个 JQuery 对象，或继承自 Control 的控件，或字符串，或 HTML DOM 元素。如果参数为 JQuery 对象，则返回本身；如果参数为继承自 Control 的控件，则返回控件的 $e 对象；如果参数为字符串，则返回以字符串为选择器的 JQuery 对象；如果参数为空，则返回控件本身的 $e 对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$wrap">mx.controls.Control.$wrap</a></div>
+            </div>
+            <hr>
+          </div><a name="__createTempMark"></a><div id="method" class="detail">
+            <h3>__createTempMark()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div><a name="__removeTempMark"></a><div id="method" class="detail">
+            <h3>__removeTempMark()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="activated"></a><div id="field" class="detail">
+            <h3>activated 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，表示窗体是否处于激活状态。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="alias"></a><div id="field" class="detail" override="true">
+            <h3>alias 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的别名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#alias">mx.controls.Control.alias</a></div>
+            </div>
+            <hr>
+          </div><a name="border"></a><div id="field" class="detail" override="true">
+            <h3>border 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#border">mx.controls.Control.border</a></div>
+            </div>
+            <hr>
+          </div><a name="bottom"></a><div id="field" class="detail" override="true">
+            <h3>bottom 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#bottom">mx.controls.Control.bottom</a></div>
+            </div>
+            <hr>
+          </div><a name="context"></a><div id="field" class="detail" override="true">
+            <h3>context 字段
+            </h3>
+            <div class="content">
+              <div class="summary">详见 <a href="../../../html/mx/controls/Control.html#getContext">Control.getContext</a> 方法。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#context">mx.views.ViewPort.context</a></div>
+            </div>
+            <hr>
+          </div><a name="contextMenu"></a><div id="field" class="detail" override="true">
+            <h3>contextMenu 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置容器的上下文菜单。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#contextMenu">mx.containers.Container.contextMenu</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="controls"></a><div id="field" class="detail" override="true">
+            <h3>controls 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取容器包含的控件集合。集合中的单个控件也可能是一个容器。请使用 <a href="#addControl">addControl</a> 和
+<a href="#removeControl">removeControl</a> 方法向集合中添加或移除控件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#controls">mx.containers.Container.controls</a></div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        
+                            集合中成员的类型为
+                            <a href="../../../html/mx/controls/Control.html">mx.controls.Control</a>。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">控件在集合中的序号（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="cssClass"></a><div id="field" class="detail" override="true">
+            <h3>cssClass 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指定css伪类名称，设置控件显示样式</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#cssClass">mx.controls.Control.cssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="dialogResult"></a><div id="field" class="detail">
+            <h3>dialogResult 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前窗体作为对话框时返回的值。请使用 <a href="#setDialogResult">setDialogResult</a> 方法设置该字段的值。请参见 <a href="#showDialog">showDialog</a> 方法。</div>
+            </div>
+            <hr>
+          </div><a name="display"></a><div id="field" class="detail" override="true">
+            <h3>display 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#display">mx.controls.Control.display</a></div>
+            </div>
+            <hr>
+          </div><a name="displayCloseButton"></a><div id="field" class="detail">
+            <h3>displayCloseButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置是否显示“关闭”按钮。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayControlBox"></a><div id="field" class="detail">
+            <h3>displayControlBox 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置是否显示“最大化”、“关闭”等控制按钮。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayHead"></a><div id="field" class="detail">
+            <h3>displayHead 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示窗体是否显示标题栏。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayMaxButton"></a><div id="field" class="detail">
+            <h3>displayMaxButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置是否显示“最大化”按钮。当 <a href="#resizable">resizable</a> 字段为 false 时，该字段会被自动置为 false。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayMinButton"></a><div id="field" class="detail">
+            <h3>displayMinButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置是否显示“最小化”按钮。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="displayStatus"></a><div id="field" class="detail">
+            <h3>displayStatus 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置是否显示状态栏。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#enabled">mx.controls.Control.enabled</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="eTag"></a><div id="field" class="detail" override="true">
+            <h3>eTag 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的标签。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#eTag">mx.controls.Control.eTag</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">&lt;div/&gt;</div>
+            </div>
+            <hr>
+          </div><a name="frameBorder"></a><div id="field" class="detail">
+            <h3>frameBorder 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置窗体的边框样式。该字段必须在初始化前设置。
+<p>
+该字段的可选值包括:
+<ul>
+    <li><b>normal</b> - 正常状态。</li>
+    <li><b>borderless</b> 或 <b>none</b> - 没有标题栏、边框和状态栏。</li>
+</ul>
+</p></div>
+              <h4>默认值</h4>
+              <div class="h4Content">normal</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail" override="true">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体的高度，可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a>、<a href="#resizeTo">resizeTo</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#height">mx.containers.Container.height</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">480</div>
+            </div>
+            <hr>
+          </div><a name="isBusy"></a><div id="field" class="detail">
+            <h3>isBusy 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体是否正处于忙碌状态，如果该值为 true，则会自动将 <a href="#isLoading">isLoading</a> 字段设置为 true，并且窗体会变暗，同时阻止用户对该窗体的所有操作。请使用 <a href="#setBusy">setBusy</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="isLoaded"></a><div id="field" class="detail">
+            <h3>isLoaded 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个值，表示当前窗体是否已完成加载。请参考 <a href="#onload">onload</a> 事件。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="isLoading"></a><div id="field" class="detail">
+            <h3>isLoading 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体是否正处于正在加载状态，如果该值为 true，则窗体的状态栏中会显示一个正在加载的图标。请使用 <a href="#setStatus">setStatus</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="layout"></a><div id="field" class="detail" override="true">
+            <h3>layout 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个容器控件的布局器。详见 <a href="../../../html/mx/layouts/LayoutFactoryClass.html#createLayout">LayoutFactoryClass.createLayout</a> 方法的 p_layout参数。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#layout">mx.containers.Container.layout</a></div>
+            </div>
+            <hr>
+          </div><a name="layoutConfigs"></a><div id="field" class="detail" override="true">
+            <h3>layoutConfigs 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#layoutConfigs">mx.controls.Control.layoutConfigs</a></div>
+            </div>
+            <hr>
+          </div><a name="layoutOptions"></a><div id="field" class="detail" override="true">
+            <h3>layoutOptions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置布局参数，该属性是一个 JSON 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#layoutOptions">mx.containers.Container.layoutOptions</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="left"></a><div id="field" class="detail" override="true">
+            <h3>left 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体的左边缘与浏览器左边缘之间的距离，除使用数字（如 100）或字符串（如“100px”、“50%”）等绝对位置外，还可以使用“center”字符串来表示水平方位居中显示。请使用 <a href="#moveTo">moveTo</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#left">mx.controls.Control.left</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">auto</div>
+            </div>
+            <hr>
+          </div><a name="movable"></a><div id="field" class="detail">
+            <h3>movable 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示窗体是否可拖动。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="owner"></a><div id="field" class="detail">
+            <h3>owner 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 <a href="../../../html/mx/windows/Window.html">Window</a> 对象，表示当前窗体的父窗体对象。通常当一个窗体通过 <a href="#showDialog">showDialog</a> 方法作为对话框打开时，会带入一个 p_owner 参数表示该对话框的父窗体。</div>
+            </div>
+            <hr>
+          </div><a name="padding"></a><div id="field" class="detail" override="true">
+            <h3>padding 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#padding">mx.controls.Control.padding</a></div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail" override="true">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件所属的父对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#parent">mx.controls.Control.parent</a></div>
+            </div>
+            <hr>
+          </div><a name="permissionID"></a><div id="field" class="detail" override="true">
+            <h3>permissionID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的权限标识。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#permissionID">mx.controls.Control.permissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="resizable"></a><div id="field" class="detail">
+            <h3>resizable 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取是否可以由用户自定义窗体大小。如果为 false，则 <a href="#displayMaxButton">displayMaxButton</a> 字段会被设置为 false。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="reusable"></a><div id="field" class="detail">
+            <h3>reusable 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置当前窗体是否可被重复使用。当用户点击“关闭”按钮时，如果该值为 true，会调用 <a href="#hide">hide</a> 方法隐藏窗体；如果为 false，则会调用 <a href="#close">close</a> 方法关闭窗体，并销毁其中的所有元素。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="right"></a><div id="field" class="detail" override="true">
+            <h3>right 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#right">mx.controls.Control.right</a></div>
+            </div>
+            <hr>
+          </div><a name="status"></a><div id="field" class="detail">
+            <h3>status 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体状态栏中的文本。请使用 <a href="#setStatus">setStatus</a> 方法设置该字段的值。stuats 字段仅当 <a href="#displayStatus">displayStatus</a> 字段为 true 时，才能看见状态栏中的内容。</div>
+            </div>
+            <hr>
+          </div><a name="title"></a><div id="field" class="detail">
+            <h3>title 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体标题栏中的文本。请使用 <a href="#setTitle">setTitle</a> 方法设置该字段的值。</div>
+            </div>
+            <hr>
+          </div><a name="top"></a><div id="field" class="detail" override="true">
+            <h3>top 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体的上边缘与浏览器上边缘之间的距离，除使用数字（如 100）或字符串（如“100px”、“50%”）等绝对位置外，还可以使用“center”字符串来表示水平方位居中显示。请使用 <a href="#moveTo">moveTo</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#top">mx.controls.Control.top</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">auto</div>
+            </div>
+            <hr>
+          </div><a name="view"></a><div id="field" class="detail" override="true">
+            <h3>view 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取视图。参见 <a href="../../../html/mx/views/View.html">View</a>。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#view">mx.views.ViewPort.view</a></div>
+            </div>
+            <hr>
+          </div><a name="viewController"></a><div id="field" class="detail" override="true">
+            <h3>viewController 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取视图控制器。参见 <a href="../../../html/mx/views/ViewController.html">ViewController</a>。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/views/ViewPort.html#viewController">mx.views.ViewPort.viewController</a></div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取窗体的宽度，可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a>、<a href="#resizeTo">resizeTo</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#width">mx.containers.Container.width</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">640</div>
+            </div>
+            <hr>
+          </div><a name="windowState"></a><div id="field" class="detail">
+            <h3>windowState 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示当前窗体的状态。请使用 <a href="#setWindowState">setWindowState</a> 方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+    <li><b>normal</b> - 正常状态。窗体的大小取决于 <a href="#width">width</a> 和 <a href="#height">height</a> 字段的值。</li>
+    <li><b>maximize</b> - 最大化状态。窗体自动撑满父容器。</li>
+</ul>
+</p></div>
+              <h4>默认值</h4>
+              <div class="h4Content">normal</div>
+            </div>
+            <hr>
+          </div><a name="$body"></a><div id="field" class="detail">
+            <h3>$body 字段
+            </h3>
+            <div class="content">
+              <div class="summary">表示窗体主体部分的 JQuery 对象（不包含标题栏、状态栏的部分）。</div>
+            </div>
+            <hr>
+          </div><a name="$container"></a><div id="field" class="detail" override="true">
+            <h3>$container 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取容器控件中用来包含控件 DOM 元素的占位符。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#$container">mx.containers.Container.$container</a></div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该控件的占位符，该占位符为一个 JQuery 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$e">mx.controls.Control.$e</a></div>
+            </div>
+            <hr>
+          </div><a name="$head"></a><div id="field" class="detail">
+            <h3>$head 字段
+            </h3>
+            <div class="content">
+              <div class="summary">表示标题栏的 JQuery 对象。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onactivate"></a><div id="event" class="detail">
+            <h3>onactivate 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体被激活后将触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onclose"></a><div id="event" class="detail">
+            <h3>onclose 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当前窗体被关闭后将触发该事件。通常调用 <a href="#close">close</a> 方法后会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onclosing"></a><div id="event" class="detail">
+            <h3>onclosing 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体被关闭前将触发该事件。通常调用 <a href="#close">close</a> 等方法前会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">可通过设置 cancel 参数为 true 来取消当前操作。默认为 false。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="onctrladded"></a><div id="event" class="detail" override="true">
+            <h3>onctrladded 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当添加控件到容器后，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">ctrl</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/Control.html">Control</a> 类型或子类型对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#onctrladded">mx.containers.Container.onctrladded</a></div>
+            </div>
+            <hr>
+          </div><a name="onctrlremoved"></a><div id="event" class="detail" override="true">
+            <h3>onctrlremoved 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当从容器移除控件后，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">ctrl</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/Control.html">Control</a> 类型或子类型对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/containers/Container.html#onctrlremoved">mx.containers.Container.onctrlremoved</a></div>
+            </div>
+            <hr>
+          </div><a name="onhide"></a><div id="event" class="detail">
+            <h3>onhide 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体被隐藏或关闭后将触发该事件。通常调用 <a href="#hide">hide</a> 和 <a href="#close">close</a> 等方法后会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onhiding"></a><div id="event" class="detail">
+            <h3>onhiding 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体被隐藏或关闭前将触发该事件。通常调用 <a href="#hide">hide</a> 和 <a href="#close">close</a> 等方法前会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">可通过设置 cancel 参数为 true 来取消当前操作。默认为 false。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="onload"></a><div id="event" class="detail">
+            <h3>onload 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体加载后将触发该事件。当窗体被实例化并调用 <a href="#init">init</a> 进行初始化后，第一次显示在浏览器之前，将触发该事件。该事件在 Window 的全生命周期中仅会触发一次，通常第一次调用 <a href="#show">show</a>、<a href="#showDialog">showDialog</a> 方法后首先会触发该事件，然后才会触发 <a href="#onshown">onshown</a> 事件。</div>
+            </div>
+            <hr>
+          </div><a name="onresize"></a><div id="event" class="detail">
+            <h3>onresize 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体重置大小后将触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onshown"></a><div id="event" class="detail">
+            <h3>onshown 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当窗体在客户端展现后将触发该事件。通常调用 <a href="#show">show</a> 和 <a href="#showDialog">showDialog</a> 等方法后会触发该事件。通常第一次调用 <a href="#show">show</a>、<a href="#showDialog">showDialog</a> 方法后首先会触发该事件，然后才会触发 <a href="#onshown">onshown</a> 事件。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.layouts.LayoutFactoryClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/layouts/index.html">mx.layouts</a><h1 id="class">LayoutFactoryClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.layouts.LayoutFactoryClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/layouts/index.html">mx.layouts</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>LayoutFactoryClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>LayoutFactoryClass</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\layouts\LayoutFactory.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供布局器工厂类。该类在运行时唯一静态实例是 <b>mx.layouts.LayoutFactory</b> 对象。详见 <a href="../../../html/mx/layouts/LayoutFactoryClass.html#createLayout">LayoutFactoryClass.createLayout</a> 方法示例。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#LayoutFactoryClass">LayoutFactoryClass()
+    </a></td>
+                <td>构建 LayoutFactoryClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#createLayout">createLayout(p_layoutType, [p_options])
+    </a><a class="exampleIcon" href="#createLayout"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>根据指定的类型和选项创建布局器。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="LayoutFactoryClass"></a><div id="method" class="detail">
+            <h3>LayoutFactoryClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 LayoutFactoryClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="createLayout"></a><div id="method" class="detail">
+            <h3>createLayout(p_layoutType, [p_options])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">根据指定的类型和选项创建布局器。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_layoutType</b><div class="paramSummary">一个字符串，表示布局器类型（区分大小写）。如果该类型属于 <a href="../../../html/mx/layouts/index.html">mx.layouts</a> 命名空间，可以省略为类型名称（如 mx.layouts.AnchorLayout 可简称为“AnchorLayout”）；否则需要给出完整的类型名称（如“mx.layouts.AnchorLayout”），详见<b>示例 1</b>。
+此外，该参数也可以为一个类型对象，详见<b>示例 2</b>。
+
+<p>
+该参数常见值包括:
+<ul>
+    <li><a href="../../../html/mx/layouts/AnchorLayout.html">AnchorLayout</a></li>
+</ul>
+</p></div>
+                </li>
+                <li><b class="paramName">p_options</b><div class="paramSummary">可选的。一个 JSON 对象，包含创建编辑器的参数及初始值。如“{ dataType: "number", max: 10, min: 0 }”。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">var layout = null;
+
+// 使用类型的全名称创建布局器
+layout = mx.layouts.LayoutFactory.createLayout("mx.layouts.AnchorLayout", {owner: container});
+
+// mx.layouts 命名空间下的布局器，可直接使用类型名称
+layout = mx.layouts.LayoutFactory.createLayout("AnchorLayout", {owner: container});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+              <p></p>
+              <h4>示例 2</h4>
+              <div class="h4Content">
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">// 在代码开头需要显示导入类型
+$import("sample.layouts.MyLayout");
+
+...
+
+// 可以将类型对象直接作为 p_layoutType 参数传递。
+var layout = mx.layouts.LayoutFactory.createLayout(
+    sample.layouts.MyLayout,
+    { myProperty1: "some value", myProperty2: "some value" }
+);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+﻿*
+{
+    font-family: 微软雅黑,Arial;
+	font-size:12px;    
+	-webkit-text-size-adjust:none;
+}
+
+html, body
+{
+    margin:0;
+    padding:0;
+}
+
+h1, h2, h3, h4, h5, h6, hr, blockquote,
+form, fieldset, legend, button,
+th, td,
+pre
+{
+    margin: 0;
+    padding: 0;
+}
+
+input,select,textarea
+{
+    margin:0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; }
+a { color:#0000CC; outline:none; }
+button::-moz-focus-inner { border:none; }
+code, kbd, pre, samp { font-family: Courier New, Courier, Monospace; }
+small { font-size: 12px; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+legend { color: #000; }
+fieldset, img { border: none; }
+button, input, select, textarea { font-size: 100%; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+input[type=text],input[type=password],input[type=button],input[type=submit],button
+{
+	height:21px;
+	outline:none;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+}
+
+a:focus, input[type=text]:focus,input[type=password]:focus,input[type=button]:focus,input[type=submit]:focus,button:focus
+{
+    outline:none;
+}
+
+textarea
+{
+	resize:none;
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+}
+
+input[type=button],input[type=submit],button
+{
+	padding:0;
+	margin:0;
+    line-height:18px;
+}
+
+input[type=text],input[type=password]
+{
+	width:145px;
+    line-height/*\**/:17px\9;
+}

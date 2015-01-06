@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datacontainers.DataParams 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datacontainers/index.html">mx.datacontainers</a><h1 id="class">DataParams 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datacontainers.DataParams</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datacontainers/index.html">mx.datacontainers</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>DataParams</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>DataParams</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datacontainers\DataParams.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个数据容器参数的包装类。
+如果参数个数为1，则包装为数据查询参数，例如过滤条件等。
+如果参数个数为2，则第一个参数包装为元数据查询参数，第二个参数包装为数据查询参数。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datacontainers/DataParams.html">DataParams</a> 的示例。<b>说明了如何使用 DataParams 类型封装查询参数</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">	// 如果数据表中已有四个字段，而只需要查询其中两个字段 "deptno,deptname" ，并且过滤出"deptno='0001'"的数据。
+ var dataParams = new mx.datacontainers.DataParams({columns: "deptno,deptname"},{filter: "deptno,deptname"});
+ var dataGrid = new mx.datacontrols.DataGrid({
+    //constructor
+ });
+ dataGrid.load(dataParams);</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#DataParams">DataParams()
+    </a></td>
+                <td>构建 DataParams 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#dataParams">dataParams</a></td>
+                <td>获取或设置一个 JSON 对象，表示数据查询参数。例如：指定查询的过滤条件，{filter: "col1='soso'"}</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#metaParams">metaParams</a></td>
+                <td>获取或设置一个 JSON 对象，表示元数据查询参数。例如：指定查询的数据列，{columns: "col1, col2"}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="DataParams"></a><div id="method" class="detail">
+            <h3>DataParams()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 DataParams 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="dataParams"></a><div id="field" class="detail">
+            <h3>dataParams 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 JSON 对象，表示数据查询参数。例如：指定查询的过滤条件，{filter: "col1='soso'"}</div>
+            </div>
+            <hr>
+          </div><a name="metaParams"></a><div id="field" class="detail">
+            <h3>metaParams 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 JSON 对象，表示元数据查询参数。例如：指定查询的数据列，{columns: "col1, col2"}</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

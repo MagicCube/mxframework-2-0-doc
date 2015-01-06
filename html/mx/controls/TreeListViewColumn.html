@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.TreeListViewColumn 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">TreeListViewColumn 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.TreeListViewColumn</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>TreeListViewColumn</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>TreeListViewColumn</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\TreeListViewColumn.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个数据项列表控件（<a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 类型）中列的类。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#TreeListViewColumn">TreeListViewColumn()
+    </a></td>
+                <td>构建 TreeListViewColumn 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化列。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#formatValue">formatValue(p_value)
+    </a></td>
+                <td>将指定的值按照 <a href="#formatString">formatString</a> 字段进行格式化后返回。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getIndex">getIndex()
+    </a></td>
+                <td>返回该列在 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 <a href="../../../html/mx/controls/TreeListView.html#columns">TreeListView.columns</a> 集合中的序号（0 代表第一个）。如果该对象的 <a href="#owner">owner</a> 字段为空，则返回 -1。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#renderCell">renderCell(p_item, $p_cell)
+    </a><a class="exampleIcon" href="#renderCell"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>将 p_item 中该列的值渲染到 $p_cell 指定的单元格中。
+在列表渲染每一个 <a href="../../../html/mx/controls/ListItem.html">ListItem</a> 时，会按照 <a href="#columns">columns</a> 属性中的顺序依次调用此方法对每一个单元格进行渲染。
+该方法默认会从 p_item 中选取 p_item[name] 字段的值，并调用 <a href="#formatValue">formatValue</a> 方法将该值转换为文本并填充至 $p_cell 中。
+<b>可通过重写该方法实现自定义渲染的效果</b>，详见示例。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setAlign">setAlign(p_align)
+    </a></td>
+                <td>设置 <a href="#align">align</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setLinkUrl">setLinkUrl(p_item, $link)
+    </a></td>
+                <td>自定义设置链接地址。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setText">setText(p_text)
+    </a></td>
+                <td>设置 <a href="#text">text</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#align">align</a></td>
+                <td>获取列文本的对齐方式。请使用 <a href="#setAlign">setAlign</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#allowSorting">allowSorting</a></td>
+                <td>获取或设置一个值，表示该列是否允许排序（只有当 <a href="../../../html/mx/controls/TreeListView.html#allowSorting">TreeListView.allowSorting</a> 和 <a href="../../../html/mx/controls/TreeListViewColumn.html#allowSorting">TreeListViewColumn.allowSorting</a> 都为 true 时，列才允许排序）。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#dataType">dataType</a></td>
+                <td>获取或设置列的 <a href="#text">text</a> 字段的数据类型。该字段必须在初始化前设置。
+<p>
+该字段通常包括:
+<ul>
+    <li><b>string</b></li>
+    <li><b>date</b></li>
+    <li><b>number</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#editor">editor</a></td>
+                <td>设置和获取编辑器。该属性可以使字符串，可以使 JSON 对象， 或者是 编辑器对象实例。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#editorOption">editorOption</a></td>
+                <td>设置和获取一个 JSON 对象，该属性表示编辑器初始化参数。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#formatString">formatString</a></td>
+                <td>获取或设置格式说明符字符，指示如何显示值。该字段必须在初始化前设置（通常在 <a href="#dataType">dataType</a> 字段为“date”或 <a href="#text">text</a>的值为数字时，设置该字段的值）。
+当 <a href="#text">text</a> 的值为数字时，formatString 表示该数字显示的格式（如 “0.0”，表示小数点后保留一位）。当 <a href="#dataType">dataType</a> 字段为“date”时，详见 <a href="../../../html/mx/controls/Calendar.html#formatString">Calendar.formatString</a> 字段；</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#isLink">isLink</a></td>
+                <td>设置或者获取一个 Boolean 值, 该属性表示是否将单元格的文本值以链接形式渲染。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#linkUrl">linkUrl</a></td>
+                <td>设置或者获取一个字符串, 该属性表示链接地址。该属性只有在 <a href="#isLink">isLink</a> 为 true 时生效。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#name">name</a></td>
+                <td>获取或设置 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 的名称。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#owner">owner</a></td>
+                <td>获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 类的实例。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#parent">parent</a></td>
+                <td>获取该对象的数据列分组对象，通常是一个 <a href="../../../html/mx/controls/TreeListViewColumnGroup.html">TreeListViewColumnGroup</a>。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#readOnly">readOnly</a></td>
+                <td>获取或者设置一个Boolean值，该属性表示列是否只读。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#text">text</a></td>
+                <td>获取列中显示的文本。请使用 <a href="#setText">setText</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#visible">visible</a></td>
+                <td>获取和设置一个 Boolean 值，该值表示列的可见性。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#width">width</a></td>
+                <td>获取列的宽度。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="TreeListViewColumn"></a><div id="method" class="detail">
+            <h3>TreeListViewColumn()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 TreeListViewColumn 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化列。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="formatValue"></a><div id="method" class="detail">
+            <h3>formatValue(p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将指定的值按照 <a href="#formatString">formatString</a> 字段进行格式化后返回。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个日期格式，如 “2011-4-1”；或一个数字格式，如 “100.00”。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getIndex"></a><div id="method" class="detail">
+            <h3>getIndex()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回该列在 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 <a href="../../../html/mx/controls/TreeListView.html#columns">TreeListView.columns</a> 集合中的序号（0 代表第一个）。如果该对象的 <a href="#owner">owner</a> 字段为空，则返回 -1。</div>
+            </div>
+            <hr>
+          </div><a name="renderCell"></a><div id="method" class="detail">
+            <h3>renderCell(p_item, $p_cell)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将 p_item 中该列的值渲染到 $p_cell 指定的单元格中。
+在列表渲染每一个 <a href="../../../html/mx/controls/ListItem.html">ListItem</a> 时，会按照 <a href="#columns">columns</a> 属性中的顺序依次调用此方法对每一个单元格进行渲染。
+该方法默认会从 p_item 中选取 p_item[name] 字段的值，并调用 <a href="#formatValue">formatValue</a> 方法将该值转换为文本并填充至 $p_cell 中。
+<b>可通过重写该方法实现自定义渲染的效果</b>，详见示例。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">由外界传入需要渲染的 <a href="../../../html/mx/controls/ListItem.html">ListItem</a> 对象。</div>
+                </li>
+                <li><b class="paramName">$p_cell</b><div class="paramSummary">由外界传入的一个 TD 的 JQuery 对象，表示 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 控件中 table 的一个单元格。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                下列代码重写了默认的 renderCell 逻辑，当该字段的值为 M 时，显示为男子图标；当值为 F 时则显示为女子图标。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">var column = listView.appendColumn(
+{
+     name: "GENDER",
+     caption: "性别",
+
+     renderCell: function(p_item, $p_cell)
+     {
+         var value = p_item.getValue("GENDER");   // 获取 GENDER 字段的值。
+         if (value != null)
+         {
+             // 根据 value 的值，决定 $p_cell 中的 HTML 内容。
+             var icon = (value == 'M' ? "male" : "female");
+             $p_cell.html("&lt;img src='" + $mappath("~/icons/" + icon + ".png") + "'&gt;");
+         }
+         else
+         {
+             // 如果该值为空，则清空单元格的内容。
+             $p_cell.empty();
+         }
+     }
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="setAlign"></a><div id="method" class="detail">
+            <h3>setAlign(p_align)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#align">align</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_align</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setLinkUrl"></a><div id="method" class="detail">
+            <h3>setLinkUrl(p_item, $link)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">自定义设置链接地址。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">$link</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setText"></a><div id="method" class="detail">
+            <h3>setText(p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#text">text</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_text</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="align"></a><div id="field" class="detail">
+            <h3>align 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列文本的对齐方式。请使用 <a href="#setAlign">setAlign</a> 方法设置该字段的值。</div>
+            </div>
+            <hr>
+          </div><a name="allowSorting"></a><div id="field" class="detail">
+            <h3>allowSorting 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个值，表示该列是否允许排序（只有当 <a href="../../../html/mx/controls/TreeListView.html#allowSorting">TreeListView.allowSorting</a> 和 <a href="../../../html/mx/controls/TreeListViewColumn.html#allowSorting">TreeListViewColumn.allowSorting</a> 都为 true 时，列才允许排序）。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="dataType"></a><div id="field" class="detail">
+            <h3>dataType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置列的 <a href="#text">text</a> 字段的数据类型。该字段必须在初始化前设置。
+<p>
+该字段通常包括:
+<ul>
+    <li><b>string</b></li>
+    <li><b>date</b></li>
+    <li><b>number</b></li>
+</ul>
+</p></div>
+              <h4>默认值</h4>
+              <div class="h4Content">string</div>
+            </div>
+            <hr>
+          </div><a name="editor"></a><div id="field" class="detail">
+            <h3>editor 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取编辑器。该属性可以使字符串，可以使 JSON 对象， 或者是 编辑器对象实例。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">TextEditor</div>
+            </div>
+            <hr>
+          </div><a name="editorOption"></a><div id="field" class="detail">
+            <h3>editorOption 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 JSON 对象，该属性表示编辑器初始化参数。</div>
+            </div>
+            <hr>
+          </div><a name="formatString"></a><div id="field" class="detail">
+            <h3>formatString 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置格式说明符字符，指示如何显示值。该字段必须在初始化前设置（通常在 <a href="#dataType">dataType</a> 字段为“date”或 <a href="#text">text</a>的值为数字时，设置该字段的值）。
+当 <a href="#text">text</a> 的值为数字时，formatString 表示该数字显示的格式（如 “0.0”，表示小数点后保留一位）。当 <a href="#dataType">dataType</a> 字段为“date”时，详见 <a href="../../../html/mx/controls/Calendar.html#formatString">Calendar.formatString</a> 字段；</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="isLink"></a><div id="field" class="detail">
+            <h3>isLink 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或者获取一个 Boolean 值, 该属性表示是否将单元格的文本值以链接形式渲染。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false。</div>
+            </div>
+            <hr>
+          </div><a name="linkUrl"></a><div id="field" class="detail">
+            <h3>linkUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或者获取一个字符串, 该属性表示链接地址。该属性只有在 <a href="#isLink">isLink</a> 为 true 时生效。</div>
+            </div>
+            <hr>
+          </div><a name="name"></a><div id="field" class="detail">
+            <h3>name 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 的名称。</div>
+            </div>
+            <hr>
+          </div><a name="owner"></a><div id="field" class="detail">
+            <h3>owner 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 类的实例。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该对象的数据列分组对象，通常是一个 <a href="../../../html/mx/controls/TreeListViewColumnGroup.html">TreeListViewColumnGroup</a>。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="readOnly"></a><div id="field" class="detail">
+            <h3>readOnly 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个Boolean值，该属性表示列是否只读。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="text"></a><div id="field" class="detail">
+            <h3>text 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列中显示的文本。请使用 <a href="#setText">setText</a> 方法设置该字段的值。</div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个 Boolean 值，该值表示列的可见性。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列的宽度。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

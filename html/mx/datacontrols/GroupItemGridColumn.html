@@ -1,0 +1,797 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datacontrols.GroupItemGridColumn 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datacontrols/index.html">mx.datacontrols</a><h1 id="class">GroupItemGridColumn 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datacontrols.GroupItemGridColumn</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datacontrols/index.html">mx.datacontrols</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>GroupItemGridColumn</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>GroupItemGridColumn</span><span id="inherit"></span><a href="../../../html/mx/datacontrols/DataGridColumn.html">DataGridColumn</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datacontrols\GroupItemGrid.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个行分组列表控件（<a href="../../../html/mx/datacontrols/GroupItemGrid.html">GroupItemGrid</a> 类型）中列的类。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#GroupItemGridColumn">GroupItemGridColumn()
+    </a></td>
+                <td>构建 GroupItemGridColumn 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#formatValue">formatValue(p_value)
+    </a></td>
+                <td>将指定的值按照 <a href="#formatString">formatString</a> 字段进行格式化后返回。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getIndex">getIndex()
+    </a></td>
+                <td>返回该列在 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 的 <a href="../../../html/mx/datacontrols/DataGrid.html#columns">DataGrid.columns</a> 集合中的序号（0 代表第一个）。如果该对象的 <a href="#owner">owner</a> 字段为空，则返回 -1。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#renderCell">renderCell(p_item, $p_cell)
+    </a><a class="exampleIcon" href="#renderCell"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>将 p_item 中该列的值渲染到 $p_cell 指定的单元格中。
+在列表渲染每一个 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 时，会按照 <a href="#columns">columns</a> 属性中的顺序依次调用此方法对每一个单元格进行渲染。
+该方法默认会从 p_item 中选取 p_item[name] 字段的值，并调用 <a href="#formatValue">formatValue</a> 方法将该值转换为文本并填充至 $p_cell 中。
+<b>可通过重写该方法实现自定义渲染的效果</b>，详见示例。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setAlign">setAlign([p_align])
+    </a></td>
+                <td>设置 <a href="#align">align</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCaption">setCaption(p_caption)
+    </a></td>
+                <td>设置 <a href="#caption">caption</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDataAlign">setDataAlign([p_dataAlign])
+    </a></td>
+                <td>设置 <a href="#dataAlign">dataAlign</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setStatisticAlign">setStatisticAlign([p_statisticAlign])
+    </a></td>
+                <td>设置 <a href="#statisticAlign">statisticAlign</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setStatisticValue">setStatisticValue(p_value)
+    </a></td>
+                <td>设置 <a href="#statisticValue">statisticValue</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#align">align</a></td>
+                <td>获取列文本的对齐方式。请使用 <a href="#setAlign">setAlign</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#allowSorting">allowSorting</a></td>
+                <td>获取或设置一个值，表示该列是否允许排序（只有当 <a href="../../../html/mx/datacontrols/DataGrid.html#allowSorting">DataGrid.allowSorting</a> 和 <a href="../../../html/mx/datacontrols/DataGridColumn.html#allowSorting">DataGridColumn.allowSorting</a> 都为 true 时，列才允许排序）。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#caption">caption</a></td>
+                <td>获取列中显示的文本。请使用 <a href="#setCaption">setCaption</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssStyle">cssStyle</a></td>
+                <td>设置列的 CSS 样式。该属性必须为 JSON 对象，如 { color:"blue", "background-color":"red" }。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#dataAlign">dataAlign</a></td>
+                <td>获取列数据文本的对齐方式。请使用 <a href="#setDataAlign">setDataAlign</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#dataType">dataType</a></td>
+                <td>获取或设置列的 <a href="#caption">caption</a> 字段的数据类型。该字段必须在初始化前设置。
+<p>
+该字段通常包括:
+<ul>
+    <li><b>string</b></li>
+    <li><b>date</b></li>
+    <li><b>number</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#editorOptions">editorOptions</a></td>
+                <td>一个 JSON 对象，表示数据列对应的编辑器选项，该值可以覆盖已有的 <a href="#editorType">editorType</a> 属性。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#editorType">editorType</a></td>
+                <td>获取或设置编辑器的类型。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>CheckEditor</b></li>
+<li><b>TextEditor</b></li>
+<li><b>DateTimeEditor</b></li>
+<li><b>DropDownEditor</b></li>
+<li><b>LinkEditor</b></li>
+<li><b>NumberEditor</b></li>
+<li><b>TimeEditor</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#formatString">formatString</a></td>
+                <td>获取或设置格式说明符字符，指示如何显示值。
+当 <a href="#dataType">dataType</a> 的值为数字时，formatString 表示该数字显示的格式（如 “0.0”，表示小数点后保留一位）。当 <a href="#dataType">dataType</a> 字段为“date”时，详见 <a href="../../../html/mx/controls/Calendar.html#formatString">Calendar.formatString</a> 字段；</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#isPrint">isPrint</a></td>
+                <td>指示列是否打印。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#isVirtual">isVirtual</a></td>
+                <td>指示字段是否虚拟，如果字段是虚拟的话，其数据将不会与服务器交互</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#items">items</a></td>
+                <td></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#locked">locked</a></td>
+                <td>获取或设置一个 Boolean 值，表示该列是否固定。如果为 true，表示该列固定；反之则不固定。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#name">name</a></td>
+                <td>获取或设置 <a href="../../../html/mx/datacontrols/DataGridColumn.html">DataGridColumn</a> 的名称。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#nullable">nullable</a></td>
+                <td>标示列是否可空，默认是可空的(true表示可以为空，false表示不可为空)</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#owner">owner</a></td>
+                <td>获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 类的实例。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#readOnly">readOnly</a></td>
+                <td>获取或设置一个 Boolean 值，表示该列是否只读。如果为 true，表示不可编辑；反之则可编辑。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#sortOrder">sortOrder</a></td>
+                <td>获取或设置一个 Boolean 值，该值表示是否按升序或降序对 <a href="../../../html/mx/datacontrols/DataGridColumn.html">DataGridColumn</a> 进行排序。如果该值为
+true，表示按升序排序；反之则降序。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#statisticAlign">statisticAlign</a></td>
+                <td>获取列统计行的对齐方式。请使用 <a href="#setStatisticAlign">setStatisticAlign</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#statisticValue">statisticValue</a></td>
+                <td>获取或设置该列的统计值。请使用 <a href="#setStatisticValue">setStatisticValue</a> 方法设置该字段的值。
+<b>使用该属性需要将 <a href="../../../html/mx/datacontrols/DataGrid.html#displayStatisticRow">DataGrid.displayStatisticRow</a> 属性设置为 true。</b></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#styleFormatter">styleFormatter</a></td>
+                <td>一个函数引用，定义了列内单元格的样式设置。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#textMember">textMember</a></td>
+                <td>数据字典中显示值对应的属性。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#valueFormatter">valueFormatter</a></td>
+                <td>一个函数引用，定义了列中单元格的实际值和显示值的之间的转换逻辑。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#valueMember">valueMember</a></td>
+                <td>数据字典中真实值对应的属性。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#valueSeperator">valueSeperator</a></td>
+                <td>数据字典中真实值对应的分隔符。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#visible">visible</a></td>
+                <td>获取和设置数据列是否显示。请使用 <a href="#setVisible">setVisible</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td>获取列的宽度。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="GroupItemGridColumn"></a><div id="method" class="detail">
+            <h3>GroupItemGridColumn()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 GroupItemGridColumn 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#init">mx.datacontrols.DataGridColumn.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="formatValue"></a><div id="method" class="detail" override="true">
+            <h3>formatValue(p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将指定的值按照 <a href="#formatString">formatString</a> 字段进行格式化后返回。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个日期格式，如 “2011-4-1”；或一个数字格式，如 “100.00”。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#formatValue">mx.datacontrols.DataGridColumn.formatValue</a></div>
+            </div>
+            <hr>
+          </div><a name="getIndex"></a><div id="method" class="detail" override="true">
+            <h3>getIndex()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回该列在 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 的 <a href="../../../html/mx/datacontrols/DataGrid.html#columns">DataGrid.columns</a> 集合中的序号（0 代表第一个）。如果该对象的 <a href="#owner">owner</a> 字段为空，则返回 -1。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#getIndex">mx.datacontrols.DataGridColumn.getIndex</a></div>
+            </div>
+            <hr>
+          </div><a name="renderCell"></a><div id="method" class="detail" override="true">
+            <h3>renderCell(p_item, $p_cell)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将 p_item 中该列的值渲染到 $p_cell 指定的单元格中。
+在列表渲染每一个 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 时，会按照 <a href="#columns">columns</a> 属性中的顺序依次调用此方法对每一个单元格进行渲染。
+该方法默认会从 p_item 中选取 p_item[name] 字段的值，并调用 <a href="#formatValue">formatValue</a> 方法将该值转换为文本并填充至 $p_cell 中。
+<b>可通过重写该方法实现自定义渲染的效果</b>，详见示例。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">由外界传入需要渲染的 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 对象。</div>
+                </li>
+                <li><b class="paramName">$p_cell</b><div class="paramSummary">由外界传入的一个 TD 的 JQuery 对象，表示 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 控件中 table 的一个单元格。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#renderCell">mx.datacontrols.DataGridColumn.renderCell</a></div>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                下列代码重写了默认的 renderCell 逻辑，当该字段的值为 M 时，显示为男子图标；当值为 F 时则显示为女子图标。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">var column = dataGrid.appendColumn(
+{
+     name: "GENDER",
+     caption: "性别",
+
+     renderCell: function(p_item, $p_cell)
+     {
+         var value = p_item.getValue("GENDER");   // 获取 GENDER 字段的值。
+         if (value != null)
+         {
+             // 根据 value 的值，决定 $p_cell 中的 HTML 内容。
+             var icon = (value == 'M' ? "male" : "female");
+             $p_cell.html("&lt;img src='" + $mappath("~/icons/" + icon + ".png") + "'&gt;");
+         }
+         else
+         {
+             // 如果该值为空，则清空单元格的内容。
+             $p_cell.empty();
+         }
+     }
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="setAlign"></a><div id="method" class="detail" override="true">
+            <h3>setAlign([p_align])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#align">align</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_align</b><div class="paramSummary">可选的。默认值为“left”。一个字符串表示文本的对齐方式，如“left”，“right”，“center”。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setAlign">mx.datacontrols.DataGridColumn.setAlign</a></div>
+            </div>
+            <hr>
+          </div><a name="setCaption"></a><div id="method" class="detail" override="true">
+            <h3>setCaption(p_caption)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#caption">caption</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_caption</b><div class="paramSummary">一个字符串</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setCaption">mx.datacontrols.DataGridColumn.setCaption</a></div>
+            </div>
+            <hr>
+          </div><a name="setDataAlign"></a><div id="method" class="detail" override="true">
+            <h3>setDataAlign([p_dataAlign])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#dataAlign">dataAlign</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dataAlign</b><div class="paramSummary">可选的。默认值为“left”。一个字符串表示数据文本的对齐方式，如“left”，“right”，“center”。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setDataAlign">mx.datacontrols.DataGridColumn.setDataAlign</a></div>
+            </div>
+            <hr>
+          </div><a name="setStatisticAlign"></a><div id="method" class="detail" override="true">
+            <h3>setStatisticAlign([p_statisticAlign])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#statisticAlign">statisticAlign</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_statisticAlign</b><div class="paramSummary">可选的。默认值为“right”。一个字符串表示数据文本的对齐方式，如“left”，“right”，“center”。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setStatisticAlign">mx.datacontrols.DataGridColumn.setStatisticAlign</a></div>
+            </div>
+            <hr>
+          </div><a name="setStatisticValue"></a><div id="method" class="detail" override="true">
+            <h3>setStatisticValue(p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#statisticValue">statisticValue</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示要显示的统计值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setStatisticValue">mx.datacontrols.DataGridColumn.setStatisticValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示列是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setVisible">mx.datacontrols.DataGridColumn.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#setWidth">mx.datacontrols.DataGridColumn.setWidth</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="align"></a><div id="field" class="detail" override="true">
+            <h3>align 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列文本的对齐方式。请使用 <a href="#setAlign">setAlign</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#align">mx.datacontrols.DataGridColumn.align</a></div>
+            </div>
+            <hr>
+          </div><a name="allowSorting"></a><div id="field" class="detail" override="true">
+            <h3>allowSorting 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个值，表示该列是否允许排序（只有当 <a href="../../../html/mx/datacontrols/DataGrid.html#allowSorting">DataGrid.allowSorting</a> 和 <a href="../../../html/mx/datacontrols/DataGridColumn.html#allowSorting">DataGridColumn.allowSorting</a> 都为 true 时，列才允许排序）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#allowSorting">mx.datacontrols.DataGridColumn.allowSorting</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="caption"></a><div id="field" class="detail" override="true">
+            <h3>caption 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列中显示的文本。请使用 <a href="#setCaption">setCaption</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#caption">mx.datacontrols.DataGridColumn.caption</a></div>
+            </div>
+            <hr>
+          </div><a name="cssStyle"></a><div id="field" class="detail" override="true">
+            <h3>cssStyle 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置列的 CSS 样式。该属性必须为 JSON 对象，如 { color:"blue", "background-color":"red" }。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#cssStyle">mx.datacontrols.DataGridColumn.cssStyle</a></div>
+            </div>
+            <hr>
+          </div><a name="dataAlign"></a><div id="field" class="detail" override="true">
+            <h3>dataAlign 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列数据文本的对齐方式。请使用 <a href="#setDataAlign">setDataAlign</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#dataAlign">mx.datacontrols.DataGridColumn.dataAlign</a></div>
+            </div>
+            <hr>
+          </div><a name="dataType"></a><div id="field" class="detail" override="true">
+            <h3>dataType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置列的 <a href="#caption">caption</a> 字段的数据类型。该字段必须在初始化前设置。
+<p>
+该字段通常包括:
+<ul>
+    <li><b>string</b></li>
+    <li><b>date</b></li>
+    <li><b>number</b></li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#dataType">mx.datacontrols.DataGridColumn.dataType</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">string</div>
+            </div>
+            <hr>
+          </div><a name="editorOptions"></a><div id="field" class="detail" override="true">
+            <h3>editorOptions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个 JSON 对象，表示数据列对应的编辑器选项，该值可以覆盖已有的 <a href="#editorType">editorType</a> 属性。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#editorOptions">mx.datacontrols.DataGridColumn.editorOptions</a></div>
+            </div>
+            <hr>
+          </div><a name="editorType"></a><div id="field" class="detail" override="true">
+            <h3>editorType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置编辑器的类型。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>CheckEditor</b></li>
+<li><b>TextEditor</b></li>
+<li><b>DateTimeEditor</b></li>
+<li><b>DropDownEditor</b></li>
+<li><b>LinkEditor</b></li>
+<li><b>NumberEditor</b></li>
+<li><b>TimeEditor</b></li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#editorType">mx.datacontrols.DataGridColumn.editorType</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">TextEditor</div>
+            </div>
+            <hr>
+          </div><a name="formatString"></a><div id="field" class="detail" override="true">
+            <h3>formatString 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置格式说明符字符，指示如何显示值。
+当 <a href="#dataType">dataType</a> 的值为数字时，formatString 表示该数字显示的格式（如 “0.0”，表示小数点后保留一位）。当 <a href="#dataType">dataType</a> 字段为“date”时，详见 <a href="../../../html/mx/controls/Calendar.html#formatString">Calendar.formatString</a> 字段；</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#formatString">mx.datacontrols.DataGridColumn.formatString</a></div>
+            </div>
+            <hr>
+          </div><a name="isPrint"></a><div id="field" class="detail" override="true">
+            <h3>isPrint 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指示列是否打印。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#isPrint">mx.datacontrols.DataGridColumn.isPrint</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="isVirtual"></a><div id="field" class="detail" override="true">
+            <h3>isVirtual 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指示字段是否虚拟，如果字段是虚拟的话，其数据将不会与服务器交互</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#isVirtual">mx.datacontrols.DataGridColumn.isVirtual</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="items"></a><div id="field" class="detail" override="true">
+            <h3>items 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#items">mx.datacontrols.DataGridColumn.items</a></div>
+            </div>
+            <hr>
+          </div><a name="locked"></a><div id="field" class="detail" override="true">
+            <h3>locked 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，表示该列是否固定。如果为 true，表示该列固定；反之则不固定。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#locked">mx.datacontrols.DataGridColumn.locked</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="name"></a><div id="field" class="detail" override="true">
+            <h3>name 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置 <a href="../../../html/mx/datacontrols/DataGridColumn.html">DataGridColumn</a> 的名称。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#name">mx.datacontrols.DataGridColumn.name</a></div>
+            </div>
+            <hr>
+          </div><a name="nullable"></a><div id="field" class="detail" override="true">
+            <h3>nullable 字段
+            </h3>
+            <div class="content">
+              <div class="summary">标示列是否可空，默认是可空的(true表示可以为空，false表示不可为空)</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#nullable">mx.datacontrols.DataGridColumn.nullable</a></div>
+            </div>
+            <hr>
+          </div><a name="owner"></a><div id="field" class="detail" override="true">
+            <h3>owner 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 类的实例。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#owner">mx.datacontrols.DataGridColumn.owner</a></div>
+            </div>
+            <hr>
+          </div><a name="readOnly"></a><div id="field" class="detail" override="true">
+            <h3>readOnly 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，表示该列是否只读。如果为 true，表示不可编辑；反之则可编辑。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#readOnly">mx.datacontrols.DataGridColumn.readOnly</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="sortOrder"></a><div id="field" class="detail" override="true">
+            <h3>sortOrder 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，该值表示是否按升序或降序对 <a href="../../../html/mx/datacontrols/DataGridColumn.html">DataGridColumn</a> 进行排序。如果该值为
+true，表示按升序排序；反之则降序。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#sortOrder">mx.datacontrols.DataGridColumn.sortOrder</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="statisticAlign"></a><div id="field" class="detail" override="true">
+            <h3>statisticAlign 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列统计行的对齐方式。请使用 <a href="#setStatisticAlign">setStatisticAlign</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#statisticAlign">mx.datacontrols.DataGridColumn.statisticAlign</a></div>
+            </div>
+            <hr>
+          </div><a name="statisticValue"></a><div id="field" class="detail" override="true">
+            <h3>statisticValue 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置该列的统计值。请使用 <a href="#setStatisticValue">setStatisticValue</a> 方法设置该字段的值。
+<b>使用该属性需要将 <a href="../../../html/mx/datacontrols/DataGrid.html#displayStatisticRow">DataGrid.displayStatisticRow</a> 属性设置为 true。</b></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#statisticValue">mx.datacontrols.DataGridColumn.statisticValue</a></div>
+            </div>
+            <hr>
+          </div><a name="styleFormatter"></a><div id="field" class="detail" override="true">
+            <h3>styleFormatter 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个函数引用，定义了列内单元格的样式设置。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#styleFormatter">mx.datacontrols.DataGridColumn.styleFormatter</a></div>
+            </div>
+            <hr>
+          </div><a name="textMember"></a><div id="field" class="detail" override="true">
+            <h3>textMember 字段
+            </h3>
+            <div class="content">
+              <div class="summary">数据字典中显示值对应的属性。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#textMember">mx.datacontrols.DataGridColumn.textMember</a></div>
+            </div>
+            <hr>
+          </div><a name="valueFormatter"></a><div id="field" class="detail" override="true">
+            <h3>valueFormatter 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个函数引用，定义了列中单元格的实际值和显示值的之间的转换逻辑。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#valueFormatter">mx.datacontrols.DataGridColumn.valueFormatter</a></div>
+            </div>
+            <hr>
+          </div><a name="valueMember"></a><div id="field" class="detail" override="true">
+            <h3>valueMember 字段
+            </h3>
+            <div class="content">
+              <div class="summary">数据字典中真实值对应的属性。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#valueMember">mx.datacontrols.DataGridColumn.valueMember</a></div>
+            </div>
+            <hr>
+          </div><a name="valueSeperator"></a><div id="field" class="detail" override="true">
+            <h3>valueSeperator 字段
+            </h3>
+            <div class="content">
+              <div class="summary">数据字典中真实值对应的分隔符。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#valueSeperator">mx.datacontrols.DataGridColumn.valueSeperator</a></div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail" override="true">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置数据列是否显示。请使用 <a href="#setVisible">setVisible</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#visible">mx.datacontrols.DataGridColumn.visible</a></div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取列的宽度。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridColumn.html#width">mx.datacontrols.DataGridColumn.width</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">120</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

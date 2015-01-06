@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.JsonUtilClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">JsonUtilClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.JsonUtilClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>JsonUtilClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>JsonUtilClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\JsonUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个通过 JsonPath 查询对象的工具类。该类在运行时唯一静态实例是 <b>mx.utils.JsonUtil</b> 对象。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#JsonUtilClass">JsonUtilClass()
+    </a></td>
+                <td>构建 JsonUtilClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#getItem">getItem(p_items, p_fieldName, p_value, [p_mode])
+    </a></td>
+                <td>查询获取数组中相应的对象，返回对应的第一个对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getItems">getItems(p_items, p_fieldName, p_value, [p_mode])
+    </a></td>
+                <td>查询获取数组中相应的对象，返回对应的一个数组。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="JsonUtilClass"></a><div id="method" class="detail">
+            <h3>JsonUtilClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 JsonUtilClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="getItem"></a><div id="method" class="detail">
+            <h3>getItem(p_items, p_fieldName, p_value, [p_mode])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">查询获取数组中相应的对象，返回对应的第一个对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary">一个 Json 数组，表示在该对象中查询。</div>
+                </li>
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示要查询的字段 key。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">表示要查询的值。</div>
+                </li>
+                <li><b class="paramName">p_mode</b><div class="paramSummary">可选的。默认值为“1”。一个 Number 值，表示查询 Json 数组的第几层（1 代表仅查询第一层；2 代表仅查询第二层；大于 3 代表递归查询）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getItems"></a><div id="method" class="detail">
+            <h3>getItems(p_items, p_fieldName, p_value, [p_mode])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">查询获取数组中相应的对象，返回对应的一个数组。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary">一个 Json 数组，表示在该对象中查询。</div>
+                </li>
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示要查询的字段 key。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">表示要查询的值。</div>
+                </li>
+                <li><b class="paramName">p_mode</b><div class="paramSummary">可选的。默认值为“1”。一个 Number 值，表示查询 Json 数组的第几层（1 代表仅查询第一层；2 代表仅查询第二层；大于 3 代表递归查询）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

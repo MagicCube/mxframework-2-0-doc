@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.weblets.WebletManagerClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/weblets/index.html">mx.weblets</a><h1 id="class">WebletManagerClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.weblets.WebletManagerClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/weblets/index.html">mx.weblets</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>WebletManagerClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>WebletManagerClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\weblets\WebletManager.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 管理的类。该类在运行时唯一的静态实例是 <b>mx.weblets.WebletManager</b>
+对象。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#WebletManagerClass">WebletManagerClass()
+    </a></td>
+                <td>构建 WebletManagerClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#load">load(p_webletID, [p_callback])
+    </a><a class="exampleIcon" href="#load"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>加载 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a>。如果指定的 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 没有被加载过，
+则当它加载完成后会触发 <a href="../../../html/mx/weblets/Weblet.html#onload">Weblet.onload</a> 事件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#register">register(p_options)
+    </a><a class="exampleIcon" href="#register"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>注册 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a>。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#start">start(p_weblet, [p_args])
+    </a></td>
+                <td>启动 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a>。如果指定的 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 已注册过，
+则当它自动完成后会触发 <a href="../../../html/mx/weblets/Weblet.html#onstart">Weblet.onstart</a> 事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#bundles">bundles</a></td>
+                <td>获取一个集合，包含了所有 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 对应的 bundle 名称。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#weblets">weblets</a></td>
+                <td>获取一个集合，包含所有注册的 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 类型。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="WebletManagerClass"></a><div id="method" class="detail">
+            <h3>WebletManagerClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 WebletManagerClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_webletID, [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a>。如果指定的 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 没有被加载过，
+则当它加载完成后会触发 <a href="../../../html/mx/weblets/Weblet.html#onload">Weblet.onload</a> 事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_webletID</b><div class="paramSummary">一个字符串，表示 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的唯一标识；或者一个 JSON 对象（如：{ webeltID:"dbm", bundleName:"mx" }）。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。默认值为“null”。回调函数。当加载完成后会执行该方法。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                下面的示例说明了如何使用 WebletManager 的 load 方法。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">mx.weblets.WebletManager.load("dbm", function(p_weblet)
+{
+    if (me.weblet == p_weblet)
+    {
+        return;
+    }
+
+    me.weblet = p_weblet;
+    if (me.weblet != null)
+    {
+        me.webletID = me.weblet.id;
+        if (p_args == null)
+        {
+            p_args = {};
+        }
+        p_args.rootViewPort = me;
+        me.context = me.weblet.context;
+        mx.weblets.WebletManager.start(me.weblet, p_args);
+    }
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="register"></a><div id="method" class="detail">
+            <h3>register(p_options)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">注册 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a>。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_options</b><div class="paramSummary">一个 JSON 对象，包含 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的唯一标识、名称、事件等信息。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                下面的示例说明了如何使用 WebletManager 的 register 方法。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">mx.weblets.WebletManager.register({
+    id: "dbm",
+    name: "Dynamic Bind Model",
+    requires: [ "dbm2", "dbm3" ],
+    onload: function(e)
+    {
+        dbm.log("Loaded.");
+    },
+    onstart: function(e)
+    {
+        dbm.log("started.");
+    }
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="start"></a><div id="method" class="detail">
+            <h3>start(p_weblet, [p_args])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">启动 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a>。如果指定的 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 已注册过，
+则当它自动完成后会触发 <a href="../../../html/mx/weblets/Weblet.html#onstart">Weblet.onstart</a> 事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_weblet</b><div class="paramSummary">一个字符串或 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 实例。
+如果为字符串，表示 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的唯一标识；否则为一个 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 实例。</div>
+                </li>
+                <li><b class="paramName">p_args</b><div class="paramSummary">可选的。默认值为“null”。一个 JSON 对象，是 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的
+           <a href="../../../html/mx/weblets/Weblet.html#onstart">Weblet.onstart</a> 事件的参数。该参数默认包含 <a href="../../../html/mx/weblets/WebletContext.html#rootViewPort">WebletContext.rootViewPort</a> 属性和 <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="bundles"></a><div id="field" class="detail">
+            <h3>bundles 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含了所有 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 对应的 bundle 名称。</div>
+            </div>
+            <hr>
+          </div><a name="weblets"></a><div id="field" class="detail">
+            <h3>weblets 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含所有注册的 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 类型。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content"><a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的唯一标识（{@link MXComponent.id}）或
+       <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 在集合中的序号（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

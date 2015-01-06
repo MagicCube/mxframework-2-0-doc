@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.ExcelUtil 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">ExcelUtil 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.ExcelUtil</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>ExcelUtil</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>ExcelUtil</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\ExcelUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个 Excel 的工具类。该类在运行时唯一静态实例是 <b>mx.utils.ExcelUtil</b> 对象。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#ExcelUtil">ExcelUtil()
+    </a></td>
+                <td>构建 ExcelUtil 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#exportExcel">exportExcel()
+    </a></td>
+                <td>根据指定的参数导出 Excel 表格。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setBaseUrl">setBaseUrl(p_baseUrl)
+    </a></td>
+                <td>设置 <a href="#baseUrl">baseUrl</a> 的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setParams">setParams(p_params)
+    </a></td>
+                <td>设置 <a href="#params">params</a> 的值。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#baseUrl">baseUrl</a></td>
+                <td>获取或设置导出 Excel 时对应的服务地址。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#params">params</a></td>
+                <td>获取或设置导出 Excel 时服务端需要的参数。
+该属性为一个 JSON 对象，如（{ tableName:"t_user", columnNames:"name,age,gender", columnCaptions:"姓名,年龄,性别", pageIndex:1, pageSize:20, filter:"gender='男' and age=25", fileName:"用户表格"}）。
+其中 tableName 表示表名称、columnNames 表示数据库列名（以逗号隔开）、columnCaptions 表示导出 Excel 的标题（以逗号隔开）、pageIndex 表示导出第几页的数据（第一页为 1）、pageSize 表示每页的条数、filter 表示过滤条件、fileName 表示导出的文件名。
+<b>这些参数中必须要传的为：</b>tableName、columnCaptions。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="ExcelUtil"></a><div id="method" class="detail">
+            <h3>ExcelUtil()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 ExcelUtil 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="exportExcel"></a><div id="method" class="detail">
+            <h3>exportExcel()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">根据指定的参数导出 Excel 表格。</div>
+            </div>
+            <hr>
+          </div><a name="setBaseUrl"></a><div id="method" class="detail">
+            <h3>setBaseUrl(p_baseUrl)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#baseUrl">baseUrl</a> 的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_baseUrl</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setParams"></a><div id="method" class="detail">
+            <h3>setParams(p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#params">params</a> 的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_params</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="baseUrl"></a><div id="field" class="detail">
+            <h3>baseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置导出 Excel 时对应的服务地址。</div>
+            </div>
+            <hr>
+          </div><a name="params"></a><div id="field" class="detail">
+            <h3>params 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置导出 Excel 时服务端需要的参数。
+该属性为一个 JSON 对象，如（{ tableName:"t_user", columnNames:"name,age,gender", columnCaptions:"姓名,年龄,性别", pageIndex:1, pageSize:20, filter:"gender='男' and age=25", fileName:"用户表格"}）。
+其中 tableName 表示表名称、columnNames 表示数据库列名（以逗号隔开）、columnCaptions 表示导出 Excel 的标题（以逗号隔开）、pageIndex 表示导出第几页的数据（第一页为 1）、pageSize 表示每页的条数、filter 表示过滤条件、fileName 表示导出的文件名。
+<b>这些参数中必须要传的为：</b>tableName、columnCaptions。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

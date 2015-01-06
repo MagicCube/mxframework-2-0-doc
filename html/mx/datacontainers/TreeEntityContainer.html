@@ -1,0 +1,1394 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datacontainers.TreeEntityContainer 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datacontainers/index.html">mx.datacontainers</a><h1 id="class">TreeEntityContainer 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datacontainers.TreeEntityContainer</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datacontainers/index.html">mx.datacontainers</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>TreeEntityContainer</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>TreeEntityContainer</span><span id="inherit"></span><a href="../../../html/mx/datacontainers/EntityContainer.html">EntityContainer</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datacontainers\TreeEntityContainer.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个供 <a href="../../../html/mx/datacontrols/DataTree.html">DataTree</a> 使用的数据容器的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个树形数据容器如何初始化并通过远程服务加载数据的代码示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var container = new mx.datacontainers.TreeEntityContainer(
+{
+    "baseUrl" : "~/rest/getNode"
+});
+container.on("load", function()
+{
+    alert("onload");//触发 onload 事件。
+});
+container.load(node);//为指定的节点加载子节点；如果不传参数，则加载根节点。</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+          <p></p>
+          <h4>示例 2</h4>
+          <div class="h4Content">
+        以下是一个树形数据容器加载本地数据的代码示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var container = new mx.datacontainers.TreeEntityContainer(
+{
+    "type" : "local",//声明容器类型为本地数据。
+    "data" : //本地数据信息。
+    [
+    {
+        "id" : "local_1",
+        "text" : "local_1_text",
+        "hasChildren" : true,
+        "nodes" : //子节点。
+        [
+        {
+            "id" : "local_1_1",
+            "text" : "local_1_1_text",
+            "hasChildren" : false
+        },
+        {
+            "id" : "local_1_2",
+            "text" : "local_1_2_text",
+            "hasChildren" : false
+        } ]
+    },
+    {
+        "id" : "local_2",
+        "text" : "local_2_text",
+        "hasChildren" : false
+    },
+    {
+        "id" : "local_3",
+        "text" : "local_3_text",
+        "hasChildren" : false
+    } ]
+});
+container.on("load", function()
+{
+   alert("onload");//触发 onload 事件。
+});
+container.load();</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#TreeEntityContainer">TreeEntityContainer()
+    </a></td>
+                <td>构建 TreeEntityContainer 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#bind">bind(p_target)
+    </a></td>
+                <td>提供一个方法，用于跟另外一个数据容器绑定，达到数据同步的效果。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#checkSaved">checkSaved(p_id)
+    </a></td>
+                <td>提供一个方法，检查指定数据是否保存过。true 表示数据为修改状态；false表示数据为新增状态，尚未保存。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#clearChanges">clearChanges()
+    </a></td>
+                <td>提供一个方法，清除容器中记录的数据改变信息。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#create">create(p_node, p_options)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getChanges">getChanges()
+    </a></td>
+                <td>提供一个方法，获取数据容器中已改变但未保存的内容。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getNodeEntity">getNodeEntity(p_nodeID)
+    </a></td>
+                <td>提供一个方法，根据主键获取对应的数据对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hasChanged">hasChanged(p_changed)
+    </a></td>
+                <td>获取或者设置 <a href="../../../html/mx/datacontainers/EntityContainer.html#changed">EntityContainer.changed</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#load">load([p_node])
+    </a></td>
+                <td>提供一个方法，为数据容器加载数据对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#load">load([p_node], [p_callBack])
+    </a></td>
+                <td>提供一个方法，为数据容器加载数据对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#remove">remove(p_node)
+    </a></td>
+                <td>提供一个方法，删除一个树节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#remove">remove(p_node, p_delete)
+    </a></td>
+                <td>提供一个方法，删除一个树节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#remove">remove(p_node, [p_callback], [p_path])
+    </a></td>
+                <td>提供一个方法，删除一个树节点。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#save">save([p_path])
+    </a></td>
+                <td>调用后台服务，将新增和修改的内容保存到数据库。 保存前会调用 <a href="#validate">validate</a> 方法检查数据值是否合法。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBaseUrl">setBaseUrl(p_url)
+    </a></td>
+                <td>设置 <a href="#baseUrl">baseUrl</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_entity, p_col, p_value)
+    </a></td>
+                <td>提供一个方法，修改表单中某个字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_entity, p_col, p_value, [p_triggerEvent])
+    </a></td>
+                <td>提供一个方法，修改表单中某个字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_getJsonFlatter">_getJsonFlatter()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_parseArgs">_parseArgs(p_args)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_parseData">_parseData(p_result)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_parseMeta">_parseMeta(p_result)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_prepareLocalData">_prepareLocalData(p_data)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_resetNewData">_resetNewData(p_result)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_setLoadArgs">_setLoadArgs(p_result)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_setLoadingArgs">_setLoadingArgs()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_showError">_showError(p_msgKey, p_context)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#actionOverideBaseUrl">actionOverideBaseUrl</a></td>
+                <td>设置或者获取是否使用action中相应的值作为baseUrl覆盖原有的baseUrl</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#actions">actions</a></td>
+                <td>获取或设置一个 JSON 对象，表示数据容器中各种操作的 path 集合。该字段的字段名表示操作类型，值表示操作路径。
+用户可以根据需要改变改变相应的操作路径。
+<p>
+该字段的字段名包括：
+<ul>
+<li><b>meta</b></li>
+<li><b>data</b></li>
+<li><b>save</b></li>
+<li><b>remove</b></li>
+</ul>
+当<a href="#actionOverideBaseUrl">actionOverideBaseUrl</a>属性设置为true时，则会使用action属性的值重置<a href="#baseUrl">baseUrl</a>属性，
+即将action属性的值作为请求的基准路径。如：action:{remove:"~/mxcasetest/rest/user/"},
+则在me.remove()时会调用setBaseUrl(action['remove'])替换数据容器的baseurl。
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#baseUrl">baseUrl</a></td>
+                <td>获取数据容器的资源 URL。请参见 <a href="../../../html/mx/rpc/RESTClient.html#baseUrl">RESTClient.baseUrl</a>。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#canCreate">canCreate</a></td>
+                <td></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#canModify">canModify</a></td>
+                <td>获取一个 boolean 值，表示当前数据容器是否允许编辑。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#changed">changed</a></td>
+                <td>获取一个 Boolean 值，表示数据容器中是否存在修改过但未保存的数据。 当 <a href="#insertEntity">insertEntity</a> 和
+<a href="#updateEntity">updateEntity</a> 方法被调用时，该字段被置为true；当 <a href="#save">save</a>
+方法被调用时，该字段被还原为false。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#client">client</a></td>
+                <td>获取数据容器的 REST 服务客户端 <a href="../../../html/mx/rpc/RESTClient.html">RESTClient</a>，数据容器通过此客户端调用后台服务。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#data">data</a></td>
+                <td>获取一个对象，表示数据容器中的数据值，通常为一个 JSON 对象或数组。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#dicts">dicts</a></td>
+                <td>获取一个数组，表示数据容器中的数据字典。通过字段名称可以获取该字段对应的所有数据字典。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#iscID">iscID</a></td>
+                <td>获取或设置一个字符串，表示当前容器的操作权限，请求加载请求元数据是传给服务。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#loadDicts">loadDicts</a></td>
+                <td>设置或获取一个 boolean 值，表示默认是否获取字典信息。
+开发时确定字典信息由前端指定，不需要调用服务时，也可以设置为 false。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#loadMeta">loadMeta</a></td>
+                <td>一个 boolean 值，表示当前数据容器是否有元数据信息。 少数控件比如树没有元数据信息时，子类重写成 false。
+开发时确定元数据信息由前端指定，不需要调用服务时，也可以设置为 false。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#mdaParams">mdaParams</a></td>
+                <td>获取或设置一个 JSON 对象，用于保存模型驱动所需要的参数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#meta">meta</a></td>
+                <td>获取一个数组，表示数据容器中的元数据信息，通常包含各个字段的类型及校验信息等内容。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#primaryKey">primaryKey</a></td>
+                <td>获取一个字符串，表示数据的主键（或唯一标识）所在列名。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#type">type</a></td>
+                <td>获取数据容器的类型。必须在创建数据容器时设定该属性。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>remote</b></li>
+<li><b>local</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_changedItems">_changedItems</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_changingType">_changingType</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_lastLoad">_lastLoad</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_loadCallBack">_loadCallBack</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_loadData">_loadData</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_loadDataPara">_loadDataPara</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_loadMetaPara">_loadMetaPara</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_oldData">_oldData</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#_removeCallBack">_removeCallBack</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_saveCallBack">_saveCallBack</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_submitting">_submitting</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#_tempLoadResult">_tempLoadResult</a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event" override="true">
+                <td><a href="#onchanged">onchanged</a></td>
+                <td>当数据容器中的数据值发生改变后，将触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onchanging">onchanging</a></td>
+                <td>当数据容器中的数据值发生改变的时候，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncreated">oncreated</a></td>
+                <td>当数据容器中新增数据对象后，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncreating">oncreating</a></td>
+                <td>当数据容器中新增数据对象时，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#ondeleted">ondeleted</a></td>
+                <td>当数据容器中有数据对象被删除后，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#ondeleting">ondeleting</a></td>
+                <td>当数据容器中有数据对象被删除时，将触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onerror">onerror</a></td>
+                <td>当出现错误时，将触发该事件。主要用于取消等待蒙板。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onload">onload</a></td>
+                <td>以下参数说明仅包含当前子类的扩展参数，基础参数和其他信息请参照
+<a href="../../../html/mx/datacontainers/EntityContainer.html#onload">EntityContainer.onload</a> 事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onloading">onloading</a></td>
+                <td>当数据容器开始加载数据时，将触发该事件。调用 <a href="#load">load</a> 方法时会触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onsaved">onsaved</a></td>
+                <td>当数据容器中的数据对象保存成功后，将触发该事件。调用 <a href="#save">save</a> 方法会触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onsaving">onsaving</a></td>
+                <td>当数据容器中的数据对象保存时，将触发该事件。调用 <a href="#save">save</a> 方法会触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onvalidate">onvalidate</a></td>
+                <td>当数据容器中的数据对象保存时，如果服务端校验不通过，将触发该事件。
+要求服务端在保存失败的时候返回的数据格式如下所示。
+{successful: false, resultValue:
+[[
+{"error":true,"errors":["最后使用时间格式不正确！"],"errorsToDefaulFormatString":"最后使用时间格式不正确！\n","fieldName":"lastTime","messages":[],"msgToDefaulFormatString":""},
+{"error":true,"errors":["必须为整数，介于0-10000之间"],"errorsToDefaulFormatString":"必须为整数，介于0-10000之间\n","fieldName":"pointCount","messages":[],"msgToDefaulFormatString":""}
+]]
+,resultHint: ""}
+，其中嵌套数组表示一条记录的校验结果，数组内的 JSON 表示一个字段的检验结果。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="TreeEntityContainer"></a><div id="method" class="detail">
+            <h3>TreeEntityContainer()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 TreeEntityContainer 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#init">mx.datacontainers.EntityContainer.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="bind"></a><div id="method" class="detail" override="true">
+            <h3>bind(p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，用于跟另外一个数据容器绑定，达到数据同步的效果。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_target</b><div class="paramSummary">一个数据容器，表示要跟当前容器绑定以保持数据同步。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#bind">mx.datacontainers.EntityContainer.bind</a></div>
+            </div>
+            <hr>
+          </div><a name="checkSaved"></a><div id="method" class="detail" override="true">
+            <h3>checkSaved(p_id)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，检查指定数据是否保存过。true 表示数据为修改状态；false表示数据为新增状态，尚未保存。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_id</b><div class="paramSummary">一个数字或字符串，表示要检查的数据主键值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#checkSaved">mx.datacontainers.EntityContainer.checkSaved</a></div>
+            </div>
+            <hr>
+          </div><a name="clearChanges"></a><div id="method" class="detail" override="true">
+            <h3>clearChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，清除容器中记录的数据改变信息。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#clearChanges">mx.datacontainers.EntityContainer.clearChanges</a></div>
+            </div>
+            <hr>
+          </div><a name="create"></a><div id="method" class="detail">
+            <h3>create(p_node, p_options)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_node</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_options</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getChanges"></a><div id="method" class="detail" override="true">
+            <h3>getChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，获取数据容器中已改变但未保存的内容。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#getChanges">mx.datacontainers.EntityContainer.getChanges</a></div>
+            </div>
+            <hr>
+          </div><a name="getNodeEntity"></a><div id="method" class="detail">
+            <h3>getNodeEntity(p_nodeID)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，根据主键获取对应的数据对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_nodeID</b><div class="paramSummary">一个字符串或者数字，表示要查找的数据对象的主键值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="hasChanged"></a><div id="method" class="detail" override="true">
+            <h3>hasChanged(p_changed)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置 <a href="../../../html/mx/datacontainers/EntityContainer.html#changed">EntityContainer.changed</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_changed</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#hasChanged">mx.datacontainers.EntityContainer.hasChanged</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail" override="true">
+            <h3>load([p_node])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，为数据容器加载数据对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_node</b><div class="paramSummary">可选的。一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要加载子节点的节点。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#load">mx.datacontainers.EntityContainer.load</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail" override="true">
+            <h3>load([p_node], [p_callBack])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，为数据容器加载数据对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_node</b><div class="paramSummary">可选的。一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要加载子节点的节点。</div>
+                </li>
+                <li><b class="paramName">p_callBack</b><div class="paramSummary">可选的。一个方法，表示加载完成后的回调函数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#load">mx.datacontainers.EntityContainer.load</a></div>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail">
+            <h3>remove(p_node)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，删除一个树节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_node</b><div class="paramSummary">一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要删除的节点。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail">
+            <h3>remove(p_node, p_delete)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，删除一个树节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_node</b><div class="paramSummary">一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要删除的节点。</div>
+                </li>
+                <li><b class="paramName">p_delete</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail">
+            <h3>remove(p_node, [p_callback], [p_path])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，删除一个树节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_node</b><div class="paramSummary">一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要删除的节点。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个方法，表示删除之后的回调函数。</div>
+                </li>
+                <li><b class="paramName">p_path</b><div class="paramSummary">可选的。一个字符串，表示自定义删除服务的路径。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="save"></a><div id="method" class="detail" override="true">
+            <h3>save([p_path])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">调用后台服务，将新增和修改的内容保存到数据库。 保存前会调用 <a href="#validate">validate</a> 方法检查数据值是否合法。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">可选的。指定的 REST 服务路径，请参见 <a href="../../../html/mx/rpc/RESTClient.html#post">RESTClient.post</a> 方法。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#save">mx.datacontainers.EntityContainer.save</a></div>
+            </div>
+            <hr>
+          </div><a name="setBaseUrl"></a><div id="method" class="detail" override="true">
+            <h3>setBaseUrl(p_url)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#baseUrl">baseUrl</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_url</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#setBaseUrl">mx.datacontainers.EntityContainer.setBaseUrl</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_entity, p_col, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，修改表单中某个字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_entity</b><div class="paramSummary">一个 json 对象，表示要修改的数据容器中的一条数据。</div>
+                </li>
+                <li><b class="paramName">p_col</b><div class="paramSummary">要修改的字段名。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">要修改成的值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#setValue">mx.datacontainers.EntityContainer.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_entity, p_col, p_value, [p_triggerEvent])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，修改表单中某个字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_entity</b><div class="paramSummary">一个 json 对象，表示要修改的数据容器中的一条数据。</div>
+                </li>
+                <li><b class="paramName">p_col</b><div class="paramSummary">要修改的字段名。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">要修改成的值。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">可选的。默认值为“false”。一个 Boolean 值，表示是否要触发事件。如果该值为 true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#setValue">mx.datacontainers.EntityContainer.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="_getJsonFlatter"></a><div id="method" class="detail" override="true">
+            <h3>_getJsonFlatter()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_getJsonFlatter">mx.datacontainers.EntityContainer._getJsonFlatter</a></div>
+            </div>
+            <hr>
+          </div><a name="_parseArgs"></a><div id="method" class="detail" override="true">
+            <h3>_parseArgs(p_args)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_args</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_parseArgs">mx.datacontainers.EntityContainer._parseArgs</a></div>
+            </div>
+            <hr>
+          </div><a name="_parseData"></a><div id="method" class="detail" override="true">
+            <h3>_parseData(p_result)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_result</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_parseData">mx.datacontainers.EntityContainer._parseData</a></div>
+            </div>
+            <hr>
+          </div><a name="_parseMeta"></a><div id="method" class="detail" override="true">
+            <h3>_parseMeta(p_result)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_result</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_parseMeta">mx.datacontainers.EntityContainer._parseMeta</a></div>
+            </div>
+            <hr>
+          </div><a name="_prepareLocalData"></a><div id="method" class="detail" override="true">
+            <h3>_prepareLocalData(p_data)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_prepareLocalData">mx.datacontainers.EntityContainer._prepareLocalData</a></div>
+            </div>
+            <hr>
+          </div><a name="_resetNewData"></a><div id="method" class="detail" override="true">
+            <h3>_resetNewData(p_result)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_result</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_resetNewData">mx.datacontainers.EntityContainer._resetNewData</a></div>
+            </div>
+            <hr>
+          </div><a name="_setLoadArgs"></a><div id="method" class="detail" override="true">
+            <h3>_setLoadArgs(p_result)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_result</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_setLoadArgs">mx.datacontainers.EntityContainer._setLoadArgs</a></div>
+            </div>
+            <hr>
+          </div><a name="_setLoadingArgs"></a><div id="method" class="detail" override="true">
+            <h3>_setLoadingArgs()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_setLoadingArgs">mx.datacontainers.EntityContainer._setLoadingArgs</a></div>
+            </div>
+            <hr>
+          </div><a name="_showError"></a><div id="method" class="detail" override="true">
+            <h3>_showError(p_msgKey, p_context)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_msgKey</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_context</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_showError">mx.datacontainers.EntityContainer._showError</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="actionOverideBaseUrl"></a><div id="field" class="detail" override="true">
+            <h3>actionOverideBaseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或者获取是否使用action中相应的值作为baseUrl覆盖原有的baseUrl</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#actionOverideBaseUrl">mx.datacontainers.EntityContainer.actionOverideBaseUrl</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="actions"></a><div id="field" class="detail" override="true">
+            <h3>actions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 JSON 对象，表示数据容器中各种操作的 path 集合。该字段的字段名表示操作类型，值表示操作路径。
+用户可以根据需要改变改变相应的操作路径。
+<p>
+该字段的字段名包括：
+<ul>
+<li><b>meta</b></li>
+<li><b>data</b></li>
+<li><b>save</b></li>
+<li><b>remove</b></li>
+</ul>
+当<a href="#actionOverideBaseUrl">actionOverideBaseUrl</a>属性设置为true时，则会使用action属性的值重置<a href="#baseUrl">baseUrl</a>属性，
+即将action属性的值作为请求的基准路径。如：action:{remove:"~/mxcasetest/rest/user/"},
+则在me.remove()时会调用setBaseUrl(action['remove'])替换数据容器的baseurl。
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#actions">mx.datacontainers.EntityContainer.actions</a></div>
+            </div>
+            <hr>
+          </div><a name="baseUrl"></a><div id="field" class="detail" override="true">
+            <h3>baseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据容器的资源 URL。请参见 <a href="../../../html/mx/rpc/RESTClient.html#baseUrl">RESTClient.baseUrl</a>。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#baseUrl">mx.datacontainers.EntityContainer.baseUrl</a></div>
+            </div>
+            <hr>
+          </div><a name="canCreate"></a><div id="field" class="detail">
+            <h3>canCreate 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="canModify"></a><div id="field" class="detail" override="true">
+            <h3>canModify 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 boolean 值，表示当前数据容器是否允许编辑。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#canModify">mx.datacontainers.EntityContainer.canModify</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="changed"></a><div id="field" class="detail" override="true">
+            <h3>changed 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示数据容器中是否存在修改过但未保存的数据。 当 <a href="#insertEntity">insertEntity</a> 和
+<a href="#updateEntity">updateEntity</a> 方法被调用时，该字段被置为true；当 <a href="#save">save</a>
+方法被调用时，该字段被还原为false。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#changed">mx.datacontainers.EntityContainer.changed</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="client"></a><div id="field" class="detail" override="true">
+            <h3>client 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据容器的 REST 服务客户端 <a href="../../../html/mx/rpc/RESTClient.html">RESTClient</a>，数据容器通过此客户端调用后台服务。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#client">mx.datacontainers.EntityContainer.client</a></div>
+            </div>
+            <hr>
+          </div><a name="data"></a><div id="field" class="detail" override="true">
+            <h3>data 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个对象，表示数据容器中的数据值，通常为一个 JSON 对象或数组。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#data">mx.datacontainers.EntityContainer.data</a></div>
+            </div>
+            <hr>
+          </div><a name="dicts"></a><div id="field" class="detail" override="true">
+            <h3>dicts 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个数组，表示数据容器中的数据字典。通过字段名称可以获取该字段对应的所有数据字典。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#dicts">mx.datacontainers.EntityContainer.dicts</a></div>
+            </div>
+            <hr>
+          </div><a name="iscID"></a><div id="field" class="detail" override="true">
+            <h3>iscID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示当前容器的操作权限，请求加载请求元数据是传给服务。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#iscID">mx.datacontainers.EntityContainer.iscID</a></div>
+            </div>
+            <hr>
+          </div><a name="loadDicts"></a><div id="field" class="detail" override="true">
+            <h3>loadDicts 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个 boolean 值，表示默认是否获取字典信息。
+开发时确定字典信息由前端指定，不需要调用服务时，也可以设置为 false。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#loadDicts">mx.datacontainers.EntityContainer.loadDicts</a></div>
+            </div>
+            <hr>
+          </div><a name="loadMeta"></a><div id="field" class="detail" override="true">
+            <h3>loadMeta 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个 boolean 值，表示当前数据容器是否有元数据信息。 少数控件比如树没有元数据信息时，子类重写成 false。
+开发时确定元数据信息由前端指定，不需要调用服务时，也可以设置为 false。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#loadMeta">mx.datacontainers.EntityContainer.loadMeta</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="mdaParams"></a><div id="field" class="detail" override="true">
+            <h3>mdaParams 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 JSON 对象，用于保存模型驱动所需要的参数。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#mdaParams">mx.datacontainers.EntityContainer.mdaParams</a></div>
+            </div>
+            <hr>
+          </div><a name="meta"></a><div id="field" class="detail" override="true">
+            <h3>meta 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个数组，表示数据容器中的元数据信息，通常包含各个字段的类型及校验信息等内容。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#meta">mx.datacontainers.EntityContainer.meta</a></div>
+            </div>
+            <hr>
+          </div><a name="primaryKey"></a><div id="field" class="detail" override="true">
+            <h3>primaryKey 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示数据的主键（或唯一标识）所在列名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#primaryKey">mx.datacontainers.EntityContainer.primaryKey</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">id</div>
+            </div>
+            <hr>
+          </div><a name="type"></a><div id="field" class="detail" override="true">
+            <h3>type 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据容器的类型。必须在创建数据容器时设定该属性。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>remote</b></li>
+<li><b>local</b></li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#type">mx.datacontainers.EntityContainer.type</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">remote</div>
+            </div>
+            <hr>
+          </div><a name="_changedItems"></a><div id="field" class="detail" override="true">
+            <h3>_changedItems 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_changedItems">mx.datacontainers.EntityContainer._changedItems</a></div>
+            </div>
+            <hr>
+          </div><a name="_changingType"></a><div id="field" class="detail" override="true">
+            <h3>_changingType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_changingType">mx.datacontainers.EntityContainer._changingType</a></div>
+            </div>
+            <hr>
+          </div><a name="_lastLoad"></a><div id="field" class="detail" override="true">
+            <h3>_lastLoad 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_lastLoad">mx.datacontainers.EntityContainer._lastLoad</a></div>
+            </div>
+            <hr>
+          </div><a name="_loadCallBack"></a><div id="field" class="detail" override="true">
+            <h3>_loadCallBack 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_loadCallBack">mx.datacontainers.EntityContainer._loadCallBack</a></div>
+            </div>
+            <hr>
+          </div><a name="_loadData"></a><div id="field" class="detail" override="true">
+            <h3>_loadData 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_loadData">mx.datacontainers.EntityContainer._loadData</a></div>
+            </div>
+            <hr>
+          </div><a name="_loadDataPara"></a><div id="field" class="detail" override="true">
+            <h3>_loadDataPara 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_loadDataPara">mx.datacontainers.EntityContainer._loadDataPara</a></div>
+            </div>
+            <hr>
+          </div><a name="_loadMetaPara"></a><div id="field" class="detail" override="true">
+            <h3>_loadMetaPara 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_loadMetaPara">mx.datacontainers.EntityContainer._loadMetaPara</a></div>
+            </div>
+            <hr>
+          </div><a name="_oldData"></a><div id="field" class="detail" override="true">
+            <h3>_oldData 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_oldData">mx.datacontainers.EntityContainer._oldData</a></div>
+            </div>
+            <hr>
+          </div><a name="_removeCallBack"></a><div id="field" class="detail">
+            <h3>_removeCallBack 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div><a name="_saveCallBack"></a><div id="field" class="detail" override="true">
+            <h3>_saveCallBack 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_saveCallBack">mx.datacontainers.EntityContainer._saveCallBack</a></div>
+            </div>
+            <hr>
+          </div><a name="_submitting"></a><div id="field" class="detail" override="true">
+            <h3>_submitting 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_submitting">mx.datacontainers.EntityContainer._submitting</a></div>
+            </div>
+            <hr>
+          </div><a name="_tempLoadResult"></a><div id="field" class="detail" override="true">
+            <h3>_tempLoadResult 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#_tempLoadResult">mx.datacontainers.EntityContainer._tempLoadResult</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onchanged"></a><div id="event" class="detail" override="true">
+            <h3>onchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中的数据值发生改变后，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止事件。</div>
+                </li>
+                <li><b class="paramName">entity</b><div class="paramSummary">一个 JSON 对象，表示发生值改变的数据对象。</div>
+                </li>
+                <li><b class="paramName">fieldName</b><div class="paramSummary">一个字符串，表示发生值改变的列名。</div>
+                </li>
+                <li><b class="paramName">value</b><div class="paramSummary">变更之后的值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onchanged">mx.datacontainers.EntityContainer.onchanged</a></div>
+            </div>
+            <hr>
+          </div><a name="onchanging"></a><div id="event" class="detail" override="true">
+            <h3>onchanging 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中的数据值发生改变的时候，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止事件。</div>
+                </li>
+                <li><b class="paramName">entity</b><div class="paramSummary">一个 JSON 对象，表示发生值改变的数据对象。</div>
+                </li>
+                <li><b class="paramName">fieldName</b><div class="paramSummary">一个字符串，表示发生值改变的列名。</div>
+                </li>
+                <li><b class="paramName">oldValue</b><div class="paramSummary">变更之前的值。</div>
+                </li>
+                <li><b class="paramName">newValue</b><div class="paramSummary">变更之后的值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onchanging">mx.datacontainers.EntityContainer.onchanging</a></div>
+            </div>
+            <hr>
+          </div><a name="oncreated"></a><div id="event" class="detail">
+            <h3>oncreated 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中新增数据对象后，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">entity</b><div class="paramSummary">一个 JSON 对象，表示新增的数据对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="oncreating"></a><div id="event" class="detail">
+            <h3>oncreating 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中新增数据对象时，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止事件。</div>
+                </li>
+                <li><b class="paramName">entity</b><div class="paramSummary">一个 JSON 对象，表示新增的数据对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="ondeleted"></a><div id="event" class="detail">
+            <h3>ondeleted 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中有数据对象被删除后，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">node</b><div class="paramSummary">一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要删除的节点。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="ondeleting"></a><div id="event" class="detail">
+            <h3>ondeleting 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中有数据对象被删除时，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止事件。</div>
+                </li>
+                <li><b class="paramName">node</b><div class="paramSummary">一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示要删除的节点。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="onerror"></a><div id="event" class="detail" override="true">
+            <h3>onerror 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当出现错误时，将触发该事件。主要用于取消等待蒙板。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">message</b><div class="paramSummary">一个包含错误信息的字符串。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onerror">mx.datacontainers.EntityContainer.onerror</a></div>
+            </div>
+            <hr>
+          </div><a name="onload"></a><div id="event" class="detail" override="true">
+            <h3>onload 事件
+            </h3>
+            <div class="content">
+              <div class="summary">以下参数说明仅包含当前子类的扩展参数，基础参数和其他信息请参照
+<a href="../../../html/mx/datacontainers/EntityContainer.html#onload">EntityContainer.onload</a> 事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">parentNode</b><div class="paramSummary">一个 <a href="../../../html/mx/datacontrols/DataTreeNode.html">DataTreeNode</a> 对象，表示此次加载子节点的节点。</div>
+                </li>
+                <li><b class="paramName">nodes</b><div class="paramSummary">一个数组，包含本次加载结果中的节点信息。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onload">mx.datacontainers.EntityContainer.onload</a></div>
+            </div>
+            <hr>
+          </div><a name="onloading"></a><div id="event" class="detail" override="true">
+            <h3>onloading 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器开始加载数据时，将触发该事件。调用 <a href="#load">load</a> 方法时会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止当前的加载动作。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onloading">mx.datacontainers.EntityContainer.onloading</a></div>
+            </div>
+            <hr>
+          </div><a name="onsaved"></a><div id="event" class="detail" override="true">
+            <h3>onsaved 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中的数据对象保存成功后，将触发该事件。调用 <a href="#save">save</a> 方法会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">result</b><div class="paramSummary">一个数组，包含保存的数据结果。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onsaved">mx.datacontainers.EntityContainer.onsaved</a></div>
+            </div>
+            <hr>
+          </div><a name="onsaving"></a><div id="event" class="detail" override="true">
+            <h3>onsaving 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中的数据对象保存时，将触发该事件。调用 <a href="#save">save</a> 方法会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止事件。</div>
+                </li>
+                <li><b class="paramName">data</b><div class="paramSummary">当前数据容器中的数据。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onsaving">mx.datacontainers.EntityContainer.onsaving</a></div>
+            </div>
+            <hr>
+          </div><a name="onvalidate"></a><div id="event" class="detail" override="true">
+            <h3>onvalidate 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器中的数据对象保存时，如果服务端校验不通过，将触发该事件。
+要求服务端在保存失败的时候返回的数据格式如下所示。
+{successful: false, resultValue:
+[[
+{"error":true,"errors":["最后使用时间格式不正确！"],"errorsToDefaulFormatString":"最后使用时间格式不正确！\n","fieldName":"lastTime","messages":[],"msgToDefaulFormatString":""},
+{"error":true,"errors":["必须为整数，介于0-10000之间"],"errorsToDefaulFormatString":"必须为整数，介于0-10000之间\n","fieldName":"pointCount","messages":[],"msgToDefaulFormatString":""}
+]]
+,resultHint: ""}
+，其中嵌套数组表示一条记录的校验结果，数组内的 JSON 表示一个字段的检验结果。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontainers/EntityContainer.html#onvalidate">mx.datacontainers.EntityContainer.onvalidate</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

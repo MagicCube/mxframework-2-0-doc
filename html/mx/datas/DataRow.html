@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datas.DataRow 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datas/index.html">mx.datas</a><h1 id="class">DataRow 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datas.DataRow</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datas/index.html">mx.datas</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>DataRow</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>DataRow</span><span id="inherit"></span><a href="../../../html/mx/datas/DataObject.html">DataObject</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datas\DataTable.js</td>
+            </tr>
+          </table>
+          <div class="summary">表示数据表 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中数据行的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 的示例。<b>说明了如何创建一个 <a href="../../../html/mx/datas/DataRow.html">DataRow</a>。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">
+  	var r = new mx.datas.DataRow();
+  	var r2 =new mx.datas.DataRow("张三", 23, "男", "1984");
+  	var r3 =new mx.datas.DataRow(["张三", 23, "男", "1984"]);
+	　　var r4 = new mx.datas.DataRow({v:"张三"},{v:23},{v:1,f:"男"},{v:1987});
+  	var r5 = new mx.datas.DataRow({value:"张三"},{value:23},{value:1,formattedValue:"男"},{value:"1987"});
+  	var r6 = new mx.datas.DataRow({cells:["张三", 23, "男", "1984"]});
+	　　var r7 = new mx.datas.DataRow({cells:[{v:"张三"},{v:23},{v:1,f:"男"},{v:1987}]});
+  	var r8 = new mx.datas.DataRow({cells:[{value:"张三"},{value:23},{value:1,formattedValue:"男"},{value:"1987"}]});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#DataRow">DataRow()
+    </a></td>
+                <td>构建 DataRow 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#addCell">addCell(p_dataCell)
+    </a></td>
+                <td>向当前数据行追加数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#addCells">addCells(p_dataCells)
+    </a></td>
+                <td>向当前数据行追加数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 的集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getCell">getCell(p_index)
+    </a></td>
+                <td>获取当前数据行的指定索引的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getCells">getCells()
+    </a></td>
+                <td>获取 <a href="#cells">cells</a> 的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getCustomProperties">getCustomProperties()
+    </a></td>
+                <td>获取客户端数据对象的自定义属性集合。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getCustomProperty">getCustomProperty(p_key)
+    </a></td>
+                <td>获取客户端数据对象指定自定义属性的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getRowIndex">getRowIndex()
+    </a></td>
+                <td>获取当前数据行的索引。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertCell">insertCell(p_index, p_dataCell)
+    </a></td>
+                <td>设置当前数据行的指定索引位置插入数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 自定义属性值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertCells">insertCells(p_index, p_dataCells)
+    </a></td>
+                <td>设置当前数据行的指定索引位置插入数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 自定义属性值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#remove">remove()
+    </a></td>
+                <td>从所属表格 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中移除自己 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeCell">removeCell(p_dataCell)
+    </a></td>
+                <td>移除的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeCell">removeCell(p_index)
+    </a></td>
+                <td>移除的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setCells">setCells(p_dataCells)
+    </a></td>
+                <td>设置当前数据行数据单元格 <a href="#cells">cells</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCustomeProperty">setCustomeProperty(p_propertyKey, p_propertyValue)
+    </a></td>
+                <td>设置客户端数据对象指定属性的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCustomProperties">setCustomProperties(p_properties)
+    </a></td>
+                <td>设置客户端数据对象的自定义属性集合。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#cells">cells</a></td>
+                <td>获取或设置当前数据行的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#table">table</a></td>
+                <td>获取或设置当前数据行的所属数据表格 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 集合。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="DataRow"></a><div id="method" class="detail">
+            <h3>DataRow()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 DataRow 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="addCell"></a><div id="method" class="detail">
+            <h3>addCell(p_dataCell)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向当前数据行追加数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dataCell</b><div class="paramSummary">准备添加到数据行中的数据单元格。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="addCells"></a><div id="method" class="detail">
+            <h3>addCells(p_dataCells)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向当前数据行追加数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 的集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dataCells</b><div class="paramSummary">准备添加到数据行中的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 的集合。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getCell"></a><div id="method" class="detail">
+            <h3>getCell(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据行的指定索引的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">数据单元格索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getCells"></a><div id="method" class="detail">
+            <h3>getCells()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取 <a href="#cells">cells</a> 的值。</div>
+            </div>
+            <hr>
+          </div><a name="getCustomProperties"></a><div id="method" class="detail" override="true">
+            <h3>getCustomProperties()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取客户端数据对象的自定义属性集合。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#getCustomProperties">mx.datas.DataObject.getCustomProperties</a></div>
+            </div>
+            <hr>
+          </div><a name="getCustomProperty"></a><div id="method" class="detail" override="true">
+            <h3>getCustomProperty(p_key)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取客户端数据对象指定自定义属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">客户端数据对象指定自定义属性名称。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#getCustomProperty">mx.datas.DataObject.getCustomProperty</a></div>
+            </div>
+            <hr>
+          </div><a name="getRowIndex"></a><div id="method" class="detail">
+            <h3>getRowIndex()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据行的索引。</div>
+            </div>
+            <hr>
+          </div><a name="insertCell"></a><div id="method" class="detail">
+            <h3>insertCell(p_index, p_dataCell)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据行的指定索引位置插入数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 自定义属性值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">数据单元格索引。</div>
+                </li>
+                <li><b class="paramName">p_dataCell</b><div class="paramSummary">准备添加到数据行中的数据单元格。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="insertCells"></a><div id="method" class="detail">
+            <h3>insertCells(p_index, p_dataCells)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据行的指定索引位置插入数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 自定义属性值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">数据单元格索引。</div>
+                </li>
+                <li><b class="paramName">p_dataCells</b><div class="paramSummary">准备添加到数据行中的数据单元格集合。如果为数字，表示增加 p_dataCells 个空单元格</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail">
+            <h3>remove()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">从所属表格 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中移除自己 。</div>
+            </div>
+            <hr>
+          </div><a name="removeCell"></a><div id="method" class="detail">
+            <h3>removeCell(p_dataCell)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移除的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dataCell</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="removeCell"></a><div id="method" class="detail">
+            <h3>removeCell(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移除的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">数据单元格索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setCells"></a><div id="method" class="detail">
+            <h3>setCells(p_dataCells)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据行数据单元格 <a href="#cells">cells</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dataCells</b><div class="paramSummary">准备添加到数据行中的数据单元格。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setCustomeProperty"></a><div id="method" class="detail" override="true">
+            <h3>setCustomeProperty(p_propertyKey, p_propertyValue)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置客户端数据对象指定属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_propertyKey</b><div class="paramSummary">自定义属性的名称</div>
+                </li>
+                <li><b class="paramName">p_propertyValue</b><div class="paramSummary">自定义属性的值</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#setCustomeProperty">mx.datas.DataObject.setCustomeProperty</a></div>
+            </div>
+            <hr>
+          </div><a name="setCustomProperties"></a><div id="method" class="detail" override="true">
+            <h3>setCustomProperties(p_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置客户端数据对象的自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_properties</b><div class="paramSummary">客户端数据对象的自定义属性集合.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#setCustomProperties">mx.datas.DataObject.setCustomProperties</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="cells"></a><div id="field" class="detail">
+            <h3>cells 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置当前数据行的数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 集合。</div>
+            </div>
+            <hr>
+          </div><a name="table"></a><div id="field" class="detail">
+            <h3>table 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置当前数据行的所属数据表格 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 集合。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

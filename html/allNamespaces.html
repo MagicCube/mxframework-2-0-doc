@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>
+                    所有命名空间
+                </title>
+    <link rel="stylesheet" href="../css/common.css">
+  </head>
+  <body>
+    <div id="frame" class="namespace">
+      <div id="head">
+        <h1 id="namespace">
+                            所有命名空间
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="namespacesIndex" class="indexSection">
+          <h2>全称</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="namespace">
+                <td><a href="mx/bizlogic/index.html">mx.bizlogic</a></td>
+                <td>提供和模型服务相关的通用的业务处理方法及事件。
+可以二次开发扩展，增加更多通用的业务处理功能。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/charts/index.html">mx.charts</a></td>
+                <td>提供图表控件。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/containers/index.html">mx.containers</a></td>
+                <td>提供基础容器控件，从而使用户可使用这些容器控件与来包含展现基础控件。
+所有容器控件的基类均为 <a href="../html/mx/containers/Container.html">Container</a>。
+容器控件类用来加载布局显示基础控件。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/controls/index.html">mx.controls</a></td>
+                <td>提供基础展现控件，从而使用户可使用这些控件与应用程序进行交互。
+所有控件的基类均为 <a href="../html/mx/controls/Control.html">Control</a>。
+控件类在用户的所有应用程序体验中处于核心地位，因为用户可使用它们来查看、选择或输入数据或其他信息，另一些具备编辑输入功能的控件则封装在 <a href="../html/mx/editors/index.html">mx.editors</a> 命名控件中。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/datacontainers/index.html">mx.datacontainers</a></td>
+                <td>为数据控件提供数据绑定功能，从而使数据控件可使用这些数据容器来来绑定数据。
+所有数据容器的基类均为 <a href="../html/mx/datacontainers/EntityContainer.html">EntityContainer</a>。
+数据容器配合数据控件使用。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/datacontrols/index.html">mx.datacontrols</a></td>
+                <td>提供数据控件，如 表格 <a href="../html/mx/datacontrols/DataGrid.html">DataGrid</a>，
+表单 <a href="../html/mx/datacontrols/DataForm.html">DataForm</a>，树 <a href="../html/mx/datacontrols/DataTree.html">DataTree</a> 等。
+数据控件类用来加载列表，表单，和树的数据显示。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/datacontrols/wizards/index.html">mx.datacontrols.wizards</a></td>
+                <td>提供数据操作向导控件，继承自 <a href="../html/mx/windows/WizardWindow.html">WizardWindow</a>。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/datas/index.html">mx.datas</a></td>
+                <td>提供客户端数据表对象，作为图表控件的数据源。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/editors/index.html">mx.editors</a></td>
+                <td>提供一组编辑器控件。
+所有编辑器的基类均为 <a href="../html/mx/editors/Editor.html">Editor</a>。
+编辑器与表单（<a href="../html/mx/datacontrols/DataForm.html">DataForm</a>）、数据源（<a href="../html/mx/datacontainers/EntityContainer.html">EntityContainer</a>）等进行配合，可以实现数据绑定，从而实现数据展现、编辑的自动化。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/io/index.html">mx.io</a></td>
+                <td>提供文件的输入输出处理类。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/layouts/index.html">mx.layouts</a></td>
+                <td>提供对 <a href="../html/mx/containers/Container.html">Container</a> 进行逻辑布局的类。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/lib/index.html">mx.lib</a></td>
+                <td>提供一系列 JQuery 的扩展插件（示例以平台控件为准，例如 Panel）。包括：
+<ul>
+<li><b>tag()</b> - 获取一个字符串（全小写），表示指定 DOM 元素的 tagName 属性值。</li>
+
+<li><b>setEnabled(p_enabled) or enabled(p_enabled)</b> - 设置指定的元素是否可操作。
+<p>
+<b>参数：</b>
+<ul>
+    <li>p_enabled - 一个 Boolean 值，表示是否可操作。如果为 true，表示可操作；反之不能操作。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.setEnabled(false);
+</p>
+</li>
+
+<li><b>contextmenu(fn)</b> - 订购弹出右键菜单事件（contextmenu 事件）。
+<p>
+<b>参数：</b>
+<ul>
+<li>fn - 一个 Function 对象，表示点击鼠标右键时执行的方法。</li>
+</ul>
+</p>
+</li>
+
+<li><b>centralize(p_horizontal, p_vertical)</b> - 设置指定的元素是否在父容器中水平和垂直方向居中。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_horizontal - 一个 Boolean 对象，表示水平方向是否居中。</li>
+<li>p_vertical - 一个 Boolean 对象，表示垂直方向是否居中。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.centralize(true, true);
+</p>
+</li>
+
+<li><b>absolutePosition()</b> - 获取一个 JSON 对象，表示元素的绝对位置（如 { top:10, left:0 }）。</li>
+
+<li><b>scrollIntoView()</b> - 将指定的元素滚动到视窗显示。</li>
+
+<li><b>popup(p_options, p_callback)</b> - 将指定的元素弹出显示。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_options - 可选。一个 JSON 对象，表示弹出所需的参数（如 { left:0, top:0, offsetWidth:null, offsetHeight:null, animation:"fadeIn", speed:0 }）。</li>
+<li>p_callback - 可选。一个 Function 对象，表示弹出后执行的方法。</li>
+</ul>
+</p>
+</li>
+
+<li><b>movable(p_handleSelector)</b> - 将指定的元素设置为可拖动。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_handleSelector - 可选。一个字符串，表示 JQuery 选择器。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.movable();
+</p>
+</li>
+
+<li><b>expandable(p_title, p_options)</b> - 将指定的元素转换为可收缩展开的形式。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_title - 一个字符串，表示收缩展开时的标题。</li>
+<li>p_options - 可选。一个 JSON 对象，表示初始化时的参数（如 { expanded:true, speed:"fast" }）。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.expandable(p_title);
+</p>
+</li>
+
+<li><b>setBusy(p_isBusy)</b> - 设置指定的容器是否处于忙碌状态。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_isBusy - 一个 Boolean 值，表示是否需要设置为忙碌状态。</li>
+</ul>
+</p>
+</li>
+
+<li><b>resizable(p_resizable, p_options)</b> - 将指定的元素转换为允许以拖动方式改变大小。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_resizable - 一个 Boolean 值，表示是否允许以拖动方式改变大小。</li>
+<li>p_options - 可选。一个 JSON 对象，表示初始化时的参数（如 { min:{ width:50, height:50 }, max:{ width: 100, height:100 }, resizeHorizon:true, resizeVertical:true, onResize:function(){}, onStop:function(){} }）。</li>
+</ul>
+</p>
+</li>
+
+<li><b>opacity(p_opacity)</b> - 将指定的元素设置为透明。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_opacity - 一个数字（0-1），表示透明度。</li>
+</ul>
+</p>
+</li>
+
+<li><b>userSelectable(p_selectable)</b> - 设置指定的元素区域是否可选择。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_selectable - 一个 Boolean 值，表示是否可选择。如果为 true，表示可选择；反之则不能。</li>
+</ul>
+</p>
+</li>
+</ul></td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/permissions/index.html">mx.permissions</a></td>
+                <td>提供和统一权限服务交互的客户端处理类，支持设置客户端组件的权限状态。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/rpc/index.html">mx.rpc</a></td>
+                <td>提供访问 REST 服务的客户端处理类。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/types/index.html">mx.types</a></td>
+                <td>提供 JavaScript 内部对象的原型扩展处理类。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/utils/index.html">mx.utils</a></td>
+                <td>提供 剪贴板、脚本加密、GUID、对象池等处理类。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/views/index.html">mx.views</a></td>
+                <td>提供一个管理一组控件、控件布局、数据、数据绑定的类。视图对应展现框架 MVC 模型中的 view。视图也是一个容器，它继承于
+<a href="../html/mx/containers/Container.html">Container</a>。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/weblets/index.html">mx.weblets</a></td>
+                <td>提供 Web 小程序相关的容器、上下文、加载器、管理类的控件。</td>
+              </tr>
+              <tr class="namespace">
+                <td><a href="mx/windows/index.html">mx.windows</a></td>
+                <td>提供窗体控件，从而使用户可使用这些窗体容器控件来显示弹出框或弹出窗体。
+所有窗体控件的基类均为 <a href="../html/mx/windows/Window.html">Window</a>。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

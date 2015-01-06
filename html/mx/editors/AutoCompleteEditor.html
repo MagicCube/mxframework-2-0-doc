@@ -1,0 +1,2190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.editors.AutoCompleteEditor 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/editors/index.html">mx.editors</a><h1 id="class">AutoCompleteEditor 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.editors.AutoCompleteEditor</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/editors/index.html">mx.editors</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>AutoCompleteEditor</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>AutoCompleteEditor</span><span id="inherit"></span><a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a><span id="inherit"></span><a href="../../../html/mx/editors/Editor.html">Editor</a><span id="inherit"></span><a href="../../../html/mx/controls/Control.html">Control</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\editors\AutoCompleteEditor.js</td>
+            </tr>
+          </table>
+          <div class="summary">智能查询控件。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">	 var auto = new mx.editors.AutoCompleteEditor({
+		url: "~/country"
+  });</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#AutoCompleteEditor">AutoCompleteEditor()
+    </a></td>
+                <td>构建 AutoCompleteEditor 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化方法。执行设置样式并初始化属性等操作。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#appendItems">appendItems(p_data)
+    </a></td>
+                <td>设置本地数据源。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#blur">blur()
+    </a></td>
+                <td>让编辑器失去焦点。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#contains">contains(p_target)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#dropDown">dropDown(p_speed)
+    </a></td>
+                <td>显示下拉框。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#focus">focus()
+    </a></td>
+                <td>让编辑器获得焦点。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getContext">getContext()
+    </a></td>
+                <td>获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEl">getEl()
+    </a></td>
+                <td>获取控件容器对应的 HTML DOM 元素对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getValue">getValue()
+    </a></td>
+                <td>获取编辑器的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hide">hide()
+    </a></td>
+                <td>隐藏控件，设置控件不可见。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hideDropDown">hideDropDown(p_speed)
+    </a></td>
+                <td>隐藏下拉框。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#isReadOnly">isReadOnly()
+    </a></td>
+                <td>获取一个 Boolean 值，当 <a href="#enabled">enabled</a> 字段为 false 或 <a href="#readOnly">readOnly</a> 字段为 true 时，返回 true；否则返回 false。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#markError">markError(p_isError, p_errorTip)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_left, p_top)
+    </a></td>
+                <td>移动控件到指定位置。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#reset">reset([p_triggerEvent])
+    </a></td>
+                <td>重置编辑器。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#resizeTo">resizeTo(p_width, p_height)
+    </a></td>
+                <td>重设控件的大小。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#search">search()
+    </a></td>
+                <td>根据输入的值请求匹配的数据。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#select">select()
+    </a></td>
+                <td>让编辑器获得焦点，并全选文本框中的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setAllowDropDown">setAllowDropDown(p_allowDropDown)
+    </a></td>
+                <td>设置 <a href="#allowDropDown">allowDropDown</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setAllowEditing">setAllowEditing(p_allowEditing)
+    </a></td>
+                <td>设置 <a href="#allowEditing">allowEditing</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBorder">setBorder(p_border)
+    </a></td>
+                <td>设置控件的边框样式。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBottom">setBottom(p_bottom)
+    </a></td>
+                <td>设置 <a href="#bottom">bottom</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCss">setCss(p_css)
+    </a></td>
+                <td>设置 <a href="#css">css</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCssClass">setCssClass(p_cssClass)
+    </a></td>
+                <td>设置 <a href="#cssClass">cssClass</a>} 字段的值</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplay">setDisplay(p_display)
+    </a></td>
+                <td>设置 <a href="#display">display</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplayValue">setDisplayValue(p_displayValue)
+    </a></td>
+                <td>设置显示值。该方法仅修改显示值，不会修改 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值，也不会触发 <a href="../../../html/mx/editors/Editor.html#onchanged">Editor.onchanged</a> 事件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>请参见 <a href="../../../html/mx/controls/Control.html#setEnabled">Control.setEnabled</a> 方法。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFormatString">setFormatString(p_formatString)
+    </a></td>
+                <td>设置 <a href="#formatString">formatString</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHeight">setHeight(p_height)
+    </a></td>
+                <td>设置 <a href="#height">height</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHint">setHint(p_hint)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setLeft">setLeft(p_left)
+    </a></td>
+                <td>设置 <a href="#left">left</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPadding">setPadding(p_padding)
+    </a></td>
+                <td>设置控件的内边距。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPosition">setPosition(p_position)
+    </a></td>
+                <td>设置 <a href="#position">position</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setReadOnly">setReadOnly(p_readOnly)
+    </a></td>
+                <td>设置 <a href="#readOnly">readOnly</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setRight">setRight(p_right)
+    </a></td>
+                <td>设置 <a href="#right">right</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setText">setText(p_text, p_triggerEvent)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setTop">setTop(p_top)
+    </a></td>
+                <td>设置 <a href="#top">top</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_value)
+    </a></td>
+                <td>设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_value, p_displayValue)
+    </a></td>
+                <td>设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_value, p_triggerEvent)
+    </a></td>
+                <td>设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_value, p_displayValue, p_triggerEvent)
+    </a></td>
+                <td>设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#show">show()
+    </a></td>
+                <td>显示控件，设置控件可见。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#validate">validate(p_markError)
+    </a></td>
+                <td>验证当前editor的值
+返回的结果为一个 Boolean 值或者一个 JSON 对象。如“true”、“false”或者“{ successful: false, hint: "验证失败！" }”。
+如果返回的是 JSON 对象，“successful”表示是否成功，“hint”表示显示值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$">$(p_expression)
+    </a></td>
+                <td>该方法与 me.$e.find(p_expression) 等同。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$wrap">$wrap([p_obj])
+    </a></td>
+                <td>返回一个 JQuery 对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_afterDropDown">_afterDropDown()
+    </a></td>
+                <td>受保护的。该方法在显示下拉框之后执行。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_beforeDropDown">_beforeDropDown()
+    </a></td>
+                <td>受保护的。该方法在显示下拉框之前执行。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_initDefaultValue">_initDefaultValue(p_triggerEvent)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_initDropDownControl">_initDropDownControl()
+    </a></td>
+                <td>受保护的。初始化下拉控件。通常为 <a href="../../../html/mx/editors/ListEditor.html">ListEditor</a> 和 <a href="../../../html/mx/controls/Calendar.html">Calendar</a> 控件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#_input_blur">_input_blur()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_resetDropDownControl">_resetDropDownControl()
+    </a></td>
+                <td>受保护的。重置下拉控件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_toggleInputStatus">_toggleInputStatus()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#alias">alias</a></td>
+                <td>获取或设置一个字符串，表示控件的别名。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#allowDropDown">allowDropDown</a></td>
+                <td>获取一个 Boolean 值，该值表示 <a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a> 是否显示下拉框按钮。如果该值为 true，表示显示；反之则不显示。
+请使用 <a href="#setAllowDropDown">setAllowDropDown</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#allowEditing">allowEditing</a></td>
+                <td>获取一个 Boolean 值，该值表示 <a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a> 是否允许用户编辑（编辑功能还受其它属性的限制，参见 <a href="../../../html/mx/editors/DropDownEditor.html">DropDownEditor</a>）。
+如果该值为 true，表示允许编辑；反之则不允许。请使用 <a href="#setAllowEditing">setAllowEditing</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#border">border</a></td>
+                <td>获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#bottom">bottom</a></td>
+                <td>获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#cache">cache</a></td>
+                <td>设置和获取一个缓存控件 {@link mx.editors.AutoCompleteEditor.Cache}。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#cacheLength">cacheLength</a></td>
+                <td>设置和获取一个数值，该值表示缓存控件最大缓存记录数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssClass">cssClass</a></td>
+                <td>指定css伪类名称，设置控件显示样式</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#customValidate">customValidate</a><a class="exampleIcon" href="#customValidate"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>自定义验证规则。
+<b>可通过重写该方法实现自定义验证的效果。</b>
+返回的结果为一个 Boolean 值或者一个 JSON 对象。如“true”、“false”或者“{ successful: false, hint: "验证失败！" }”。
+如果返回的是 JSON 对象，“successful”表示是否成功，“hint”表示显示值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#data">data</a></td>
+                <td>设置和获取一个数组对象，该值表示本地数据源。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#differDisplayValue">differDisplayValue</a></td>
+                <td>获取编辑器的显示值是否与实际值相同。例如，当 {@link DropDownList} 控件的 displayMember 字段和 valueMember 字段不同时，该字段为 true；而多数情况下该字段为 false。
+该字段通常由具体的编辑器设定，请不要在程序中直接修改。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#display">display</a></td>
+                <td>获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayMember">displayMember</a></td>
+                <td>设置和获取显示字段。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#dropDownAnimation">dropDownAnimation</a></td>
+                <td>获取或设置下拉框显示的动画效果。
+<p>
+该字段的可选值包括:
+<ul>
+	   <li><b>none</b> - 无动画效果。</li>
+	   <li><b>show</b> - 无动画效果。</li>
+    <li><b>slideDown</b> - 以滑动的方式显示。</li>
+    <li><b>fadeIn</b> - 淡入效果。</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#dropDownMaxHeight">dropDownMaxHeight</a></td>
+                <td>设置和获取一个数值，该值表示下拉列表的最大高度。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#dropDownMinHeight">dropDownMinHeight</a></td>
+                <td>设置和获取一个数值，该值表示下拉列表的最小高度。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#droppedDown">droppedDown</a></td>
+                <td>获取一个 Boolean 值，该值表示 <a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a> 的下拉框是否显示。如果该值为 true，表示已显示；反之则隐藏。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enableEventOnInit">enableEventOnInit</a></td>
+                <td>一个布尔值，指示在me.init方法中是否触发changed事件，默认是触发的。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#eTag">eTag</a></td>
+                <td>获取控件的标签。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#formatString">formatString</a></td>
+                <td>获取编辑器的日期（如“yyyy-MM-dd”）或数字（如“0.00”）格式化字符串。
+请使用 <a href="#setFormatString">setFormatString</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#height">height</a></td>
+                <td>获取控件的高度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#hint">hint</a></td>
+                <td>获取或者设置一个字符串，该属性表示输入框提示值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#isValidate">isValidate</a></td>
+                <td>获取一个 Boolean 值，表示编辑器是否通过验证。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutConfigs">layoutConfigs</a></td>
+                <td>获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#left">left</a></td>
+                <td>获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#matchCase">matchCase</a></td>
+                <td>设置和获取一个 Boolean 值，该值表示是否开启大小写敏感。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#matchContains">matchContains</a></td>
+                <td>设置和获取一个 Boolean 值，该值表示在字符串比较时是否要在字符串内部匹配。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#matchSubset">matchSubset</a></td>
+                <td>设置和获取一个 Boolean 值，该值表示是否使用本地缓存查询结果。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#max">max</a></td>
+                <td>获取编辑器允许的最大值（仅对 Number 类型有效）。
+该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#maxItems">maxItems</a></td>
+                <td>设置和获取一个值，该值表示数据集 <a href="#data">data</a> 大小的最大值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#min">min</a></td>
+                <td>获取编辑器允许的最小值（仅对 Number 类型有效）。
+该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#minChars">minChars</a></td>
+                <td>设置和获取一个值，该值表示在触发 autoComplete 前用户至少需要输入的字符数。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#mustMatch">mustMatch</a></td>
+                <td>设置和获取一个 Boolean 值，该值表示是否必须匹配。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#padding">padding</a></td>
+                <td>获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#params">params</a></td>
+                <td>设置和获取一个 JSON 对象，该值表示服务请求的自定义参数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#parent">parent</a></td>
+                <td>获取控件所属的父对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#permissionID">permissionID</a></td>
+                <td>获取或设置一个字符串，表示控件的权限标识。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#position">position</a></td>
+                <td>获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#postponesDropDown">postponesDropDown</a></td>
+                <td>获取一个 Boolean 值，该值表示是否在初始化时创建下拉框。如果该值为 true，表示在点击下拉按钮时创建；如果为 false，表示在控件初始化时创建。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#readOnly">readOnly</a></td>
+                <td>获取编辑器是否只读。
+请使用 <a href="#setReadOnly">setReadOnly</a> 方法设置该字段的值。
+请参考 <a href="#isReadOnly">isReadOnly</a> 和 <a href="#setReadOnly">setReadOnly</a> 方法。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#right">right</a></td>
+                <td>获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#selectFirst">selectFirst</a></td>
+                <td>设置和获取一个 Boolean 值，该值表示是否选中下拉列表的第一个值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#speed">speed</a></td>
+                <td>设置或者获取一个数值或者字符串，该属性表示动画的时间长度。当该属性为数值时，表示毫秒数（例如：1000），当该属性为字符串时，可选参数有"slow" 、"fast" 和 "normal"。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#text">text</a></td>
+                <td>获取编辑器的文本值。
+请使用 <a href="#setText">setText</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#textTransform">textTransform</a></td>
+                <td>获取编辑器当前字符转换模式。
+该字段必须在初始化前设置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>uppercase</b> - 表示输入字符转换为大写格式</li>
+     <li><b>lowercase</b> - 表示输入字符转换为小写格式</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#tipPosition">tipPosition</a></td>
+                <td>获取或设置一个字符串，表示编辑器未通过校验时，提示信息的位置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>left</b></li>
+     <li><b>right</b></li>
+     <li><b>top</b></li>
+     <li><b>bottom</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#top">top</a></td>
+                <td>获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#url">url</a></td>
+                <td>设置和获取一个字符串，该值表示服务地址。 服务返回的数据格式为： {successful: true, resultValue: [{ text: "中国", value: "China"}, {text: "美国", value: "America"}]}</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#validateMessage">validateMessage</a></td>
+                <td>获取编辑器验证提示信息。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#validOptions">validOptions</a></td>
+                <td>设置和获取校验参数。该属性与 <a href="#validType">validType</a>配合使用。常用参数请参见 <a href="../../../html/mx/utils/ValidatorClass.html#validator">ValidatorClass.validator</a> 的 p_options。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#validType">validType</a></td>
+                <td>获取或设置一个字符串，表示验证类型。
+该字段可选的值包括：
+<ul>
+    <li><b>DIGIT</b> 数字</li>
+    <li><b>INTEGER</b> 整数</li>
+    <li><b>FLOAT</b> 浮点数</li>
+    <li><b>MINUSINTEGER</b> 负整数</li>
+    <li><b>MINUSFLOAT</b> 负浮点数</li>
+    <li><b>PLUSINTEGER</b> 正整数</li>
+    <li><b>PLUSFLOAT</b> 正浮点数</li>
+    <li><b>CHINESE</b> 中文</li>
+    <li><b>LETTER</b> 字母</li>
+    <li><b>ASCII</b> ASCII 码</li>
+    <li><b>DATE</b> 日期。例如：2007-07-01</li>
+    <li><b>DATETIME</b> 日期时间。例如：2007-07-01 14:28:32</li>
+    <li><b>TIME</b> 时间。例如：14:28:32</li>
+    <li><b>EMAIL</b> 邮箱地址</li>
+    <li><b>IP</b>  IP 地址</li>
+    <li><b>MOBILE</b> 手机号码</li>
+    <li><b>PHONE</b> 电话号码</li>
+    <li><b>URL</b> 统一资源地址</li>
+    <li><b>ZIPCODE</b> 邮政编码</li>
+    <li><b>SQL</b> 是否包含 SQL 关键字</li>
+    <li><b>IDCARD</b> 身份证号码</li>
+    <li><b>REGEXP</b> 正则表达式，支持通过指定正则表达式进行校验。</li>
+</ul></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#value">value</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#valueMember">valueMember</a></td>
+                <td>设置和获取值字段。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#valueType">valueType</a></td>
+                <td>获取一个字符串，表示 <a href="#value">value</a> 的数据类型。
+该字段必须在初始化前设置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>string</b></li>
+     <li><b>int</b></li>
+     <li><b>number</b></li>
+     <li><b>double</b></li>
+     <li><b>float</b></li>
+     <li><b>date</b></li>
+     <li><b>datetime</b></li>
+     <li><b>time</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#visible">visible</a></td>
+                <td>获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取该控件的占位符，该占位符为一个 JQuery 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event" override="true">
+                <td><a href="#onchanged">onchanged</a></td>
+                <td>当编辑器的值发生变化后将触发该事件。通常调用 <a href="#setValue">setValue</a> 方法（其中 p_triggerEvent 参数必须为 true），后会触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#ondeleted">ondeleted</a></td>
+                <td>当删除输入值的时候，将触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#ondropdown">ondropdown</a></td>
+                <td>当下拉框显示的时候，将触发该事件。通常调用 <a href="#dropDown">dropDown</a> 方法时会触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="AutoCompleteEditor"></a><div id="method" class="detail">
+            <h3>AutoCompleteEditor()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 AutoCompleteEditor 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化方法。执行设置样式并初始化属性等操作。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#init">mx.editors.ComboEditor.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="appendItems"></a><div id="method" class="detail">
+            <h3>appendItems(p_data)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置本地数据源。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">一个数组。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="blur"></a><div id="method" class="detail" override="true">
+            <h3>blur()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">让编辑器失去焦点。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#blur">mx.editors.Editor.blur</a></div>
+            </div>
+            <hr>
+          </div><a name="contains"></a><div id="method" class="detail" override="true">
+            <h3>contains(p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_target</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#contains">mx.editors.ComboEditor.contains</a></div>
+            </div>
+            <hr>
+          </div><a name="dropDown"></a><div id="method" class="detail" override="true">
+            <h3>dropDown(p_speed)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示下拉框。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_speed</b><div class="paramSummary">一个数字，表示显示下拉框的毫秒数值（如 1000）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#dropDown">mx.editors.ComboEditor.dropDown</a></div>
+            </div>
+            <hr>
+          </div><a name="focus"></a><div id="method" class="detail" override="true">
+            <h3>focus()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">让编辑器获得焦点。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#focus">mx.editors.Editor.focus</a></div>
+            </div>
+            <hr>
+          </div><a name="getContext"></a><div id="method" class="detail" override="true">
+            <h3>getContext()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getContext">mx.controls.Control.getContext</a></div>
+            </div>
+            <hr>
+          </div><a name="getEl"></a><div id="method" class="detail" override="true">
+            <h3>getEl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件容器对应的 HTML DOM 元素对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getEl">mx.controls.Control.getEl</a></div>
+            </div>
+            <hr>
+          </div><a name="getValue"></a><div id="method" class="detail" override="true">
+            <h3>getValue()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#getValue">mx.editors.Editor.getValue</a></div>
+            </div>
+            <hr>
+          </div><a name="hide"></a><div id="method" class="detail" override="true">
+            <h3>hide()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏控件，设置控件不可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#hide">mx.controls.Control.hide</a></div>
+            </div>
+            <hr>
+          </div><a name="hideDropDown"></a><div id="method" class="detail" override="true">
+            <h3>hideDropDown(p_speed)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏下拉框。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_speed</b><div class="paramSummary">参见 <a href="#dropDown">dropDown</a> 方法的参数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#hideDropDown">mx.editors.ComboEditor.hideDropDown</a></div>
+            </div>
+            <hr>
+          </div><a name="isReadOnly"></a><div id="method" class="detail" override="true">
+            <h3>isReadOnly()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，当 <a href="#enabled">enabled</a> 字段为 false 或 <a href="#readOnly">readOnly</a> 字段为 true 时，返回 true；否则返回 false。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#isReadOnly">mx.editors.Editor.isReadOnly</a></div>
+            </div>
+            <hr>
+          </div><a name="markError"></a><div id="method" class="detail" override="true">
+            <h3>markError(p_isError, p_errorTip)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_isError</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_errorTip</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#markError">mx.editors.Editor.markError</a></div>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_left, p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移动控件到指定位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">一个数字，表示 css 样式的 left 属性。</div>
+                </li>
+                <li><b class="paramName">p_top</b><div class="paramSummary">一个数字，表示 css 样式的 top 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#moveTo">mx.controls.Control.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="reset"></a><div id="method" class="detail" override="true">
+            <h3>reset([p_triggerEvent])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重置编辑器。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">可选的。默认值为“false”。指定是否要触发 <a href="#onchanged">onchanged</a> 事件。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#reset">mx.editors.Editor.reset</a></div>
+            </div>
+            <hr>
+          </div><a name="resizeTo"></a><div id="method" class="detail" override="true">
+            <h3>resizeTo(p_width, p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重设控件的大小。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的宽度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#resizeTo">mx.controls.Control.resizeTo</a></div>
+            </div>
+            <hr>
+          </div><a name="search"></a><div id="method" class="detail">
+            <h3>search()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">根据输入的值请求匹配的数据。</div>
+            </div>
+            <hr>
+          </div><a name="select"></a><div id="method" class="detail" override="true">
+            <h3>select()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">让编辑器获得焦点，并全选文本框中的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#select">mx.editors.Editor.select</a></div>
+            </div>
+            <hr>
+          </div><a name="setAllowDropDown"></a><div id="method" class="detail" override="true">
+            <h3>setAllowDropDown(p_allowDropDown)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#allowDropDown">allowDropDown</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_allowDropDown</b><div class="paramSummary">一个 Boolean 值，表示是否显示下拉框按钮。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setAllowDropDown">mx.editors.ComboEditor.setAllowDropDown</a></div>
+            </div>
+            <hr>
+          </div><a name="setAllowEditing"></a><div id="method" class="detail" override="true">
+            <h3>setAllowEditing(p_allowEditing)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#allowEditing">allowEditing</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_allowEditing</b><div class="paramSummary">一个 Boolean 值，表示是否允许用户编辑。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setAllowEditing">mx.editors.ComboEditor.setAllowEditing</a></div>
+            </div>
+            <hr>
+          </div><a name="setBorder"></a><div id="method" class="detail" override="true">
+            <h3>setBorder(p_border)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的边框样式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_border</b><div class="paramSummary">一个字符串，表示css样式的 border 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBorder">mx.controls.Control.setBorder</a></div>
+            </div>
+            <hr>
+          </div><a name="setBottom"></a><div id="method" class="detail" override="true">
+            <h3>setBottom(p_bottom)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#bottom">bottom</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_bottom</b><div class="paramSummary">控件的下边界与父容器下边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBottom">mx.controls.Control.setBottom</a></div>
+            </div>
+            <hr>
+          </div><a name="setCss"></a><div id="method" class="detail" override="true">
+            <h3>setCss(p_css)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#css">css</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_css</b><div class="paramSummary">一个 JSON 对象，表示控件的 CSS 样式。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCss">mx.controls.Control.setCss</a></div>
+            </div>
+            <hr>
+          </div><a name="setCssClass"></a><div id="method" class="detail" override="true">
+            <h3>setCssClass(p_cssClass)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#cssClass">cssClass</a>} 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_cssClass</b><div class="paramSummary">一个String 对象，样式classname</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCssClass">mx.controls.Control.setCssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplay"></a><div id="method" class="detail" override="true">
+            <h3>setDisplay(p_display)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#display">display</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_display</b><div class="paramSummary">css 样式的 display 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setDisplay">mx.controls.Control.setDisplay</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplayValue"></a><div id="method" class="detail" override="true">
+            <h3>setDisplayValue(p_displayValue)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置显示值。该方法仅修改显示值，不会修改 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值，也不会触发 <a href="../../../html/mx/editors/Editor.html#onchanged">Editor.onchanged</a> 事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_displayValue</b><div class="paramSummary">一个字符串，表示要设置的显示值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setDisplayValue">mx.editors.ComboEditor.setDisplayValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">请参见 <a href="../../../html/mx/controls/Control.html#setEnabled">Control.setEnabled</a> 方法。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#setEnabled">mx.editors.Editor.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setFormatString"></a><div id="method" class="detail" override="true">
+            <h3>setFormatString(p_formatString)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#formatString">formatString</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_formatString</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#setFormatString">mx.editors.Editor.setFormatString</a></div>
+            </div>
+            <hr>
+          </div><a name="setHeight"></a><div id="method" class="detail" override="true">
+            <h3>setHeight(p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#height">height</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setHeight">mx.controls.Control.setHeight</a></div>
+            </div>
+            <hr>
+          </div><a name="setHint"></a><div id="method" class="detail" override="true">
+            <h3>setHint(p_hint)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_hint</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setHint">mx.editors.ComboEditor.setHint</a></div>
+            </div>
+            <hr>
+          </div><a name="setLeft"></a><div id="method" class="detail" override="true">
+            <h3>setLeft(p_left)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#left">left</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">控件的左边界与父容器左边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setLeft">mx.controls.Control.setLeft</a></div>
+            </div>
+            <hr>
+          </div><a name="setPadding"></a><div id="method" class="detail" override="true">
+            <h3>setPadding(p_padding)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的内边距。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_padding</b><div class="paramSummary">一个字符串，表示css样式的 padding 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPadding">mx.controls.Control.setPadding</a></div>
+            </div>
+            <hr>
+          </div><a name="setPosition"></a><div id="method" class="detail" override="true">
+            <h3>setPosition(p_position)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#position">position</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_position</b><div class="paramSummary">一个字符串，表示 css 样式的 position 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPosition">mx.controls.Control.setPosition</a></div>
+            </div>
+            <hr>
+          </div><a name="setReadOnly"></a><div id="method" class="detail" override="true">
+            <h3>setReadOnly(p_readOnly)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#readOnly">readOnly</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_readOnly</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#setReadOnly">mx.editors.Editor.setReadOnly</a></div>
+            </div>
+            <hr>
+          </div><a name="setRight"></a><div id="method" class="detail" override="true">
+            <h3>setRight(p_right)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#right">right</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_right</b><div class="paramSummary">控件的右边界与父容器右边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setRight">mx.controls.Control.setRight</a></div>
+            </div>
+            <hr>
+          </div><a name="setText"></a><div id="method" class="detail" override="true">
+            <h3>setText(p_text, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_text</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#setText">mx.editors.Editor.setText</a></div>
+            </div>
+            <hr>
+          </div><a name="setTop"></a><div id="method" class="detail" override="true">
+            <h3>setTop(p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#top">top</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_top</b><div class="paramSummary">控件的上边界与父容器上边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setTop">mx.controls.Control.setTop</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示实际值。详见 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setValue">mx.editors.ComboEditor.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_value, p_displayValue)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示实际值。详见 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段。</div>
+                </li>
+                <li><b class="paramName">p_displayValue</b><div class="paramSummary">一个字符串，表示显示值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setValue">mx.editors.ComboEditor.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_value, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示实际值。详见 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="../../../html/mx/editors/Editor.html#onchanged">Editor.onchanged</a> 事件。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setValue">mx.editors.ComboEditor.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_value, p_displayValue, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示实际值。详见 <a href="../../../html/mx/editors/Editor.html#value">Editor.value</a> 字段。</div>
+                </li>
+                <li><b class="paramName">p_displayValue</b><div class="paramSummary">一个字符串，表示显示值。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="../../../html/mx/editors/Editor.html#onchanged">Editor.onchanged</a> 事件。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#setValue">mx.editors.ComboEditor.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示控件是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setVisible">mx.controls.Control.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的高度,可以是数字（如 500）、字符串（如“500px”或“50%”）.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setWidth">mx.controls.Control.setWidth</a></div>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail" override="true">
+            <h3>show()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示控件，设置控件可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#show">mx.controls.Control.show</a></div>
+            </div>
+            <hr>
+          </div><a name="validate"></a><div id="method" class="detail" override="true">
+            <h3>validate(p_markError)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">验证当前editor的值
+返回的结果为一个 Boolean 值或者一个 JSON 对象。如“true”、“false”或者“{ successful: false, hint: "验证失败！" }”。
+如果返回的是 JSON 对象，“successful”表示是否成功，“hint”表示显示值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_markError</b><div class="paramSummary">一个布尔值，是否标记错误提示。true表示标记，默认为false</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#validate">mx.editors.Editor.validate</a></div>
+            </div>
+            <hr>
+          </div><a name="$"></a><div id="method" class="detail" override="true">
+            <h3>$(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">该方法与 me.$e.find(p_expression) 等同。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$">mx.controls.Control.$</a></div>
+            </div>
+            <hr>
+          </div><a name="$wrap"></a><div id="method" class="detail" override="true">
+            <h3>$wrap([p_obj])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_obj</b><div class="paramSummary">可选的。默认值为“me.$e”。一个 JQuery 对象，或继承自 Control 的控件，或字符串，或 HTML DOM 元素。如果参数为 JQuery 对象，则返回本身；如果参数为继承自 Control 的控件，则返回控件的 $e 对象；如果参数为字符串，则返回以字符串为选择器的 JQuery 对象；如果参数为空，则返回控件本身的 $e 对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$wrap">mx.controls.Control.$wrap</a></div>
+            </div>
+            <hr>
+          </div><a name="_afterDropDown"></a><div id="method" class="detail" override="true">
+            <h3>_afterDropDown()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。该方法在显示下拉框之后执行。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#_afterDropDown">mx.editors.ComboEditor._afterDropDown</a></div>
+            </div>
+            <hr>
+          </div><a name="_beforeDropDown"></a><div id="method" class="detail" override="true">
+            <h3>_beforeDropDown()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。该方法在显示下拉框之前执行。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#_beforeDropDown">mx.editors.ComboEditor._beforeDropDown</a></div>
+            </div>
+            <hr>
+          </div><a name="_initDefaultValue"></a><div id="method" class="detail" override="true">
+            <h3>_initDefaultValue(p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#_initDefaultValue">mx.editors.Editor._initDefaultValue</a></div>
+            </div>
+            <hr>
+          </div><a name="_initDropDownControl"></a><div id="method" class="detail" override="true">
+            <h3>_initDropDownControl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。初始化下拉控件。通常为 <a href="../../../html/mx/editors/ListEditor.html">ListEditor</a> 和 <a href="../../../html/mx/controls/Calendar.html">Calendar</a> 控件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#_initDropDownControl">mx.editors.ComboEditor._initDropDownControl</a></div>
+            </div>
+            <hr>
+          </div><a name="_input_blur"></a><div id="method" class="detail">
+            <h3>_input_blur()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div><a name="_resetDropDownControl"></a><div id="method" class="detail" override="true">
+            <h3>_resetDropDownControl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。重置下拉控件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#_resetDropDownControl">mx.editors.ComboEditor._resetDropDownControl</a></div>
+            </div>
+            <hr>
+          </div><a name="_toggleInputStatus"></a><div id="method" class="detail" override="true">
+            <h3>_toggleInputStatus()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#_toggleInputStatus">mx.editors.ComboEditor._toggleInputStatus</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="alias"></a><div id="field" class="detail" override="true">
+            <h3>alias 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的别名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#alias">mx.controls.Control.alias</a></div>
+            </div>
+            <hr>
+          </div><a name="allowDropDown"></a><div id="field" class="detail" override="true">
+            <h3>allowDropDown 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，该值表示 <a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a> 是否显示下拉框按钮。如果该值为 true，表示显示；反之则不显示。
+请使用 <a href="#setAllowDropDown">setAllowDropDown</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#allowDropDown">mx.editors.ComboEditor.allowDropDown</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="allowEditing"></a><div id="field" class="detail" override="true">
+            <h3>allowEditing 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，该值表示 <a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a> 是否允许用户编辑（编辑功能还受其它属性的限制，参见 <a href="../../../html/mx/editors/DropDownEditor.html">DropDownEditor</a>）。
+如果该值为 true，表示允许编辑；反之则不允许。请使用 <a href="#setAllowEditing">setAllowEditing</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#allowEditing">mx.editors.ComboEditor.allowEditing</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="border"></a><div id="field" class="detail" override="true">
+            <h3>border 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#border">mx.controls.Control.border</a></div>
+            </div>
+            <hr>
+          </div><a name="bottom"></a><div id="field" class="detail" override="true">
+            <h3>bottom 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#bottom">mx.controls.Control.bottom</a></div>
+            </div>
+            <hr>
+          </div><a name="cache"></a><div id="field" class="detail">
+            <h3>cache 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个缓存控件 {@link mx.editors.AutoCompleteEditor.Cache}。</div>
+            </div>
+            <hr>
+          </div><a name="cacheLength"></a><div id="field" class="detail">
+            <h3>cacheLength 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个数值，该值表示缓存控件最大缓存记录数。</div>
+            </div>
+            <hr>
+          </div><a name="cssClass"></a><div id="field" class="detail" override="true">
+            <h3>cssClass 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指定css伪类名称，设置控件显示样式</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#cssClass">mx.controls.Control.cssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="customValidate"></a><div id="field" class="detail" override="true">
+            <h3>customValidate 字段
+            </h3>
+            <div class="content">
+              <div class="summary">自定义验证规则。
+<b>可通过重写该方法实现自定义验证的效果。</b>
+返回的结果为一个 Boolean 值或者一个 JSON 对象。如“true”、“false”或者“{ successful: false, hint: "验证失败！" }”。
+如果返回的是 JSON 对象，“successful”表示是否成功，“hint”表示显示值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#customValidate">mx.editors.Editor.customValidate</a></div>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">var editor = new mx.editors.TextEditor({
+    customValidate:function(p_editor){
+        // TODO: 验证逻辑
+        // 如果没有验证通过
+        return { successful:false, hint:"验证失败！" }
+    }
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="data"></a><div id="field" class="detail">
+            <h3>data 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个数组对象，该值表示本地数据源。</div>
+            </div>
+            <hr>
+          </div><a name="differDisplayValue"></a><div id="field" class="detail" override="true">
+            <h3>differDisplayValue 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器的显示值是否与实际值相同。例如，当 {@link DropDownList} 控件的 displayMember 字段和 valueMember 字段不同时，该字段为 true；而多数情况下该字段为 false。
+该字段通常由具体的编辑器设定，请不要在程序中直接修改。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#differDisplayValue">mx.editors.Editor.differDisplayValue</a></div>
+            </div>
+            <hr>
+          </div><a name="display"></a><div id="field" class="detail" override="true">
+            <h3>display 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#display">mx.controls.Control.display</a></div>
+            </div>
+            <hr>
+          </div><a name="displayMember"></a><div id="field" class="detail">
+            <h3>displayMember 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取显示字段。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">text</div>
+            </div>
+            <hr>
+          </div><a name="dropDownAnimation"></a><div id="field" class="detail" override="true">
+            <h3>dropDownAnimation 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置下拉框显示的动画效果。
+<p>
+该字段的可选值包括:
+<ul>
+	   <li><b>none</b> - 无动画效果。</li>
+	   <li><b>show</b> - 无动画效果。</li>
+    <li><b>slideDown</b> - 以滑动的方式显示。</li>
+    <li><b>fadeIn</b> - 淡入效果。</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#dropDownAnimation">mx.editors.ComboEditor.dropDownAnimation</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">slideDown</div>
+            </div>
+            <hr>
+          </div><a name="dropDownMaxHeight"></a><div id="field" class="detail">
+            <h3>dropDownMaxHeight 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个数值，该值表示下拉列表的最大高度。</div>
+            </div>
+            <hr>
+          </div><a name="dropDownMinHeight"></a><div id="field" class="detail">
+            <h3>dropDownMinHeight 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个数值，该值表示下拉列表的最小高度。</div>
+            </div>
+            <hr>
+          </div><a name="droppedDown"></a><div id="field" class="detail" override="true">
+            <h3>droppedDown 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，该值表示 <a href="../../../html/mx/editors/ComboEditor.html">ComboEditor</a> 的下拉框是否显示。如果该值为 true，表示已显示；反之则隐藏。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#droppedDown">mx.editors.ComboEditor.droppedDown</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#enabled">mx.controls.Control.enabled</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="enableEventOnInit"></a><div id="field" class="detail" override="true">
+            <h3>enableEventOnInit 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个布尔值，指示在me.init方法中是否触发changed事件，默认是触发的。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#enableEventOnInit">mx.editors.Editor.enableEventOnInit</a></div>
+            </div>
+            <hr>
+          </div><a name="eTag"></a><div id="field" class="detail" override="true">
+            <h3>eTag 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的标签。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#eTag">mx.controls.Control.eTag</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">&lt;div/&gt;</div>
+            </div>
+            <hr>
+          </div><a name="formatString"></a><div id="field" class="detail" override="true">
+            <h3>formatString 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器的日期（如“yyyy-MM-dd”）或数字（如“0.00”）格式化字符串。
+请使用 <a href="#setFormatString">setFormatString</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#formatString">mx.editors.Editor.formatString</a></div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail" override="true">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的高度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#height">mx.editors.Editor.height</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">21</div>
+            </div>
+            <hr>
+          </div><a name="hint"></a><div id="field" class="detail" override="true">
+            <h3>hint 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个字符串，该属性表示输入框提示值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#hint">mx.editors.ComboEditor.hint</a></div>
+            </div>
+            <hr>
+          </div><a name="isValidate"></a><div id="field" class="detail" override="true">
+            <h3>isValidate 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示编辑器是否通过验证。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#isValidate">mx.editors.Editor.isValidate</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="layoutConfigs"></a><div id="field" class="detail" override="true">
+            <h3>layoutConfigs 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#layoutConfigs">mx.controls.Control.layoutConfigs</a></div>
+            </div>
+            <hr>
+          </div><a name="left"></a><div id="field" class="detail" override="true">
+            <h3>left 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#left">mx.controls.Control.left</a></div>
+            </div>
+            <hr>
+          </div><a name="matchCase"></a><div id="field" class="detail">
+            <h3>matchCase 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 Boolean 值，该值表示是否开启大小写敏感。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="matchContains"></a><div id="field" class="detail">
+            <h3>matchContains 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 Boolean 值，该值表示在字符串比较时是否要在字符串内部匹配。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="matchSubset"></a><div id="field" class="detail">
+            <h3>matchSubset 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 Boolean 值，该值表示是否使用本地缓存查询结果。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="max"></a><div id="field" class="detail" override="true">
+            <h3>max 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器允许的最大值（仅对 Number 类型有效）。
+该字段必须在初始化前设置。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#max">mx.editors.Editor.max</a></div>
+            </div>
+            <hr>
+          </div><a name="maxItems"></a><div id="field" class="detail">
+            <h3>maxItems 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个值，该值表示数据集 <a href="#data">data</a> 大小的最大值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">100</div>
+            </div>
+            <hr>
+          </div><a name="min"></a><div id="field" class="detail" override="true">
+            <h3>min 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器允许的最小值（仅对 Number 类型有效）。
+该字段必须在初始化前设置。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#min">mx.editors.Editor.min</a></div>
+            </div>
+            <hr>
+          </div><a name="minChars"></a><div id="field" class="detail">
+            <h3>minChars 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个值，该值表示在触发 autoComplete 前用户至少需要输入的字符数。</div>
+            </div>
+            <hr>
+          </div><a name="mustMatch"></a><div id="field" class="detail">
+            <h3>mustMatch 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 Boolean 值，该值表示是否必须匹配。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="padding"></a><div id="field" class="detail" override="true">
+            <h3>padding 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#padding">mx.controls.Control.padding</a></div>
+            </div>
+            <hr>
+          </div><a name="params"></a><div id="field" class="detail">
+            <h3>params 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 JSON 对象，该值表示服务请求的自定义参数。</div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail" override="true">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件所属的父对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#parent">mx.controls.Control.parent</a></div>
+            </div>
+            <hr>
+          </div><a name="permissionID"></a><div id="field" class="detail" override="true">
+            <h3>permissionID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的权限标识。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#permissionID">mx.controls.Control.permissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="position"></a><div id="field" class="detail" override="true">
+            <h3>position 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#position">mx.controls.Control.position</a></div>
+            </div>
+            <hr>
+          </div><a name="postponesDropDown"></a><div id="field" class="detail" override="true">
+            <h3>postponesDropDown 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，该值表示是否在初始化时创建下拉框。如果该值为 true，表示在点击下拉按钮时创建；如果为 false，表示在控件初始化时创建。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#postponesDropDown">mx.editors.ComboEditor.postponesDropDown</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="readOnly"></a><div id="field" class="detail" override="true">
+            <h3>readOnly 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器是否只读。
+请使用 <a href="#setReadOnly">setReadOnly</a> 方法设置该字段的值。
+请参考 <a href="#isReadOnly">isReadOnly</a> 和 <a href="#setReadOnly">setReadOnly</a> 方法。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#readOnly">mx.editors.Editor.readOnly</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="right"></a><div id="field" class="detail" override="true">
+            <h3>right 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#right">mx.controls.Control.right</a></div>
+            </div>
+            <hr>
+          </div><a name="selectFirst"></a><div id="field" class="detail">
+            <h3>selectFirst 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个 Boolean 值，该值表示是否选中下拉列表的第一个值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true.</div>
+            </div>
+            <hr>
+          </div><a name="speed"></a><div id="field" class="detail" override="true">
+            <h3>speed 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或者获取一个数值或者字符串，该属性表示动画的时间长度。当该属性为数值时，表示毫秒数（例如：1000），当该属性为字符串时，可选参数有"slow" 、"fast" 和 "normal"。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#speed">mx.editors.ComboEditor.speed</a></div>
+            </div>
+            <hr>
+          </div><a name="text"></a><div id="field" class="detail" override="true">
+            <h3>text 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器的文本值。
+请使用 <a href="#setText">setText</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#text">mx.editors.Editor.text</a></div>
+            </div>
+            <hr>
+          </div><a name="textTransform"></a><div id="field" class="detail" override="true">
+            <h3>textTransform 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器当前字符转换模式。
+该字段必须在初始化前设置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>uppercase</b> - 表示输入字符转换为大写格式</li>
+     <li><b>lowercase</b> - 表示输入字符转换为小写格式</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#textTransform">mx.editors.ComboEditor.textTransform</a></div>
+            </div>
+            <hr>
+          </div><a name="tipPosition"></a><div id="field" class="detail" override="true">
+            <h3>tipPosition 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示编辑器未通过校验时，提示信息的位置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>left</b></li>
+     <li><b>right</b></li>
+     <li><b>top</b></li>
+     <li><b>bottom</b></li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#tipPosition">mx.editors.Editor.tipPosition</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">bottom</div>
+            </div>
+            <hr>
+          </div><a name="top"></a><div id="field" class="detail" override="true">
+            <h3>top 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#top">mx.controls.Control.top</a></div>
+            </div>
+            <hr>
+          </div><a name="url"></a><div id="field" class="detail">
+            <h3>url 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取一个字符串，该值表示服务地址。 服务返回的数据格式为： {successful: true, resultValue: [{ text: "中国", value: "China"}, {text: "美国", value: "America"}]}</div>
+            </div>
+            <hr>
+          </div><a name="validateMessage"></a><div id="field" class="detail" override="true">
+            <h3>validateMessage 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取编辑器验证提示信息。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#validateMessage">mx.editors.Editor.validateMessage</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="validOptions"></a><div id="field" class="detail" override="true">
+            <h3>validOptions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取校验参数。该属性与 <a href="#validType">validType</a>配合使用。常用参数请参见 <a href="../../../html/mx/utils/ValidatorClass.html#validator">ValidatorClass.validator</a> 的 p_options。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#validOptions">mx.editors.Editor.validOptions</a></div>
+            </div>
+            <hr>
+          </div><a name="validType"></a><div id="field" class="detail" override="true">
+            <h3>validType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示验证类型。
+该字段可选的值包括：
+<ul>
+    <li><b>DIGIT</b> 数字</li>
+    <li><b>INTEGER</b> 整数</li>
+    <li><b>FLOAT</b> 浮点数</li>
+    <li><b>MINUSINTEGER</b> 负整数</li>
+    <li><b>MINUSFLOAT</b> 负浮点数</li>
+    <li><b>PLUSINTEGER</b> 正整数</li>
+    <li><b>PLUSFLOAT</b> 正浮点数</li>
+    <li><b>CHINESE</b> 中文</li>
+    <li><b>LETTER</b> 字母</li>
+    <li><b>ASCII</b> ASCII 码</li>
+    <li><b>DATE</b> 日期。例如：2007-07-01</li>
+    <li><b>DATETIME</b> 日期时间。例如：2007-07-01 14:28:32</li>
+    <li><b>TIME</b> 时间。例如：14:28:32</li>
+    <li><b>EMAIL</b> 邮箱地址</li>
+    <li><b>IP</b>  IP 地址</li>
+    <li><b>MOBILE</b> 手机号码</li>
+    <li><b>PHONE</b> 电话号码</li>
+    <li><b>URL</b> 统一资源地址</li>
+    <li><b>ZIPCODE</b> 邮政编码</li>
+    <li><b>SQL</b> 是否包含 SQL 关键字</li>
+    <li><b>IDCARD</b> 身份证号码</li>
+    <li><b>REGEXP</b> 正则表达式，支持通过指定正则表达式进行校验。</li>
+</ul></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#validType">mx.editors.ComboEditor.validType</a></div>
+            </div>
+            <hr>
+          </div><a name="value"></a><div id="field" class="detail" override="true">
+            <h3>value 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#value">mx.editors.Editor.value</a></div>
+            </div>
+            <hr>
+          </div><a name="valueMember"></a><div id="field" class="detail">
+            <h3>valueMember 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置和获取值字段。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">value</div>
+            </div>
+            <hr>
+          </div><a name="valueType"></a><div id="field" class="detail" override="true">
+            <h3>valueType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示 <a href="#value">value</a> 的数据类型。
+该字段必须在初始化前设置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>string</b></li>
+     <li><b>int</b></li>
+     <li><b>number</b></li>
+     <li><b>double</b></li>
+     <li><b>float</b></li>
+     <li><b>date</b></li>
+     <li><b>datetime</b></li>
+     <li><b>time</b></li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#valueType">mx.editors.Editor.valueType</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">string</div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail" override="true">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#visible">mx.controls.Control.visible</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#width">mx.editors.ComboEditor.width</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">145</div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该控件的占位符，该占位符为一个 JQuery 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$e">mx.controls.Control.$e</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onchanged"></a><div id="event" class="detail" override="true">
+            <h3>onchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当编辑器的值发生变化后将触发该事件。通常调用 <a href="#setValue">setValue</a> 方法（其中 p_triggerEvent 参数必须为 true），后会触发该事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/Editor.html#onchanged">mx.editors.Editor.onchanged</a></div>
+            </div>
+            <hr>
+          </div><a name="ondeleted"></a><div id="event" class="detail" override="true">
+            <h3>ondeleted 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当删除输入值的时候，将触发该事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#ondeleted">mx.editors.ComboEditor.ondeleted</a></div>
+            </div>
+            <hr>
+          </div><a name="ondropdown"></a><div id="event" class="detail" override="true">
+            <h3>ondropdown 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当下拉框显示的时候，将触发该事件。通常调用 <a href="#dropDown">dropDown</a> 方法时会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">可通过设置 cancel 参数为 true 来取消当前操作。默认为 false。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/editors/ComboEditor.html#ondropdown">mx.editors.ComboEditor.ondropdown</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

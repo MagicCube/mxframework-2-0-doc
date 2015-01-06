@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.windows.MessageBox 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/windows/index.html">mx.windows</a><h1 id="class">MessageBox 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.windows.MessageBox</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/windows/index.html">mx.windows</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>MessageBox</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>MessageBox</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\windows\MessageBox.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个消息提示框的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个使用消息提示框的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var msgBox = new mx.windows.MessageBox( {
+		reusable : true,//一个Boolean值，表示弹出窗口是否可重用。
+		title : "标题",// 一个字符串，表示弹出窗口的标题。
+		showOkButton : true,//一个Boolean值，表示是否显示确定按纽。
+		showCancelButton : true,//一个Boolean值，表示是否显示取消按纽。
+		okButtonText : "确定",//一个字符串，表示第一个按纽名称。
+		cancelButtonText : "取消",// 一个字符串，表示第二个按纽名称。
+		message : "提示内容。",//一个字符串，表示弹出窗口的内容。
+		imgkey : "error",//一个字符串，表示弹出窗口的类型， 支持四种类型：info：提示信息 | warnning：警告信息 | error：错误信息 |prompt：输入框(如果类型是 prompt，可以调用时使用 function(){alert(this.textEditor.text);}来获取输入框的值)
+		okButtonCallback : function()
+		{//一个 Function 对象，表示第一个按钮的回调函数。
+			alert("第一个按纽回调")
+		},
+		cancelButtonCallback : function()
+		{//一个 Function 对象，表示第二个按钮的回调函数。
+			alert("第二个按纽回调")
+		}
+	});
+
+	msgBox.setMessage("setMessage");
+	msgBox.setTitle("setTitle");
+	msgBox.setOkButtonText("获取prompt的值");
+	msgBox.setCancelButtonText("canel");
+	msgBox.setImgkey("prompt");
+
+ msgBox.show( function()
+	{
+		if(this.textEditor!=null){
+			if(this.textEditor.text!=""){
+				alert(this.textEditor.text);
+			}else{
+				alert("输入框值为空");
+			}
+		}else{
+			alert("当前类型不是提示框");
+		}
+	}, function()
+	{
+		alert("点击cancel的回调函数，此回调是在show方法里定义的");
+	});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#MessageBox">MessageBox()
+    </a></td>
+                <td>构建 MessageBox 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#setCancelButtonText">setCancelButtonText(p_text)
+    </a></td>
+                <td>设置取消按钮的显示值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setImgkey">setImgkey(p_imgkey)
+    </a></td>
+                <td>设置 <a href="#imgkey">imgkey</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setMessage">setMessage(p_message)
+    </a></td>
+                <td>设置 <a href="#message">message</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setOkButtonText">setOkButtonText(p_text)
+    </a></td>
+                <td>设置确定按钮的显示值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setTitle">setTitle(p_title)
+    </a></td>
+                <td>设置 <a href="#title">title</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#show">show([p_okBtnCallback], [p_cancelBtnCallback])
+    </a></td>
+                <td>显示消息框。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#cancelButtonCallback">cancelButtonCallback</a></td>
+                <td>点击“取消”按钮后执行的回调函数。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#cancelButtonText">cancelButtonText</a></td>
+                <td>获取或设置取消按钮的显示值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#height">height</a></td>
+                <td>获取或设置消息提示框的高度。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#imgkey">imgkey</a></td>
+                <td>获取或者设置提示框的类型，默认为：info。 支持四种类型：info：提示信息 | warnning：警告信息 | error：错误信息 |
+prompt：输入框。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#message">message</a></td>
+                <td>获取或设置消息框显示内容。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#okButtonCallback">okButtonCallback</a></td>
+                <td>点击“确定”按钮后执行的回调函数。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#okButtonText">okButtonText</a></td>
+                <td>获取或设置确定按钮的显示值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#reusable">reusable</a></td>
+                <td>参见 <a href="../../../html/mx/windows/Window.html#reusable">Window.reusable</a> 字段。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#showCancelButton">showCancelButton</a></td>
+                <td>获取或设置取消按钮是否显示，默认为显示。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#showOkButton">showOkButton</a></td>
+                <td>获取或设置确定按钮是否显示，默认为显示。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#title">title</a></td>
+                <td>获取或设置消息框标题。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#width">width</a></td>
+                <td>获取或设置消息提示框的宽度。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#zIndex">zIndex</a></td>
+                <td>获取或设置窗体的zIndex值，控制窗口的层叠顺序，值大的窗口覆盖值小的窗口,值需大于0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="MessageBox"></a><div id="method" class="detail">
+            <h3>MessageBox()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 MessageBox 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="setCancelButtonText"></a><div id="method" class="detail">
+            <h3>setCancelButtonText(p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置取消按钮的显示值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_text</b><div class="paramSummary">一个字符串，表示取消按钮的显示值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setImgkey"></a><div id="method" class="detail">
+            <h3>setImgkey(p_imgkey)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#imgkey">imgkey</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_imgkey</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setMessage"></a><div id="method" class="detail">
+            <h3>setMessage(p_message)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#message">message</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_message</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setOkButtonText"></a><div id="method" class="detail">
+            <h3>setOkButtonText(p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置确定按钮的显示值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_text</b><div class="paramSummary">一个字符串，表示确定按钮的显示值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setTitle"></a><div id="method" class="detail">
+            <h3>setTitle(p_title)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#title">title</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_title</b><div class="paramSummary">一个字符串，表示弹出框的标题。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail">
+            <h3>show([p_okBtnCallback], [p_cancelBtnCallback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示消息框。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_okBtnCallback</b><div class="paramSummary">可选的。一个 Function 对象，表示确定按钮的回调函数。</div>
+                </li>
+                <li><b class="paramName">p_cancelBtnCallback</b><div class="paramSummary">可选的。一个 Function 对象，表示取消按钮的回调函数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="cancelButtonCallback"></a><div id="field" class="detail">
+            <h3>cancelButtonCallback 字段
+            </h3>
+            <div class="content">
+              <div class="summary">点击“取消”按钮后执行的回调函数。</div>
+            </div>
+            <hr>
+          </div><a name="cancelButtonText"></a><div id="field" class="detail">
+            <h3>cancelButtonText 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置取消按钮的显示值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">取消</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置消息提示框的高度。</div>
+            </div>
+            <hr>
+          </div><a name="imgkey"></a><div id="field" class="detail">
+            <h3>imgkey 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置提示框的类型，默认为：info。 支持四种类型：info：提示信息 | warnning：警告信息 | error：错误信息 |
+prompt：输入框。</div>
+            </div>
+            <hr>
+          </div><a name="message"></a><div id="field" class="detail">
+            <h3>message 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置消息框显示内容。</div>
+            </div>
+            <hr>
+          </div><a name="okButtonCallback"></a><div id="field" class="detail">
+            <h3>okButtonCallback 字段
+            </h3>
+            <div class="content">
+              <div class="summary">点击“确定”按钮后执行的回调函数。</div>
+            </div>
+            <hr>
+          </div><a name="okButtonText"></a><div id="field" class="detail">
+            <h3>okButtonText 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置确定按钮的显示值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">确定</div>
+            </div>
+            <hr>
+          </div><a name="reusable"></a><div id="field" class="detail">
+            <h3>reusable 字段
+            </h3>
+            <div class="content">
+              <div class="summary">参见 <a href="../../../html/mx/windows/Window.html#reusable">Window.reusable</a> 字段。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="showCancelButton"></a><div id="field" class="detail">
+            <h3>showCancelButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置取消按钮是否显示，默认为显示。</div>
+            </div>
+            <hr>
+          </div><a name="showOkButton"></a><div id="field" class="detail">
+            <h3>showOkButton 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置确定按钮是否显示，默认为显示。</div>
+            </div>
+            <hr>
+          </div><a name="title"></a><div id="field" class="detail">
+            <h3>title 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置消息框标题。</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置消息提示框的宽度。</div>
+            </div>
+            <hr>
+          </div><a name="zIndex"></a><div id="field" class="detail">
+            <h3>zIndex 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置窗体的zIndex值，控制窗口的层叠顺序，值大的窗口覆盖值小的窗口,值需大于0</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

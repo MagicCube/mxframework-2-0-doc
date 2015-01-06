@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.lib 命名空间</title>
+    <link rel="stylesheet" href="../../../css/common.css">
+  </head>
+  <body>
+    <div id="frame" class="namespace">
+      <div id="head">
+        <h1 id="namespace">mx.lib 命名空间
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="namespaceDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.lib</td>
+            </tr>
+          </table>
+          <div class="summary">提供一系列 JQuery 的扩展插件（示例以平台控件为准，例如 Panel）。包括：
+<ul>
+<li><b>tag()</b> - 获取一个字符串（全小写），表示指定 DOM 元素的 tagName 属性值。</li>
+
+<li><b>setEnabled(p_enabled) or enabled(p_enabled)</b> - 设置指定的元素是否可操作。
+<p>
+<b>参数：</b>
+<ul>
+    <li>p_enabled - 一个 Boolean 值，表示是否可操作。如果为 true，表示可操作；反之不能操作。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.setEnabled(false);
+</p>
+</li>
+
+<li><b>contextmenu(fn)</b> - 订购弹出右键菜单事件（contextmenu 事件）。
+<p>
+<b>参数：</b>
+<ul>
+<li>fn - 一个 Function 对象，表示点击鼠标右键时执行的方法。</li>
+</ul>
+</p>
+</li>
+
+<li><b>centralize(p_horizontal, p_vertical)</b> - 设置指定的元素是否在父容器中水平和垂直方向居中。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_horizontal - 一个 Boolean 对象，表示水平方向是否居中。</li>
+<li>p_vertical - 一个 Boolean 对象，表示垂直方向是否居中。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.centralize(true, true);
+</p>
+</li>
+
+<li><b>absolutePosition()</b> - 获取一个 JSON 对象，表示元素的绝对位置（如 { top:10, left:0 }）。</li>
+
+<li><b>scrollIntoView()</b> - 将指定的元素滚动到视窗显示。</li>
+
+<li><b>popup(p_options, p_callback)</b> - 将指定的元素弹出显示。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_options - 可选。一个 JSON 对象，表示弹出所需的参数（如 { left:0, top:0, offsetWidth:null, offsetHeight:null, animation:"fadeIn", speed:0 }）。</li>
+<li>p_callback - 可选。一个 Function 对象，表示弹出后执行的方法。</li>
+</ul>
+</p>
+</li>
+
+<li><b>movable(p_handleSelector)</b> - 将指定的元素设置为可拖动。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_handleSelector - 可选。一个字符串，表示 JQuery 选择器。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.movable();
+</p>
+</li>
+
+<li><b>expandable(p_title, p_options)</b> - 将指定的元素转换为可收缩展开的形式。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_title - 一个字符串，表示收缩展开时的标题。</li>
+<li>p_options - 可选。一个 JSON 对象，表示初始化时的参数（如 { expanded:true, speed:"fast" }）。</li>
+</ul>
+</p>
+<p>
+<b>示例：</b>
+Panel.$e.expandable(p_title);
+</p>
+</li>
+
+<li><b>setBusy(p_isBusy)</b> - 设置指定的容器是否处于忙碌状态。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_isBusy - 一个 Boolean 值，表示是否需要设置为忙碌状态。</li>
+</ul>
+</p>
+</li>
+
+<li><b>resizable(p_resizable, p_options)</b> - 将指定的元素转换为允许以拖动方式改变大小。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_resizable - 一个 Boolean 值，表示是否允许以拖动方式改变大小。</li>
+<li>p_options - 可选。一个 JSON 对象，表示初始化时的参数（如 { min:{ width:50, height:50 }, max:{ width: 100, height:100 }, resizeHorizon:true, resizeVertical:true, onResize:function(){}, onStop:function(){} }）。</li>
+</ul>
+</p>
+</li>
+
+<li><b>opacity(p_opacity)</b> - 将指定的元素设置为透明。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_opacity - 一个数字（0-1），表示透明度。</li>
+</ul>
+</p>
+</li>
+
+<li><b>userSelectable(p_selectable)</b> - 设置指定的元素区域是否可选择。
+<p>
+<b>参数：</b>
+<ul>
+<li>p_selectable - 一个 Boolean 值，表示是否可选择。如果为 true，表示可选择；反之则不能。</li>
+</ul>
+</p>
+</li>
+</ul></div>
+        </div>
+        <hr>
+        <div id="classesIndex" class="indexSection">
+          <h2>类</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

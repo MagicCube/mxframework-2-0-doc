@@ -1,0 +1,305 @@
+@import url(zero.css);
+
+html, body
+{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+#frame
+{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+#frame > #head
+{
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+    position:absolute;
+    left:0;
+    right:0;
+    height:50px;
+    padding-left:15px;
+    background:url(../images/background.png) 0 50px;
+    box-shadow:0px 2px 4px rgba(0,0,0,0.3); -moz-box-shadow:0px 2px 4px rgba(0,0,0,0.3); -webkit-box-shadow:0px 2px 4px rgba(0,0,0,0.3);
+}
+
+#frame.class > #head
+{
+    padding-top:5px;    
+}
+
+#frame.namespace > #head
+{
+    padding-top:13px;    
+}
+
+#frame > #head #title
+{
+    float:left;
+}
+
+#frame > #head  h1
+{
+    font-size:16px;
+}
+
+#frame > #head #links
+{
+    float:right;
+    margin-top:10px;
+}
+
+#frame > #head #links a
+{
+    margin-right:16px;    
+}
+
+#frame > #body
+{
+    box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+    position:absolute;
+    top:50px;
+    bottom:0;
+    width:100%;
+    padding:26px;
+    overflow:auto;
+}
+
+#frame > #body > hr
+{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+
+
+#summaryTable > tbody > tr
+{
+    height:24px;
+}
+#summaryTable > tbody > tr > td:first-child
+{
+    width:100px;
+    font-weight:bold;
+}
+
+#summaryTable span, #classDetail >#summaryTable a
+{
+    float:left;
+}
+
+#summaryTable #inherit
+{
+	width:16px;
+	height:16px;
+	background:url(../images/inherit.png) no-repeat	
+}
+
+#classDetail .summary, #namespaceDetail .summary
+{
+    padding-top:16px;
+    padding-bottom:16px;    
+}
+
+
+.indexSection > table
+{
+    table-layout:fixed;
+    width:100%;
+    margin-top:8px;
+}
+
+.indexSection > table > thead > tr > td
+{
+    font-weight:bold;
+    background:#EFEFEF;
+}
+
+.indexSection > table > * > tr > td
+{
+    padding:6px;
+    border:1px solid silver;
+}
+
+.indexSection > table > * > tr > td:first-child
+{
+    width:32%;
+    padding-left:25px;
+    background-repeat:no-repeat;
+    background-position:5px center;
+}
+
+
+.indexSection > table > * > tr.namespace > td:first-child
+{
+    background-image:url(../images/namespace.png);
+}
+
+.indexSection > table > * > tr.class > td:first-child
+{
+    background-image:url(../images/class.png);
+}
+
+.indexSection > table > * > tr.class > td:first-child > a
+{
+    
+}
+
+.indexSection > table > * > tr.method > td:first-child
+{
+    background-image:url(../images/method.png);
+}
+
+.indexSection > table > * > tr.field > td:first-child
+{
+    background-image:url(../images/field.png);
+}
+
+.indexSection > table > * > tr.event > td:first-child
+{
+    background-image:url(../images/event.png);
+}
+
+.indexSection > table > tbody > tr > td:first-child > a
+{
+    text-decoration:none;    
+}
+
+.indexSection h2
+{
+    font-size:18px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+
+
+
+
+
+
+
+.detailSection h2
+{
+    margin-top:40px;
+    height:30px;
+    line-height:30px;
+    padding-left:10px;
+    font-size:18px;
+    background:url(../images/header.jpg);
+}
+
+.detailSection h3
+{
+    padding-left:20px;
+    color:#0000CC;
+    font-size:16px;    
+    margin-bottom:10px;
+    background-position:0px center;
+    background-repeat:no-repeat;
+}
+
+.detailSection#method h3, .detailSection#constructor h3
+{
+    background-image:url(../images/method.png);
+}
+
+.detailSection#field h3
+{
+    background-image:url(../images/field.png);
+}
+
+.detailSection#event h3
+{
+    background-image:url(../images/event.png);
+}
+
+.detailSection > .detail
+{
+    padding-left:10px;
+    padding-right:20px;
+    padding-top:20px;
+}
+
+.detailSection > .detail > .content
+{
+    padding:22px;
+    padding-top:8px;
+    padding-bottom:20px;
+}
+
+.detailSection > .detail h4
+{
+    margin-top:20px;
+}
+
+.h4Content
+{
+    padding-left:22px;    
+}
+
+.detailSection > .detail .paramList
+{
+    list-style:none;
+    padding-left:24px;
+}
+
+.detailSection > .detail .paramList li
+{
+    margin-bottom:17px;
+}
+
+.detailSection > .detail .paramList .paramName
+{
+    color:#666600;
+}
+
+
+
+.exampleCode
+{
+    table-layout:fixed;
+    width:100%;
+    border:1px solid silver;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.exampleCode thead td
+{
+    padding:4px;
+    font-weight:bold;
+    border-bottom:1px solid silver;
+    background:#E7E5DC;
+}
+
+.exampleCode code
+{
+    padding-left:4px;
+    display:block;
+    white-space:pre;
+    line-height:20px;
+    background-image:url(../images/code_bg.png);
+    background-image:none\9;
+}
+
+.exampleIcon
+{
+    margin-left:10px;
+}
+
+
+
+.JavaScript__operator
+{
+    color:Blue;    
+}
+
+.JavaScript__statement
+{
+    color:Blue;    
+}

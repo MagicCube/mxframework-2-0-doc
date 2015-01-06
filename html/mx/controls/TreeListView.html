@@ -1,0 +1,2721 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.TreeListView 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">TreeListView 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.TreeListView</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>TreeListView</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>TreeListView</span><span id="inherit"></span><a href="../../../html/mx/datacontrols/PagedControl.html">PagedControl</a><span id="inherit"></span><a href="../../../html/mx/controls/Control.html">Control</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\TreeListView.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个数据项以树结构显示的列表控件。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 控件的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var treeList = new mx.controls.TreeListView({
+	   type: "local",
+    images:
+    [
+        { itemType: "folder", imageUrl: "$/icons/folder.png" },
+        { itemType: "role", imageUrl: "$/icons/role.png" }
+    ], // 控件中所有使用的图片集合
+    itemMenu:
+    {
+        items:
+        [
+            { name: "appendRoot", text: "添加根节点" },
+            { name: "append", text: "添加子节点" },
+            "-",
+            { name: "remove", text: "删除" }
+        ],
+
+        onitemclick: _toolStrip_itemclick
+    }, // 定义数据项的右键菜单
+    columns:
+    [
+        { name: "name", text: "名称" },
+        { name: "value", text: "值" }
+    ], // 定义列
+    items:
+    [
+        {
+            name: "Folder1",
+            value: "folder1",
+            itemType: "folder", // itemType 的值与 images 集合中对象的 name 属性值相对应，显示相应的图片
+            items:
+            [
+                {
+                    name: "A1",
+                    value: "a1",
+                    itemType: "role"
+                }
+            ] // Folder1 的子数据项节点
+        },
+        {
+            name: "Folder2",
+            value: "folder2",
+            itemType: "folder",
+            expanded: true, // 设置默认展开节点
+            items:
+            [
+                {
+                    name: "Folder2-1",
+                    value: "folder2-1",
+                    itemType: "folder",
+                    expanded: true,
+                    items:
+                    [
+                        {
+                            name: "B1",
+                            value: "b1",
+                            itemType: "role"
+                        },
+                        {
+                            name: "B2",
+                            value: "b2",
+                            itemType: "role"
+                        }
+                    ]
+                }
+            ]
+        }
+    ], // 定义数据项。可以嵌套，表示数据项子节点
+
+    onitemdoubleclick: _treeItem_doubleclick
+});
+
+
+function _treeItem_doubleclick(e)
+{
+    alert("您双击的项的名称为：" + e.item.getValue("name"));
+}
+
+function _toolStrip_itemclick(e)
+{
+    if (e.item.name == "appendRoot")
+    {
+        treeList.appendItem({
+            name: "root",
+            value: "根节点",
+            itemType: "folder"
+        });
+    }
+}</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#TreeListView">TreeListView()
+    </a></td>
+                <td>构建 TreeListView 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#appendColumn">appendColumn(p_column)
+    </a><a class="exampleIcon" href="#appendColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 <a href="#columns">columns</a> 集合中添加一个列，并返回该
+<a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendColumn">appendColumn(p_name, [p_text], [p_width], [p_align])
+    </a><a class="exampleIcon" href="#appendColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 <a href="#columns">columns</a> 集合中添加一个列，并返回该
+<a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendColumns">appendColumns(p_columns)
+    </a></td>
+                <td>向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 添加一组列集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendImage">appendImage(p_image)
+    </a></td>
+                <td>向 <a href="#images">images</a> 集合中添加图片。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendImages">appendImages(p_images)
+    </a></td>
+                <td>向 <a href="#images">images</a> 集合中添加一组图片。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendItem">appendItem(p_item)
+    </a><a class="exampleIcon" href="#appendItem"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的数据项列表（<a href="#items">items</a> 集合）添加根数据项，并返回该
+<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。如果根数据项包含子数据项节点，那么子数据项节点也会添加到控件中。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendItems">appendItems(p_items)
+    </a><a class="exampleIcon" href="#appendItems"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的数据项列表（<a href="#items">items</a> 集合）添加一组数据项节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#checkAll">checkAll()
+    </a></td>
+                <td>全选</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#checkItem">checkItem(p_item)
+    </a></td>
+                <td>勾选一条记录。
+p_item 一个数字，表示行号,或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象的 id。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#clearImages">clearImages()
+    </a></td>
+                <td>清空 <a href="#images">images</a> 集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#clearItems">clearItems()
+    </a></td>
+                <td>从 <a href="#items">items</a> 集合中移除所有数据项节点。若要从 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a>
+中移除单个数据项，请使用 <a href="../../../html/mx/controls/TreeListViewItem.html#remove">TreeListViewItem.remove</a> 方法。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#commitChanges">commitChanges()
+    </a></td>
+                <td>重置修改的记录。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#contains">contains($p_target)
+    </a></td>
+                <td>返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#deselectItem">deselectItem(p_item, [p_triggerEvent])
+    </a></td>
+                <td>清除对 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中指定数据项节点的选定。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#dispose">dispose()
+    </a></td>
+                <td>释放对象运行时动态生成的内容（属性、方法、事件）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#endEdit">endEdit()
+    </a></td>
+                <td>结束编辑。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#expandAll">expandAll()
+    </a></td>
+                <td>展开所有节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getChanges">getChanges()
+    </a></td>
+                <td>获取修改的记录。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getCheckedIds">getCheckedIds()
+    </a></td>
+                <td>获取选中的 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项的主键集合。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getContext">getContext()
+    </a></td>
+                <td>获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEl">getEl()
+    </a></td>
+                <td>获取控件容器对应的 HTML DOM 元素对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getFirstItemIndex">getFirstItemIndex()
+    </a></td>
+                <td>获取当前页第一条数据的索引值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getImageUrlOfItem">getImageUrlOfItem(p_item)
+    </a></td>
+                <td>根据指定的 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>，获取
+<a href="../../../html/mx/controls/TreeListViewItem.html#imageUrl">TreeListViewItem.imageUrl</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getItem">getItem(p_expression)
+    </a></td>
+                <td>返回一个数据项节点（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getPageCount">getPageCount()
+    </a></td>
+                <td>获取当前的总页数</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getSelections">getSelections()
+    </a></td>
+                <td>获取选中的 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hide">hide()
+    </a></td>
+                <td>隐藏控件，设置控件不可见。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isCheckedAll">isCheckedAll(p_item)
+    </a></td>
+                <td>判断 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a>的数据项是否全部选中，或者判断某一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项的子项是否全部选中。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#isFirstPage">isFirstPage()
+    </a></td>
+                <td>获取一个 Boolean 值，表示当前是否是第一页。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#isLastPage">isLastPage()
+    </a></td>
+                <td>获取一个 Boolean 值，表示当前是否是最后一页。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#load">load(p_callback)
+    </a></td>
+                <td>数据加载。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#load">load(p_data)
+    </a></td>
+                <td>数据加载。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#load">load(p_params)
+    </a></td>
+                <td>数据加载。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#load">load(p_data, p_callback)
+    </a></td>
+                <td>数据加载。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#load">load(p_data, p_params)
+    </a></td>
+                <td>数据加载。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#load">load(p_data, p_params, p_callback)
+    </a></td>
+                <td>数据加载。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#loadChildren">loadChildren(p_item)
+    </a></td>
+                <td>加载子项。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#loadChildren">loadChildren(p_item, p_callback)
+    </a></td>
+                <td>加载子项。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#loadChildren">loadChildren(p_item, p_params)
+    </a></td>
+                <td>加载子项。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#loadChildren">loadChildren(p_item, p_params, p_callback)
+    </a></td>
+                <td>加载子项。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_left, p_top)
+    </a></td>
+                <td>移动控件到指定位置。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveToFirstPage">moveToFirstPage()
+    </a></td>
+                <td>跳转到第一页。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveToLastPage">moveToLastPage()
+    </a></td>
+                <td>跳转到最后一页。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveToNextPage">moveToNextPage()
+    </a></td>
+                <td>跳转到下一页。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveToPage">moveToPage(p_index)
+    </a></td>
+                <td>跳转到某一页。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveToPreviousPage">moveToPreviousPage()
+    </a></td>
+                <td>跳转到前一页。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#rejectChanges">rejectChanges()
+    </a></td>
+                <td>撤销修改的记录。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeItem">removeItem(p_item)
+    </a></td>
+                <td>删除指定数据项。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#resizeTo">resizeTo(p_width, p_height)
+    </a></td>
+                <td>重设控件的大小。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#selectItem">selectItem(p_item, [p_triggerEvent])
+    </a></td>
+                <td>选择 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 列表中的指定的数据项节点。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBorder">setBorder(p_border)
+    </a></td>
+                <td>设置控件的边框样式。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBottom">setBottom(p_bottom)
+    </a></td>
+                <td>设置 <a href="#bottom">bottom</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setColumnVisible">setColumnVisible(p_columnName, p_visible)
+    </a></td>
+                <td>设置列的可见性。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCss">setCss(p_css)
+    </a></td>
+                <td>设置 <a href="#css">css</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCssClass">setCssClass(p_cssClass)
+    </a></td>
+                <td>设置 <a href="#cssClass">cssClass</a>} 字段的值</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplay">setDisplay(p_display)
+    </a></td>
+                <td>设置 <a href="#display">display</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setDisplayHead">setDisplayHead(p_displayHead)
+    </a></td>
+                <td>设置 <a href="#displayHead">displayHead</a> 的字段值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>设置 <a href="#enabled">enabled</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setFilter">setFilter(p_filter)
+    </a></td>
+                <td>设置 <a href="#filter">filter</a> 的字段属性。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHeight">setHeight(p_height)
+    </a></td>
+                <td>设置 <a href="#height">height</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setImages">setImages(p_images)
+    </a></td>
+                <td>设置 <a href="#images">images</a> 字段的值。该方法首先会清空 <a href="#images">images</a> 集合的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setItems">setItems(p_items)
+    </a></td>
+                <td>设置 <a href="#items">items</a> 字段的值。该方法首先会清空 <a href="#items">items</a> 集合。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setLeft">setLeft(p_left)
+    </a></td>
+                <td>设置 <a href="#left">left</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPadding">setPadding(p_padding)
+    </a></td>
+                <td>设置控件的内边距。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPageSize">setPageSize(p_pageSize)
+    </a></td>
+                <td>设置 <a href="#pageSize">pageSize</a> 字段的值。同时跳转到第一页。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPosition">setPosition(p_position)
+    </a></td>
+                <td>设置 <a href="#position">position</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setRight">setRight(p_right)
+    </a></td>
+                <td>设置 <a href="#right">right</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setTop">setTop(p_top)
+    </a></td>
+                <td>设置 <a href="#top">top</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#show">show()
+    </a></td>
+                <td>显示控件，设置控件可见。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#startEdit">startEdit(p_item, p_fieldName)
+    </a></td>
+                <td>启动编辑表格单元。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#uncheckAll">uncheckAll()
+    </a></td>
+                <td>清除对 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 当前所有通过 CheckBox 选中的数据项的选中状态。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#unCheckedItem">unCheckedItem(p_item)
+    </a></td>
+                <td>取消勾选一条记录。
+p_item 一个数字，表示行号,或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象的 id。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$">$(p_expression)
+    </a></td>
+                <td>该方法与 me.$e.find(p_expression) 等同。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$wrap">$wrap([p_obj])
+    </a></td>
+                <td>返回一个 JQuery 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#_adjustSizeForIE6">_adjustSizeForIE6()
+    </a></td>
+                <td>受保护的。IE6调整大小，为兼容IE6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#alias">alias</a></td>
+                <td>获取或设置一个字符串，表示控件的别名。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#allColumns">allColumns</a></td>
+                <td>获取一个集合，包含控件中显示的所有 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#allowDragging">allowDragging</a></td>
+                <td>获取一个 Boolean 值，表示数据项节点是否允许拖拽。该字段必须在初始化前设置。
+暂未提供行拖拽功能，该属性设置无效，暂时保留。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#allowEditing">allowEditing</a></td>
+                <td>获取和设置一个 Boolean 值， 该属性表示是否允许编辑。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#allowPaging">allowPaging</a></td>
+                <td>获取和设置一个 Boolean 值，表示是否可以分页。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#autoLoad">autoLoad</a></td>
+                <td>获取或设置一个 Boolean 值，该属性表示是否自动执行远程数据加载。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#baseUrl">baseUrl</a></td>
+                <td>获取或者设置一个属性，表示数据加载的服务地址。请参见 <a href="../../../html/mx/rpc/RESTClient.html#baseUrl">RESTClient.baseUrl</a></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#border">border</a></td>
+                <td>获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#bottom">bottom</a></td>
+                <td>获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#client">client</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#columns">columns</a></td>
+                <td>获取一个集合，包含控件中第一层列 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 与列分组 <a href="../../../html/mx/controls/TreeListViewColumnGroup.html">TreeListViewColumnGroup</a> 的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#contextMenu">contextMenu</a></td>
+                <td>一个 <a href="../../../html/mx/controls/ContextMenu.html">ContextMenu</a> 对象，表示控件的右键菜单。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssClass">cssClass</a></td>
+                <td>指定css伪类名称，设置控件显示样式</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#dicts">dicts</a></td>
+                <td>获取或者设置一个数组，该值表示数据项的数据字典。例如：
+[
+    {name: "gender", values:[{text: "女", value: "female"}, {text: "男", value: "male"}]},
+    {name: "fruit", values:[{text: "苹果", value: "appple"}, {text: "香蕉", value: "banana"}]},
+]</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#display">display</a></td>
+                <td>获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayCheckBox">displayCheckBox</a></td>
+                <td>获取或者设置一个 Boolean 值，表示是否显示多选框。默认显示多选框。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayHead">displayHead</a></td>
+                <td>获取一个 Boolean 值，表示是否显示列标题。请使用 <a href="#setDisplayHead">setDisplayHead</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayImage">displayImage</a></td>
+                <td>获取一个 Boolean 值，表示是否需要在 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>
+中显示图标。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayRowNumber">displayRowNumber</a></td>
+                <td>获取或设置一个 Boolean 值，表示是否需要显示行序号。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#eTag">eTag</a></td>
+                <td>获取控件的标签。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#filter">filter</a></td>
+                <td>获取或设置一个 JSON 对象，该属性将用作数据加载的查询参数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#height">height</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#idField">idField</a></td>
+                <td>获取或设置一个属性，该属性将用作 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中数据项的 id 值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#images">images</a></td>
+                <td>获取一个集合，包含 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中所有使用的图片。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#imageSize">imageSize</a></td>
+                <td>获取 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 图片的大小。该字段必须在初始化前设置。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#itemCount">itemCount</a></td>
+                <td>获取和设置一个 Number 值，表示当前的总记录数。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#itemMenu">itemMenu</a></td>
+                <td>一个 <a href="../../../html/mx/controls/ContextMenu.html">ContextMenu</a> 对象，表示数据项节点的右键菜单。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#items">items</a></td>
+                <td>获取一个集合，包含数据项列表中的根数据项（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型）。请使用
+<a href="#setItems">setItems</a> 方法设置该集合的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutConfigs">layoutConfigs</a></td>
+                <td>获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#left">left</a></td>
+                <td>获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#padding">padding</a></td>
+                <td>获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#pageIndex">pageIndex</a></td>
+                <td>获取和设置一个 Number 值，表示当前第几页。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#pageSize">pageSize</a></td>
+                <td>获取和设置一个 Number 值，表示当前每页允许显示的记录数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#pageSizeOptions">pageSizeOptions</a></td>
+                <td>获取和设置一个数组值，表示分页记录数可设置的选项。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#parent">parent</a></td>
+                <td>获取控件所属的父对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#permissionID">permissionID</a></td>
+                <td>获取或设置一个字符串，表示控件的权限标识。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#position">position</a></td>
+                <td>获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#right">right</a></td>
+                <td>获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#searchBox">searchBox</a></td>
+                <td>设置或者获取一个 <a href="../../../html/mx/datacontrols/DataGridSearchBox.html">DataGridSearchBox</a> 对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#searchParamType">searchParamType</a></td>
+                <td>获取或设置表格的查询条件类型。json 表示查询参数filter 的值采用 Json 对象的形式传递。string 表示查询参数 filter 的值采用字符串的形式传递。
+该字段必须在初始化前设置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>json</b></li>
+     <li><b>string</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#selection">selection</a></td>
+                <td>获取一个对象，表示 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中当前选中的数据项节点（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>
+类型）。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#singleSelect">singleSelect</a></td>
+                <td>获取或者设置一个 Boolean 值，表示是支持多选。该属性与 <a href="#displayCheckBox">displayCheckBox</a> 属性等价，建议使用 <a href="#displayCheckBox">displayCheckBox</a>属性。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#top">top</a></td>
+                <td>获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#treeField">treeField</a></td>
+                <td>获取或设置一个属性，该属性将用作 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中数据项以树型结构显示的字段值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#type">type</a></td>
+                <td>获取数据加载的类型。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>remote</b></li>
+<li><b>local</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#visible">visible</a></td>
+                <td>获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$body1">$body1</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$body2">$body2</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$bodyTable1">$bodyTable1</a></td>
+                <td></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取该控件的占位符，该占位符为一个 JQuery 对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$grid">$grid</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$head1">$head1</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$headTable1">$headTable1</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$view">$view</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$view1">$view1</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#$view2">$view2</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#_items">_items</a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#oncelledited">oncelledited</a></td>
+                <td>编辑后事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncellediting">oncellediting</a></td>
+                <td>编辑前事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#ondeleted">ondeleted</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#ondeleting">ondeleting</a></td>
+                <td>数据项删除前事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onexpanded">onexpanded</a></td>
+                <td>数据项展开后事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onexpanding">onexpanding</a></td>
+                <td>数据项展开前事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onitemcountchanged">onitemcountchanged</a></td>
+                <td>总记录数改变时触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onitemdoubleclick">onitemdoubleclick</a></td>
+                <td>当双击数据项列表中项的时候，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onload">onload</a></td>
+                <td>数据加载事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onpageindexchanged">onpageindexchanged</a></td>
+                <td>当前的页面索引变更时触发该事件。调用 <a href="#moveToPage">moveToPage</a> 方法是触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onselectionchanged">onselectionchanged</a></td>
+                <td>当控件当前的选择项发生改变后，将触发该事件。通常调用 <a href="#selectItem">selectItem</a> 、 <a href="#deselectItem">deselectItem</a> 、
+<a href="#deselectAll">deselectAll</a> 等方法后会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onselectionchanging">onselectionchanging</a></td>
+                <td>当控件当前的选择项发生改变的时候，将触发该事件。通常调用 <a href="#selectItem">selectItem</a> 方法时会触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="TreeListView"></a><div id="method" class="detail">
+            <h3>TreeListView()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 TreeListView 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#init">mx.controls.Control.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="appendColumn"></a><div id="method" class="detail">
+            <h3>appendColumn(p_column)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 <a href="#columns">columns</a> 集合中添加一个列，并返回该
+<a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_column</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象，表示要添加的列。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                请参见 <a href="../../../html/mx/controls/ListView.html#appendColumn">ListView.appendColumn</a> 方法的示例。
+
+            </div>
+            </div>
+            <hr>
+          </div><a name="appendColumn"></a><div id="method" class="detail">
+            <h3>appendColumn(p_name, [p_text], [p_width], [p_align])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 <a href="#columns">columns</a> 集合中添加一个列，并返回该
+<a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_name</b><div class="paramSummary">一个 JSON 对象（如 { name:"class", text:"类", dataType:"string",
+           width:150, align:"center" }），表示
+           <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 的一组属性值；或一个字符串，表示
+           <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象的
+           <a href="../../../html/mx/controls/TreeListViewColumn.html#name">TreeListViewColumn.name</a> 字段的值。</div>
+                </li>
+                <li><b class="paramName">p_text</b><div class="paramSummary">可选的。一个字符串，表示 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象的
+           <a href="../../../html/mx/controls/TreeListViewColumn.html#text">TreeListViewColumn.text</a> 字段的值。</div>
+                </li>
+                <li><b class="paramName">p_width</b><div class="paramSummary">可选的。一个数字（如 500）或字符串（如“500px”或“50%”），表示列的宽度。</div>
+                </li>
+                <li><b class="paramName">p_align</b><div class="paramSummary">可选的。一个字符串，表示列中文本的对齐方式。可以为“left”左对齐、“right”右对齐、“center”居中对齐、“justify”两端对齐。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                请参见 <a href="../../../html/mx/controls/ListView.html#appendColumn">ListView.appendColumn</a> 方法的示例。
+
+            </div>
+            </div>
+            <hr>
+          </div><a name="appendColumns"></a><div id="method" class="detail">
+            <h3>appendColumns(p_columns)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的 添加一组列集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columns</b><div class="paramSummary">一个数组，该数组包含了一组 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 对象 或者 <a href="../../../html/mx/controls/TreeListViewColumnGroup.html">TreeListViewColumnGroup</a> 对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="appendImage"></a><div id="method" class="detail">
+            <h3>appendImage(p_image)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="#images">images</a> 集合中添加图片。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_image</b><div class="paramSummary">一个 JSON 对象（如 { itemType: "role", imageUrl: "role" }）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="appendImages"></a><div id="method" class="detail">
+            <h3>appendImages(p_images)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="#images">images</a> 集合中添加一组图片。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_images</b><div class="paramSummary">一个数组，包含一组图片。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="appendItem"></a><div id="method" class="detail">
+            <h3>appendItem(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的数据项列表（<a href="#items">items</a> 集合）添加根数据项，并返回该
+<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。如果根数据项包含子数据项节点，那么子数据项节点也会添加到控件中。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 JSON 对象（如 { name:"bruce", value:"lee" }，“name”和“value”分别为列（<a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a>
+           类型）的 <a href="../../../html/mx/controls/TreeListViewColumn.html#name">TreeListViewColumn.name</a> 字段值）或一个
+           <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 添加一个
+         <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">treeList.appendItem({
+    name: "C",
+    value: "c",
+    itemType: "folder",
+    items: [
+        { name: "C1", value: "c1", itemType: "role" },
+        { name: "C2", value: "c2", itemType: "role" }
+    ]
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="appendItems"></a><div id="method" class="detail">
+            <h3>appendItems(p_items)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 的数据项列表（<a href="#items">items</a> 集合）添加一组数据项节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary">一个数组，该数组包含了一组 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 添加一组
+         <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">treeList.appendItems([
+    {
+        name: "C",
+        value: "c",
+        itemType: "folder",
+        items: [
+            { name: "C1", value: "c1", itemType: "role" },
+            { name: "C2", value: "c2", itemType: "role" }
+        ]
+    },
+    {
+        name: "D",
+        value: "d",
+        itemType: "folder",
+        items: [
+            { name: "D1", value: "d1", itemType: "role" },
+            { name: "D2", value: "d2", itemType: "role" }
+        ]
+    }
+]);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="checkAll"></a><div id="method" class="detail">
+            <h3>checkAll()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">全选</div>
+            </div>
+            <hr>
+          </div><a name="checkItem"></a><div id="method" class="detail">
+            <h3>checkItem(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">勾选一条记录。
+p_item 一个数字，表示行号,或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象的 id。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="clearImages"></a><div id="method" class="detail">
+            <h3>clearImages()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">清空 <a href="#images">images</a> 集合。</div>
+            </div>
+            <hr>
+          </div><a name="clearItems"></a><div id="method" class="detail">
+            <h3>clearItems()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">从 <a href="#items">items</a> 集合中移除所有数据项节点。若要从 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a>
+中移除单个数据项，请使用 <a href="../../../html/mx/controls/TreeListViewItem.html#remove">TreeListViewItem.remove</a> 方法。</div>
+            </div>
+            <hr>
+          </div><a name="commitChanges"></a><div id="method" class="detail">
+            <h3>commitChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重置修改的记录。</div>
+            </div>
+            <hr>
+          </div><a name="contains"></a><div id="method" class="detail" override="true">
+            <h3>contains($p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">$p_target</b><div class="paramSummary">一个 JQuery 对象，或 JQuery 选择器对应的字符串（如“#container”），或 HTML DOM 元素。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#contains">mx.controls.Control.contains</a></div>
+            </div>
+            <hr>
+          </div><a name="deselectItem"></a><div id="method" class="detail">
+            <h3>deselectItem(p_item, [p_triggerEvent])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">清除对 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中指定数据项节点的选定。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，表示要清除对该项的选定。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，表示是否要触发 <a href="#onselectionchanged">onselectionchanged</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="dispose"></a><div id="method" class="detail" override="true">
+            <h3>dispose()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">释放对象运行时动态生成的内容（属性、方法、事件）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#dispose">mx.controls.Control.dispose</a></div>
+            </div>
+            <hr>
+          </div><a name="endEdit"></a><div id="method" class="detail">
+            <h3>endEdit()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">结束编辑。</div>
+            </div>
+            <hr>
+          </div><a name="expandAll"></a><div id="method" class="detail">
+            <h3>expandAll()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">展开所有节点。</div>
+            </div>
+            <hr>
+          </div><a name="getChanges"></a><div id="method" class="detail">
+            <h3>getChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取修改的记录。</div>
+            </div>
+            <hr>
+          </div><a name="getCheckedIds"></a><div id="method" class="detail">
+            <h3>getCheckedIds()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取选中的 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项的主键集合。</div>
+            </div>
+            <hr>
+          </div><a name="getContext"></a><div id="method" class="detail" override="true">
+            <h3>getContext()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getContext">mx.controls.Control.getContext</a></div>
+            </div>
+            <hr>
+          </div><a name="getEl"></a><div id="method" class="detail" override="true">
+            <h3>getEl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件容器对应的 HTML DOM 元素对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getEl">mx.controls.Control.getEl</a></div>
+            </div>
+            <hr>
+          </div><a name="getFirstItemIndex"></a><div id="method" class="detail" override="true">
+            <h3>getFirstItemIndex()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前页第一条数据的索引值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#getFirstItemIndex">mx.datacontrols.PagedControl.getFirstItemIndex</a></div>
+            </div>
+            <hr>
+          </div><a name="getImageUrlOfItem"></a><div id="method" class="detail">
+            <h3>getImageUrlOfItem(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">根据指定的 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>，获取
+<a href="../../../html/mx/controls/TreeListViewItem.html#imageUrl">TreeListViewItem.imageUrl</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getItem"></a><div id="method" class="detail">
+            <h3>getItem(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个数据项节点（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型）。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary">参见 <a href="../../../html/mx/controls/Control.html#$wrap">Control.$wrap</a> 方法的参数 p_obj。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getPageCount"></a><div id="method" class="detail" override="true">
+            <h3>getPageCount()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前的总页数</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#getPageCount">mx.datacontrols.PagedControl.getPageCount</a></div>
+            </div>
+            <hr>
+          </div><a name="getSelections"></a><div id="method" class="detail">
+            <h3>getSelections()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取选中的 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项</div>
+            </div>
+            <hr>
+          </div><a name="hide"></a><div id="method" class="detail" override="true">
+            <h3>hide()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏控件，设置控件不可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#hide">mx.controls.Control.hide</a></div>
+            </div>
+            <hr>
+          </div><a name="isCheckedAll"></a><div id="method" class="detail">
+            <h3>isCheckedAll(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">判断 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a>的数据项是否全部选中，或者判断某一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项的子项是否全部选中。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">表示一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据项。默认不赋值，表示获取<a href="../../../html/mx/controls/TreeListView.html">TreeListView</a>的数据项全部选中状态。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isFirstPage"></a><div id="method" class="detail" override="true">
+            <h3>isFirstPage()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示当前是否是第一页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#isFirstPage">mx.datacontrols.PagedControl.isFirstPage</a></div>
+            </div>
+            <hr>
+          </div><a name="isLastPage"></a><div id="method" class="detail" override="true">
+            <h3>isLastPage()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示当前是否是最后一页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#isLastPage">mx.datacontrols.PagedControl.isLastPage</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_callback</b><div class="paramSummary">回调函数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_data)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">一个 JSON 数组 或者 一个字符串， 其中 JSON 数组表示本地数据集合；字符串表示数据加载的服务地址。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_params</b><div class="paramSummary">一个 JSON 对象，表示服务请求的参数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_data, p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">一个 JSON 数组 或者 一个字符串， 其中 JSON 数组表示本地数据集合；字符串表示数据加载的服务地址。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">回调函数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_data, p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">一个 JSON 数组 或者 一个字符串， 其中 JSON 数组表示本地数据集合；字符串表示数据加载的服务地址。</div>
+                </li>
+                <li><b class="paramName">p_params</b><div class="paramSummary">一个 JSON 对象，表示服务请求的参数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail">
+            <h3>load(p_data, p_params, p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">一个 JSON 数组 或者 一个字符串， 其中 JSON 数组表示本地数据集合；字符串表示数据加载的服务地址。</div>
+                </li>
+                <li><b class="paramName">p_params</b><div class="paramSummary">一个 JSON 对象，表示服务请求的参数。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">回调函数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="loadChildren"></a><div id="method" class="detail">
+            <h3>loadChildren(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载子项。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据或者数据项 id 。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="loadChildren"></a><div id="method" class="detail">
+            <h3>loadChildren(p_item, p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载子项。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据或者数据项 id 。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">表示回调函数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="loadChildren"></a><div id="method" class="detail">
+            <h3>loadChildren(p_item, p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载子项。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据或者数据项 id 。</div>
+                </li>
+                <li><b class="paramName">p_params</b><div class="paramSummary">一个 JSON 对象，表示服务请求参数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="loadChildren"></a><div id="method" class="detail">
+            <h3>loadChildren(p_item, p_params, p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载子项。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 数据或者数据项 id 。</div>
+                </li>
+                <li><b class="paramName">p_params</b><div class="paramSummary">一个 JSON 对象，表示服务请求参数。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">表示回调函数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_left, p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移动控件到指定位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">一个数字，表示 css 样式的 left 属性。</div>
+                </li>
+                <li><b class="paramName">p_top</b><div class="paramSummary">一个数字，表示 css 样式的 top 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#moveTo">mx.controls.Control.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="moveToFirstPage"></a><div id="method" class="detail" override="true">
+            <h3>moveToFirstPage()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">跳转到第一页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#moveToFirstPage">mx.datacontrols.PagedControl.moveToFirstPage</a></div>
+            </div>
+            <hr>
+          </div><a name="moveToLastPage"></a><div id="method" class="detail" override="true">
+            <h3>moveToLastPage()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">跳转到最后一页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#moveToLastPage">mx.datacontrols.PagedControl.moveToLastPage</a></div>
+            </div>
+            <hr>
+          </div><a name="moveToNextPage"></a><div id="method" class="detail" override="true">
+            <h3>moveToNextPage()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">跳转到下一页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#moveToNextPage">mx.datacontrols.PagedControl.moveToNextPage</a></div>
+            </div>
+            <hr>
+          </div><a name="moveToPage"></a><div id="method" class="detail" override="true">
+            <h3>moveToPage(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">跳转到某一页。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">一个 Number 值，表示要跳转到第几页。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#moveToPage">mx.datacontrols.PagedControl.moveToPage</a></div>
+            </div>
+            <hr>
+          </div><a name="moveToPreviousPage"></a><div id="method" class="detail" override="true">
+            <h3>moveToPreviousPage()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">跳转到前一页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#moveToPreviousPage">mx.datacontrols.PagedControl.moveToPreviousPage</a></div>
+            </div>
+            <hr>
+          </div><a name="rejectChanges"></a><div id="method" class="detail">
+            <h3>rejectChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">撤销修改的记录。</div>
+            </div>
+            <hr>
+          </div><a name="removeItem"></a><div id="method" class="detail">
+            <h3>removeItem(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">删除指定数据项。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="resizeTo"></a><div id="method" class="detail" override="true">
+            <h3>resizeTo(p_width, p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重设控件的大小。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的宽度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#resizeTo">mx.controls.Control.resizeTo</a></div>
+            </div>
+            <hr>
+          </div><a name="selectItem"></a><div id="method" class="detail">
+            <h3>selectItem(p_item, [p_triggerEvent])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">选择 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 列表中的指定的数据项节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个数字（如 1），表示行号；或者一个
+           <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象；或者<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象的 id;</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，表示是否要触发 <a href="#onselectionchanged">onselectionchanged</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setBorder"></a><div id="method" class="detail" override="true">
+            <h3>setBorder(p_border)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的边框样式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_border</b><div class="paramSummary">一个字符串，表示css样式的 border 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBorder">mx.controls.Control.setBorder</a></div>
+            </div>
+            <hr>
+          </div><a name="setBottom"></a><div id="method" class="detail" override="true">
+            <h3>setBottom(p_bottom)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#bottom">bottom</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_bottom</b><div class="paramSummary">控件的下边界与父容器下边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBottom">mx.controls.Control.setBottom</a></div>
+            </div>
+            <hr>
+          </div><a name="setColumnVisible"></a><div id="method" class="detail">
+            <h3>setColumnVisible(p_columnName, p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置列的可见性。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnName</b><div class="paramSummary">表示列的名称。</div>
+                </li>
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setCss"></a><div id="method" class="detail" override="true">
+            <h3>setCss(p_css)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#css">css</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_css</b><div class="paramSummary">一个 JSON 对象，表示控件的 CSS 样式。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCss">mx.controls.Control.setCss</a></div>
+            </div>
+            <hr>
+          </div><a name="setCssClass"></a><div id="method" class="detail" override="true">
+            <h3>setCssClass(p_cssClass)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#cssClass">cssClass</a>} 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_cssClass</b><div class="paramSummary">一个String 对象，样式classname</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCssClass">mx.controls.Control.setCssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplay"></a><div id="method" class="detail" override="true">
+            <h3>setDisplay(p_display)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#display">display</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_display</b><div class="paramSummary">css 样式的 display 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setDisplay">mx.controls.Control.setDisplay</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplayHead"></a><div id="method" class="detail">
+            <h3>setDisplayHead(p_displayHead)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#displayHead">displayHead</a> 的字段值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_displayHead</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#enabled">enabled</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setEnabled">mx.controls.Control.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setFilter"></a><div id="method" class="detail">
+            <h3>setFilter(p_filter)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#filter">filter</a> 的字段属性。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_filter</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setHeight"></a><div id="method" class="detail" override="true">
+            <h3>setHeight(p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#height">height</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setHeight">mx.controls.Control.setHeight</a></div>
+            </div>
+            <hr>
+          </div><a name="setImages"></a><div id="method" class="detail">
+            <h3>setImages(p_images)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#images">images</a> 字段的值。该方法首先会清空 <a href="#images">images</a> 集合的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_images</b><div class="paramSummary">一个数组，包含一组图片。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setItems"></a><div id="method" class="detail">
+            <h3>setItems(p_items)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#items">items</a> 字段的值。该方法首先会清空 <a href="#items">items</a> 集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary">一个数组，该数组包含了一组 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setLeft"></a><div id="method" class="detail" override="true">
+            <h3>setLeft(p_left)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#left">left</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">控件的左边界与父容器左边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setLeft">mx.controls.Control.setLeft</a></div>
+            </div>
+            <hr>
+          </div><a name="setPadding"></a><div id="method" class="detail" override="true">
+            <h3>setPadding(p_padding)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的内边距。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_padding</b><div class="paramSummary">一个字符串，表示css样式的 padding 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPadding">mx.controls.Control.setPadding</a></div>
+            </div>
+            <hr>
+          </div><a name="setPageSize"></a><div id="method" class="detail" override="true">
+            <h3>setPageSize(p_pageSize)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#pageSize">pageSize</a> 字段的值。同时跳转到第一页。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_pageSize</b><div class="paramSummary">一个 Number 值，表示每页可以显示的记录数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#setPageSize">mx.datacontrols.PagedControl.setPageSize</a></div>
+            </div>
+            <hr>
+          </div><a name="setPosition"></a><div id="method" class="detail" override="true">
+            <h3>setPosition(p_position)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#position">position</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_position</b><div class="paramSummary">一个字符串，表示 css 样式的 position 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPosition">mx.controls.Control.setPosition</a></div>
+            </div>
+            <hr>
+          </div><a name="setRight"></a><div id="method" class="detail" override="true">
+            <h3>setRight(p_right)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#right">right</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_right</b><div class="paramSummary">控件的右边界与父容器右边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setRight">mx.controls.Control.setRight</a></div>
+            </div>
+            <hr>
+          </div><a name="setTop"></a><div id="method" class="detail" override="true">
+            <h3>setTop(p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#top">top</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_top</b><div class="paramSummary">控件的上边界与父容器上边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setTop">mx.controls.Control.setTop</a></div>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示控件是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setVisible">mx.controls.Control.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的高度,可以是数字（如 500）、字符串（如“500px”或“50%”）.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setWidth">mx.controls.Control.setWidth</a></div>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail" override="true">
+            <h3>show()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示控件，设置控件可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#show">mx.controls.Control.show</a></div>
+            </div>
+            <hr>
+          </div><a name="startEdit"></a><div id="method" class="detail">
+            <h3>startEdit(p_item, p_fieldName)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">启动编辑表格单元。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">数据项实例 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>。</div>
+                </li>
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">字段名称。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="uncheckAll"></a><div id="method" class="detail">
+            <h3>uncheckAll()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">清除对 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 当前所有通过 CheckBox 选中的数据项的选中状态。</div>
+            </div>
+            <hr>
+          </div><a name="unCheckedItem"></a><div id="method" class="detail">
+            <h3>unCheckedItem(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">取消勾选一条记录。
+p_item 一个数字，表示行号,或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，或者一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象的 id。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="$"></a><div id="method" class="detail" override="true">
+            <h3>$(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">该方法与 me.$e.find(p_expression) 等同。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$">mx.controls.Control.$</a></div>
+            </div>
+            <hr>
+          </div><a name="$wrap"></a><div id="method" class="detail" override="true">
+            <h3>$wrap([p_obj])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_obj</b><div class="paramSummary">可选的。默认值为“me.$e”。一个 JQuery 对象，或继承自 Control 的控件，或字符串，或 HTML DOM 元素。如果参数为 JQuery 对象，则返回本身；如果参数为继承自 Control 的控件，则返回控件的 $e 对象；如果参数为字符串，则返回以字符串为选择器的 JQuery 对象；如果参数为空，则返回控件本身的 $e 对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$wrap">mx.controls.Control.$wrap</a></div>
+            </div>
+            <hr>
+          </div><a name="_adjustSizeForIE6"></a><div id="method" class="detail">
+            <h3>_adjustSizeForIE6()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。IE6调整大小，为兼容IE6</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="alias"></a><div id="field" class="detail" override="true">
+            <h3>alias 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的别名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#alias">mx.controls.Control.alias</a></div>
+            </div>
+            <hr>
+          </div><a name="allColumns"></a><div id="field" class="detail">
+            <h3>allColumns 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含控件中显示的所有 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 的集合。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        
+                            集合中成员的类型为
+                            <a href="../../../html/mx/controls/TreeListViewColumn.html">mx.controls.TreeListViewColumn</a>。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">列的名称（<a href="../../../html/mx/controls/TreeListViewColumn.html#name">TreeListViewColumn.name</a>）或列在集合中的序号（从 0
+       开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="allowDragging"></a><div id="field" class="detail">
+            <h3>allowDragging 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示数据项节点是否允许拖拽。该字段必须在初始化前设置。
+暂未提供行拖拽功能，该属性设置无效，暂时保留。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="allowEditing"></a><div id="field" class="detail">
+            <h3>allowEditing 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个 Boolean 值， 该属性表示是否允许编辑。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="allowPaging"></a><div id="field" class="detail" override="true">
+            <h3>allowPaging 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个 Boolean 值，表示是否可以分页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#allowPaging">mx.datacontrols.PagedControl.allowPaging</a></div>
+            </div>
+            <hr>
+          </div><a name="autoLoad"></a><div id="field" class="detail">
+            <h3>autoLoad 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，该属性表示是否自动执行远程数据加载。</div>
+            </div>
+            <hr>
+          </div><a name="baseUrl"></a><div id="field" class="detail">
+            <h3>baseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个属性，表示数据加载的服务地址。请参见 <a href="../../../html/mx/rpc/RESTClient.html#baseUrl">RESTClient.baseUrl</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="border"></a><div id="field" class="detail" override="true">
+            <h3>border 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#border">mx.controls.Control.border</a></div>
+            </div>
+            <hr>
+          </div><a name="bottom"></a><div id="field" class="detail" override="true">
+            <h3>bottom 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#bottom">mx.controls.Control.bottom</a></div>
+            </div>
+            <hr>
+          </div><a name="client"></a><div id="field" class="detail">
+            <h3>client 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="columns"></a><div id="field" class="detail">
+            <h3>columns 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含控件中第一层列 <a href="../../../html/mx/controls/TreeListViewColumn.html">TreeListViewColumn</a> 与列分组 <a href="../../../html/mx/controls/TreeListViewColumnGroup.html">TreeListViewColumnGroup</a> 的集合。</div>
+            </div>
+            <hr>
+          </div><a name="contextMenu"></a><div id="field" class="detail">
+            <h3>contextMenu 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个 <a href="../../../html/mx/controls/ContextMenu.html">ContextMenu</a> 对象，表示控件的右键菜单。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="cssClass"></a><div id="field" class="detail" override="true">
+            <h3>cssClass 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指定css伪类名称，设置控件显示样式</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#cssClass">mx.controls.Control.cssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="dicts"></a><div id="field" class="detail">
+            <h3>dicts 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个数组，该值表示数据项的数据字典。例如：
+[
+    {name: "gender", values:[{text: "女", value: "female"}, {text: "男", value: "male"}]},
+    {name: "fruit", values:[{text: "苹果", value: "appple"}, {text: "香蕉", value: "banana"}]},
+]</div>
+            </div>
+            <hr>
+          </div><a name="display"></a><div id="field" class="detail" override="true">
+            <h3>display 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#display">mx.controls.Control.display</a></div>
+            </div>
+            <hr>
+          </div><a name="displayCheckBox"></a><div id="field" class="detail">
+            <h3>displayCheckBox 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 Boolean 值，表示是否显示多选框。默认显示多选框。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayHead"></a><div id="field" class="detail">
+            <h3>displayHead 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示是否显示列标题。请使用 <a href="#setDisplayHead">setDisplayHead</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayImage"></a><div id="field" class="detail">
+            <h3>displayImage 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示是否需要在 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>
+中显示图标。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="displayRowNumber"></a><div id="field" class="detail">
+            <h3>displayRowNumber 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，表示是否需要显示行序号。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#enabled">mx.controls.Control.enabled</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="eTag"></a><div id="field" class="detail" override="true">
+            <h3>eTag 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的标签。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#eTag">mx.controls.Control.eTag</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">&lt;div/&gt;</div>
+            </div>
+            <hr>
+          </div><a name="filter"></a><div id="field" class="detail">
+            <h3>filter 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 JSON 对象，该属性将用作数据加载的查询参数。</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail" override="true">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#height">mx.controls.Control.height</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">100%</div>
+            </div>
+            <hr>
+          </div><a name="idField"></a><div id="field" class="detail">
+            <h3>idField 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个属性，该属性将用作 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中数据项的 id 值。</div>
+            </div>
+            <hr>
+          </div><a name="images"></a><div id="field" class="detail">
+            <h3>images 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中所有使用的图片。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">JSON 对象在集合中的序号（从 0 开始计数）或 JSON 对象的 itemType 属性值。</div>
+            </div>
+            <hr>
+          </div><a name="imageSize"></a><div id="field" class="detail">
+            <h3>imageSize 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 图片的大小。该字段必须在初始化前设置。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">16</div>
+            </div>
+            <hr>
+          </div><a name="itemCount"></a><div id="field" class="detail" override="true">
+            <h3>itemCount 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个 Number 值，表示当前的总记录数。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#itemCount">mx.datacontrols.PagedControl.itemCount</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">0</div>
+            </div>
+            <hr>
+          </div><a name="itemMenu"></a><div id="field" class="detail">
+            <h3>itemMenu 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个 <a href="../../../html/mx/controls/ContextMenu.html">ContextMenu</a> 对象，表示数据项节点的右键菜单。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="items"></a><div id="field" class="detail">
+            <h3>items 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含数据项列表中的根数据项（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型）。请使用
+<a href="#setItems">setItems</a> 方法设置该集合的值。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        
+                            集合中成员的类型为
+                            <a href="../../../html/mx/controls/TreeListViewItem.html">mx.controls.TreeListViewItem</a>。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">数据项在集合中的序号（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="layoutConfigs"></a><div id="field" class="detail" override="true">
+            <h3>layoutConfigs 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#layoutConfigs">mx.controls.Control.layoutConfigs</a></div>
+            </div>
+            <hr>
+          </div><a name="left"></a><div id="field" class="detail" override="true">
+            <h3>left 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#left">mx.controls.Control.left</a></div>
+            </div>
+            <hr>
+          </div><a name="padding"></a><div id="field" class="detail" override="true">
+            <h3>padding 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#padding">mx.controls.Control.padding</a></div>
+            </div>
+            <hr>
+          </div><a name="pageIndex"></a><div id="field" class="detail" override="true">
+            <h3>pageIndex 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个 Number 值，表示当前第几页。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#pageIndex">mx.datacontrols.PagedControl.pageIndex</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">1</div>
+            </div>
+            <hr>
+          </div><a name="pageSize"></a><div id="field" class="detail" override="true">
+            <h3>pageSize 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个 Number 值，表示当前每页允许显示的记录数。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#pageSize">mx.datacontrols.PagedControl.pageSize</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">20</div>
+            </div>
+            <hr>
+          </div><a name="pageSizeOptions"></a><div id="field" class="detail" override="true">
+            <h3>pageSizeOptions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置一个数组值，表示分页记录数可设置的选项。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#pageSizeOptions">mx.datacontrols.PagedControl.pageSizeOptions</a></div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail" override="true">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件所属的父对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#parent">mx.controls.Control.parent</a></div>
+            </div>
+            <hr>
+          </div><a name="permissionID"></a><div id="field" class="detail" override="true">
+            <h3>permissionID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的权限标识。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#permissionID">mx.controls.Control.permissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="position"></a><div id="field" class="detail" override="true">
+            <h3>position 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#position">mx.controls.Control.position</a></div>
+            </div>
+            <hr>
+          </div><a name="right"></a><div id="field" class="detail" override="true">
+            <h3>right 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#right">mx.controls.Control.right</a></div>
+            </div>
+            <hr>
+          </div><a name="searchBox"></a><div id="field" class="detail">
+            <h3>searchBox 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或者获取一个 <a href="../../../html/mx/datacontrols/DataGridSearchBox.html">DataGridSearchBox</a> 对象。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="searchParamType"></a><div id="field" class="detail">
+            <h3>searchParamType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置表格的查询条件类型。json 表示查询参数filter 的值采用 Json 对象的形式传递。string 表示查询参数 filter 的值采用字符串的形式传递。
+该字段必须在初始化前设置。
+<p>
+该字段可选的值包括：
+<ul>
+     <li><b>json</b></li>
+     <li><b>string</b></li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="selection"></a><div id="field" class="detail">
+            <h3>selection 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个对象，表示 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中当前选中的数据项节点（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a>
+类型）。</div>
+            </div>
+            <hr>
+          </div><a name="singleSelect"></a><div id="field" class="detail">
+            <h3>singleSelect 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 Boolean 值，表示是支持多选。该属性与 <a href="#displayCheckBox">displayCheckBox</a> 属性等价，建议使用 <a href="#displayCheckBox">displayCheckBox</a>属性。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="top"></a><div id="field" class="detail" override="true">
+            <h3>top 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#top">mx.controls.Control.top</a></div>
+            </div>
+            <hr>
+          </div><a name="treeField"></a><div id="field" class="detail">
+            <h3>treeField 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个属性，该属性将用作 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 中数据项以树型结构显示的字段值。</div>
+            </div>
+            <hr>
+          </div><a name="type"></a><div id="field" class="detail">
+            <h3>type 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据加载的类型。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>remote</b></li>
+<li><b>local</b></li>
+</ul>
+</p></div>
+              <h4>默认值</h4>
+              <div class="h4Content">remote</div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail" override="true">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#visible">mx.controls.Control.visible</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#width">mx.controls.Control.width</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">auto</div>
+            </div>
+            <hr>
+          </div><a name="$body1"></a><div id="field" class="detail">
+            <h3>$body1 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$body2"></a><div id="field" class="detail">
+            <h3>$body2 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$bodyTable1"></a><div id="field" class="detail">
+            <h3>$bodyTable1 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该控件的占位符，该占位符为一个 JQuery 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$e">mx.controls.Control.$e</a></div>
+            </div>
+            <hr>
+          </div><a name="$grid"></a><div id="field" class="detail">
+            <h3>$grid 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$head1"></a><div id="field" class="detail">
+            <h3>$head1 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$headTable1"></a><div id="field" class="detail">
+            <h3>$headTable1 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$view"></a><div id="field" class="detail">
+            <h3>$view 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$view1"></a><div id="field" class="detail">
+            <h3>$view1 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="$view2"></a><div id="field" class="detail">
+            <h3>$view2 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="_items"></a><div id="field" class="detail">
+            <h3>_items 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="oncelledited"></a><div id="event" class="detail">
+            <h3>oncelledited 事件
+            </h3>
+            <div class="content">
+              <div class="summary">编辑后事件。</div>
+            </div>
+            <hr>
+          </div><a name="oncellediting"></a><div id="event" class="detail">
+            <h3>oncellediting 事件
+            </h3>
+            <div class="content">
+              <div class="summary">编辑前事件。</div>
+            </div>
+            <hr>
+          </div><a name="ondeleted"></a><div id="event" class="detail">
+            <h3>ondeleted 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="ondeleting"></a><div id="event" class="detail">
+            <h3>ondeleting 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据项删除前事件。</div>
+            </div>
+            <hr>
+          </div><a name="onexpanded"></a><div id="event" class="detail">
+            <h3>onexpanded 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据项展开后事件。</div>
+            </div>
+            <hr>
+          </div><a name="onexpanding"></a><div id="event" class="detail">
+            <h3>onexpanding 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据项展开前事件。</div>
+            </div>
+            <hr>
+          </div><a name="onitemcountchanged"></a><div id="event" class="detail" override="true">
+            <h3>onitemcountchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary">总记录数改变时触发该事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#onitemcountchanged">mx.datacontrols.PagedControl.onitemcountchanged</a></div>
+            </div>
+            <hr>
+          </div><a name="onitemdoubleclick"></a><div id="event" class="detail">
+            <h3>onitemdoubleclick 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当双击数据项列表中项的时候，将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，被双击的项。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="onload"></a><div id="event" class="detail">
+            <h3>onload 事件
+            </h3>
+            <div class="content">
+              <div class="summary">数据加载事件。</div>
+            </div>
+            <hr>
+          </div><a name="onpageindexchanged"></a><div id="event" class="detail" override="true">
+            <h3>onpageindexchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当前的页面索引变更时触发该事件。调用 <a href="#moveToPage">moveToPage</a> 方法是触发该事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/PagedControl.html#onpageindexchanged">mx.datacontrols.PagedControl.onpageindexchanged</a></div>
+            </div>
+            <hr>
+          </div><a name="onselectionchanged"></a><div id="event" class="detail">
+            <h3>onselectionchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当控件当前的选择项发生改变后，将触发该事件。通常调用 <a href="#selectItem">selectItem</a> 、 <a href="#deselectItem">deselectItem</a> 、
+<a href="#deselectAll">deselectAll</a> 等方法后会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onselectionchanging"></a><div id="event" class="detail">
+            <h3>onselectionchanging 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当控件当前的选择项发生改变的时候，将触发该事件。通常调用 <a href="#selectItem">selectItem</a> 方法时会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">可通过设置 cancel 参数为 true 来取消当前操作。默认为 false。</div>
+                </li>
+                <li><b class="paramName">item</b><div class="paramSummary">一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象，即将被选择的项。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

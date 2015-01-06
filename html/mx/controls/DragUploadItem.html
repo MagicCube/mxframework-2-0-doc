@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.DragUploadItem 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">DragUploadItem 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.DragUploadItem</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>DragUploadItem</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>DragUploadItem</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\DragUploadControl.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个上传控件（<a href="../../../html/mx/controls/DragUploadControl.html">DragUploadControl</a> 类型）中的上传项的类。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#DragUploadItem">DragUploadItem()
+    </a></td>
+                <td>构建 DragUploadItem 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#cancel">cancel()
+    </a></td>
+                <td>取消上传文件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getName">getName()
+    </a></td>
+                <td>获取文件名。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getPath">getPath()
+    </a></td>
+                <td>获取文件路径。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getSize">getSize()
+    </a></td>
+                <td>获取文件大小。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getType">getType()
+    </a></td>
+                <td>获取文件类型。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setParams">setParams(p_params)
+    </a></td>
+                <td>设置 <a href="#params">params</a> 的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setProgress">setProgress(p_percentage)
+    </a></td>
+                <td>设置 <a href="#progress">progress</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setStatus">setStatus(p_status)
+    </a></td>
+                <td>设置 {status} 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setUdsParam">setUdsParam(p_params)
+    </a></td>
+                <td>设置 <a href="#params">params</a> 的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#upload">upload(p_triggerEvent)
+    </a></td>
+                <td>开始上传文件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#file">file</a></td>
+                <td>获取或设置一个对象，表示要上传的文件。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#fileUploader">fileUploader</a></td>
+                <td>获取一个 <a href="../../../html/mx/io/FileUploader.html">FileUploader</a> 对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#name">name</a></td>
+                <td>获取或设置一个字符串，表示文件名。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#params">params</a></td>
+                <td>参见 <a href="../../../html/mx/io/FileUploader.html#params">FileUploader.params</a> 字段。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#path">path</a></td>
+                <td>获取或设置一个字符串，表示文件路径。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#progress">progress</a></td>
+                <td>获取或设置一个数字，表示上传的进度（如 50，表示上传了 50%）。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#size">size</a></td>
+                <td>获取或设置一个数字，表示文件大小（单位：字节）。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#status">status</a></td>
+                <td>获取或设置一个字符串，表示文件的上传状态
+（DragUploadControl.uploadStatus.UNSTART，DragUploadControl.uploadStatus.UPLOADING，DragUploadControl.uploadStatus.COMPLETE，
+DragUploadControl.uploadStatus.STOP，DragUploadControl.uploadStatus.ERROR）。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#type">type</a></td>
+                <td>获取或设置一个字符串，表示文件类型。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onuploaded">onuploaded</a></td>
+                <td>文件上传之后触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onuploading">onuploading</a></td>
+                <td>文件上传之前触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="DragUploadItem"></a><div id="method" class="detail">
+            <h3>DragUploadItem()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 DragUploadItem 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="cancel"></a><div id="method" class="detail">
+            <h3>cancel()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">取消上传文件。</div>
+            </div>
+            <hr>
+          </div><a name="getName"></a><div id="method" class="detail">
+            <h3>getName()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取文件名。</div>
+            </div>
+            <hr>
+          </div><a name="getPath"></a><div id="method" class="detail">
+            <h3>getPath()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取文件路径。</div>
+            </div>
+            <hr>
+          </div><a name="getSize"></a><div id="method" class="detail">
+            <h3>getSize()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取文件大小。</div>
+            </div>
+            <hr>
+          </div><a name="getType"></a><div id="method" class="detail">
+            <h3>getType()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取文件类型。</div>
+            </div>
+            <hr>
+          </div><a name="setParams"></a><div id="method" class="detail">
+            <h3>setParams(p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#params">params</a> 的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_params</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setProgress"></a><div id="method" class="detail">
+            <h3>setProgress(p_percentage)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#progress">progress</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_percentage</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setStatus"></a><div id="method" class="detail">
+            <h3>setStatus(p_status)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 {status} 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_status</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setUdsParam"></a><div id="method" class="detail">
+            <h3>setUdsParam(p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#params">params</a> 的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_params</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="upload"></a><div id="method" class="detail">
+            <h3>upload(p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">开始上传文件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#onuploaded">onuploaded</a> 事件。如果该值为
+           true，则触发事件。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="file"></a><div id="field" class="detail">
+            <h3>file 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个对象，表示要上传的文件。</div>
+            </div>
+            <hr>
+          </div><a name="fileUploader"></a><div id="field" class="detail">
+            <h3>fileUploader 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 <a href="../../../html/mx/io/FileUploader.html">FileUploader</a> 对象。</div>
+            </div>
+            <hr>
+          </div><a name="name"></a><div id="field" class="detail">
+            <h3>name 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示文件名。</div>
+            </div>
+            <hr>
+          </div><a name="params"></a><div id="field" class="detail">
+            <h3>params 字段
+            </h3>
+            <div class="content">
+              <div class="summary">参见 <a href="../../../html/mx/io/FileUploader.html#params">FileUploader.params</a> 字段。</div>
+            </div>
+            <hr>
+          </div><a name="path"></a><div id="field" class="detail">
+            <h3>path 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示文件路径。</div>
+            </div>
+            <hr>
+          </div><a name="progress"></a><div id="field" class="detail">
+            <h3>progress 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个数字，表示上传的进度（如 50，表示上传了 50%）。</div>
+            </div>
+            <hr>
+          </div><a name="size"></a><div id="field" class="detail">
+            <h3>size 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个数字，表示文件大小（单位：字节）。</div>
+            </div>
+            <hr>
+          </div><a name="status"></a><div id="field" class="detail">
+            <h3>status 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示文件的上传状态
+（DragUploadControl.uploadStatus.UNSTART，DragUploadControl.uploadStatus.UPLOADING，DragUploadControl.uploadStatus.COMPLETE，
+DragUploadControl.uploadStatus.STOP，DragUploadControl.uploadStatus.ERROR）。</div>
+            </div>
+            <hr>
+          </div><a name="type"></a><div id="field" class="detail">
+            <h3>type 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示文件类型。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onuploaded"></a><div id="event" class="detail">
+            <h3>onuploaded 事件
+            </h3>
+            <div class="content">
+              <div class="summary">文件上传之后触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onuploading"></a><div id="event" class="detail">
+            <h3>onuploading 事件
+            </h3>
+            <div class="content">
+              <div class="summary">文件上传之前触发该事件。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

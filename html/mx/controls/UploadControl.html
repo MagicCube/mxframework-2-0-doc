@@ -1,0 +1,1236 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.UploadControl 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">UploadControl 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.UploadControl</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>UploadControl</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>UploadControl</span><span id="inherit"></span><a href="../../../html/mx/controls/Control.html">Control</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\UploadControl.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个允许用户上传文件的类。特别注意：在FireFox浏览器下载中文名文件时会出现乱码。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个文件上传编辑器如何初始化的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var upload = new mx.controls.UploadControl(
+{
+     filePath : "D:\\testUpload\\inner\\",
+     height : 200,
+     baseUrl : mx.mappath("~/../mx/servlets/fileUpload")
+});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#UploadControl">UploadControl()
+    </a></td>
+                <td>构建 UploadControl 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#contains">contains($p_target)
+    </a></td>
+                <td>返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#createXMLHttpRequest">createXMLHttpRequest()
+    </a></td>
+                <td>提供一个方法，创建调用后台服务的 HTTP 对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#dispose">dispose()
+    </a></td>
+                <td>释放对象运行时动态生成的内容（属性、方法、事件）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#download">download(p_fileName)
+    </a></td>
+                <td>提供一个方法，下载指定的文件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getContext">getContext()
+    </a></td>
+                <td>获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEl">getEl()
+    </a></td>
+                <td>获取控件容器对应的 HTML DOM 元素对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getUploadedNames">getUploadedNames()
+    </a></td>
+                <td>提供一个方法，获取上传控件上传成功的文件名字。多个文件名用 “;” 分隔</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hide">hide()
+    </a></td>
+                <td>隐藏控件，设置控件不可见。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_left, p_top)
+    </a></td>
+                <td>移动控件到指定位置。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#refreshPk">refreshPk(p_items, p_pkColName)
+    </a></td>
+                <td>请参见 {mx.editors.FileEditor.refreshPk} 。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#resizeTo">resizeTo(p_width, p_height)
+    </a></td>
+                <td>重设控件的大小。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBorder">setBorder(p_border)
+    </a></td>
+                <td>设置控件的边框样式。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBottom">setBottom(p_bottom)
+    </a></td>
+                <td>设置 <a href="#bottom">bottom</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCss">setCss(p_css)
+    </a></td>
+                <td>设置 <a href="#css">css</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCssClass">setCssClass(p_cssClass)
+    </a></td>
+                <td>设置 <a href="#cssClass">cssClass</a>} 字段的值</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplay">setDisplay(p_display)
+    </a></td>
+                <td>设置 <a href="#display">display</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>设置 <a href="#enabled">enabled</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHeight">setHeight(p_height)
+    </a></td>
+                <td>设置 <a href="#height">height</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setLeft">setLeft(p_left)
+    </a></td>
+                <td>设置 <a href="#left">left</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPadding">setPadding(p_padding)
+    </a></td>
+                <td>设置控件的内边距。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPosition">setPosition(p_position)
+    </a></td>
+                <td>设置 <a href="#position">position</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setRight">setRight(p_right)
+    </a></td>
+                <td>设置 <a href="#right">right</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setTop">setTop(p_top)
+    </a></td>
+                <td>设置 <a href="#top">top</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#show">show()
+    </a></td>
+                <td>显示控件，设置控件可见。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$">$(p_expression)
+    </a></td>
+                <td>该方法与 me.$e.find(p_expression) 等同。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$wrap">$wrap([p_obj])
+    </a></td>
+                <td>返回一个 JQuery 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#alias">alias</a></td>
+                <td>获取或设置一个字符串，表示控件的别名。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#allowTypes">allowTypes</a></td>
+                <td>设置或获取一个字符串，表示允许上传的文件类型，多个扩展名用逗号隔开。值为 null 时表示允许上传所有文件。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#baseUrl">baseUrl</a></td>
+                <td>获取或设置一个字符串，表示后台服务所在路径。MX 框架提供两个服务路径可供选择。
+mx.mappath("~/../mx/servlets/fileUpload") 供管理指定目录下的文件时使用，
+mx.mappath("~/../mx/servlets/dataFileUpload") 供管理表单、表格对应的数据附件时使用。
+用户可以根据需要使用自己的服务路径。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#border">border</a></td>
+                <td>获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#bottom">bottom</a></td>
+                <td>获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#colName">colName</a></td>
+                <td>设置或获取一个字符串，表示上传控件在存储表单数据的表中对应的列名。 当控件类型为 form 时，此属性有值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssClass">cssClass</a></td>
+                <td>指定css伪类名称，设置控件显示样式</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#display">display</a></td>
+                <td>获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#eTag">eTag</a></td>
+                <td>获取控件的标签。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#fileNames">fileNames</a></td>
+                <td>获取一个字符串，表示当前已经上传的文件名，多个文件名用分号分隔。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#filePath">filePath</a></td>
+                <td>获取或设置一个字符串，表示上传文件在服务器上的保存路径。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#filesLimit">filesLimit</a></td>
+                <td>设置或获取一个数字，表示允许上传的文件个数。为 0 时表示没有限制。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#isVirtual">isVirtual</a></td>
+                <td>指示列是否虚拟，如果列是虚拟的话，将不会执行业务表的逻辑</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutConfigs">layoutConfigs</a></td>
+                <td>获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#left">left</a></td>
+                <td>获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#limitTypes">limitTypes</a></td>
+                <td>设置或获取一个字符串，表示禁止上传的文件类型，多个扩展名用逗号隔开。需要先满足 <a href="../../../html/mx/controls/UploadControl.html#allowTypes">UploadControl.allowTypes</a>。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#maxSize">maxSize</a></td>
+                <td>获取或设置一个数字，表示上传文件的大小所允许的最大值，单位 “KB”。如果为“-1”表示无限制。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#padding">padding</a></td>
+                <td>获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#parent">parent</a></td>
+                <td>获取控件所属的父对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#permissionID">permissionID</a></td>
+                <td>获取或设置一个字符串，表示控件的权限标识。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#pkVal">pkVal</a></td>
+                <td>设置或获取一个字符串，表示上传控件所属数据的主键值。 当控件类型为 form 时，此属性有意义；若此时此属性没有值，控件不会响应点击事件。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#position">position</a></td>
+                <td>获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#primaryKey">primaryKey</a></td>
+                <td>设置或获取一个字符串，表示上传控件所属数据表的主键列名。 当控件类型为 form 时，此属性有值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#right">right</a></td>
+                <td>获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#tableName">tableName</a></td>
+                <td>设置或获取一个字符串，表示上传控件所属数据的表名。 当控件类型为 form 时，此属性有值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#top">top</a></td>
+                <td>获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#type">type</a></td>
+                <td>设置或获取一个字符串，表示当前上传控件的类型。 当类型为 path 时，表示管理指定目录下的文件； 当类型为 form
+时，表示管理表单对应的数据的附件。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#uploadMode">uploadMode</a></td>
+                <td>设置或获取一个字符串，表示保存文件的方式。 当控件类型为 form 时，此属性有意义。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>file</b></li>
+<li><b>blob</b></li>
+<li><b>uds</b></li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#vault">vault</a></td>
+                <td>获取一个对象，表示上传组件对应的工具类。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#visible">visible</a></td>
+                <td>获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td>获取控件的宽度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取该控件的占位符，该占位符为一个 JQuery 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onallitemuploaded">onallitemuploaded</a></td>
+                <td>所有文件上传成功后触发该事件</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onclosed">onclosed</a></td>
+                <td>当控件点击关闭按钮时，将触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onitemuploaded">onitemuploaded</a></td>
+                <td>上传项上传之后触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onitemuploading">onitemuploading</a></td>
+                <td>上传项上传之前触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onselectionchanged">onselectionchanged</a></td>
+                <td>当选择的文件改变时触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="UploadControl"></a><div id="method" class="detail">
+            <h3>UploadControl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 UploadControl 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#init">mx.controls.Control.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="contains"></a><div id="method" class="detail" override="true">
+            <h3>contains($p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">$p_target</b><div class="paramSummary">一个 JQuery 对象，或 JQuery 选择器对应的字符串（如“#container”），或 HTML DOM 元素。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#contains">mx.controls.Control.contains</a></div>
+            </div>
+            <hr>
+          </div><a name="createXMLHttpRequest"></a><div id="method" class="detail">
+            <h3>createXMLHttpRequest()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，创建调用后台服务的 HTTP 对象。</div>
+            </div>
+            <hr>
+          </div><a name="dispose"></a><div id="method" class="detail" override="true">
+            <h3>dispose()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">释放对象运行时动态生成的内容（属性、方法、事件）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#dispose">mx.controls.Control.dispose</a></div>
+            </div>
+            <hr>
+          </div><a name="download"></a><div id="method" class="detail">
+            <h3>download(p_fileName)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，下载指定的文件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fileName</b><div class="paramSummary">要下载的文件名。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getContext"></a><div id="method" class="detail" override="true">
+            <h3>getContext()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getContext">mx.controls.Control.getContext</a></div>
+            </div>
+            <hr>
+          </div><a name="getEl"></a><div id="method" class="detail" override="true">
+            <h3>getEl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件容器对应的 HTML DOM 元素对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getEl">mx.controls.Control.getEl</a></div>
+            </div>
+            <hr>
+          </div><a name="getUploadedNames"></a><div id="method" class="detail">
+            <h3>getUploadedNames()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，获取上传控件上传成功的文件名字。多个文件名用 “;” 分隔</div>
+            </div>
+            <hr>
+          </div><a name="hide"></a><div id="method" class="detail" override="true">
+            <h3>hide()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏控件，设置控件不可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#hide">mx.controls.Control.hide</a></div>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_left, p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移动控件到指定位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">一个数字，表示 css 样式的 left 属性。</div>
+                </li>
+                <li><b class="paramName">p_top</b><div class="paramSummary">一个数字，表示 css 样式的 top 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#moveTo">mx.controls.Control.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="refreshPk"></a><div id="method" class="detail">
+            <h3>refreshPk(p_items, p_pkColName)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">请参见 {mx.editors.FileEditor.refreshPk} 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_pkColName</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="resizeTo"></a><div id="method" class="detail" override="true">
+            <h3>resizeTo(p_width, p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重设控件的大小。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的宽度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#resizeTo">mx.controls.Control.resizeTo</a></div>
+            </div>
+            <hr>
+          </div><a name="setBorder"></a><div id="method" class="detail" override="true">
+            <h3>setBorder(p_border)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的边框样式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_border</b><div class="paramSummary">一个字符串，表示css样式的 border 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBorder">mx.controls.Control.setBorder</a></div>
+            </div>
+            <hr>
+          </div><a name="setBottom"></a><div id="method" class="detail" override="true">
+            <h3>setBottom(p_bottom)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#bottom">bottom</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_bottom</b><div class="paramSummary">控件的下边界与父容器下边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBottom">mx.controls.Control.setBottom</a></div>
+            </div>
+            <hr>
+          </div><a name="setCss"></a><div id="method" class="detail" override="true">
+            <h3>setCss(p_css)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#css">css</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_css</b><div class="paramSummary">一个 JSON 对象，表示控件的 CSS 样式。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCss">mx.controls.Control.setCss</a></div>
+            </div>
+            <hr>
+          </div><a name="setCssClass"></a><div id="method" class="detail" override="true">
+            <h3>setCssClass(p_cssClass)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#cssClass">cssClass</a>} 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_cssClass</b><div class="paramSummary">一个String 对象，样式classname</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCssClass">mx.controls.Control.setCssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplay"></a><div id="method" class="detail" override="true">
+            <h3>setDisplay(p_display)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#display">display</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_display</b><div class="paramSummary">css 样式的 display 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setDisplay">mx.controls.Control.setDisplay</a></div>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#enabled">enabled</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setEnabled">mx.controls.Control.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setHeight"></a><div id="method" class="detail" override="true">
+            <h3>setHeight(p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#height">height</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setHeight">mx.controls.Control.setHeight</a></div>
+            </div>
+            <hr>
+          </div><a name="setLeft"></a><div id="method" class="detail" override="true">
+            <h3>setLeft(p_left)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#left">left</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">控件的左边界与父容器左边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setLeft">mx.controls.Control.setLeft</a></div>
+            </div>
+            <hr>
+          </div><a name="setPadding"></a><div id="method" class="detail" override="true">
+            <h3>setPadding(p_padding)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的内边距。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_padding</b><div class="paramSummary">一个字符串，表示css样式的 padding 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPadding">mx.controls.Control.setPadding</a></div>
+            </div>
+            <hr>
+          </div><a name="setPosition"></a><div id="method" class="detail" override="true">
+            <h3>setPosition(p_position)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#position">position</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_position</b><div class="paramSummary">一个字符串，表示 css 样式的 position 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPosition">mx.controls.Control.setPosition</a></div>
+            </div>
+            <hr>
+          </div><a name="setRight"></a><div id="method" class="detail" override="true">
+            <h3>setRight(p_right)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#right">right</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_right</b><div class="paramSummary">控件的右边界与父容器右边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setRight">mx.controls.Control.setRight</a></div>
+            </div>
+            <hr>
+          </div><a name="setTop"></a><div id="method" class="detail" override="true">
+            <h3>setTop(p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#top">top</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_top</b><div class="paramSummary">控件的上边界与父容器上边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setTop">mx.controls.Control.setTop</a></div>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示控件是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setVisible">mx.controls.Control.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的高度,可以是数字（如 500）、字符串（如“500px”或“50%”）.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setWidth">mx.controls.Control.setWidth</a></div>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail" override="true">
+            <h3>show()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示控件，设置控件可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#show">mx.controls.Control.show</a></div>
+            </div>
+            <hr>
+          </div><a name="$"></a><div id="method" class="detail" override="true">
+            <h3>$(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">该方法与 me.$e.find(p_expression) 等同。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$">mx.controls.Control.$</a></div>
+            </div>
+            <hr>
+          </div><a name="$wrap"></a><div id="method" class="detail" override="true">
+            <h3>$wrap([p_obj])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_obj</b><div class="paramSummary">可选的。默认值为“me.$e”。一个 JQuery 对象，或继承自 Control 的控件，或字符串，或 HTML DOM 元素。如果参数为 JQuery 对象，则返回本身；如果参数为继承自 Control 的控件，则返回控件的 $e 对象；如果参数为字符串，则返回以字符串为选择器的 JQuery 对象；如果参数为空，则返回控件本身的 $e 对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$wrap">mx.controls.Control.$wrap</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="alias"></a><div id="field" class="detail" override="true">
+            <h3>alias 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的别名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#alias">mx.controls.Control.alias</a></div>
+            </div>
+            <hr>
+          </div><a name="allowTypes"></a><div id="field" class="detail">
+            <h3>allowTypes 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示允许上传的文件类型，多个扩展名用逗号隔开。值为 null 时表示允许上传所有文件。</div>
+            </div>
+            <hr>
+          </div><a name="baseUrl"></a><div id="field" class="detail">
+            <h3>baseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示后台服务所在路径。MX 框架提供两个服务路径可供选择。
+mx.mappath("~/../mx/servlets/fileUpload") 供管理指定目录下的文件时使用，
+mx.mappath("~/../mx/servlets/dataFileUpload") 供管理表单、表格对应的数据附件时使用。
+用户可以根据需要使用自己的服务路径。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">mx.mappath("~/../mx/servlets/fileUpload")</div>
+            </div>
+            <hr>
+          </div><a name="border"></a><div id="field" class="detail" override="true">
+            <h3>border 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#border">mx.controls.Control.border</a></div>
+            </div>
+            <hr>
+          </div><a name="bottom"></a><div id="field" class="detail" override="true">
+            <h3>bottom 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#bottom">mx.controls.Control.bottom</a></div>
+            </div>
+            <hr>
+          </div><a name="colName"></a><div id="field" class="detail">
+            <h3>colName 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示上传控件在存储表单数据的表中对应的列名。 当控件类型为 form 时，此属性有值。</div>
+            </div>
+            <hr>
+          </div><a name="cssClass"></a><div id="field" class="detail" override="true">
+            <h3>cssClass 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指定css伪类名称，设置控件显示样式</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#cssClass">mx.controls.Control.cssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="display"></a><div id="field" class="detail" override="true">
+            <h3>display 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#display">mx.controls.Control.display</a></div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#enabled">mx.controls.Control.enabled</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="eTag"></a><div id="field" class="detail" override="true">
+            <h3>eTag 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的标签。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#eTag">mx.controls.Control.eTag</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">&lt;div/&gt;</div>
+            </div>
+            <hr>
+          </div><a name="fileNames"></a><div id="field" class="detail">
+            <h3>fileNames 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示当前已经上传的文件名，多个文件名用分号分隔。</div>
+            </div>
+            <hr>
+          </div><a name="filePath"></a><div id="field" class="detail">
+            <h3>filePath 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示上传文件在服务器上的保存路径。</div>
+            </div>
+            <hr>
+          </div><a name="filesLimit"></a><div id="field" class="detail">
+            <h3>filesLimit 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个数字，表示允许上传的文件个数。为 0 时表示没有限制。</div>
+            </div>
+            <hr>
+          </div><a name="isVirtual"></a><div id="field" class="detail">
+            <h3>isVirtual 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指示列是否虚拟，如果列是虚拟的话，将不会执行业务表的逻辑</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="layoutConfigs"></a><div id="field" class="detail" override="true">
+            <h3>layoutConfigs 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#layoutConfigs">mx.controls.Control.layoutConfigs</a></div>
+            </div>
+            <hr>
+          </div><a name="left"></a><div id="field" class="detail" override="true">
+            <h3>left 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#left">mx.controls.Control.left</a></div>
+            </div>
+            <hr>
+          </div><a name="limitTypes"></a><div id="field" class="detail">
+            <h3>limitTypes 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示禁止上传的文件类型，多个扩展名用逗号隔开。需要先满足 <a href="../../../html/mx/controls/UploadControl.html#allowTypes">UploadControl.allowTypes</a>。</div>
+            </div>
+            <hr>
+          </div><a name="maxSize"></a><div id="field" class="detail">
+            <h3>maxSize 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个数字，表示上传文件的大小所允许的最大值，单位 “KB”。如果为“-1”表示无限制。</div>
+            </div>
+            <hr>
+          </div><a name="padding"></a><div id="field" class="detail" override="true">
+            <h3>padding 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#padding">mx.controls.Control.padding</a></div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail" override="true">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件所属的父对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#parent">mx.controls.Control.parent</a></div>
+            </div>
+            <hr>
+          </div><a name="permissionID"></a><div id="field" class="detail" override="true">
+            <h3>permissionID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的权限标识。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#permissionID">mx.controls.Control.permissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="pkVal"></a><div id="field" class="detail">
+            <h3>pkVal 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示上传控件所属数据的主键值。 当控件类型为 form 时，此属性有意义；若此时此属性没有值，控件不会响应点击事件。</div>
+            </div>
+            <hr>
+          </div><a name="position"></a><div id="field" class="detail" override="true">
+            <h3>position 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#position">mx.controls.Control.position</a></div>
+            </div>
+            <hr>
+          </div><a name="primaryKey"></a><div id="field" class="detail">
+            <h3>primaryKey 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示上传控件所属数据表的主键列名。 当控件类型为 form 时，此属性有值。</div>
+            </div>
+            <hr>
+          </div><a name="right"></a><div id="field" class="detail" override="true">
+            <h3>right 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#right">mx.controls.Control.right</a></div>
+            </div>
+            <hr>
+          </div><a name="tableName"></a><div id="field" class="detail">
+            <h3>tableName 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示上传控件所属数据的表名。 当控件类型为 form 时，此属性有值。</div>
+            </div>
+            <hr>
+          </div><a name="top"></a><div id="field" class="detail" override="true">
+            <h3>top 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#top">mx.controls.Control.top</a></div>
+            </div>
+            <hr>
+          </div><a name="type"></a><div id="field" class="detail">
+            <h3>type 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示当前上传控件的类型。 当类型为 path 时，表示管理指定目录下的文件； 当类型为 form
+时，表示管理表单对应的数据的附件。</div>
+            </div>
+            <hr>
+          </div><a name="uploadMode"></a><div id="field" class="detail">
+            <h3>uploadMode 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个字符串，表示保存文件的方式。 当控件类型为 form 时，此属性有意义。
+<p>
+该字段可选的值包括：
+<ul>
+<li><b>file</b></li>
+<li><b>blob</b></li>
+<li><b>uds</b></li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="vault"></a><div id="field" class="detail">
+            <h3>vault 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个对象，表示上传组件对应的工具类。</div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail" override="true">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#visible">mx.controls.Control.visible</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的宽度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#width">mx.controls.Control.width</a></div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该控件的占位符，该占位符为一个 JQuery 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$e">mx.controls.Control.$e</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onallitemuploaded"></a><div id="event" class="detail">
+            <h3>onallitemuploaded 事件
+            </h3>
+            <div class="content">
+              <div class="summary">所有文件上传成功后触发该事件</div>
+            </div>
+            <hr>
+          </div><a name="onclosed"></a><div id="event" class="detail">
+            <h3>onclosed 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当控件点击关闭按钮时，将触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onitemuploaded"></a><div id="event" class="detail">
+            <h3>onitemuploaded 事件
+            </h3>
+            <div class="content">
+              <div class="summary">上传项上传之后触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onitemuploading"></a><div id="event" class="detail">
+            <h3>onitemuploading 事件
+            </h3>
+            <div class="content">
+              <div class="summary">上传项上传之前触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">可通过设置 cancel 参数为 true 来取消当前操作。默认为 false。</div>
+                </li>
+                <li><b class="paramName">item</b><div class="paramSummary">上传项对象，其 setUdsParam 方法参加  <a href="../../../html/mx/controls/DragUploadItem.html#setUdsParam">DragUploadItem.setUdsParam</a> 方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="onselectionchanged"></a><div id="event" class="detail">
+            <h3>onselectionchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当选择的文件改变时触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">item</b><div class="paramSummary">一个对象，表示当前选中的文件信息。如果是未上传文件，item 包含未上传文件信息，如{name:"", path:""}；
+如果是已上传文件，包含的是服务端文件信息，如{attName:"",attSize:"", fileId:""}。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

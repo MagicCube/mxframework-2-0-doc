@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>MX 类</title>
+    <link rel="stylesheet" href="../css/common.css"><script src="../scripts/jquery.js"></script><script src="../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../html//index.html"></a><h1 id="class">MX 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>MX</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../html//index.html"></a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>MX</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>MX</span><span id="inherit"></span><a href="../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\framework-debug.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个基础类，为 MX 框架提供运行时环境。该类在运行时只有一个实例 mx。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#MX">MX()
+    </a></td>
+                <td>构建 MX 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#err">err(p_key, p_args)
+    </a></td>
+                <td>返回一个字符串，表示错误类的国际化信息。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#error">error(p_message)
+    </a></td>
+                <td>在控制台打印 MX 的错误日志。日志以“MX”开头（如“[MX] error.”）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getScrollBarWidth">getScrollBarWidth()
+    </a></td>
+                <td>获取滚动条的宽度。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#importClass">importClass(p_fullClassName, [p_callback])
+    </a></td>
+                <td>加载 JavaScript 脚本。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#importMessages">importMessages(p_moduleName, [p_callback])
+    </a></td>
+                <td>加载国际化资源脚本。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#include">include(p_path, [p_callback])
+    </a></td>
+                <td>加载 JavaScript 脚本或者 CSS 样式库文件。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#indicate">indicate(p_type, p_message, [p_options])
+    </a></td>
+                <td>在指定的容器中显示一个提示。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#loadMXExtModule">loadMXExtModule(p_extWebletName, [p_callback])
+    </a></td>
+                <td>加载框架扩展模块的 Weblet 脚本。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#log">log(p_message)
+    </a></td>
+                <td>在控制台打印 MX 的普通日志。日志以“MX”开头（如“[MX] loaded.”）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#mappath">mappath(p_url)
+    </a></td>
+                <td>返回一个 Weblet 对应的地址。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#msg">msg(p_key, [p_args])
+    </a></td>
+                <td>返回一个字符串，表示国际化信息。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setTheme">setTheme(p_theme, [p_themePath])
+    </a></td>
+                <td>设置 <a href="#theme">theme</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setThemePath">setThemePath(p_themePath)
+    </a></td>
+                <td>设置 <a href="#themePath">themePath</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#showerror">showerror(p_error, p_errorPage)
+    </a></td>
+                <td>在页面中以统一方式显示错误信息。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#warn">warn(p_message)
+    </a></td>
+                <td>在控制台打印 MX 的警告日志。日志以“MX”开头（如“[MX] warning.”）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#whenReady">whenReady(p_callback)
+    </a></td>
+                <td>添加一个方法，该方法在所有资源加载完成后被执行。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#whenScriptReady">whenScriptReady(p_callback)
+    </a></td>
+                <td>添加一个方法，该方法在所有 JavaScript 脚本加载完成后被执行。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#whenStyleReady">whenStyleReady(p_callback)
+    </a></td>
+                <td>添加一个方法，该方法在所有 CSS 样式库加载完成后被执行。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#bundleName">bundleName</a></td>
+                <td>获取或设置模块名称。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#compressMode">compressMode</a></td>
+                <td>获取一个 Boolean 值，表示当前是否采用压缩模式引入框架。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#debugMode">debugMode</a></td>
+                <td>获取一个 Boolean 值，表示当前是否开发。如果为 true 表示当前是开发模式；反之当前为运行时模式。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#errorType">errorType</a></td>
+                <td>获取设置的错误类型，如果为 normal 表示正常提示错误信息，如果为 friendly 表示不显示后台错误信息。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#globalUploadMode">globalUploadMode</a></td>
+                <td>获取一个字符串值，表示框架内的上传控件 <a href="../html/mx/editors/FileEditor.html">FileEditor</a> 的默认上传模式。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#loadedScripts">loadedScripts</a></td>
+                <td>获取已经加载完毕的 JavaScript 脚本的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#loadedStyles">loadedStyles</a></td>
+                <td>获取已经加载完毕的 CSS 样式库的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#loadingScripts">loadingScripts</a></td>
+                <td>获取正在加载中的 JavaScript 脚本的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#loadingStyles">loadingStyles</a></td>
+                <td>获取正在加载中的 CSS 样式库的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#locale">locale</a></td>
+                <td>获取框架的国际化信息。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#rootPath">rootPath</a></td>
+                <td>获取当前工程的根路径。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#theme">theme</a></td>
+                <td>获取或设置框架的主题库名称。
+如果需要替换框架提供的主题，请使用 <a href="#setTheme">setTheme</a> 方法设置主题。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#themePath">themePath</a></td>
+                <td>获取或设置框架使用的主题库的路径。
+如果需要替换框架提供的主题，请设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#_scriptReady_callbacks">_scriptReady_callbacks</a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#_styleReady_callbacks">_styleReady_callbacks</a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="MX"></a><div id="method" class="detail">
+            <h3>MX()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 MX 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="err"></a><div id="method" class="detail">
+            <h3>err(p_key, p_args)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个字符串，表示错误类的国际化信息。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">一个字符串，表示指定的键。<b>在国际化文件中错误类的国际化信息的键需要以“ERR_”开头，但获取国际化信息时不需要加“ERR_”。</b></div>
+                </li>
+                <li><b class="paramName">p_args</b><div class="paramSummary">请参见 <a href="#msg">msg</a> 方法的“p_args”参数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="error"></a><div id="method" class="detail">
+            <h3>error(p_message)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在控制台打印 MX 的错误日志。日志以“MX”开头（如“[MX] error.”）。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_message</b><div class="paramSummary">一个字符串，表示需要打印的信息。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getScrollBarWidth"></a><div id="method" class="detail">
+            <h3>getScrollBarWidth()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取滚动条的宽度。</div>
+            </div>
+            <hr>
+          </div><a name="importClass"></a><div id="method" class="detail">
+            <h3>importClass(p_fullClassName, [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载 JavaScript 脚本。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fullClassName</b><div class="paramSummary">要加载的类信息，如 mx.windows.Window。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。默认值为“null”。加载完成后的回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="importMessages"></a><div id="method" class="detail">
+            <h3>importMessages(p_moduleName, [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载国际化资源脚本。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_moduleName</b><div class="paramSummary">要加载的模块名称。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。默认值为“null”。加载完成后的回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="include"></a><div id="method" class="detail">
+            <h3>include(p_path, [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载 JavaScript 脚本或者 CSS 样式库文件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_path</b><div class="paramSummary">一个字符串，表示要加载文件的路径。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。默认值为“null”。加载完成后的回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="indicate"></a><div id="method" class="detail">
+            <h3>indicate(p_type, p_message, [p_options])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的容器中显示一个提示。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_type</b><div class="paramSummary">一个字符串，表示提示的类型。如“info”、“warn”、“error”、“busy”、“user”等。</div>
+                </li>
+                <li><b class="paramName">p_message</b><div class="paramSummary">指定提示的信息。</div>
+                </li>
+                <li><b class="paramName">p_options</b><div class="paramSummary">可选的。目前暂未使用。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="loadMXExtModule"></a><div id="method" class="detail">
+            <h3>loadMXExtModule(p_extWebletName, [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载框架扩展模块的 Weblet 脚本。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_extWebletName</b><div class="paramSummary">要加载的扩展模块 Weblet 名称，默认为 "mx"。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。默认值为“null”。加载完成后的回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="log"></a><div id="method" class="detail">
+            <h3>log(p_message)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在控制台打印 MX 的普通日志。日志以“MX”开头（如“[MX] loaded.”）。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_message</b><div class="paramSummary">一个字符串，表示需要打印的信息。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="mappath"></a><div id="method" class="detail">
+            <h3>mappath(p_url)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Weblet 对应的地址。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_url</b><div class="paramSummary">一个字符串，表示特定的地址。
+           <p>
+           该参数的形式包括:
+           <ul>
+           <li><b>~/</b> - 以“~/”开头表示获取 UAP项目 的根目录地址或网站虚拟路径。</li>
+           <li><b>~/../</b> - 在模块项目中使用本框架时，如果引用其他模块项目的资源必须以该格式或者完整路径。
+           <li><b>./</b> - 以“./”开头表示获取 MX 的根目录地址。</li>
+           <li><b>$/</b> - 以“$/”开头表示获取 MX 的 resources 目录地址。</li>
+           <li><b>$locale/</b> - 以“$locale/”开头表示获取 MX 的 resources/locales 目录地址。</li>
+           <li><b>$theme/</b> - 以“$theme/”开头表示获取 MX 的 resources/themes 目录地址。</li>
+           </ul>
+           </p></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="msg"></a><div id="method" class="detail">
+            <h3>msg(p_key, [p_args])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个字符串，表示国际化信息。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">一个字符串，表示指定的键。</div>
+                </li>
+                <li><b class="paramName">p_args</b><div class="paramSummary">可选的。默认值为“null”。一个数组或 JSON 对象。当国际化信息为“{0} 已加载。”或“{0} 和 {1}
+           已加载。”的形式时，参数为数组，分别对应各个占位符中的值；当国际化信息为“{a} 已加载。”或“{a} 和 {b}
+           已加载。”的形式时，参数为 JSON 对象（如{a: "DBM", b: "DBM2"}）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setTheme"></a><div id="method" class="detail">
+            <h3>setTheme(p_theme, [p_themePath])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#theme">theme</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_theme</b><div class="paramSummary">一个字符串，表示主题的名称（如“aero”）。</div>
+                </li>
+                <li><b class="paramName">p_themePath</b><div class="paramSummary">可选的。一个字符串，表示需要使用的主题库的路径（如“~/dbm/resources/themes”）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setThemePath"></a><div id="method" class="detail">
+            <h3>setThemePath(p_themePath)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#themePath">themePath</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_themePath</b><div class="paramSummary">一个字符串，表示需要使用的主题库的路径（如“~/dbm/resources/themes”）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="showerror"></a><div id="method" class="detail">
+            <h3>showerror(p_error, p_errorPage)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在页面中以统一方式显示错误信息。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_error</b><div class="paramSummary">一个字符串，表示错误信息；或一个 Error 对象。</div>
+                </li>
+                <li><b class="paramName">p_errorPage</b><div class="paramSummary">一个字符串，表示错误页面的地址。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="warn"></a><div id="method" class="detail">
+            <h3>warn(p_message)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在控制台打印 MX 的警告日志。日志以“MX”开头（如“[MX] warning.”）。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_message</b><div class="paramSummary">一个字符串，表示需要打印的信息。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="whenReady"></a><div id="method" class="detail">
+            <h3>whenReady(p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一个方法，该方法在所有资源加载完成后被执行。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_callback</b><div class="paramSummary">回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="whenScriptReady"></a><div id="method" class="detail">
+            <h3>whenScriptReady(p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一个方法，该方法在所有 JavaScript 脚本加载完成后被执行。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_callback</b><div class="paramSummary">回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="whenStyleReady"></a><div id="method" class="detail">
+            <h3>whenStyleReady(p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一个方法，该方法在所有 CSS 样式库加载完成后被执行。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_callback</b><div class="paramSummary">回调方法。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="bundleName"></a><div id="field" class="detail">
+            <h3>bundleName 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置模块名称。</div>
+            </div>
+            <hr>
+          </div><a name="compressMode"></a><div id="field" class="detail">
+            <h3>compressMode 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示当前是否采用压缩模式引入框架。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="debugMode"></a><div id="field" class="detail">
+            <h3>debugMode 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示当前是否开发。如果为 true 表示当前是开发模式；反之当前为运行时模式。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="errorType"></a><div id="field" class="detail">
+            <h3>errorType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取设置的错误类型，如果为 normal 表示正常提示错误信息，如果为 friendly 表示不显示后台错误信息。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">normal</div>
+            </div>
+            <hr>
+          </div><a name="globalUploadMode"></a><div id="field" class="detail">
+            <h3>globalUploadMode 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串值，表示框架内的上传控件 <a href="../html/mx/editors/FileEditor.html">FileEditor</a> 的默认上传模式。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="loadedScripts"></a><div id="field" class="detail">
+            <h3>loadedScripts 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取已经加载完毕的 JavaScript 脚本的集合。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">JavaScript 脚本的 src 属性或者加载完成顺序（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="loadedStyles"></a><div id="field" class="detail">
+            <h3>loadedStyles 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取已经加载完毕的 CSS 样式库的集合。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">CSS 样式库的 href 属性加载完成顺序（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="loadingScripts"></a><div id="field" class="detail">
+            <h3>loadingScripts 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取正在加载中的 JavaScript 脚本的集合。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">JavaScript 脚本的 src 属性或者加载开始顺序（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="loadingStyles"></a><div id="field" class="detail">
+            <h3>loadingStyles 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取正在加载中的 CSS 样式库的集合。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">CSS 样式库的 href 属性或者加载开始顺序（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="locale"></a><div id="field" class="detail">
+            <h3>locale 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取框架的国际化信息。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">zh_CN</div>
+            </div>
+            <hr>
+          </div><a name="rootPath"></a><div id="field" class="detail">
+            <h3>rootPath 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前工程的根路径。</div>
+            </div>
+            <hr>
+          </div><a name="theme"></a><div id="field" class="detail">
+            <h3>theme 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置框架的主题库名称。
+如果需要替换框架提供的主题，请使用 <a href="#setTheme">setTheme</a> 方法设置主题。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">aero</div>
+            </div>
+            <hr>
+          </div><a name="themePath"></a><div id="field" class="detail">
+            <h3>themePath 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置框架使用的主题库的路径。
+如果需要替换框架提供的主题，请设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">~/mx/resources/themes</div>
+            </div>
+            <hr>
+          </div><a name="_scriptReady_callbacks"></a><div id="field" class="detail">
+            <h3>_scriptReady_callbacks 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div><a name="_styleReady_callbacks"></a><div id="field" class="detail">
+            <h3>_styleReady_callbacks 字段
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

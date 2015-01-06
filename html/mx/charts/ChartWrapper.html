@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.charts.ChartWrapper 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/charts/index.html">mx.charts</a><h1 id="class">ChartWrapper 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.charts.ChartWrapper</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/charts/index.html">mx.charts</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>ChartWrapper</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>ChartWrapper</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\charts\ChartWrapper.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供封装的 AnyChart 图表控件。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/charts/ChartWrapper.html">ChartWrapper</a> 的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript"> var chart = new mx.charts.ChartWrapper({
+ 	//设置图表类型
+ 	plotType: "Pie",// 饼图
+     globalSettings : {
+     	animation:{
+     		enabled:true
+     	}
+     },
+ 	title: {text: "用电量"},//创建标题对象
+ 	// 设置图表系列显示方式。default_series_type 默认值 Bar，可选值 Bar、RangeBar、Line、RangeArea、RangeSplineArea、
+ 	// Spline、Marker、Area、Bubble、Candlestick、OHLC等。
+ 	data_plot_setting: {
+ 		pie_series:{
+	 	 		label_settings:{
+	 		 		enabled:true,
+	 		 		position:{
+	 		 			anchor:"Center",
+	 		 			padding:20
+	 		 		},
+	 		 		format:"{%YPercentOfSeries}{numDecimals:1}%"
+	 		 	}
+	 	 	},
+	 		tooltip_settings:{
+	 	 		enabled:true,
+	 	 		format:"{%Name}Sales: ${%Value}Percent: {%YPercentOfSeries}{numDecimals: 2}%"
+			}
+	 	},
+ 	chart_settings: {
+ 		chart_background:{
+ 			border: {color: "blue", thickness: 2},
+ 			corners: {type: "Rounded"}, // type 默认值 Square，可选值 Square、Cut、Rounded、RoundedInner。分别代表方角、切角、圆角。
+ 			effects: {drop_shaddow: {enabled: true}}
+ 		},//设置图表背景。
+ 		axes: { y_axis: {title: {text: "度数"}}, x_axis:  {title: {text: "省份"}} } //设置图表纵、横坐标标题。
+ 	},
+ 	data_plot_background: {
+ 		fill: {type: "Gradient", opacity: 0.5}, //type 默认值 Solid，可选值 Solid、Gradient、Image，分别代表实线、渐变、图片填充。
+ 		effects: {enabled: true, inner_shaddow: {enabled: true, distance: 5, angle: 30}}
+ 	},//设置图表数据区域背景。
+
+ 	palettes: {item: {color: "red, blue, yellow"}, gradient: {type: "Radial"}}//type 默认值 Linear，可选值 Linear、Radial，分别代表线性填充和辐射填充。
+
+ });
+
+	var dt = new mx.datas.DataTable();//数据对象
+	dt.addColumn({type: "string", label: "省份", id: "province"});
+	dt.addColumn({type: "number", label: "用电量", id: "volume"});
+	dt.addRow({ cells: [{value: "北京"}, {value: 1000}] });
+	dt.addRow({ cells: [{value: "上海"}, {value: 800}] });
+	dt.addRow({ cells: [{value: "广州"}, {value: 650}] });
+	dt.name = "series name";
+
+
+	chart.setData(dt);//设置图表数据
+	chart.draw("container");//绘制图表，container 为页面图表容器对象。
+
+ // 如果不指定绘制区域，则绘制到内部的面板容器中，添加图表时需添加内部面板对象，如下所示。
+ parentContainer.addControl(chart.panel); // 其中 parentContainer 为 chart 的父容器。
+ chart.draw();</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#ChartWrapper">ChartWrapper()
+    </a></td>
+                <td>构建 ChartWrapper 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化内部 AnyChart 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#draw">draw(p_containerId)
+    </a></td>
+                <td>在指定的容器或内置的面板内绘制图表。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getJsonData">getJsonData()
+    </a></td>
+                <td>获取 anychart 控件所需的客户端对象设置。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setChartType">setChartType(p_type)
+    </a></td>
+                <td>设置图表类型。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setData">setData(p_dataTable)
+    </a></td>
+                <td>设置图表数据。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#chart">chart</a></td>
+                <td>设置或获取 anychart 对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#chart_settings">chart_settings</a></td>
+                <td>设置或获取图表设置，例如图表标题、背景等信息。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#data">data</a></td>
+                <td>设置或获取图形 json 格式 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的数据源。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#data_plot_setting">data_plot_setting</a></td>
+                <td>设置或获取数据情节，例如显示在图表的系列类型等。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#globalSettings">globalSettings</a></td>
+                <td>设置或获取图表全局配置信息。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#height">height</a></td>
+                <td>设置或获取图形高度。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#palettes">palettes</a></td>
+                <td>设置或获取图表调色板。
+包含了一组命名的颜色，自动着色标记调色板，孵化填充等。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#panel">panel</a></td>
+                <td>设置或获取图形默认容器面板。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#plotType">plotType</a></td>
+                <td>设置或获取图表类型。
+
+<p>
+该参数常见值包括:
+<ul>
+    <li>CategorizedVertical （按点垂直显示）</li>
+    <li>CategorizedHorizontal （按点水平显示）</li>
+    <li>CategorizedBySeriesVertical（按系列垂直显示）</li>
+    <li>CategorizedBySeriesHorizontal（按系列水平显示）</li>
+    <li>Scatter（按坐标轴分散显示，散点图）</li>
+    <li>Pie（饼图）</li>
+    <li>Polar（极坐标图）</li>
+    <li>Radar（雷达图）</li>
+    <li>Doughnut（圆环图）</li>
+    <li>Map（地图）</li>
+    <li>HeatMap（热点地图）</li>
+    <li>TreeMap（树状分层地图）</li>
+    <li>Funnel（漏斗图）</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#pointOptions">pointOptions</a></td>
+                <td>根据数据点的 name 属性设置或获取数据点的其它属性，具体请参考 Anychart 的官方文档。
+<p>
+值示例:
+<ul>
+    <li>pointOptions:{"北京": {color: "AliceBlue"}, "上海": {color: "AntiqueWhite"}}</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#seriesOptions">seriesOptions</a></td>
+                <td>根据系列的 name 属性设置或获取系列的其它属性，具体请参考 Anychart 的官方文档。
+<p>
+值示例:
+<ul>
+    <li>seriesOptions:{"series1": {type: "Line", close_contour: false, style: "idLineStyle"}, "series2": {type: "Line"}}</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#styles">styles</a></td>
+                <td>设置或获取图表元素风格。
+包含了一组数据绘制元素的命名样式。每个类型的图表，有自己的风格设置。
+例如工具提示或标签的样式。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#thresholds">thresholds</a></td>
+                <td>设置或获取图表元素阈值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#title">title</a><a class="exampleIcon" href="#title"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>设置或获取图形标题，json 格式。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#width">width</a></td>
+                <td>设置或获取图形宽度。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#oncreate">oncreate</a></td>
+                <td>当图表绘制到页面之后，将触发该事件。调用 <a href="#draw">draw</a> 方法时会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onload">onload</a></td>
+                <td>当图表加载之后，将触发该事件。调用 <a href="#draw">draw</a> 方法时会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onpointclick">onpointclick</a></td>
+                <td>当鼠标点击图表中的数据点时，将会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onpointmouseout">onpointmouseout</a></td>
+                <td>当鼠标滑过图表中的数据点时，将会触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onpointmouseover">onpointmouseover</a></td>
+                <td>当鼠标移至图表中的数据点上方时，将会触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="ChartWrapper"></a><div id="method" class="detail">
+            <h3>ChartWrapper()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 ChartWrapper 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化内部 AnyChart 对象。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="draw"></a><div id="method" class="detail">
+            <h3>draw(p_containerId)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的容器或内置的面板内绘制图表。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_containerId</b><div class="paramSummary">一个容器对象ID</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getJsonData"></a><div id="method" class="detail">
+            <h3>getJsonData()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取 anychart 控件所需的客户端对象设置。</div>
+            </div>
+            <hr>
+          </div><a name="setChartType"></a><div id="method" class="detail">
+            <h3>setChartType(p_type)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置图表类型。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_type</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setData"></a><div id="method" class="detail">
+            <h3>setData(p_dataTable)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置图表数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_dataTable</b><div class="paramSummary"><a href="../../../html/mx/datas/DataTable.html">DataTable</a> ，单系列时设置为一个 dataTable 实例,
+		如果是多系列，应该设置为一个 JSON 数组 [dataTable1, dataTable2, dataTable3, ...]， 包含多个 dataTable 实例。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="chart"></a><div id="field" class="detail">
+            <h3>chart 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取 anychart 对象。</div>
+            </div>
+            <hr>
+          </div><a name="chart_settings"></a><div id="field" class="detail">
+            <h3>chart_settings 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图表设置，例如图表标题、背景等信息。</div>
+            </div>
+            <hr>
+          </div><a name="data"></a><div id="field" class="detail">
+            <h3>data 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图形 json 格式 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的数据源。</div>
+            </div>
+            <hr>
+          </div><a name="data_plot_setting"></a><div id="field" class="detail">
+            <h3>data_plot_setting 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取数据情节，例如显示在图表的系列类型等。</div>
+            </div>
+            <hr>
+          </div><a name="globalSettings"></a><div id="field" class="detail">
+            <h3>globalSettings 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图表全局配置信息。</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图形高度。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">400</div>
+            </div>
+            <hr>
+          </div><a name="palettes"></a><div id="field" class="detail">
+            <h3>palettes 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图表调色板。
+包含了一组命名的颜色，自动着色标记调色板，孵化填充等。</div>
+            </div>
+            <hr>
+          </div><a name="panel"></a><div id="field" class="detail">
+            <h3>panel 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图形默认容器面板。</div>
+            </div>
+            <hr>
+          </div><a name="plotType"></a><div id="field" class="detail">
+            <h3>plotType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图表类型。
+
+<p>
+该参数常见值包括:
+<ul>
+    <li>CategorizedVertical （按点垂直显示）</li>
+    <li>CategorizedHorizontal （按点水平显示）</li>
+    <li>CategorizedBySeriesVertical（按系列垂直显示）</li>
+    <li>CategorizedBySeriesHorizontal（按系列水平显示）</li>
+    <li>Scatter（按坐标轴分散显示，散点图）</li>
+    <li>Pie（饼图）</li>
+    <li>Polar（极坐标图）</li>
+    <li>Radar（雷达图）</li>
+    <li>Doughnut（圆环图）</li>
+    <li>Map（地图）</li>
+    <li>HeatMap（热点地图）</li>
+    <li>TreeMap（树状分层地图）</li>
+    <li>Funnel（漏斗图）</li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="pointOptions"></a><div id="field" class="detail">
+            <h3>pointOptions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">根据数据点的 name 属性设置或获取数据点的其它属性，具体请参考 Anychart 的官方文档。
+<p>
+值示例:
+<ul>
+    <li>pointOptions:{"北京": {color: "AliceBlue"}, "上海": {color: "AntiqueWhite"}}</li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="seriesOptions"></a><div id="field" class="detail">
+            <h3>seriesOptions 字段
+            </h3>
+            <div class="content">
+              <div class="summary">根据系列的 name 属性设置或获取系列的其它属性，具体请参考 Anychart 的官方文档。
+<p>
+值示例:
+<ul>
+    <li>seriesOptions:{"series1": {type: "Line", close_contour: false, style: "idLineStyle"}, "series2": {type: "Line"}}</li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="styles"></a><div id="field" class="detail">
+            <h3>styles 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图表元素风格。
+包含了一组数据绘制元素的命名样式。每个类型的图表，有自己的风格设置。
+例如工具提示或标签的样式。</div>
+            </div>
+            <hr>
+          </div><a name="thresholds"></a><div id="field" class="detail">
+            <h3>thresholds 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图表元素阈值。</div>
+            </div>
+            <hr>
+          </div><a name="title"></a><div id="field" class="detail">
+            <h3>title 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图形标题，json 格式。</div>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                {text: "五日调度曲线"}
+
+            </div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取图形宽度。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">600</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="oncreate"></a><div id="event" class="detail">
+            <h3>oncreate 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当图表绘制到页面之后，将触发该事件。调用 <a href="#draw">draw</a> 方法时会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onload"></a><div id="event" class="detail">
+            <h3>onload 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当图表加载之后，将触发该事件。调用 <a href="#draw">draw</a> 方法时会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onpointclick"></a><div id="event" class="detail">
+            <h3>onpointclick 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当鼠标点击图表中的数据点时，将会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onpointmouseout"></a><div id="event" class="detail">
+            <h3>onpointmouseout 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当鼠标滑过图表中的数据点时，将会触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onpointmouseover"></a><div id="event" class="detail">
+            <h3>onpointmouseover 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当鼠标移至图表中的数据点上方时，将会触发该事件。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1535 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.controls.TreeListViewItem 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/controls/index.html">mx.controls</a><h1 id="class">TreeListViewItem 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.controls.TreeListViewItem</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/controls/index.html">mx.controls</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>TreeListViewItem</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>TreeListViewItem</span><span id="inherit"></span><a href="../../../html/mx/controls/Control.html">Control</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\controls\TreeListViewItem.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个数据项列表控件（<a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 类型）中的数据项节点的类。<b>该数据项容器的 HTML 元素为 &lt;TR&gt;</b>。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#TreeListViewItem">TreeListViewItem()
+    </a></td>
+                <td>构建 TreeListViewItem 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化数据项节点。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#appendItem">appendItem(p_item)
+    </a></td>
+                <td>添加一个子数据项节点，并返回该节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#appendItems">appendItems(p_items)
+    </a></td>
+                <td>添加一组数据项子节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#clearItems">clearItems()
+    </a></td>
+                <td>移除所有的子数据项节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#collapse">collapse()
+    </a></td>
+                <td>隐藏子节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#commitChanges">commitChanges()
+    </a></td>
+                <td>确认修改。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#contains">contains($p_target)
+    </a></td>
+                <td>返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#dispose">dispose()
+    </a></td>
+                <td>释放对象运行时动态生成的内容（属性、方法、事件）。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#expand">expand()
+    </a></td>
+                <td>展开子节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getChanges">getChanges()
+    </a></td>
+                <td>返回修改后的字段。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getContext">getContext()
+    </a></td>
+                <td>获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEl">getEl()
+    </a></td>
+                <td>获取控件容器对应的 HTML DOM 元素对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getValue">getValue(p_index)
+    </a></td>
+                <td>返回指定列序号或列名对应的数据项的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getValues">getValues()
+    </a></td>
+                <td>获取 {@values}。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hide">hide()
+    </a></td>
+                <td>隐藏控件，设置控件不可见。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertCell">insertCell(p_col, p_value)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertItemAfter">insertItemAfter(p_item)
+    </a></td>
+                <td>将节点插入到指定的 JQuery 对象的后面，并返回该 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertItemBefore">insertItemBefore(p_item)
+    </a></td>
+                <td>将节点插入到指定的 JQuery 对象的前面，并返回该 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isChanged">isChanged()
+    </a></td>
+                <td>判断记录是否修改。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isFolder">isFolder()
+    </a></td>
+                <td>返回一个 Boolean 值，表示该数据项节点是否为文件夹节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#isSelected">isSelected()
+    </a></td>
+                <td>返回一个 Boolean 值，表示该节点是否选中。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#markAsFolder">markAsFolder([p_isFolder])
+    </a></td>
+                <td>将该数据项节点标记为“folder”或“item”节点。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#markAsSelected">markAsSelected([p_selected])
+    </a></td>
+                <td>将该数据项节点标记为选中的节点。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_left, p_top)
+    </a></td>
+                <td>移动控件到指定位置。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#refresh">refresh()
+    </a></td>
+                <td>更新当前项所有字段的显示值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#rejectChanges">rejectChanges()
+    </a></td>
+                <td>撤销修改。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#remove">remove(p_isTriggerEvent)
+    </a></td>
+                <td>移除该节点以及所有的子节点的 DOM 元素。所有绑定的事件、附加的数据等都会保留下来。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeItem">removeItem(p_Item)
+    </a></td>
+                <td>移除指定的子数据项节点。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#resizeTo">resizeTo(p_width, p_height)
+    </a></td>
+                <td>重设控件的大小。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#select">select(p_triggerEvent)
+    </a></td>
+                <td>请参见 <a href="../../../html/mx/controls/TreeListView.html#selectItem">TreeListView.selectItem</a> 方法。该方法仅在 <a href="#owner">owner</a> 字段不为空时有效。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBorder">setBorder(p_border)
+    </a></td>
+                <td>设置控件的边框样式。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBottom">setBottom(p_bottom)
+    </a></td>
+                <td>设置 <a href="#bottom">bottom</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCss">setCss(p_css)
+    </a></td>
+                <td>设置 <a href="#css">css</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCssClass">setCssClass(p_cssClass)
+    </a></td>
+                <td>设置 <a href="#cssClass">cssClass</a>} 字段的值</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplay">setDisplay(p_display)
+    </a></td>
+                <td>设置 <a href="#display">display</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>设置 <a href="#enabled">enabled</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHeight">setHeight(p_height)
+    </a></td>
+                <td>设置 <a href="#height">height</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setImageUrl">setImageUrl([p_imageUrl])
+    </a></td>
+                <td>设置 <a href="#imageUrl">imageUrl</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setItems">setItems(p_items)
+    </a></td>
+                <td>设置 <a href="#items">items</a> 字段的值。该方法首先会清空 <a href="#items">items</a> 集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setItemType">setItemType(p_type)
+    </a></td>
+                <td>设置 <a href="#itemType">itemType</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setLeft">setLeft(p_left)
+    </a></td>
+                <td>设置 <a href="#left">left</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPadding">setPadding(p_padding)
+    </a></td>
+                <td>设置控件的内边距。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPosition">setPosition(p_position)
+    </a></td>
+                <td>设置 <a href="#position">position</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setRight">setRight(p_right)
+    </a></td>
+                <td>设置 <a href="#right">right</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setTop">setTop(p_top)
+    </a></td>
+                <td>设置 <a href="#top">top</a> 字段的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setValue">setValue(p_index, p_value)
+    </a></td>
+                <td>设置指定列序号或列名对应的数据项节点的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setValues">setValues(p_values)
+    </a></td>
+                <td>设置 <a href="#values">values</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#show">show()
+    </a></td>
+                <td>显示控件，设置控件可见。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#toggleExpand">toggleExpand()
+    </a></td>
+                <td>切换节点展开的状态。如果节点隐藏，使用该方法后就展开；反之则隐藏。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$">$(p_expression)
+    </a></td>
+                <td>该方法与 me.$e.find(p_expression) 等同。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$wrap">$wrap([p_obj])
+    </a></td>
+                <td>返回一个 JQuery 对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#_hideChildren">_hideChildren()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#_setItemPathAndDepth">_setItemPathAndDepth()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#_showChildren">_showChildren()
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#alias">alias</a></td>
+                <td>获取或设置一个字符串，表示控件的别名。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#border">border</a></td>
+                <td>获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#bottom">bottom</a></td>
+                <td>获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#checked">checked</a></td>
+                <td>获取一个 Boolean 值，表示数据项是否被选中。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssClass">cssClass</a></td>
+                <td>指定css伪类名称，设置控件显示样式</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#depth">depth</a></td>
+                <td>获取一个数字，表示该数据项节点的深度（如 0，表示第一层节点）。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#display">display</a></td>
+                <td>获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#eTag">eTag</a></td>
+                <td>获取控件的标签。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#expanded">expanded</a></td>
+                <td>获取一个 Boolean 值，表示该数据项节点的子节点是否展开。如果该值为 true，表示子节点展开；反之则隐藏。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#hasChildren">hasChildren</a></td>
+                <td>获取一个 Boolean 值，表示数据项是否具有子数据项。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#hasLoad">hasLoad</a></td>
+                <td>获取一个 Boolean 值，表示数据项的子数据项是否已经加载。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#height">height</a></td>
+                <td>获取控件的高度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#id">id</a></td>
+                <td>获取一个字符串，表示数据项节点的唯一标识。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#imageUrl">imageUrl</a></td>
+                <td>获取一个字符串，表示 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 图像的 URL（如“$/icons/role.png”）。请使用 <a href="#setImageUrl">setImageUrl</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#items">items</a></td>
+                <td>获取一个集合，包含该数据项节点的子节点（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型）。请使用 <a href="#setItems">setItems</a> 方法设置该集合的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#itemType">itemType</a></td>
+                <td>获取一个字符串，表示说明数据项节点的类型（如“folder”，“role”，“job”等）。该属性的值如果与 <a href="../../../html/mx/controls/TreeListView.html#images">TreeListView.images</a> 集合中的索引值相同，则会显示对应的图片。
+请使用 <a href="#setItemType">setItemType</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutConfigs">layoutConfigs</a></td>
+                <td>获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#left">left</a></td>
+                <td>获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#owner">owner</a></td>
+                <td>获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 类的实例。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#padding">padding</a></td>
+                <td>获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#parent">parent</a></td>
+                <td>获取控件所属的父对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#parentItem">parentItem</a></td>
+                <td>获取一个对象（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型），表示该数据项节点的父节点。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#path">path</a></td>
+                <td>获取一个字符串，表示数据项节点的完整 id。该属性的值为父数据项节点的 <a href="#path">path</a> 属性值加该节点的 <a href="#id">id</a> 属性的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#permissionID">permissionID</a></td>
+                <td>获取或设置一个字符串，表示控件的权限标识。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#position">position</a></td>
+                <td>获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#right">right</a></td>
+                <td>获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#top">top</a></td>
+                <td>获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#values">values</a></td>
+                <td>获取一个 JSON 对象，表示数据项的所有的值（当构造函数的参数不为空时，该字段与构造函数的参数相同）。请使用 <a href="#setValues">setValues</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#visible">visible</a></td>
+                <td>获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td>获取控件的宽度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取该控件的占位符，该占位符为一个 JQuery 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="TreeListViewItem"></a><div id="method" class="detail">
+            <h3>TreeListViewItem()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 TreeListViewItem 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化数据项节点。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#init">mx.controls.Control.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="appendItem"></a><div id="method" class="detail">
+            <h3>appendItem(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一个子数据项节点，并返回该节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">要插入的数据项节点，详见 <a href="#_createItem">_createItem</a> 方法的参数 p_item。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="appendItems"></a><div id="method" class="detail">
+            <h3>appendItems(p_items)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一组数据项子节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary">一个数组，数组中的元素请参见 <a href="#appendItem">appendItem</a> 方法的参数 p_item。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="clearItems"></a><div id="method" class="detail">
+            <h3>clearItems()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移除所有的子数据项节点。</div>
+            </div>
+            <hr>
+          </div><a name="collapse"></a><div id="method" class="detail">
+            <h3>collapse()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏子节点。</div>
+            </div>
+            <hr>
+          </div><a name="commitChanges"></a><div id="method" class="detail">
+            <h3>commitChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">确认修改。</div>
+            </div>
+            <hr>
+          </div><a name="contains"></a><div id="method" class="detail" override="true">
+            <h3>contains($p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">$p_target</b><div class="paramSummary">一个 JQuery 对象，或 JQuery 选择器对应的字符串（如“#container”），或 HTML DOM 元素。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#contains">mx.controls.Control.contains</a></div>
+            </div>
+            <hr>
+          </div><a name="dispose"></a><div id="method" class="detail" override="true">
+            <h3>dispose()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">释放对象运行时动态生成的内容（属性、方法、事件）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#dispose">mx.controls.Control.dispose</a></div>
+            </div>
+            <hr>
+          </div><a name="expand"></a><div id="method" class="detail">
+            <h3>expand()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">展开子节点。</div>
+            </div>
+            <hr>
+          </div><a name="getChanges"></a><div id="method" class="detail">
+            <h3>getChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回修改后的字段。</div>
+            </div>
+            <hr>
+          </div><a name="getContext"></a><div id="method" class="detail" override="true">
+            <h3>getContext()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getContext">mx.controls.Control.getContext</a></div>
+            </div>
+            <hr>
+          </div><a name="getEl"></a><div id="method" class="detail" override="true">
+            <h3>getEl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件容器对应的 HTML DOM 元素对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getEl">mx.controls.Control.getEl</a></div>
+            </div>
+            <hr>
+          </div><a name="getValue"></a><div id="method" class="detail">
+            <h3>getValue(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回指定列序号或列名对应的数据项的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">一个数字（如 0），表示列的序号；或一个字符串，表示列的名称（<a href="../../../html/mx/controls/TreeListViewColumn.html#name">TreeListViewColumn.name</a> 字段的值）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getValues"></a><div id="method" class="detail">
+            <h3>getValues()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取 {@values}。</div>
+            </div>
+            <hr>
+          </div><a name="hide"></a><div id="method" class="detail" override="true">
+            <h3>hide()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏控件，设置控件不可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#hide">mx.controls.Control.hide</a></div>
+            </div>
+            <hr>
+          </div><a name="insertCell"></a><div id="method" class="detail">
+            <h3>insertCell(p_col, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_col</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="insertItemAfter"></a><div id="method" class="detail">
+            <h3>insertItemAfter(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将节点插入到指定的 JQuery 对象的后面，并返回该 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 JSON 对象，表示 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 的一组属性值；或一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="insertItemBefore"></a><div id="method" class="detail">
+            <h3>insertItemBefore(p_item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将节点插入到指定的 JQuery 对象的前面，并返回该 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_item</b><div class="paramSummary">一个 JSON 对象，表示 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 的一组属性值；或一个 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="isChanged"></a><div id="method" class="detail">
+            <h3>isChanged()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">判断记录是否修改。</div>
+            </div>
+            <hr>
+          </div><a name="isFolder"></a><div id="method" class="detail">
+            <h3>isFolder()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，表示该数据项节点是否为文件夹节点。</div>
+            </div>
+            <hr>
+          </div><a name="isSelected"></a><div id="method" class="detail">
+            <h3>isSelected()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，表示该节点是否选中。</div>
+            </div>
+            <hr>
+          </div><a name="markAsFolder"></a><div id="method" class="detail">
+            <h3>markAsFolder([p_isFolder])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将该数据项节点标记为“folder”或“item”节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_isFolder</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，表示将该节点标记为“folder”节点还是“item”节点。当该值为 true 时，标记为“folder”；反之则标记为“item”。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="markAsSelected"></a><div id="method" class="detail">
+            <h3>markAsSelected([p_selected])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将该数据项节点标记为选中的节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_selected</b><div class="paramSummary">可选的。默认值为“true”。一个 Boolean 值，表示是否将该数据项节点标记为选中的节点。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_left, p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移动控件到指定位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">一个数字，表示 css 样式的 left 属性。</div>
+                </li>
+                <li><b class="paramName">p_top</b><div class="paramSummary">一个数字，表示 css 样式的 top 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#moveTo">mx.controls.Control.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="refresh"></a><div id="method" class="detail">
+            <h3>refresh()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">更新当前项所有字段的显示值。</div>
+            </div>
+            <hr>
+          </div><a name="rejectChanges"></a><div id="method" class="detail">
+            <h3>rejectChanges()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">撤销修改。</div>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail">
+            <h3>remove(p_isTriggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移除该节点以及所有的子节点的 DOM 元素。所有绑定的事件、附加的数据等都会保留下来。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_isTriggerEvent</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="removeItem"></a><div id="method" class="detail">
+            <h3>removeItem(p_Item)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移除指定的子数据项节点。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_Item</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="resizeTo"></a><div id="method" class="detail" override="true">
+            <h3>resizeTo(p_width, p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重设控件的大小。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的宽度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#resizeTo">mx.controls.Control.resizeTo</a></div>
+            </div>
+            <hr>
+          </div><a name="select"></a><div id="method" class="detail">
+            <h3>select(p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">请参见 <a href="../../../html/mx/controls/TreeListView.html#selectItem">TreeListView.selectItem</a> 方法。该方法仅在 <a href="#owner">owner</a> 字段不为空时有效。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setBorder"></a><div id="method" class="detail" override="true">
+            <h3>setBorder(p_border)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的边框样式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_border</b><div class="paramSummary">一个字符串，表示css样式的 border 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBorder">mx.controls.Control.setBorder</a></div>
+            </div>
+            <hr>
+          </div><a name="setBottom"></a><div id="method" class="detail" override="true">
+            <h3>setBottom(p_bottom)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#bottom">bottom</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_bottom</b><div class="paramSummary">控件的下边界与父容器下边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBottom">mx.controls.Control.setBottom</a></div>
+            </div>
+            <hr>
+          </div><a name="setCss"></a><div id="method" class="detail" override="true">
+            <h3>setCss(p_css)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#css">css</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_css</b><div class="paramSummary">一个 JSON 对象，表示控件的 CSS 样式。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCss">mx.controls.Control.setCss</a></div>
+            </div>
+            <hr>
+          </div><a name="setCssClass"></a><div id="method" class="detail" override="true">
+            <h3>setCssClass(p_cssClass)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#cssClass">cssClass</a>} 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_cssClass</b><div class="paramSummary">一个String 对象，样式classname</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCssClass">mx.controls.Control.setCssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplay"></a><div id="method" class="detail" override="true">
+            <h3>setDisplay(p_display)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#display">display</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_display</b><div class="paramSummary">css 样式的 display 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setDisplay">mx.controls.Control.setDisplay</a></div>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#enabled">enabled</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setEnabled">mx.controls.Control.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setHeight"></a><div id="method" class="detail" override="true">
+            <h3>setHeight(p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#height">height</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setHeight">mx.controls.Control.setHeight</a></div>
+            </div>
+            <hr>
+          </div><a name="setImageUrl"></a><div id="method" class="detail">
+            <h3>setImageUrl([p_imageUrl])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#imageUrl">imageUrl</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_imageUrl</b><div class="paramSummary">可选的。默认值为“$/images/space.png”。一个字符串，表示图像的 URL。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setItems"></a><div id="method" class="detail">
+            <h3>setItems(p_items)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#items">items</a> 字段的值。该方法首先会清空 <a href="#items">items</a> 集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_items</b><div class="paramSummary">一个数组，该数组包含了一组 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setItemType"></a><div id="method" class="detail">
+            <h3>setItemType(p_type)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#itemType">itemType</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_type</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setLeft"></a><div id="method" class="detail" override="true">
+            <h3>setLeft(p_left)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#left">left</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">控件的左边界与父容器左边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setLeft">mx.controls.Control.setLeft</a></div>
+            </div>
+            <hr>
+          </div><a name="setPadding"></a><div id="method" class="detail" override="true">
+            <h3>setPadding(p_padding)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的内边距。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_padding</b><div class="paramSummary">一个字符串，表示css样式的 padding 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPadding">mx.controls.Control.setPadding</a></div>
+            </div>
+            <hr>
+          </div><a name="setPosition"></a><div id="method" class="detail" override="true">
+            <h3>setPosition(p_position)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#position">position</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_position</b><div class="paramSummary">一个字符串，表示 css 样式的 position 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPosition">mx.controls.Control.setPosition</a></div>
+            </div>
+            <hr>
+          </div><a name="setRight"></a><div id="method" class="detail" override="true">
+            <h3>setRight(p_right)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#right">right</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_right</b><div class="paramSummary">控件的右边界与父容器右边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setRight">mx.controls.Control.setRight</a></div>
+            </div>
+            <hr>
+          </div><a name="setTop"></a><div id="method" class="detail" override="true">
+            <h3>setTop(p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#top">top</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_top</b><div class="paramSummary">控件的上边界与父容器上边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setTop">mx.controls.Control.setTop</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail">
+            <h3>setValue(p_index, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置指定列序号或列名对应的数据项节点的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">一个数字（如 0），表示列的在集合中的序号；或一个字符串，表示列的名称。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示要设置的值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setValues"></a><div id="method" class="detail">
+            <h3>setValues(p_values)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#values">values</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_values</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示控件是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setVisible">mx.controls.Control.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的高度,可以是数字（如 500）、字符串（如“500px”或“50%”）.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setWidth">mx.controls.Control.setWidth</a></div>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail" override="true">
+            <h3>show()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示控件，设置控件可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#show">mx.controls.Control.show</a></div>
+            </div>
+            <hr>
+          </div><a name="toggleExpand"></a><div id="method" class="detail">
+            <h3>toggleExpand()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">切换节点展开的状态。如果节点隐藏，使用该方法后就展开；反之则隐藏。</div>
+            </div>
+            <hr>
+          </div><a name="$"></a><div id="method" class="detail" override="true">
+            <h3>$(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">该方法与 me.$e.find(p_expression) 等同。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$">mx.controls.Control.$</a></div>
+            </div>
+            <hr>
+          </div><a name="$wrap"></a><div id="method" class="detail" override="true">
+            <h3>$wrap([p_obj])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_obj</b><div class="paramSummary">可选的。默认值为“me.$e”。一个 JQuery 对象，或继承自 Control 的控件，或字符串，或 HTML DOM 元素。如果参数为 JQuery 对象，则返回本身；如果参数为继承自 Control 的控件，则返回控件的 $e 对象；如果参数为字符串，则返回以字符串为选择器的 JQuery 对象；如果参数为空，则返回控件本身的 $e 对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$wrap">mx.controls.Control.$wrap</a></div>
+            </div>
+            <hr>
+          </div><a name="_hideChildren"></a><div id="method" class="detail">
+            <h3>_hideChildren()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div><a name="_setItemPathAndDepth"></a><div id="method" class="detail">
+            <h3>_setItemPathAndDepth()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div><a name="_showChildren"></a><div id="method" class="detail">
+            <h3>_showChildren()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="alias"></a><div id="field" class="detail" override="true">
+            <h3>alias 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的别名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#alias">mx.controls.Control.alias</a></div>
+            </div>
+            <hr>
+          </div><a name="border"></a><div id="field" class="detail" override="true">
+            <h3>border 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#border">mx.controls.Control.border</a></div>
+            </div>
+            <hr>
+          </div><a name="bottom"></a><div id="field" class="detail" override="true">
+            <h3>bottom 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#bottom">mx.controls.Control.bottom</a></div>
+            </div>
+            <hr>
+          </div><a name="checked"></a><div id="field" class="detail">
+            <h3>checked 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示数据项是否被选中。</div>
+            </div>
+            <hr>
+          </div><a name="cssClass"></a><div id="field" class="detail" override="true">
+            <h3>cssClass 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指定css伪类名称，设置控件显示样式</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#cssClass">mx.controls.Control.cssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="depth"></a><div id="field" class="detail">
+            <h3>depth 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个数字，表示该数据项节点的深度（如 0，表示第一层节点）。</div>
+            </div>
+            <hr>
+          </div><a name="display"></a><div id="field" class="detail" override="true">
+            <h3>display 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#display">mx.controls.Control.display</a></div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#enabled">mx.controls.Control.enabled</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="eTag"></a><div id="field" class="detail" override="true">
+            <h3>eTag 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的标签。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#eTag">mx.controls.Control.eTag</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">&lt;div/&gt;</div>
+            </div>
+            <hr>
+          </div><a name="expanded"></a><div id="field" class="detail">
+            <h3>expanded 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示该数据项节点的子节点是否展开。如果该值为 true，表示子节点展开；反之则隐藏。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="hasChildren"></a><div id="field" class="detail">
+            <h3>hasChildren 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示数据项是否具有子数据项。</div>
+            </div>
+            <hr>
+          </div><a name="hasLoad"></a><div id="field" class="detail">
+            <h3>hasLoad 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示数据项的子数据项是否已经加载。</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail" override="true">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的高度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#height">mx.controls.Control.height</a></div>
+            </div>
+            <hr>
+          </div><a name="id"></a><div id="field" class="detail">
+            <h3>id 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示数据项节点的唯一标识。</div>
+            </div>
+            <hr>
+          </div><a name="imageUrl"></a><div id="field" class="detail">
+            <h3>imageUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示 <a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 图像的 URL（如“$/icons/role.png”）。请使用 <a href="#setImageUrl">setImageUrl</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="items"></a><div id="field" class="detail">
+            <h3>items 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含该数据项节点的子节点（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型）。请使用 <a href="#setItems">setItems</a> 方法设置该集合的值。</div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        
+                            集合中成员的类型为
+                            <a href="../../../html/mx/controls/TreeListViewItem.html">mx.controls.TreeListViewItem</a>。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">数据项节点在集合中的序号（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="itemType"></a><div id="field" class="detail">
+            <h3>itemType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示说明数据项节点的类型（如“folder”，“role”，“job”等）。该属性的值如果与 <a href="../../../html/mx/controls/TreeListView.html#images">TreeListView.images</a> 集合中的索引值相同，则会显示对应的图片。
+请使用 <a href="#setItemType">setItemType</a> 方法设置该字段的值。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">item</div>
+            </div>
+            <hr>
+          </div><a name="layoutConfigs"></a><div id="field" class="detail" override="true">
+            <h3>layoutConfigs 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#layoutConfigs">mx.controls.Control.layoutConfigs</a></div>
+            </div>
+            <hr>
+          </div><a name="left"></a><div id="field" class="detail" override="true">
+            <h3>left 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#left">mx.controls.Control.left</a></div>
+            </div>
+            <hr>
+          </div><a name="owner"></a><div id="field" class="detail">
+            <h3>owner 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/controls/TreeListView.html">TreeListView</a> 类的实例。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="padding"></a><div id="field" class="detail" override="true">
+            <h3>padding 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#padding">mx.controls.Control.padding</a></div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail" override="true">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件所属的父对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#parent">mx.controls.Control.parent</a></div>
+            </div>
+            <hr>
+          </div><a name="parentItem"></a><div id="field" class="detail">
+            <h3>parentItem 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个对象（<a href="../../../html/mx/controls/TreeListViewItem.html">TreeListViewItem</a> 类型），表示该数据项节点的父节点。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">null</div>
+            </div>
+            <hr>
+          </div><a name="path"></a><div id="field" class="detail">
+            <h3>path 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示数据项节点的完整 id。该属性的值为父数据项节点的 <a href="#path">path</a> 属性值加该节点的 <a href="#id">id</a> 属性的值。</div>
+            </div>
+            <hr>
+          </div><a name="permissionID"></a><div id="field" class="detail" override="true">
+            <h3>permissionID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的权限标识。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#permissionID">mx.controls.Control.permissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="position"></a><div id="field" class="detail" override="true">
+            <h3>position 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#position">mx.controls.Control.position</a></div>
+            </div>
+            <hr>
+          </div><a name="right"></a><div id="field" class="detail" override="true">
+            <h3>right 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#right">mx.controls.Control.right</a></div>
+            </div>
+            <hr>
+          </div><a name="top"></a><div id="field" class="detail" override="true">
+            <h3>top 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#top">mx.controls.Control.top</a></div>
+            </div>
+            <hr>
+          </div><a name="values"></a><div id="field" class="detail">
+            <h3>values 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 JSON 对象，表示数据项的所有的值（当构造函数的参数不为空时，该字段与构造函数的参数相同）。请使用 <a href="#setValues">setValues</a> 方法设置该字段的值。</div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail" override="true">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#visible">mx.controls.Control.visible</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的宽度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#width">mx.controls.Control.width</a></div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该控件的占位符，该占位符为一个 JQuery 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$e">mx.controls.Control.$e</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

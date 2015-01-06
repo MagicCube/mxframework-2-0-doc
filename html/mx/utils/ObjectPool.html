@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.ObjectPool 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">ObjectPool 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.ObjectPool</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>ObjectPool</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>ObjectPool</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\ObjectPool.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供对象池，有关对象池的概念请跳转至<a href='http://www.ibm.com/developerworks/cn/java/l-common-pool/'>Jakarta Commons Pool</a>。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个通过 <a href="../../../html/mx/utils/ObjectPool.html">ObjectPool</a> 创建一个 <a href="../../../html/mx/controls/Button.html">Button</a> 对象池的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">
+//创建一个池大小为 10 的 {@link mx.controls.Button} 对象池。
+var buttonObjectPool = mx.utils.ObjectPool(mx.controls.Button, 10);</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#ObjectPool">ObjectPool(p_createObjectHandler, [p_poolSize])
+    </a></td>
+                <td>构建 ObjectPool 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#getObject">getObject([p_context])
+    </a></td>
+                <td>总是返回一个可用的对象。如果当前池中已缓存了对象，则将其从池中取出并返回；如果当前池中没有可用的对象，则会自动调用 <a href="#createObjectHandler">createObjectHandler</a> 方法创建一个新对象，并将其返回。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getPooledObjects">getPooledObjects()
+    </a></td>
+                <td>返回一个 Object[] 数组，表示包含池中所有缓存的对象。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#passivateObject">passivateObject(p_object)
+    </a></td>
+                <td>回收指定的对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#createObjectHandler">createObjectHandler</a></td>
+                <td>获取一个 Function 对象，表示创建新对象的方法。该字段由构造方法传入。该方法的原型为 function(p_objectPool, p_context)，其中 p_objectPool 表示调用池对象本身，而 p_context 则表示由 getObject 方法带入的上下文对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#poolSize">poolSize</a></td>
+                <td>获取或设置池中可缓存的最大个数。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="ObjectPool"></a><div id="method" class="detail">
+            <h3>ObjectPool(p_createObjectHandler, [p_poolSize])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 ObjectPool 类的新实例。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_createObjectHandler</b><div class="paramSummary">一个 Function 对象，指定创建新对象的方法。详见 <a href="#createObjectHandler">createObjectHandler</a> 方法。</div>
+                </li>
+                <li><b class="paramName">p_poolSize</b><div class="paramSummary">可选的。默认值为“5”。指定对象池可缓存对象的最大个数。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="getObject"></a><div id="method" class="detail">
+            <h3>getObject([p_context])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">总是返回一个可用的对象。如果当前池中已缓存了对象，则将其从池中取出并返回；如果当前池中没有可用的对象，则会自动调用 <a href="#createObjectHandler">createObjectHandler</a> 方法创建一个新对象，并将其返回。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_context</b><div class="paramSummary">可选的。需要带入 createObjectHandler 中的上下文对象。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getPooledObjects"></a><div id="method" class="detail">
+            <h3>getPooledObjects()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Object[] 数组，表示包含池中所有缓存的对象。</div>
+            </div>
+            <hr>
+          </div><a name="passivateObject"></a><div id="method" class="detail">
+            <h3>passivateObject(p_object)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">回收指定的对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_object</b><div class="paramSummary">需要被回收的对象。该对象的类型必须与池中对象一致，并且保证被回收后仍然可重复使用。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="createObjectHandler"></a><div id="field" class="detail">
+            <h3>createObjectHandler 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Function 对象，表示创建新对象的方法。该字段由构造方法传入。该方法的原型为 function(p_objectPool, p_context)，其中 p_objectPool 表示调用池对象本身，而 p_context 则表示由 getObject 方法带入的上下文对象。</div>
+            </div>
+            <hr>
+          </div><a name="poolSize"></a><div id="field" class="detail">
+            <h3>poolSize 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置池中可缓存的最大个数。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">5</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1802 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datacontrols.ComplexForm 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datacontrols/index.html">mx.datacontrols</a><h1 id="class">ComplexForm 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datacontrols.ComplexForm</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datacontrols/index.html">mx.datacontrols</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>ComplexForm</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>ComplexForm</span><span id="inherit"></span><a href="../../../html/mx/datacontrols/DataForm.html">DataForm</a><span id="inherit"></span><a href="../../../html/mx/controls/Control.html">Control</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datacontrols\ComplexForm.js</td>
+            </tr>
+          </table>
+          <div class="summary"></div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#ComplexForm">ComplexForm()
+    </a></td>
+                <td>构建 ComplexForm 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td>初始化方法。执行设置样式并初始化属性等操作。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#blur">blur()
+    </a></td>
+                <td>触发所有编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的 blur 事件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#contains">contains($p_target)
+    </a></td>
+                <td>返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#dispose">dispose()
+    </a></td>
+                <td>释放对象运行时动态生成的内容（属性、方法、事件）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#focus">focus()
+    </a></td>
+                <td>触发所有编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的 focus 事件。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getContext">getContext()
+    </a></td>
+                <td>获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEditor">getEditor(p_fieldName)
+    </a></td>
+                <td>返回一个编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getEl">getEl()
+    </a></td>
+                <td>获取控件容器对应的 HTML DOM 元素对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getId">getId()
+    </a></td>
+                <td>提供一个方法，获取表单中当前数据的主键。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hasChanged">hasChanged()
+    </a></td>
+                <td>提供一个方法，判断表单是否有修改过但未保存的信息。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#hide">hide()
+    </a></td>
+                <td>隐藏控件，设置控件不可见。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#load">load([p_callback])
+    </a></td>
+                <td>加载数据。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#load">load([p_data], [p_callback])
+    </a></td>
+                <td>加载数据。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#load">load([p_id], [p_callback])
+    </a></td>
+                <td>加载数据。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#load">load([p_id], [p_data], [p_callback])
+    </a></td>
+                <td>加载数据。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_left, p_top)
+    </a></td>
+                <td>移动控件到指定位置。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#printForm">printForm(p_preview, p_printOptions)
+    </a></td>
+                <td>提供一个方法，打印表单内容。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#resizeTo">resizeTo(p_width, p_height)
+    </a></td>
+                <td>重设控件的大小。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#save">save(p_data, p_callback)
+    </a></td>
+                <td>保存数据。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#selectEditor">selectEditor(p_fieldName)
+    </a></td>
+                <td>选中指定字段的编辑器。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBorder">setBorder(p_border)
+    </a></td>
+                <td>设置控件的边框样式。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setBottom">setBottom(p_bottom)
+    </a></td>
+                <td>设置 <a href="#bottom">bottom</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCss">setCss(p_css)
+    </a></td>
+                <td>设置 <a href="#css">css</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCssClass">setCssClass(p_cssClass)
+    </a></td>
+                <td>设置 <a href="#cssClass">cssClass</a>} 字段的值</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setDisplay">setDisplay(p_display)
+    </a></td>
+                <td>设置 <a href="#display">display</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>设置 <a href="#enabled">enabled</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEntityContainer">setEntityContainer(p_entityContainer)
+    </a></td>
+                <td>设置 <a href="#entityContainer">entityContainer</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFieldCaption">setFieldCaption(p_fieldName, p_caption)
+    </a></td>
+                <td>设置表单中字段信息的标题。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFieldCaptionVisible">setFieldCaptionVisible(p_fieldName, p_visible)
+    </a></td>
+                <td>设置表单中字段标题的可见性。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFieldEnabled">setFieldEnabled(p_fieldName, p_enabled)
+    </a></td>
+                <td>设置字段信息中编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的
+<a href="../../../html/mx/controls/Control.html#enabled">Control.enabled</a> 属性的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFieldNullable">setFieldNullable(p_fieldName, p_nullable)
+    </a></td>
+                <td>设置表单中字段是否可空。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFieldReadOnly">setFieldReadOnly(p_fieldName, p_readOnly)
+    </a></td>
+                <td>设置字段信息中编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的
+<a href="../../../html/mx/editors/Editor.html#readOnly">Editor.readOnly</a> 属性的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFields">setFields(p_fields)
+    </a></td>
+                <td>设置 <a href="#fields">fields</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setFieldVisible">setFieldVisible(p_fieldName, p_visible)
+    </a></td>
+                <td>设置表单中字段信息的可见性。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setGroupCaption">setGroupCaption(p_name, p_new_caption)
+    </a></td>
+                <td>设置表单中分组的标题。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setGroupVisible">setGroupVisible(p_name, p_visible)
+    </a></td>
+                <td>设置表单中分组的可见性。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setHeight">setHeight(p_height)
+    </a></td>
+                <td>设置 <a href="#height">height</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setLeft">setLeft(p_left)
+    </a></td>
+                <td>设置 <a href="#left">left</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPadding">setPadding(p_padding)
+    </a></td>
+                <td>设置控件的内边距。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setPosition">setPosition(p_position)
+    </a></td>
+                <td>设置 <a href="#position">position</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setRight">setRight(p_right)
+    </a></td>
+                <td>设置 <a href="#right">right</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setTop">setTop(p_top)
+    </a></td>
+                <td>设置 <a href="#top">top</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setVisible">setVisible(p_visible)
+    </a></td>
+                <td>设置 <a href="#visible">visible</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setWidth">setWidth(p_width)
+    </a></td>
+                <td>设置 <a href="#width">width</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#show">show()
+    </a></td>
+                <td>显示控件，设置控件可见。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#validate">validate(p_data, [p_withoutIndication])
+    </a></td>
+                <td>执行验证表单的逻辑。 返回一个对象（如 { successful: true }），该对象的 successful 属性表示该表单通过验证；
+如果返回对象为 { successful: false, hint: "描述错误原因。", fieldName: "错误字段名称" }，其中
+fieldName 是可选字段，是出错字段的 <a href="../../../html/mx/datacontrols/FormField.html#name">FormField.name</a>，原因由 hint
+描述。 该方法将触发 <a href="#onvalidate">onvalidate</a> 事件，<b>可通过该事件进行自定义数据校验</b>，详见该事件示例。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$">$(p_expression)
+    </a></td>
+                <td>该方法与 me.$e.find(p_expression) 等同。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#$wrap">$wrap([p_obj])
+    </a></td>
+                <td>返回一个 JQuery 对象。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_entityContainer_load">_entityContainer_load(e)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_renderField">_renderField(p_field, $p_table, p_level)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_renderFieldGroup">_renderFieldGroup(p_fields, $p_table, p_level)
+    </a></td>
+                <td>受保护的。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#alias">alias</a></td>
+                <td>获取或设置一个字符串，表示控件的别名。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#baseUrl">baseUrl</a></td>
+                <td>详见 <a href="../../../html/mx/datacontrols/DataGrid.html#baseUrl">DataGrid.baseUrl</a> 属性。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#border">border</a></td>
+                <td>获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#bottom">bottom</a></td>
+                <td>获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#captionColumnWidth">captionColumnWidth</a></td>
+                <td>获取标题列的宽度。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#cssClass">cssClass</a></td>
+                <td>指定css伪类名称，设置控件显示样式</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#display">display</a></td>
+                <td>获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#displayPrimaryKey">displayPrimaryKey</a></td>
+                <td>获取或者设置一个 Boolean 值，该属性表示是否需要显示表单中的主键字段。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#displayToolBar">displayToolBar</a></td>
+                <td>获取或设置一个 Boolean 值，表示是否显示工具栏。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#editors">editors</a></td>
+                <td>获取一个集合，包含表单中所有的编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#entityContainer">entityContainer</a></td>
+                <td>获取一个 <a href="../../../html/mx/datacontainers/FormEntityContainer.html">FormEntityContainer</a> 对象（通常是
+<a href="../../../html/mx/datacontainers/FormEntityContainer.html">FormEntityContainer</a> 类型），表示表单的数据源。 请使用
+<a href="#setEntityContainer">setEntityContainer</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#eTag">eTag</a></td>
+                <td>获取控件的标签。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#fieldCaptionRender">fieldCaptionRender</a></td>
+                <td>设置或获取一个函数，用来自定义表单中字段的标题显示方式。
+函数需要返回一个 JQquey 对象或者一个 HTML 片段，返回值将用作字段的标题。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#fields">fields</a></td>
+                <td>获取一个具有层次关系的集合，包含当前表单中所有字段（<a href="../../../html/mx/datacontrols/FormField.html">FormField</a>）和字段分组（<a href="../../../html/mx/datacontrols/FormFieldGroup.html">FormFieldGroup</a>）信息。
+另请参考 <a href="#allFields">allFields</a> 字段。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#groups">groups</a></td>
+                <td>获取一个集合，包含表单中所有的编辑器（<a href="../../../html/mx/datacontrols/FormFieldGroup.html">FormFieldGroup</a> 类型）。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#height">height</a></td>
+                <td>获取控件的高度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#ignoreCheckOnHide">ignoreCheckOnHide</a></td>
+                <td>一个Boolean值，表示是否忽略隐藏编辑器的校验,如果为true，则忽略，flase为校验</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#layoutConfigs">layoutConfigs</a></td>
+                <td>获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#left">left</a></td>
+                <td>获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#maxCols">maxCols</a></td>
+                <td>获取和设置单行中最大列宽度总数。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#padding">padding</a></td>
+                <td>获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#parent">parent</a></td>
+                <td>获取控件所属的父对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#permissionID">permissionID</a></td>
+                <td>获取或设置一个字符串，表示控件的权限标识。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#position">position</a></td>
+                <td>获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#primaryKey">primaryKey</a></td>
+                <td>详见 <a href="../../../html/mx/datacontrols/DataGrid.html#primaryKey">DataGrid.primaryKey</a> 属性。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#printHideFields">printHideFields</a></td>
+                <td>是否打印默认隐藏的字段。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#right">right</a></td>
+                <td>获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#toolBar">toolBar</a></td>
+                <td>获取或设置一个 <a href="../../../html/mx/controls/ToolBar.html">ToolBar</a> 对象。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#top">top</a></td>
+                <td>获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#visible">visible</a></td>
+                <td>获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#width">width</a></td>
+                <td>获取控件的宽度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取该控件的占位符，该占位符为一个 JQuery 对象。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event" override="true">
+                <td><a href="#onload">onload</a></td>
+                <td>当表单加载完数据后触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onloading">onloading</a></td>
+                <td>当数据容器开始加载数据时，将触发该事件。调用 <a href="#load">load</a> 方法时会触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onrendering">onrendering</a></td>
+                <td>加载数据之后，表单渲染之前将触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onsubmit">onsubmit</a></td>
+                <td>当表单提交是触发该事件。</td>
+              </tr>
+              <tr class="event" override="true">
+                <td><a href="#onvalidate">onvalidate</a><a class="exampleIcon" href="#onvalidate"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>当验证表单输入时将触发该事件。调用 <a href="#validate">validate</a> 方法时会触发该事件。<b>可通过订购该事件，实现对表单的自定义验证</b>。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="ComplexForm"></a><div id="method" class="detail">
+            <h3>ComplexForm()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 ComplexForm 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">初始化方法。执行设置样式并初始化属性等操作。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#init">mx.datacontrols.DataForm.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="blur"></a><div id="method" class="detail" override="true">
+            <h3>blur()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">触发所有编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的 blur 事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#blur">mx.datacontrols.DataForm.blur</a></div>
+            </div>
+            <hr>
+          </div><a name="contains"></a><div id="method" class="detail" override="true">
+            <h3>contains($p_target)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 Boolean 值，该值表示控件的容器中是否包含该 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">$p_target</b><div class="paramSummary">一个 JQuery 对象，或 JQuery 选择器对应的字符串（如“#container”），或 HTML DOM 元素。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#contains">mx.controls.Control.contains</a></div>
+            </div>
+            <hr>
+          </div><a name="dispose"></a><div id="method" class="detail" override="true">
+            <h3>dispose()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">释放对象运行时动态生成的内容（属性、方法、事件）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#dispose">mx.datacontrols.DataForm.dispose</a></div>
+            </div>
+            <hr>
+          </div><a name="focus"></a><div id="method" class="detail" override="true">
+            <h3>focus()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">触发所有编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的 focus 事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#focus">mx.datacontrols.DataForm.focus</a></div>
+            </div>
+            <hr>
+          </div><a name="getContext"></a><div id="method" class="detail" override="true">
+            <h3>getContext()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件当前所属 <a href="../../../html/mx/weblets/Weblet.html">Weblet</a> 的上下文信息（ <a href="../../../html/mx/weblets/WebletContext.html">WebletContext</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getContext">mx.controls.Control.getContext</a></div>
+            </div>
+            <hr>
+          </div><a name="getEditor"></a><div id="method" class="detail" override="true">
+            <h3>getEditor(p_fieldName)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个数字，或编辑器的标识（如 “birthday”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#getEditor">mx.datacontrols.DataForm.getEditor</a></div>
+            </div>
+            <hr>
+          </div><a name="getEl"></a><div id="method" class="detail" override="true">
+            <h3>getEl()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件容器对应的 HTML DOM 元素对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#getEl">mx.controls.Control.getEl</a></div>
+            </div>
+            <hr>
+          </div><a name="getId"></a><div id="method" class="detail" override="true">
+            <h3>getId()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，获取表单中当前数据的主键。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#getId">mx.datacontrols.DataForm.getId</a></div>
+            </div>
+            <hr>
+          </div><a name="hasChanged"></a><div id="method" class="detail" override="true">
+            <h3>hasChanged()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，判断表单是否有修改过但未保存的信息。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#hasChanged">mx.datacontrols.DataForm.hasChanged</a></div>
+            </div>
+            <hr>
+          </div><a name="hide"></a><div id="method" class="detail" override="true">
+            <h3>hide()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">隐藏控件，设置控件不可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#hide">mx.controls.Control.hide</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail" override="true">
+            <h3>load([p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调函数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#load">mx.datacontrols.DataForm.load</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail" override="true">
+            <h3>load([p_data], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。一个 JSON 对象，表示查询参数。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调函数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#load">mx.datacontrols.DataForm.load</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail" override="true">
+            <h3>load([p_id], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_id</b><div class="paramSummary">可选的。一个字符串，表示表单数据的唯一标识。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调函数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#load">mx.datacontrols.DataForm.load</a></div>
+            </div>
+            <hr>
+          </div><a name="load"></a><div id="method" class="detail" override="true">
+            <h3>load([p_id], [p_data], [p_callback])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">加载数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_id</b><div class="paramSummary">可选的。一个字符串，表示表单数据的唯一标识。</div>
+                </li>
+                <li><b class="paramName">p_data</b><div class="paramSummary">可选的。一个 JSON 对象，表示查询参数。</div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary">可选的。一个 Function 对象，表示回调函数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#load">mx.datacontrols.DataForm.load</a></div>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_left, p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">移动控件到指定位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">一个数字，表示 css 样式的 left 属性。</div>
+                </li>
+                <li><b class="paramName">p_top</b><div class="paramSummary">一个数字，表示 css 样式的 top 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#moveTo">mx.controls.Control.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="printForm"></a><div id="method" class="detail" override="true">
+            <h3>printForm(p_preview, p_printOptions)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，打印表单内容。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_preview</b><div class="paramSummary">:
+           true | false 一个 Boolean 值，表示是否启用打印预览功能，默认 true
+           true : 表示显示打印预览
+           false : 表示不显示打印预览，直接打印</div>
+                </li>
+                <li><b class="paramName">p_printOptions</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#printForm">mx.datacontrols.DataForm.printForm</a></div>
+            </div>
+            <hr>
+          </div><a name="resizeTo"></a><div id="method" class="detail" override="true">
+            <h3>resizeTo(p_width, p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">重设控件的大小。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的宽度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#resizeTo">mx.controls.Control.resizeTo</a></div>
+            </div>
+            <hr>
+          </div><a name="save"></a><div id="method" class="detail" override="true">
+            <h3>save(p_data, p_callback)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">保存数据。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_callback</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#save">mx.datacontrols.DataForm.save</a></div>
+            </div>
+            <hr>
+          </div><a name="selectEditor"></a><div id="method" class="detail" override="true">
+            <h3>selectEditor(p_fieldName)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">选中指定字段的编辑器。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#selectEditor">mx.datacontrols.DataForm.selectEditor</a></div>
+            </div>
+            <hr>
+          </div><a name="setBorder"></a><div id="method" class="detail" override="true">
+            <h3>setBorder(p_border)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的边框样式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_border</b><div class="paramSummary">一个字符串，表示css样式的 border 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBorder">mx.controls.Control.setBorder</a></div>
+            </div>
+            <hr>
+          </div><a name="setBottom"></a><div id="method" class="detail" override="true">
+            <h3>setBottom(p_bottom)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#bottom">bottom</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_bottom</b><div class="paramSummary">控件的下边界与父容器下边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setBottom">mx.controls.Control.setBottom</a></div>
+            </div>
+            <hr>
+          </div><a name="setCss"></a><div id="method" class="detail" override="true">
+            <h3>setCss(p_css)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#css">css</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_css</b><div class="paramSummary">一个 JSON 对象，表示控件的 CSS 样式。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCss">mx.controls.Control.setCss</a></div>
+            </div>
+            <hr>
+          </div><a name="setCssClass"></a><div id="method" class="detail" override="true">
+            <h3>setCssClass(p_cssClass)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#cssClass">cssClass</a>} 字段的值</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_cssClass</b><div class="paramSummary">一个String 对象，样式classname</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setCssClass">mx.controls.Control.setCssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="setDisplay"></a><div id="method" class="detail" override="true">
+            <h3>setDisplay(p_display)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#display">display</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_display</b><div class="paramSummary">css 样式的 display 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setDisplay">mx.controls.Control.setDisplay</a></div>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#enabled">enabled</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setEnabled">mx.datacontrols.DataForm.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setEntityContainer"></a><div id="method" class="detail" override="true">
+            <h3>setEntityContainer(p_entityContainer)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#entityContainer">entityContainer</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_entityContainer</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setEntityContainer">mx.datacontrols.DataForm.setEntityContainer</a></div>
+            </div>
+            <hr>
+          </div><a name="setFieldCaption"></a><div id="method" class="detail" override="true">
+            <h3>setFieldCaption(p_fieldName, p_caption)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置表单中字段信息的标题。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示字段信息的标识。</div>
+                </li>
+                <li><b class="paramName">p_caption</b><div class="paramSummary">一个字符串，指定字段的标题。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFieldCaption">mx.datacontrols.DataForm.setFieldCaption</a></div>
+            </div>
+            <hr>
+          </div><a name="setFieldCaptionVisible"></a><div id="method" class="detail" override="true">
+            <h3>setFieldCaptionVisible(p_fieldName, p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置表单中字段标题的可见性。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示字段信息的标识。</div>
+                </li>
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示是否可见。如果该值为 true，表示字段信息可见；反之则不可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFieldCaptionVisible">mx.datacontrols.DataForm.setFieldCaptionVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setFieldEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setFieldEnabled(p_fieldName, p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置字段信息中编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的
+<a href="../../../html/mx/controls/Control.html#enabled">Control.enabled</a> 属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示字段信息的标识。</div>
+                </li>
+                <li><b class="paramName">p_enabled</b><div class="paramSummary">一个 Boolean 值，详见 <a href="../../../html/mx/controls/Control.html#setEnabled">Control.setEnabled</a> 方法的参数。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFieldEnabled">mx.datacontrols.DataForm.setFieldEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setFieldNullable"></a><div id="method" class="detail" override="true">
+            <h3>setFieldNullable(p_fieldName, p_nullable)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置表单中字段是否可空。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示字段信息的标识。</div>
+                </li>
+                <li><b class="paramName">p_nullable</b><div class="paramSummary">一个 Boolean 值，指定字段是否允许空。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFieldNullable">mx.datacontrols.DataForm.setFieldNullable</a></div>
+            </div>
+            <hr>
+          </div><a name="setFieldReadOnly"></a><div id="method" class="detail" override="true">
+            <h3>setFieldReadOnly(p_fieldName, p_readOnly)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置字段信息中编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）的
+<a href="../../../html/mx/editors/Editor.html#readOnly">Editor.readOnly</a> 属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示字段信息的标识。</div>
+                </li>
+                <li><b class="paramName">p_readOnly</b><div class="paramSummary">一个 Boolean 值，表示是否只读。如果该值为 true，表示只读；反之为可编辑。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFieldReadOnly">mx.datacontrols.DataForm.setFieldReadOnly</a></div>
+            </div>
+            <hr>
+          </div><a name="setFields"></a><div id="method" class="detail" override="true">
+            <h3>setFields(p_fields)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#fields">fields</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fields</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFields">mx.datacontrols.DataForm.setFields</a></div>
+            </div>
+            <hr>
+          </div><a name="setFieldVisible"></a><div id="method" class="detail" override="true">
+            <h3>setFieldVisible(p_fieldName, p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置表单中字段信息的可见性。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fieldName</b><div class="paramSummary">一个字符串，表示字段信息的标识。</div>
+                </li>
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示是否可见。如果该值为 true，表示字段信息可见；反之则不可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setFieldVisible">mx.datacontrols.DataForm.setFieldVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setGroupCaption"></a><div id="method" class="detail" override="true">
+            <h3>setGroupCaption(p_name, p_new_caption)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置表单中分组的标题。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_name</b><div class="paramSummary">一个字符串或数字,FormFiledGroup的name值,或是FormFiledGroup在表单中的索引</div>
+                </li>
+                <li><b class="paramName">p_new_caption</b><div class="paramSummary">一个字符串。表示group的新caption。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setGroupCaption">mx.datacontrols.DataForm.setGroupCaption</a></div>
+            </div>
+            <hr>
+          </div><a name="setGroupVisible"></a><div id="method" class="detail" override="true">
+            <h3>setGroupVisible(p_name, p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置表单中分组的可见性。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_name</b><div class="paramSummary">一个字符串或数字,FormFiledGroup的name值,或是FormFiledGroup在表单中的索引</div>
+                </li>
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示是否可见。如果该值为 true，表示字段信息可见；反之则不可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#setGroupVisible">mx.datacontrols.DataForm.setGroupVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setHeight"></a><div id="method" class="detail" override="true">
+            <h3>setHeight(p_height)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#height">height</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_height</b><div class="paramSummary">控件的高度，可以是数字（如 100），也可以是字符串（如 “100%”）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setHeight">mx.controls.Control.setHeight</a></div>
+            </div>
+            <hr>
+          </div><a name="setLeft"></a><div id="method" class="detail" override="true">
+            <h3>setLeft(p_left)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#left">left</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_left</b><div class="paramSummary">控件的左边界与父容器左边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setLeft">mx.controls.Control.setLeft</a></div>
+            </div>
+            <hr>
+          </div><a name="setPadding"></a><div id="method" class="detail" override="true">
+            <h3>setPadding(p_padding)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置控件的内边距。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_padding</b><div class="paramSummary">一个字符串，表示css样式的 padding 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPadding">mx.controls.Control.setPadding</a></div>
+            </div>
+            <hr>
+          </div><a name="setPosition"></a><div id="method" class="detail" override="true">
+            <h3>setPosition(p_position)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#position">position</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_position</b><div class="paramSummary">一个字符串，表示 css 样式的 position 属性。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setPosition">mx.controls.Control.setPosition</a></div>
+            </div>
+            <hr>
+          </div><a name="setRight"></a><div id="method" class="detail" override="true">
+            <h3>setRight(p_right)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#right">right</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_right</b><div class="paramSummary">控件的右边界与父容器右边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setRight">mx.controls.Control.setRight</a></div>
+            </div>
+            <hr>
+          </div><a name="setTop"></a><div id="method" class="detail" override="true">
+            <h3>setTop(p_top)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#top">top</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_top</b><div class="paramSummary">控件的上边界与父容器上边界的像素距离，可以是数字（如 50），也可以是字符串（如 50%）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setTop">mx.controls.Control.setTop</a></div>
+            </div>
+            <hr>
+          </div><a name="setVisible"></a><div id="method" class="detail" override="true">
+            <h3>setVisible(p_visible)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#visible">visible</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_visible</b><div class="paramSummary">一个 Boolean 值，表示控件是否可见。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setVisible">mx.controls.Control.setVisible</a></div>
+            </div>
+            <hr>
+          </div><a name="setWidth"></a><div id="method" class="detail" override="true">
+            <h3>setWidth(p_width)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#width">width</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_width</b><div class="paramSummary">控件的高度,可以是数字（如 500）、字符串（如“500px”或“50%”）.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#setWidth">mx.controls.Control.setWidth</a></div>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail" override="true">
+            <h3>show()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示控件，设置控件可见。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#show">mx.controls.Control.show</a></div>
+            </div>
+            <hr>
+          </div><a name="validate"></a><div id="method" class="detail" override="true">
+            <h3>validate(p_data, [p_withoutIndication])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">执行验证表单的逻辑。 返回一个对象（如 { successful: true }），该对象的 successful 属性表示该表单通过验证；
+如果返回对象为 { successful: false, hint: "描述错误原因。", fieldName: "错误字段名称" }，其中
+fieldName 是可选字段，是出错字段的 <a href="../../../html/mx/datacontrols/FormField.html#name">FormField.name</a>，原因由 hint
+描述。 该方法将触发 <a href="#onvalidate">onvalidate</a> 事件，<b>可通过该事件进行自定义数据校验</b>，详见该事件示例。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_data</b><div class="paramSummary">待校验的表单数据。</div>
+                </li>
+                <li><b class="paramName">p_withoutIndication</b><div class="paramSummary">可选的。默认值为“false”。指定是否需要采用提示。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#validate">mx.datacontrols.DataForm.validate</a></div>
+            </div>
+            <hr>
+          </div><a name="$"></a><div id="method" class="detail" override="true">
+            <h3>$(p_expression)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">该方法与 me.$e.find(p_expression) 等同。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_expression</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$">mx.controls.Control.$</a></div>
+            </div>
+            <hr>
+          </div><a name="$wrap"></a><div id="method" class="detail" override="true">
+            <h3>$wrap([p_obj])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回一个 JQuery 对象。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_obj</b><div class="paramSummary">可选的。默认值为“me.$e”。一个 JQuery 对象，或继承自 Control 的控件，或字符串，或 HTML DOM 元素。如果参数为 JQuery 对象，则返回本身；如果参数为继承自 Control 的控件，则返回控件的 $e 对象；如果参数为字符串，则返回以字符串为选择器的 JQuery 对象；如果参数为空，则返回控件本身的 $e 对象。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$wrap">mx.controls.Control.$wrap</a></div>
+            </div>
+            <hr>
+          </div><a name="_entityContainer_load"></a><div id="method" class="detail" override="true">
+            <h3>_entityContainer_load(e)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">e</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#_entityContainer_load">mx.datacontrols.DataForm._entityContainer_load</a></div>
+            </div>
+            <hr>
+          </div><a name="_renderField"></a><div id="method" class="detail" override="true">
+            <h3>_renderField(p_field, $p_table, p_level)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_field</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">$p_table</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_level</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#_renderField">mx.datacontrols.DataForm._renderField</a></div>
+            </div>
+            <hr>
+          </div><a name="_renderFieldGroup"></a><div id="method" class="detail" override="true">
+            <h3>_renderFieldGroup(p_fields, $p_table, p_level)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_fields</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">$p_table</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_level</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#_renderFieldGroup">mx.datacontrols.DataForm._renderFieldGroup</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="alias"></a><div id="field" class="detail" override="true">
+            <h3>alias 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的别名。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#alias">mx.controls.Control.alias</a></div>
+            </div>
+            <hr>
+          </div><a name="baseUrl"></a><div id="field" class="detail" override="true">
+            <h3>baseUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">详见 <a href="../../../html/mx/datacontrols/DataGrid.html#baseUrl">DataGrid.baseUrl</a> 属性。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#baseUrl">mx.datacontrols.DataForm.baseUrl</a></div>
+            </div>
+            <hr>
+          </div><a name="border"></a><div id="field" class="detail" override="true">
+            <h3>border 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的边框样式。如“1px solid red”，表示边框的样式为 1 像素红色的实线。请使用 <a href="#setBorder">setBorder</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#border">mx.controls.Control.border</a></div>
+            </div>
+            <hr>
+          </div><a name="bottom"></a><div id="field" class="detail" override="true">
+            <h3>bottom 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的下边界与父容器下边界的像素距离。请使用 <a href="#setBottom">setBottom</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#bottom">mx.controls.Control.bottom</a></div>
+            </div>
+            <hr>
+          </div><a name="captionColumnWidth"></a><div id="field" class="detail" override="true">
+            <h3>captionColumnWidth 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取标题列的宽度。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#captionColumnWidth">mx.datacontrols.DataForm.captionColumnWidth</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">120</div>
+            </div>
+            <hr>
+          </div><a name="cssClass"></a><div id="field" class="detail" override="true">
+            <h3>cssClass 字段
+            </h3>
+            <div class="content">
+              <div class="summary">指定css伪类名称，设置控件显示样式</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#cssClass">mx.controls.Control.cssClass</a></div>
+            </div>
+            <hr>
+          </div><a name="display"></a><div id="field" class="detail" override="true">
+            <h3>display 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的显示样式值。如“none”，表示隐藏控件；
+“block”表示强制作为块对象呈递。请使用 <a href="#setDisplay">setDisplay</a>。注：该"block"值不能在ComplexGrid控件中使用。
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#display">mx.controls.Control.display</a></div>
+            </div>
+            <hr>
+          </div><a name="displayPrimaryKey"></a><div id="field" class="detail" override="true">
+            <h3>displayPrimaryKey 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 Boolean 值，该属性表示是否需要显示表单中的主键字段。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#displayPrimaryKey">mx.datacontrols.DataForm.displayPrimaryKey</a></div>
+            </div>
+            <hr>
+          </div><a name="displayToolBar"></a><div id="field" class="detail">
+            <h3>displayToolBar 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 Boolean 值，表示是否显示工具栏。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="editors"></a><div id="field" class="detail" override="true">
+            <h3>editors 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含表单中所有的编辑器（<a href="../../../html/mx/editors/Editor.html">Editor</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#editors">mx.datacontrols.DataForm.editors</a></div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        
+                            集合中成员的类型为
+                            <a href="../../../html/mx/editors/Editor.html">mx.editors.Editor</a>。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">编辑器的标识或编辑器在集合中的序号（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件是否可以对用户交互作出响应。如果该值为 true，则表示控件可以对用户交互作出响应；反之则不能。
+请使用 <a href="#setEnabled">setEnabled</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#enabled">mx.controls.Control.enabled</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="entityContainer"></a><div id="field" class="detail" override="true">
+            <h3>entityContainer 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 <a href="../../../html/mx/datacontainers/FormEntityContainer.html">FormEntityContainer</a> 对象（通常是
+<a href="../../../html/mx/datacontainers/FormEntityContainer.html">FormEntityContainer</a> 类型），表示表单的数据源。 请使用
+<a href="#setEntityContainer">setEntityContainer</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#entityContainer">mx.datacontrols.DataForm.entityContainer</a></div>
+            </div>
+            <hr>
+          </div><a name="eTag"></a><div id="field" class="detail" override="true">
+            <h3>eTag 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的标签。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#eTag">mx.controls.Control.eTag</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">&lt;div/&gt;</div>
+            </div>
+            <hr>
+          </div><a name="fieldCaptionRender"></a><div id="field" class="detail" override="true">
+            <h3>fieldCaptionRender 字段
+            </h3>
+            <div class="content">
+              <div class="summary">设置或获取一个函数，用来自定义表单中字段的标题显示方式。
+函数需要返回一个 JQquey 对象或者一个 HTML 片段，返回值将用作字段的标题。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#fieldCaptionRender">mx.datacontrols.DataForm.fieldCaptionRender</a></div>
+            </div>
+            <hr>
+          </div><a name="fields"></a><div id="field" class="detail" override="true">
+            <h3>fields 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个具有层次关系的集合，包含当前表单中所有字段（<a href="../../../html/mx/datacontrols/FormField.html">FormField</a>）和字段分组（<a href="../../../html/mx/datacontrols/FormFieldGroup.html">FormFieldGroup</a>）信息。
+另请参考 <a href="#allFields">allFields</a> 字段。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#fields">mx.datacontrols.DataForm.fields</a></div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">数字或字段名称（<a href="../../../html/mx/datacontrols/FormField.html#name">FormField.name</a>）。</div>
+            </div>
+            <hr>
+          </div><a name="groups"></a><div id="field" class="detail" override="true">
+            <h3>groups 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个集合，包含表单中所有的编辑器（<a href="../../../html/mx/datacontrols/FormFieldGroup.html">FormFieldGroup</a> 类型）。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#groups">mx.datacontrols.DataForm.groups</a></div>
+              <h4>集合</h4>
+              <div class="h4Content">
+                        该字段是一个集合数组字段。
+                        
+                            集合中成员的类型为
+                            <a href="../../../html/mx/datacontrols/FormFieldGroup.html">mx.datacontrols.FormFieldGroup</a>。
+                        </div>
+              <h4>集合索引</h4>
+              <div class="h4Content">FormFieldGroup的name或FormFieldGroup在集合中的序号（从 0 开始计数）。</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail" override="true">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的高度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setHeight">setHeight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#height">mx.controls.Control.height</a></div>
+            </div>
+            <hr>
+          </div><a name="ignoreCheckOnHide"></a><div id="field" class="detail" override="true">
+            <h3>ignoreCheckOnHide 字段
+            </h3>
+            <div class="content">
+              <div class="summary">一个Boolean值，表示是否忽略隐藏编辑器的校验,如果为true，则忽略，flase为校验</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#ignoreCheckOnHide">mx.datacontrols.DataForm.ignoreCheckOnHide</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="layoutConfigs"></a><div id="field" class="detail" override="true">
+            <h3>layoutConfigs 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或者设置一个 JSON 对象，该属性表示控件在父容器中的布局配置参数。该属性只有在控件父容器运用布局器才会生效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#layoutConfigs">mx.controls.Control.layoutConfigs</a></div>
+            </div>
+            <hr>
+          </div><a name="left"></a><div id="field" class="detail" override="true">
+            <h3>left 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的左边界与父容器左边界的像素距离。请使用 <a href="#setLeft">setLeft</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#left">mx.controls.Control.left</a></div>
+            </div>
+            <hr>
+          </div><a name="maxCols"></a><div id="field" class="detail" override="true">
+            <h3>maxCols 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取和设置单行中最大列宽度总数。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#maxCols">mx.datacontrols.DataForm.maxCols</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">2</div>
+            </div>
+            <hr>
+          </div><a name="padding"></a><div id="field" class="detail" override="true">
+            <h3>padding 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的内边距。如“4px”表示上下左右的内边距均为 4 像素； “4px 2px 3px 1px”则表示上边距为 4 像素，右边距为 2
+像素，下边距为 3 像素，左边距为 1 像素。请使用 <a href="#setPadding">setPadding</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#padding">mx.controls.Control.padding</a></div>
+            </div>
+            <hr>
+          </div><a name="parent"></a><div id="field" class="detail" override="true">
+            <h3>parent 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件所属的父对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#parent">mx.controls.Control.parent</a></div>
+            </div>
+            <hr>
+          </div><a name="permissionID"></a><div id="field" class="detail" override="true">
+            <h3>permissionID 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示控件的权限标识。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#permissionID">mx.controls.Control.permissionID</a></div>
+            </div>
+            <hr>
+          </div><a name="position"></a><div id="field" class="detail" override="true">
+            <h3>position 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件位置样式值。如“static”，表示无特殊定位，对象遵循 HTML 定位规则。请使用 <a href="#setPosition">setPosition</a>
+方法设置该字段的值。
+<p>
+该字段的可选值包括:
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</p></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#position">mx.controls.Control.position</a></div>
+            </div>
+            <hr>
+          </div><a name="primaryKey"></a><div id="field" class="detail" override="true">
+            <h3>primaryKey 字段
+            </h3>
+            <div class="content">
+              <div class="summary">详见 <a href="../../../html/mx/datacontrols/DataGrid.html#primaryKey">DataGrid.primaryKey</a> 属性。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#primaryKey">mx.datacontrols.DataForm.primaryKey</a></div>
+            </div>
+            <hr>
+          </div><a name="printHideFields"></a><div id="field" class="detail" override="true">
+            <h3>printHideFields 字段
+            </h3>
+            <div class="content">
+              <div class="summary">是否打印默认隐藏的字段。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#printHideFields">mx.datacontrols.DataForm.printHideFields</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="right"></a><div id="field" class="detail" override="true">
+            <h3>right 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的右边界与父容器右边界的像素距离。请使用 <a href="#setRight">setRight</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#right">mx.controls.Control.right</a></div>
+            </div>
+            <hr>
+          </div><a name="toolBar"></a><div id="field" class="detail">
+            <h3>toolBar 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 <a href="../../../html/mx/controls/ToolBar.html">ToolBar</a> 对象。</div>
+            </div>
+            <hr>
+          </div><a name="top"></a><div id="field" class="detail" override="true">
+            <h3>top 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的上边界与父容器上边界的像素距离。请使用 <a href="#setTop">setTop</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#top">mx.controls.Control.top</a></div>
+            </div>
+            <hr>
+          </div><a name="visible"></a><div id="field" class="detail" override="true">
+            <h3>visible 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示控件是否可见。如果该值为 true，则表示控件可见；反之则不可见。请使用 <a href="#setVisible">setVisible</a>
+方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#visible">mx.controls.Control.visible</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">true</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail" override="true">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取控件的宽度。可以是数字（如 500）、字符串（如“500px”或“50%”）。请使用 <a href="#setWidth">setWidth</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#width">mx.controls.Control.width</a></div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该控件的占位符，该占位符为一个 JQuery 对象。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/controls/Control.html#$e">mx.controls.Control.$e</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onload"></a><div id="event" class="detail" override="true">
+            <h3>onload 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当表单加载完数据后触发该事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#onload">mx.datacontrols.DataForm.onload</a></div>
+            </div>
+            <hr>
+          </div><a name="onloading"></a><div id="event" class="detail" override="true">
+            <h3>onloading 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当数据容器开始加载数据时，将触发该事件。调用 <a href="#load">load</a> 方法时会触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止当前的加载动作。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#onloading">mx.datacontrols.DataForm.onloading</a></div>
+            </div>
+            <hr>
+          </div><a name="onrendering"></a><div id="event" class="detail" override="true">
+            <h3>onrendering 事件
+            </h3>
+            <div class="content">
+              <div class="summary">加载数据之后，表单渲染之前将触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">fields</b><div class="paramSummary">一个代表列信息的数组，如 [
+                           {"name":"id","caption":"id","nullable":false,"length":32,"maxLength":100,"precision":3,"readOnly":false,"editorType":"TextEditor","dataType":"string","textMode":"","locked":false,"visible":true},
+                           {"name":"name","caption":"名称","nullable":false,"length":32,"maxLength":100,"precision":3,"readOnly":false,"editorType":"TextEditor","dataType":"string","textMode":"","locked":false,"visible":true}
+                        ]</div>
+                </li>
+                <li><b class="paramName">cancel</b><div class="paramSummary">一个 Boolean 值，表示是否中止当前的渲染动作。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#onrendering">mx.datacontrols.DataForm.onrendering</a></div>
+            </div>
+            <hr>
+          </div><a name="onsubmit"></a><div id="event" class="detail" override="true">
+            <h3>onsubmit 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当表单提交是触发该事件。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#onsubmit">mx.datacontrols.DataForm.onsubmit</a></div>
+            </div>
+            <hr>
+          </div><a name="onvalidate"></a><div id="event" class="detail" override="true">
+            <h3>onvalidate 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当验证表单输入时将触发该事件。调用 <a href="#validate">validate</a> 方法时会触发该事件。<b>可通过订购该事件，实现对表单的自定义验证</b>。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">successful</b><div class="paramSummary">指定是否成功通过验证。默认为 true。</div>
+                </li>
+                <li><b class="paramName">hint</b><div class="paramSummary">指定没有通过验证的原因。默认为 null。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataForm.html#onvalidate">mx.datacontrols.DataForm.onvalidate</a></div>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                下面是一段创建用户的 Form 代码，除需进行必填字段校验外，还需校验两次密码输入是否一致，这时需要订购
+         <a href="#onvalidate">onvalidate</a> 事件进行自定义验证的开发:
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">var entityContainer = new mx.datacontainers.FormEntityContainer(
+		baseUrl: mx.mappath("~/user")
+);
+var form = new mx.datacontrols.DataForm({
+	   entityContainer: entityContainer,
+    fields: [
+        { name: "userName", caption: "用户名", nullable: false },
+        { name: "password", caption: "密码", textMode: "password", nullable: false },
+        { name: "confirmPassword", caption: "密码", textMode: "password", nullable: false }
+    ]
+});
+entityContainer.load();
+
+form.on("validate", function(e)
+{
+	   // e.param，待校验的表单数据。
+	   // e.dataForm，当前表单信息。
+    var entityContainer = form.entityContainer;
+    if (entityContainer.getValue("password") != entityContainer.getValue("confirmPassword"))
+    {
+        // 通过事件参数传递校验结果
+        e.successful = false;
+        e.hint = "两次输入的密码不一致。";
+    }
+});</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

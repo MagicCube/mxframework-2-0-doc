@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.io.FileUploader 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/io/index.html">mx.io</a><h1 id="class">FileUploader 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.io.FileUploader</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/io/index.html">mx.io</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>FileUploader</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>FileUploader</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\io\FileUploader.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个文件上传的类（不包含界面部分）。目前仅支持 HTML5。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#FileUploader">FileUploader()
+    </a></td>
+                <td>构建 FileUploader 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#setParams">setParams(p_params)
+    </a></td>
+                <td>设置 <a href="#params">params</a> 的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#upload">upload()
+    </a></td>
+                <td>文件上传。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#file">file</a></td>
+                <td>获取或设置一个 HTML5 的 File 对象。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#params">params</a></td>
+                <td>获取或设置文件上传服务端需要的参数。
+该属性为一个 JSON 对象，如（{ columnNames:"name,age,gender", columnCaptions:"姓名,年龄,性别", fileName:"用户表格"}）。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#url">url</a></td>
+                <td>获取或设置一个字符串，表示处理上传文件的服务地址。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onprogresschange">onprogresschange</a></td>
+                <td>当文件上传，进度发生改变时触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onprogresscomplete">onprogresscomplete</a></td>
+                <td>当文件上传完成时，触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onprogresserror">onprogresserror</a></td>
+                <td>当文件上传失败时，触发该事件。</td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onuploadcomplete">onuploadcomplete</a></td>
+                <td>当文件上传服务端处理完毕后，触发该事件。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="FileUploader"></a><div id="method" class="detail">
+            <h3>FileUploader()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 FileUploader 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="setParams"></a><div id="method" class="detail">
+            <h3>setParams(p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#params">params</a> 的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_params</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="upload"></a><div id="method" class="detail">
+            <h3>upload()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">文件上传。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="file"></a><div id="field" class="detail">
+            <h3>file 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个 HTML5 的 File 对象。</div>
+            </div>
+            <hr>
+          </div><a name="params"></a><div id="field" class="detail">
+            <h3>params 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置文件上传服务端需要的参数。
+该属性为一个 JSON 对象，如（{ columnNames:"name,age,gender", columnCaptions:"姓名,年龄,性别", fileName:"用户表格"}）。</div>
+            </div>
+            <hr>
+          </div><a name="url"></a><div id="field" class="detail">
+            <h3>url 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置一个字符串，表示处理上传文件的服务地址。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onprogresschange"></a><div id="event" class="detail">
+            <h3>onprogresschange 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当文件上传，进度发生改变时触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onprogresscomplete"></a><div id="event" class="detail">
+            <h3>onprogresscomplete 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当文件上传完成时，触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onprogresserror"></a><div id="event" class="detail">
+            <h3>onprogresserror 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当文件上传失败时，触发该事件。</div>
+            </div>
+            <hr>
+          </div><a name="onuploadcomplete"></a><div id="event" class="detail">
+            <h3>onuploadcomplete 事件
+            </h3>
+            <div class="content">
+              <div class="summary">当文件上传服务端处理完毕后，触发该事件。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">resultValue</b><div class="paramSummary">一个字符串，表示服务端的返回值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

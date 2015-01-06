@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.GUIDUtilClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">GUIDUtilClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.GUIDUtilClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>GUIDUtilClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>GUIDUtilClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\GUIDUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供生成 GUID 的工具类。该类在运行时唯一静态实例是 <b>mx.utils.GUIDUtil</b> 对象。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个通过 <b>mx.utils.GUIDUtil</b> 获取一个 GUID 字符串的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">//获取一个大写的 32 位的 GUID 串。
+var newGUID_32 = mx.utils.GUIDUtil.newGUID();
+
+//获取一个小写的 16 位的 GUID 串。
+var lowwer_GUID_16 = mx.utils.GUIDUtil.newGUID(true, 16);</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#GUIDUtilClass">GUIDUtilClass()
+    </a></td>
+                <td>构建 GUIDUtilClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#newGUID">newGUID([p_toLowerCase], [p_length])
+    </a></td>
+                <td>获取一个指定长度和大小写的 GUID 字符串。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="GUIDUtilClass"></a><div id="method" class="detail">
+            <h3>GUIDUtilClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 GUIDUtilClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="newGUID"></a><div id="method" class="detail">
+            <h3>newGUID([p_toLowerCase], [p_length])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个指定长度和大小写的 GUID 字符串。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_toLowerCase</b><div class="paramSummary">可选的。默认值为“false”。一个 Boolean 值，true 表示是否返回小写的 GUID。如果参数为 true，则返回小写的 GUID。反之返回大写的 GUID。</div>
+                </li>
+                <li><b class="paramName">p_length</b><div class="paramSummary">可选的。默认值为“32”。一个 Number 值，表示返回的 GUID 长度，默认返回的 GUID 长度为 32。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1643 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datas.DataTable 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datas/index.html">mx.datas</a><h1 id="class">DataTable 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datas.DataTable</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datas/index.html">mx.datas</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>DataTable</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>DataTable</span><span id="inherit"></span><a href="../../../html/mx/datas/DataObject.html">DataObject</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datas\DataTable.js</td>
+            </tr>
+          </table>
+          <div class="summary">表示脱机内存数据中数据表的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的示例。<b>说明了如何创建一个数据表，其行列都为空。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var table = new mx.datas.DataTable();</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+          <p></p>
+          <h4>示例 2</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的示例。<b>说明了如何传参数 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 对象集合，<a href="../../../html/mx/datas/DataRow.html">DataRow</a> 对象集合创建一个数据表。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">var table = new mx.datas.DataTable({
+  		columns:[
+  		new mx.datas.DataColumn({id:"name", label:"名字", type:"string"}),
+  		new mx.datas.DataColumn({id:"age", label:"年龄", type:"number"}),
+  		new mx.datas.DataColumn({id:"sex", label:"性别", type:"number"}),
+  		new mx.datas.DataColumn({id:"birthday", label:"生日", type:"Date", pattern:"yyyy.MM.dd"})
+  		],
+  		rows:[
+  			new mx.datas.DataRow({cells:[{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]}),
+  			new mx.datas.DataRow({cells:[{value:"李四"}, {value:24},{value:"0", formattedValue:"女"}, {value:"1984-1-1"}]}),
+  			new mx.datas.DataRow({cells:[{value:"王五"}, {value:25},{value:"1", formattedValue:"男"}, {value:"1988-1-1"}]})
+  		]
+});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+          <p></p>
+          <h4>示例 3</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的示例。<b>说明了如何创建一个数据表。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">     var table = new mx.datas.DataTable({
+  		columns:[
+  		    {id:"name", label:"名字", type:"string"},
+  		    {id:"age",  label:"年龄", type:"number"},
+  		    {id:"sex",  label:"性别", type:"number"},
+  		    {id:"birthday", label:"生日", type:"Date", pattern:"yyyy.MM.dd"}
+  		],
+  		rows:[{
+             cells:[
+  		        [{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]},
+  		        [{value:"李四"}, {value:24},{value:"0",formattedValue:"女"},{value:"1984-1-1"}],
+  		        [{value:"王五"}, {value:25},{value:"1",formattedValue:"男"}, {value:"1988-1-1"}]
+  			]
+  		}]
+  	});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+          <p></p>
+          <h4>示例 4</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的示例。<b> 说明了使用简单的参数格式创建 <a href="../../../html/mx/datas/DataTable.html">DataTable</a>，方便数据传输。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">	    	var table = new mx.datas.DataTable({
+	    		cols:[
+	    		["name","名字"],
+	    		["age","年龄", "number"],
+	    		["sex","性别","number"],
+	    		["birthday","生日","Date","yyyy.MM.dd"]
+	    		],
+	    		rows:[
+	    		[{v:"张三"}, {v:23},{v:"1",f:"男"}, {v:"1985-1-1"}],
+	    		[{v:"李四"}, {v:24},{v:"0",f:"女"},{v:"1984-1-1"}],
+	    		[{v:"王五"}, {v:25},{v:"1",f:"男"}, {v:"1988-1-1"}]
+	    		]
+	    	});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+          <p></p>
+          <h4>示例 5</h4>
+          <div class="h4Content">
+        以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 的示例。<b> 说明了使用简单的参数格式创建 <a href="../../../html/mx/datas/DataTable.html">DataTable</a>，方便数据传输。</b>
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">	    	var table = new mx.datas.DataTable({
+	    		cols:[
+	    		["name","名字"],
+	    		["age","年龄", "number"],
+	    		["sex","性别","number"],
+	    		["birthday","生日","Date","yyyy.MM.dd"]
+	    		],
+	    		rows:[
+	    		["张三", 23,"男", "1985-1-1"],
+	    		["李四", 24,"女","1984-1-1"],
+	    		["王五", 25,"男", "1988-1-1"]
+	    		]
+	    	});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#DataTable">DataTable()
+    </a></td>
+                <td>构建 DataTable 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#addColumn">addColumn(p_column, p_triggerEvent)
+    </a><a class="exampleIcon" href="#addColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>添加一个数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 作为表的最后一列，并将返回此数据列。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#addColumn">addColumn(p_id, p_label, p_type, p_triggerEvent)
+    </a><a class="exampleIcon" href="#addColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>添加一个数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 作为表的最后一列，并将返回此数据列。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#addColumns">addColumns(p_columns, p_triggerEvent)
+    </a><a class="exampleIcon" href="#addColumns"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>在指定的数据表最后一列追加 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#addRow">addRow(p_row, p_triggerEvent)
+    </a><a class="exampleIcon" href="#addRow"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>向该表追加指定的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> ，并将返回此数据行。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#addRows">addRows(p_rows, p_triggerEvent)
+    </a></td>
+                <td>向该表追加多行数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a>。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getColumnId">getColumnId(p_index)
+    </a></td>
+                <td>获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 字段名。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getColumnLabel">getColumnLabel(p_index)
+    </a></td>
+                <td>获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 中文标题。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getColumnPattern">getColumnPattern(p_index)
+    </a></td>
+                <td>获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 格式。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getColumnProperties">getColumnProperties(p_columnIndex)
+    </a></td>
+                <td>获取当前数据表的指定数据列索引的自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getColumnProperty">getColumnProperty(p_columnIndex, p_property)
+    </a></td>
+                <td>获取当前数据表的指定数据列索引的自定义属性值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getColumnType">getColumnType(p_index)
+    </a></td>
+                <td>获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 数据类型。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getCustomProperties">getCustomProperties()
+    </a></td>
+                <td>获取客户端数据对象的自定义属性集合。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getCustomProperty">getCustomProperty(p_key)
+    </a></td>
+                <td>获取客户端数据对象指定自定义属性的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getFilteredRows">getFilteredRows(p_filters)
+    </a></td>
+                <td>获取指定过滤条件筛选出的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getFormattedValue">getFormattedValue(p_rowIndex, p_columnIndex)
+    </a></td>
+                <td>获取指定行、列索引交叉处的数据格式化值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getNumberOfColumns">getNumberOfColumns()
+    </a></td>
+                <td>获取当前数据表对象的列数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getNumberOfRows">getNumberOfRows()
+    </a></td>
+                <td>获取当前数据表对象的行数。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getTableProperties">getTableProperties()
+    </a></td>
+                <td>获取当前数据表的自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getTableProperty">getTableProperty(p_property)
+    </a></td>
+                <td>获取当前数据表指定属性的属性值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#getValue">getValue(p_rowIndex, p_columnIndex)
+    </a></td>
+                <td>获取指定行、列索引交叉处的数据值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertColumn">insertColumn(p_atColumnIndex, p_column, p_triggerEvent)
+    </a><a class="exampleIcon" href="#insertColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>在指定的行索引前插入一列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> ，并将返回此数据列。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertColumn">insertColumn(p_atColumnIndex, p_id, p_label, p_type, p_triggerEvent)
+    </a><a class="exampleIcon" href="#insertColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>在指定的行索引前插入一列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> ，并将返回此数据列。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertColumns">insertColumns(p_atColumnIndex, p_columns, p_triggerEvent)
+    </a><a class="exampleIcon" href="#insertColumns"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>在指定的列索引前插入数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertRow">insertRow(p_atRowIndex, p_row, p_triggerEvent)
+    </a><a class="exampleIcon" href="#insertRow"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>在指定的行索引前插入一个数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> ，将其添加到当前表中，并将返回此数据行。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#insertRows">insertRows(p_atRowIndex, p_rows, p_triggerEvent)
+    </a><a class="exampleIcon" href="#insertRows"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>在指定的行索引前插入一个数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 集合，将其添加到当前表中。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeColumn">removeColumn(p_columnIndex, p_triggerEvent)
+    </a><a class="exampleIcon" href="#removeColumn"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>删除指定列索引的数据列。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeColumns">removeColumns(p_startIndex, p_count, p_triggerEvent)
+    </a><a class="exampleIcon" href="#removeColumns"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>从指定的索引开始删除指定数量的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeRow">removeRow(p_rowIndex)
+    </a><a class="exampleIcon" href="#removeRow"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>删除指定行索引的数据行。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#removeRows">removeRows(p_startIndex, p_count)
+    </a><a class="exampleIcon" href="#removeRows"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>从指定的索引开始删除指定数量的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setCell">setCell(p_rowIndex, p_columnIndex, p_opt_value, p_opt_formattedValue, p_opt_properties)
+    </a></td>
+                <td>在当前数据表的指定位置的设置数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 的值、格式化值以及可选属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setColumnLabel">setColumnLabel(p_columnIndex, p_newLabel)
+    </a></td>
+                <td>设置当前数据表的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 中文标题。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setColumnProperties">setColumnProperties(p_columnIndex, p_properties)
+    </a></td>
+                <td>设置当前数据表的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setColumnProperty">setColumnProperty(p_columnIndex, p_property, p_value)
+    </a></td>
+                <td>设置当前数据表的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 自定义属性值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setColumns">setColumns(p_columns)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCustomeProperty">setCustomeProperty(p_propertyKey, p_propertyValue)
+    </a></td>
+                <td>设置客户端数据对象指定属性的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setCustomProperties">setCustomProperties(p_properties)
+    </a></td>
+                <td>设置客户端数据对象的自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setRowProperties">setRowProperties(p_rowIndex, p_properties)
+    </a></td>
+                <td>设置当前数据表的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setRowProperty">setRowProperty(p_rowIndex, p_property, p_value)
+    </a></td>
+                <td>设置当前数据表的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 自定义属性值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setRows">setRows(p_rows)
+    </a></td>
+                <td>设置或重置当前数据表对象的数据行集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setTableProperties">setTableProperties(p_properties)
+    </a></td>
+                <td>设置当前数据表的自定义属性集合。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setTableProperty">setTableProperty(p_property, p_value)
+    </a></td>
+                <td>设置当前数据表的指定自定义属性的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#sort">sort(p_sortColumns, p_sortOrder)
+    </a></td>
+                <td>对指定列根据排序规则（升序、降序）进行排序。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#toJSON">toJSON()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#columns">columns</a></td>
+                <td>获取该表的数据行 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#rows">rows</a></td>
+                <td>获取该表的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 的集合。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#sortColumn">sortColumn</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#sortOrder">sortOrder</a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="eventsIndex" class="indexSection">
+          <h2>事件</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="event">
+                <td><a href="#onchanged">onchanged</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onchanging">onchanging</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncolumnCreated">oncolumnCreated</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncolumnCreating">oncolumnCreating</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncolumnDeleted">oncolumnDeleted</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#oncolumnDeleting">oncolumnDeleting</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onrowCreated">onrowCreated</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onrowCreating">onrowCreating</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onrowDeleted">onrowDeleted</a></td>
+                <td></td>
+              </tr>
+              <tr class="event">
+                <td><a href="#onrowDeleting">onrowDeleting</a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="DataTable"></a><div id="method" class="detail">
+            <h3>DataTable()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 DataTable 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="addColumn"></a><div id="method" class="detail">
+            <h3>addColumn(p_column, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一个数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 作为表的最后一列，并将返回此数据列。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_column</b><div class="paramSummary">指定的数据列。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnCreated">oncolumnCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为向 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 追加数据列的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+	table.addColumn(new mx.datas.DataColumn({type :"number", label :"身高", id:"height"}));
+ table.addColumn({id:"height", label :"身高", type :"number"});
+	table.addColumn(["height", "身高", "number"]);
+	table.addColumn("height", "身高", "number");</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="addColumn"></a><div id="method" class="detail">
+            <h3>addColumn(p_id, p_label, p_type, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">添加一个数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 作为表的最后一列，并将返回此数据列。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_id</b><div class="paramSummary">指定的数据列的字段名称。</div>
+                </li>
+                <li><b class="paramName">p_label</b><div class="paramSummary">指定的数据列的中文标题。</div>
+                </li>
+                <li><b class="paramName">p_type</b><div class="paramSummary">指定的数据列数据类型。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnCreated">oncolumnCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为向 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 追加数据列的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+	table.addColumn(new mx.datas.DataColumn({type :"number", label :"身高", id:"height"}));
+ table.addColumn({id:"height", label :"身高", type :"number"});
+	table.addColumn(["height", "身高", "number"]);
+	table.addColumn("height", "身高", "number");</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="addColumns"></a><div id="method" class="detail">
+            <h3>addColumns(p_columns, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的数据表最后一列追加 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columns</b><div class="paramSummary">指定的数据列集合型。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnCreated">oncolumnCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 向数据表尾部添加数据列集合的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">// 示例 1
+table.addColumns([
+		{id:"name", label:"名字", type:"string"},
+		{id:"age", label:"年龄", type:"number"},
+		new mx.datas.DataColumn({id:"sex", label:"性别", type:"number"}),
+		{id:"birthday", label:"生日", type:"Date", pattern:"yyyy.MM.dd"}
+	]);
+
+// 示例 2
+table.addColumns([
+		["name", "名字", "string"],
+		["age", "年龄", "number"],
+		["sex", "性别","number"}],
+		["birthday", "生日","Date", "yyyy-MM-dd"]
+	]);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="addRow"></a><div id="method" class="detail">
+            <h3>addRow(p_row, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向该表追加指定的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> ，并将返回此数据行。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_row</b><div class="paramSummary">指定的数据行。为 null 时，追加一空行。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#onrowCreated">onrowCreated</a> 事件。如果该值为
+          true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为向 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 中追加数据行的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+ // 增加空行，本行 cells 中的 value 为空
+	table.addRow();
+
+	// 参数为json对象时
+	table.addRow(
+		{cells:[{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]}
+	);
+	// 参数为DataRow对象时
+	table.addRow(
+		new mx.datas.DataRow({cells:[{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]})
+	);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="addRows"></a><div id="method" class="detail">
+            <h3>addRows(p_rows, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">向该表追加多行数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a>。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rows</b><div class="paramSummary"></div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getColumnId"></a><div id="method" class="detail">
+            <h3>getColumnId(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 字段名。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getColumnLabel"></a><div id="method" class="detail">
+            <h3>getColumnLabel(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 中文标题。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getColumnPattern"></a><div id="method" class="detail">
+            <h3>getColumnPattern(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 格式。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getColumnProperties"></a><div id="method" class="detail">
+            <h3>getColumnProperties(p_columnIndex)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据表的指定数据列索引的自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getColumnProperty"></a><div id="method" class="detail">
+            <h3>getColumnProperty(p_columnIndex, p_property)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据表的指定数据列索引的自定义属性值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+                <li><b class="paramName">p_property</b><div class="paramSummary">数据列自定义属性名称。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getColumnType"></a><div id="method" class="detail">
+            <h3>getColumnType(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定列索引的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 数据类型。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getCustomProperties"></a><div id="method" class="detail" override="true">
+            <h3>getCustomProperties()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取客户端数据对象的自定义属性集合。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#getCustomProperties">mx.datas.DataObject.getCustomProperties</a></div>
+            </div>
+            <hr>
+          </div><a name="getCustomProperty"></a><div id="method" class="detail" override="true">
+            <h3>getCustomProperty(p_key)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取客户端数据对象指定自定义属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_key</b><div class="paramSummary">客户端数据对象指定自定义属性名称。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#getCustomProperty">mx.datas.DataObject.getCustomProperty</a></div>
+            </div>
+            <hr>
+          </div><a name="getFilteredRows"></a><div id="method" class="detail">
+            <h3>getFilteredRows(p_filters)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定过滤条件筛选出的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_filters</b><div class="paramSummary">数据表过滤条件。
+p_filters example: [{column: 3, value: 42}, {column: 2, minValue: 'bar', maxValue: 'foo'}]</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getFormattedValue"></a><div id="method" class="detail">
+            <h3>getFormattedValue(p_rowIndex, p_columnIndex)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定行、列索引交叉处的数据格式化值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rowIndex</b><div class="paramSummary">行索引。</div>
+                </li>
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getNumberOfColumns"></a><div id="method" class="detail">
+            <h3>getNumberOfColumns()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据表对象的列数。</div>
+            </div>
+            <hr>
+          </div><a name="getNumberOfRows"></a><div id="method" class="detail">
+            <h3>getNumberOfRows()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据表对象的行数。</div>
+            </div>
+            <hr>
+          </div><a name="getTableProperties"></a><div id="method" class="detail">
+            <h3>getTableProperties()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据表的自定义属性集合。</div>
+            </div>
+            <hr>
+          </div><a name="getTableProperty"></a><div id="method" class="detail">
+            <h3>getTableProperty(p_property)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前数据表指定属性的属性值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_property</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="getValue"></a><div id="method" class="detail">
+            <h3>getValue(p_rowIndex, p_columnIndex)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取指定行、列索引交叉处的数据值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rowIndex</b><div class="paramSummary">行索引。</div>
+                </li>
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="insertColumn"></a><div id="method" class="detail">
+            <h3>insertColumn(p_atColumnIndex, p_column, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的行索引前插入一列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> ，并将返回此数据列。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_atColumnIndex</b><div class="paramSummary">指定的数据列要插入的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_column</b><div class="paramSummary">指定的数据列。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnCreated">oncolumnCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为向 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 指定位置插入数据列的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+	// 在索引为 1 的位置插入一列的示例
+	table.insertColumn(1, new mx.datas.DataColumn({type :"number", label :"身高", id:"height"}));
+ table.insertColumn(1, {id:"height", label :"身高", type :"number"});
+	table.insertColumn(1, ["height", "身高", "number"]);
+	table.insertColumn(1, "height", "身高", "number");</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="insertColumn"></a><div id="method" class="detail">
+            <h3>insertColumn(p_atColumnIndex, p_id, p_label, p_type, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的行索引前插入一列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> ，并将返回此数据列。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_atColumnIndex</b><div class="paramSummary">指定的数据列要插入的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_id</b><div class="paramSummary">指定的数据列的字段名称。</div>
+                </li>
+                <li><b class="paramName">p_label</b><div class="paramSummary">指定的数据列的中文标题。</div>
+                </li>
+                <li><b class="paramName">p_type</b><div class="paramSummary">指定的数据列数据类型。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnCreated">oncolumnCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为向 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 指定位置插入数据列的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+	// 在索引为 1 的位置插入一列的示例
+	table.insertColumn(1, new mx.datas.DataColumn({type :"number", label :"身高", id:"height"}));
+ table.insertColumn(1, {id:"height", label :"身高", type :"number"});
+	table.insertColumn(1, ["height", "身高", "number"]);
+	table.insertColumn(1, "height", "身高", "number");</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="insertColumns"></a><div id="method" class="detail">
+            <h3>insertColumns(p_atColumnIndex, p_columns, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的列索引前插入数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_atColumnIndex</b><div class="paramSummary">指定的数据列要插入的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_columns</b><div class="paramSummary">指定的数据列集合型。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnCreated">oncolumnCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 向数据表中添加数据列集合的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript"> // 示例 1
+table.insertColumns(1, [
+		{id:"name", label:"名字", type:"string"},
+		{id:"age", label:"年龄", type:"number"},
+		new mx.datas.DataColumn({id:"sex", label:"性别", type:"number"}),
+		{id:"birthday", label:"生日", type:"Date", pattern:"yyyy.MM.dd"}
+	]);
+ // 示例 2
+table.insertColumns(1, [
+		["name", "名字", "string"],
+		["age", "年龄", "number"],
+		["sex", "性别","number"}],
+		["birthday", "生日","Date", "yyyy-MM-dd"]
+	]);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="insertRow"></a><div id="method" class="detail">
+            <h3>insertRow(p_atRowIndex, p_row, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的行索引前插入一个数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> ，将其添加到当前表中，并将返回此数据行。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_atRowIndex</b><div class="paramSummary">指定的数据行要插入的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_row</b><div class="paramSummary">指定的数据行，如果为null，插入空行。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#onrowCreated">onrowCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是为向 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 指定位置插入数据行的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+ // 在索引为 1 的位置插入一空行的示例
+	table.insertRow(1);
+
+	// 在索引为 1 的位置插入一行的示例
+	table.insertRow(1,
+		{cells:[{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]}
+	);
+
+	table.insertRow(1,
+		new mx.datas.DataRow({cells:[{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]})
+	);
+
+	table.insertRow(1, {value:"张三"}, {value:23},{value:"1",formattedValue:"男"}, {value:"1985-1-1"});
+	table.insertRow(1, [{v:"张三"}, {v:23},{v:"1",f:"男"}, {v:"1985-1-1"}]);
+	table.insertRow(1, ["张三", 23,"男", "1985-1-1"]);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="insertRows"></a><div id="method" class="detail">
+            <h3>insertRows(p_atRowIndex, p_rows, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在指定的行索引前插入一个数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 集合，将其添加到当前表中。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_atRowIndex</b><div class="paramSummary">指定的数据行要插入的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_rows</b><div class="paramSummary">指定的数据行集合型，如果为数字则增加 p_rows 行空行。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#onrowCreated">onrowCreated</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 向数据表中添加数据集合的示例。
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+// 在下标为 1 的地方增加 3 空行
+table.insertRows(1, 3);
+
+// 参数为对象时的示例
+table.insertRows(1, [
+		new mx.datas.DataRow({cells:[{value:"张三"}, {value:23},{value:"1",formattedValue:"男"}, {value:"1985-1-1"}]}),
+		new mx.datas.DataRow({cells:[{value:"李四"}, {value:24},{value:"0",formattedValue:"女"}, {value:"1984-1-1"}]}),
+		new mx.datas.DataRow({cells:[{value:"王五"}, {value:25},{value:"1",formattedValue:"男"}, {value:"1988-1-1"}]})
+	]);
+
+// p_rows 为json对象时的示例
+table.insertRows(1, [
+		{cells:[{value:"张三"}, {value:23},{value:"1", formattedValue:"男"}, {value:"1985-1-1"}]},
+		[{value:"李四"}, {value:24},{value:"0",formattedValue:"女"}, {value:"1984-1-1"}],
+		[{value:"王五"}, {value:25},{value:"1",formattedValue:"男"}, {value:"1988-1-1"}]
+	]);
+
+table.insertRows(1, [
+  	[{v:"张三"}, {v:23},{v:"1",f:"男"}, {v:"1985-1-1"}],
+  	[{v:"李四"}, {v:24},{v:"0",f:"女"},{v:"1984-1-1"}],
+  	[{v:"王五"}, {v:25},{v:"1",f:"男"}, {v:"1988-1-1"}]
+ ]);
+	table.insertRows(1, [
+  	["张三", 23,"男", "1985-1-1"],
+  	["李四", 24,"女","1984-1-1"],
+  	["王五", 25,"男", "1988-1-1"]
+ ]);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="removeColumn"></a><div id="method" class="detail">
+            <h3>removeColumn(p_columnIndex, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">删除指定列索引的数据列。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">待删除数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">一个 Boolean 值，表示是否要触发 <a href="#oncolumnDeleted">oncolumnDeleted</a> 事件。如果该值为
+           true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为从 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中从移除指定列的示例
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+//移除索引为 1 的列
+table.removeColumn(1);
+
+//移除 id 为 “NAME” 的列
+table.removeColumn(“NAME”);
+
+//移除列 dataColumn
+table.removeColumn(dataColumn);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="removeColumns"></a><div id="method" class="detail">
+            <h3>removeColumns(p_startIndex, p_count, p_triggerEvent)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">从指定的索引开始删除指定数量的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_startIndex</b><div class="paramSummary">指定开始删除数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_count</b><div class="paramSummary">待删除的数据列数量。</div>
+                </li>
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为从 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中从移除列的示例
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+//从 索引 1 位置开始移除 2 列
+table.removeColumns(1,2);
+
+//从 列 id 为 “NAME”，“SEX”，的列
+table.removeColumns(["NAME","SEX"]);
+
+//从 列 column, column2, column3
+table.removeColumns([column, column2, column3]);
+
+// 移除所有列
+table.removeColumns(-1);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="removeRow"></a><div id="method" class="detail">
+            <h3>removeRow(p_rowIndex)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">删除指定行索引的数据行。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rowIndex</b><div class="paramSummary">待删除数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 的索引位置。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为从 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中从移除指定行的示例
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+//移除索引为 1 的行
+table.removeRows(1);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="removeRows"></a><div id="method" class="detail">
+            <h3>removeRows(p_startIndex, p_count)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">从指定的索引开始删除指定数量的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_startIndex</b><div class="paramSummary">指定开始删除数据行的索引位置。</div>
+                </li>
+                <li><b class="paramName">p_count</b><div class="paramSummary">待删除的数据行数量。</div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下为从 <a href="../../../html/mx/datas/DataTable.html">DataTable</a> 中从移除行的示例
+
+                <table class="exampleCode" cellpadding="0" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <td>JavaScript 代码
+                    </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="JavaScript">
+//从 索引 1 位置开始移除 2 行
+table.removeRows(1,2);
+
+// 移除所有行
+table.removeRows(-1);</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            <hr>
+          </div><a name="setCell"></a><div id="method" class="detail">
+            <h3>setCell(p_rowIndex, p_columnIndex, p_opt_value, p_opt_formattedValue, p_opt_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">在当前数据表的指定位置的设置数据单元格 <a href="../../../html/mx/datas/DataCell.html">DataCell</a> 的值、格式化值以及可选属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rowIndex</b><div class="paramSummary">行索引。</div>
+                </li>
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+                <li><b class="paramName">p_opt_value</b><div class="paramSummary">数据单元格的值。</div>
+                </li>
+                <li><b class="paramName">p_opt_formattedValue</b><div class="paramSummary">数据单元格的格式化值。</div>
+                </li>
+                <li><b class="paramName">p_opt_properties</b><div class="paramSummary">数据单元格的自定义属性集合。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setColumnLabel"></a><div id="method" class="detail">
+            <h3>setColumnLabel(p_columnIndex, p_newLabel)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 中文标题。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+                <li><b class="paramName">p_newLabel</b><div class="paramSummary">数据行中文标题。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setColumnProperties"></a><div id="method" class="detail">
+            <h3>setColumnProperties(p_columnIndex, p_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+                <li><b class="paramName">p_properties</b><div class="paramSummary">数据列自定义属性集合。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setColumnProperty"></a><div id="method" class="detail">
+            <h3>setColumnProperty(p_columnIndex, p_property, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的数据列 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 自定义属性值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columnIndex</b><div class="paramSummary">列索引。</div>
+                </li>
+                <li><b class="paramName">p_property</b><div class="paramSummary">数据列自定义属性集合。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">数据列自定义属性值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setColumns"></a><div id="method" class="detail">
+            <h3>setColumns(p_columns)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_columns</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setCustomeProperty"></a><div id="method" class="detail" override="true">
+            <h3>setCustomeProperty(p_propertyKey, p_propertyValue)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置客户端数据对象指定属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_propertyKey</b><div class="paramSummary">自定义属性的名称</div>
+                </li>
+                <li><b class="paramName">p_propertyValue</b><div class="paramSummary">自定义属性的值</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#setCustomeProperty">mx.datas.DataObject.setCustomeProperty</a></div>
+            </div>
+            <hr>
+          </div><a name="setCustomProperties"></a><div id="method" class="detail" override="true">
+            <h3>setCustomProperties(p_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置客户端数据对象的自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_properties</b><div class="paramSummary">客户端数据对象的自定义属性集合.</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datas/DataObject.html#setCustomProperties">mx.datas.DataObject.setCustomProperties</a></div>
+            </div>
+            <hr>
+          </div><a name="setRowProperties"></a><div id="method" class="detail">
+            <h3>setRowProperties(p_rowIndex, p_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rowIndex</b><div class="paramSummary">行索引。</div>
+                </li>
+                <li><b class="paramName">p_properties</b><div class="paramSummary">数据行自定义属性集合。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setRowProperty"></a><div id="method" class="detail">
+            <h3>setRowProperty(p_rowIndex, p_property, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 自定义属性值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rowIndex</b><div class="paramSummary">行索引。</div>
+                </li>
+                <li><b class="paramName">p_property</b><div class="paramSummary">数据行自定义属性名称。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">数据行自定义属性值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setRows"></a><div id="method" class="detail">
+            <h3>setRows(p_rows)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置或重置当前数据表对象的数据行集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rows</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setTableProperties"></a><div id="method" class="detail">
+            <h3>setTableProperties(p_properties)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的自定义属性集合。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_properties</b><div class="paramSummary">自定义属性集合。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setTableProperty"></a><div id="method" class="detail">
+            <h3>setTableProperty(p_property, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前数据表的指定自定义属性的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_property</b><div class="paramSummary">自定义属性名称。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">自定义属性值。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="sort"></a><div id="method" class="detail">
+            <h3>sort(p_sortColumns, p_sortOrder)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">对指定列根据排序规则（升序、降序）进行排序。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_sortColumns</b><div class="paramSummary">排序列，一个数组或者以逗号分隔的字符串。</div>
+                </li>
+                <li><b class="paramName">p_sortOrder</b><div class="paramSummary">排序规则（升序、降序）。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="toJSON"></a><div id="method" class="detail">
+            <h3>toJSON()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="columns"></a><div id="field" class="detail">
+            <h3>columns 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该表的数据行 <a href="../../../html/mx/datas/DataColumn.html">DataColumn</a> 的集合。</div>
+            </div>
+            <hr>
+          </div><a name="rows"></a><div id="field" class="detail">
+            <h3>rows 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该表的数据行 <a href="../../../html/mx/datas/DataRow.html">DataRow</a> 的集合。</div>
+            </div>
+            <hr>
+          </div><a name="sortColumn"></a><div id="field" class="detail">
+            <h3>sortColumn 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="sortOrder"></a><div id="field" class="detail">
+            <h3>sortOrder 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="event" class="detailSection">
+          <h2>事件详细信息</h2><a name="onchanged"></a><div id="event" class="detail">
+            <h3>onchanged 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="onchanging"></a><div id="event" class="detail">
+            <h3>onchanging 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="oncolumnCreated"></a><div id="event" class="detail">
+            <h3>oncolumnCreated 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="oncolumnCreating"></a><div id="event" class="detail">
+            <h3>oncolumnCreating 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="oncolumnDeleted"></a><div id="event" class="detail">
+            <h3>oncolumnDeleted 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="oncolumnDeleting"></a><div id="event" class="detail">
+            <h3>oncolumnDeleting 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="onrowCreated"></a><div id="event" class="detail">
+            <h3>onrowCreated 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="onrowCreating"></a><div id="event" class="detail">
+            <h3>onrowCreating 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="onrowDeleted"></a><div id="event" class="detail">
+            <h3>onrowDeleted 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="onrowDeleting"></a><div id="event" class="detail">
+            <h3>onrowDeleting 事件
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.windows 命名空间</title>
+    <link rel="stylesheet" href="../../../css/common.css">
+  </head>
+  <body>
+    <div id="frame" class="namespace">
+      <div id="head">
+        <h1 id="namespace">mx.windows 命名空间
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="namespaceDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.windows</td>
+            </tr>
+          </table>
+          <div class="summary">提供窗体控件，从而使用户可使用这些窗体容器控件来显示弹出框或弹出窗体。
+所有窗体控件的基类均为 <a href="../../../html/mx/windows/Window.html">Window</a>。</div>
+        </div>
+        <hr>
+        <div id="classesIndex" class="indexSection">
+          <h2>类</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="class">
+                <td><a href="AjaxWindow.html">AjaxWindow</a></td>
+                <td>提供一个使用 AJAX 动态加载技术实现的窗体基类。窗体在第一次显示在浏览器之前，会自动从后台通过 AJAX 技术加载 <a href="../../../html/mx/windows/AjaxWindow.html#url">AjaxWindow.url</a> 字段指定的页面，并将其中的内容呈现在窗体中。
+
+<p>
+<b>AjaxWindow 的初始化逻辑，必须通过订购 <a href="#onload">onload</a> 事件编写，切勿通过重写 <a href="#init">init</a> 方法实现。</b>
+</p></td>
+              </tr>
+              <tr class="class">
+                <td><a href="IFrameWindow.html">IFrameWindow</a></td>
+                <td>提供一个使用 IFrame 加载技术实现的窗体基类，该窗体的主体部分是一个 IFRAME 元素，当窗体显示在浏览器时，会动态加载 <a href="../../../html/mx/windows/IFrameWindow.html#url">IFrameWindow.url</a> 字段指定的页面。
+
+<p>
+<b>IFrameWindow 的初始化逻辑，必须通过订购 <a href="#onload">onload</a> 事件编写，切勿通过重写 <a href="#init">init</a> 方法实现。</b>
+</p></td>
+              </tr>
+              <tr class="class">
+                <td><a href="MessageBox.html">MessageBox</a></td>
+                <td>提供一个消息提示框的类。</td>
+              </tr>
+              <tr class="class">
+                <td><a href="TipsBox.html">TipsBox</a></td>
+                <td>提供一个Tips提示框的类。</td>
+              </tr>
+              <tr class="class">
+                <td><a href="Window.html">Window</a></td>
+                <td>提供所有窗体的基类。通常请使用 <a href="../../../html/mx/windows/WindowManager.html#create">WindowManager.create</a> 方法来创建窗体。</td>
+              </tr>
+              <tr class="class">
+                <td><a href="WindowManager.html">WindowManager</a></td>
+                <td>提供一个负责创建窗体的类。</td>
+              </tr>
+              <tr class="class">
+                <td><a href="WizardWindow.html">WizardWindow</a></td>
+                <td>表示一个包含向导对象的窗体，同时它还是一个 <a href="../../../html/mx/windows/Window.html">Window</a>
+窗体。当用户点击“取消”和“完成”的按钮时，将会关闭该窗体。该窗体对应的 HTML 页面中必须包含一个向导
+<a href="../../../html/mx/containers/Wizard.html">Wizard</a>。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

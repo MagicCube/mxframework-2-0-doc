@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.windows.TipsBox 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/windows/index.html">mx.windows</a><h1 id="class">TipsBox 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.windows.TipsBox</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/windows/index.html">mx.windows</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>TipsBox</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>TipsBox</span></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\windows\TipsBox.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个Tips提示框的类。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个创建 <a href="../../../html/mx/windows/TipsBox.html">TipsBox</a> 的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">	var TipsBox = new mx.windows.TipsBox({//参数可以new实例时时传入，也可以在调用show方法时传入。
+		title:"标题",//一个字符串，表示Tips的标题。
+		message:"内容",//一个字符串，表示Tips的内容。
+		showSpeed: 500,//一个数字值（毫秒），表示Tips显示的速度。
+		orientation : "bottom left",//两个字符串值，用空格格开，第一个值是向滚动方向，第二个值是tips框显示的绝对位置。 可用参数有："top right"|"bottom right"|"left top"|"right top"| "bottom left"|"top left"|"right bottom"|"left bottom"|"center center"
+		width : 200,//一个数字型，表示第Tips宽。
+		height : 160,//一个数字型，表示第Tips高。
+		contentBackground:"#FFFFFF",//一个 css样式，表示Tips内容背景颜色样式。
+		autoHide:true,//一个 Boolean 对象，表示是否自动关闭Tips。
+		autoHideSpeed:2000   //一个数字值（毫秒），表示Tips关闭的速度。
+	});
+	TipsBox.show({
+		title : "Tips 标题",
+		message : "这是Tips内容",
+		orientation : "top right"
+	});</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#TipsBox">TipsBox()
+    </a></td>
+                <td>构建 TipsBox 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#getWindow">getWindow()
+    </a></td>
+                <td>提供一个方法，可以传一个view到提示框中。
+var TipsBox = new mx.windows.TipsBox()
+var ve = new mx.views.View();
+ve.$e.append($("view content"));
+ve.$e.css({"backgroundColor":"green"});
+ve.$e.append($("<div>aaaaaa</div>"));
+TipsBox.getWindow().setView(ve);
+TipsBox.show();</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setMessage">setMessage(p_message)
+    </a></td>
+                <td>设置Tips框内容的值。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setOrientation">setOrientation([p_orientation])
+    </a></td>
+                <td>设置Tips框的绝对位置。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#show">show(p_params)
+    </a><a class="exampleIcon" href="#show"><img title="跳转到示例" src="../../../images/example.png"></a></td>
+                <td>显示Tips。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field">
+                <td><a href="#autoHide">autoHide</a></td>
+                <td>获取或设置Tips是否自动关闭。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#autoHideSpeed">autoHideSpeed</a></td>
+                <td>获取或设置Tips提示框自动关闭的时间。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#closeSpeed">closeSpeed</a></td>
+                <td></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#contentBackground">contentBackground</a></td>
+                <td>获取或设置Tips背景颜色。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#height">height</a></td>
+                <td>获取或设置Tips提示框的高度。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#message">message</a></td>
+                <td>获取或设置Tips提示框的内容。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#orientation">orientation</a></td>
+                <td>获取或设置Tips提示框的滚动方向及位置。第一个参数是滚动方向，第二个是初始Tips位置。
+
+<p>
+该字段的值包括:
+<ul>
+    <li><b>top right</b> - 表示在右下角，向上移动。</li>
+    <li><b>bottom right</b> - 表示在右上角，向下移动。</li>
+    <li><b>left top</b> - 表示在右上角，向左移动。</li>
+    <li><b>right top</b> - 表示在左上角，向右移动。</li>
+    <li><b>bottom left</b> - 表示在左下角，向下移动。</li>
+    <li><b>top left</b> - 表示在左下角，向上移动。</li>
+    <li><b>right bottom</b> - 表示在左下角，向右移动。</li>
+    <li><b>left bottom</b> - 表示在右下角，向左移动。</li>
+    <li><b>center center</b> - 表示在右下角，向左移动。</li>
+</ul>
+</p></td>
+              </tr>
+              <tr class="field">
+                <td><a href="#showSpeed">showSpeed</a></td>
+                <td>获取或设置Tips提示框的弹出的速度。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#title">title</a></td>
+                <td>获取或设置Tips提示框的标题 。</td>
+              </tr>
+              <tr class="field">
+                <td><a href="#width">width</a></td>
+                <td>获取或设置Tips提示框的宽度。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="TipsBox"></a><div id="method" class="detail">
+            <h3>TipsBox()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 TipsBox 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="getWindow"></a><div id="method" class="detail">
+            <h3>getWindow()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，可以传一个view到提示框中。
+var TipsBox = new mx.windows.TipsBox()
+var ve = new mx.views.View();
+ve.$e.append($("view content"));
+ve.$e.css({"backgroundColor":"green"});
+ve.$e.append($("<div>aaaaaa</div>"));
+TipsBox.getWindow().setView(ve);
+TipsBox.show();</div>
+            </div>
+            <hr>
+          </div><a name="setMessage"></a><div id="method" class="detail">
+            <h3>setMessage(p_message)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置Tips框内容的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_message</b><div class="paramSummary">:
+           一个字符串，表示Tips的内容。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="setOrientation"></a><div id="method" class="detail">
+            <h3>setOrientation([p_orientation])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置Tips框的绝对位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_orientation</b><div class="paramSummary">可选的。两个字符串值，用空格格开，第一个值是向滚动方向，第二个值是tips框显示的绝对位置。 可用参数有："top
+           right"|"bottom right"|"left top"|"right top"| "bottom
+           left"|"top left"|"right bottom"|"left bottom"</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div><a name="show"></a><div id="method" class="detail">
+            <h3>show(p_params)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">显示Tips。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_params</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <p></p>
+              <h4>示例 1</h4>
+              <div class="h4Content">
+                以下是调用 {@link mx.windows.TipsBox.show()} 的示例。
+
+var TipsBox = new mx.windows.TipsBox();
+TipsBox.show({
+		title : "Tips 标题",
+		message : "这是Tips内容",
+		orientation : "top right"
+	});
+
+            </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="autoHide"></a><div id="field" class="detail">
+            <h3>autoHide 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips是否自动关闭。</div>
+            </div>
+            <hr>
+          </div><a name="autoHideSpeed"></a><div id="field" class="detail">
+            <h3>autoHideSpeed 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框自动关闭的时间。</div>
+            </div>
+            <hr>
+          </div><a name="closeSpeed"></a><div id="field" class="detail">
+            <h3>closeSpeed 字段
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+            </div>
+            <hr>
+          </div><a name="contentBackground"></a><div id="field" class="detail">
+            <h3>contentBackground 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips背景颜色。</div>
+            </div>
+            <hr>
+          </div><a name="height"></a><div id="field" class="detail">
+            <h3>height 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框的高度。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">160</div>
+            </div>
+            <hr>
+          </div><a name="message"></a><div id="field" class="detail">
+            <h3>message 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框的内容。</div>
+            </div>
+            <hr>
+          </div><a name="orientation"></a><div id="field" class="detail">
+            <h3>orientation 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框的滚动方向及位置。第一个参数是滚动方向，第二个是初始Tips位置。
+
+<p>
+该字段的值包括:
+<ul>
+    <li><b>top right</b> - 表示在右下角，向上移动。</li>
+    <li><b>bottom right</b> - 表示在右上角，向下移动。</li>
+    <li><b>left top</b> - 表示在右上角，向左移动。</li>
+    <li><b>right top</b> - 表示在左上角，向右移动。</li>
+    <li><b>bottom left</b> - 表示在左下角，向下移动。</li>
+    <li><b>top left</b> - 表示在左下角，向上移动。</li>
+    <li><b>right bottom</b> - 表示在左下角，向右移动。</li>
+    <li><b>left bottom</b> - 表示在右下角，向左移动。</li>
+    <li><b>center center</b> - 表示在右下角，向左移动。</li>
+</ul>
+</p></div>
+            </div>
+            <hr>
+          </div><a name="showSpeed"></a><div id="field" class="detail">
+            <h3>showSpeed 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框的弹出的速度。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">500</div>
+            </div>
+            <hr>
+          </div><a name="title"></a><div id="field" class="detail">
+            <h3>title 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框的标题 。</div>
+            </div>
+            <hr>
+          </div><a name="width"></a><div id="field" class="detail">
+            <h3>width 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取或设置Tips提示框的宽度。</div>
+              <h4>默认值</h4>
+              <div class="h4Content">200</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

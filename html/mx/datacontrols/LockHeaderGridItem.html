@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.datacontrols.LockHeaderGridItem 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/datacontrols/index.html">mx.datacontrols</a><h1 id="class">LockHeaderGridItem 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.datacontrols.LockHeaderGridItem</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/datacontrols/index.html">mx.datacontrols</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>LockHeaderGridItem</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>LockHeaderGridItem</span><span id="inherit"></span><a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\datacontrols\LockHeaderGrid.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供一个数据项列表控件（<a href="../../../html/mx/datacontrols/LockHeaderGrid.html">LockHeaderGrid</a> 类型）中的数据项的类。<b>该数据项容器的 HTML 元素为 &lt;TR&gt;</b>。</div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#LockHeaderGridItem">LockHeaderGridItem()
+    </a></td>
+                <td>构建 LockHeaderGridItem 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>初始化函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#init">init()
+    </a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method" override="true">
+                <td><a href="#changeValues">changeValues(p_changeValues)
+    </a></td>
+                <td>更新指定的列的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getIndex">getIndex()
+    </a></td>
+                <td>返回该数据项在 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 的 <a href="../../../html/mx/datacontrols/DataGrid.html#items">DataGrid.items</a> 集合中的序号（0 代表第一个）。如果该对象的 <a href="#owner">owner</a> 字段为空，则返回 -1。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#getValue">getValue(p_index)
+    </a></td>
+                <td>返回指定列序号或列名对应的数据项的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#insertCell">insertCell(p_column)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#markError">markError(p_colName, p_value, p_msg)
+    </a></td>
+                <td>提供一个方法，给指定单元格上标记错误。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveDown">moveDown()
+    </a></td>
+                <td>将当前数据项向下移动一格。如果是最后一个数据项则位置不变。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveTo">moveTo(p_index)
+    </a></td>
+                <td>将当前节点移动到指定的位置。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#moveUp">moveUp()
+    </a></td>
+                <td>将当前数据项向上移动一格。如果是第一个数据项则位置不变。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#refresh">refresh()
+    </a></td>
+                <td>更新当前项所有字段的显示值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#remove">remove()
+    </a></td>
+                <td>请参见 <a href="../../../html/mx/datacontrols/DataGrid.html#removeItem">DataGrid.removeItem</a> 方法。该方法仅当 <a href="#owner">owner</a> 字段不为空时有效。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#select">select([p_triggerEvent])
+    </a></td>
+                <td>请参见 <a href="../../../html/mx/datacontrols/DataGrid.html#selectItem">DataGrid.selectItem</a> 方法。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setChecked">setChecked(p_checked)
+    </a></td>
+                <td>设置 <a href="#checked">checked</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setEnabled">setEnabled(p_enabled)
+    </a></td>
+                <td>设置DataGridItem是否可编辑
+p_enabled 一个布尔值，true代表可以编辑，false代表不可编辑</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setImageKey">setImageKey([p_imageKey])
+    </a></td>
+                <td>设置 <a href="#imageKey">imageKey</a> 字段的值。该方法会在 $/icons 目录中查找相应的 png 图片。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setImageUrl">setImageUrl([p_imageUrl])
+    </a></td>
+                <td>设置 <a href="#imageUrl">imageUrl</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setItemType">setItemType(p_type)
+    </a></td>
+                <td>设置 <a href="#itemType">itemType</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setRowNumber">setRowNumber(p_rownumber)
+    </a></td>
+                <td></td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValue">setValue(p_index, p_value)
+    </a></td>
+                <td>设置指定列序号或列名对应的数据项的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#setValues">setValues(p_values)
+    </a></td>
+                <td>设置 <a href="#values">values</a> 字段的值。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#toggleChecked">toggleChecked()
+    </a></td>
+                <td>切换选中状态。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_initCheckBoxCell">_initCheckBoxCell()
+    </a></td>
+                <td>受保护的。初始化复选框单元格,如果复选框单元格已经存在了，就不重复添加
+此方法为内部方法，在表格中调用。</td>
+              </tr>
+              <tr class="method" override="true">
+                <td><a href="#_initRowNumberCell">_initRowNumberCell()
+    </a></td>
+                <td>受保护的。初始化行号单元格,如果行号单元格已经存在了，就不重复添加
+此方法为内部方法，在表格中调用。
+此方法在成功添加单元格后会返回true,其它情况返回false;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="fieldsIndex" class="indexSection">
+          <h2>字段</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="field" override="true">
+                <td><a href="#checked">checked</a></td>
+                <td>获取一个 Boolean 值，表示数据项是否选中。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#enabled">enabled</a></td>
+                <td>获取一个 布尔值，表示数据项是否可编辑。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#id">id</a></td>
+                <td>获取 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 的唯一标识。该字段的值是与 <a href="../../../html/mx/datacontrols/DataGrid.html#primaryKey">DataGrid.primaryKey</a> 字段的值有关。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#imageKey">imageKey</a></td>
+                <td>获取一个字符串，表示 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 图像的名称。请使用 <a href="#setImageKey">setImageKey</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#imageUrl">imageUrl</a></td>
+                <td>获取一个字符串，表示 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 图像的 URL（如“$/icons/save.png”）。请使用 <a href="#setImageUrl">setImageUrl</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#itemType">itemType</a></td>
+                <td>获取一个字符串，表示说明数据项的类型（如“folder”，“role”，“job”等）。该属性的值如果与 <a href="../../../html/mx/datacontrols/DataGrid.html#images">DataGrid.images</a> 集合中的索引值相同，则会显示对应的图片。
+请使用 <a href="#setItemType">setItemType</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#owner">owner</a></td>
+                <td>获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 类的实例。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#values">values</a></td>
+                <td>获取一个 JSON 对象，表示数据项的所有的值。请使用 <a href="#setValues">setValues</a> 方法设置该字段的值。</td>
+              </tr>
+              <tr class="field" override="true">
+                <td><a href="#$e">$e</a></td>
+                <td>获取数据项（<a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 类型）容器的 JQuery 对象。数据项容器的 HTML DOM 元素为“tr”。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="LockHeaderGridItem"></a><div id="method" class="detail">
+            <h3>LockHeaderGridItem()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 LockHeaderGridItem 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="initializer" class="detailSection">
+          <h2>初始化函数详细信息</h2><a name="init"></a><div id="method" class="detail" override="true">
+            <h3>init()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#init">mx.datacontrols.DataGridItem.init</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="changeValues"></a><div id="method" class="detail" override="true">
+            <h3>changeValues(p_changeValues)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">更新指定的列的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_changeValues</b><div class="paramSummary">一个 JSON 对象（如{ name: "bruce", age: "25" }），表示需要修改的列的值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#changeValues">mx.datacontrols.DataGridItem.changeValues</a></div>
+            </div>
+            <hr>
+          </div><a name="getIndex"></a><div id="method" class="detail" override="true">
+            <h3>getIndex()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回该数据项在 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 的 <a href="../../../html/mx/datacontrols/DataGrid.html#items">DataGrid.items</a> 集合中的序号（0 代表第一个）。如果该对象的 <a href="#owner">owner</a> 字段为空，则返回 -1。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#getIndex">mx.datacontrols.DataGridItem.getIndex</a></div>
+            </div>
+            <hr>
+          </div><a name="getValue"></a><div id="method" class="detail" override="true">
+            <h3>getValue(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">返回指定列序号或列名对应的数据项的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">一个数字（如 0），表示列的序号；或一个字符串，表示列的名称（<a href="../../../html/mx/datacontrols/DataGridColumn.html#name">DataGridColumn.name</a> 字段的值）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#getValue">mx.datacontrols.DataGridItem.getValue</a></div>
+            </div>
+            <hr>
+          </div><a name="insertCell"></a><div id="method" class="detail" override="true">
+            <h3>insertCell(p_column)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_column</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#insertCell">mx.datacontrols.DataGridItem.insertCell</a></div>
+            </div>
+            <hr>
+          </div><a name="markError"></a><div id="method" class="detail" override="true">
+            <h3>markError(p_colName, p_value, p_msg)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">提供一个方法，给指定单元格上标记错误。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_colName</b><div class="paramSummary">一个字符串，表示单元格所在列的列标题。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个 Boolean 值，true 时标记错误，false 时取消标记。</div>
+                </li>
+                <li><b class="paramName">p_msg</b><div class="paramSummary">一个字符串，表示提示信息，p_value 为 false 时，可以不传值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#markError">mx.datacontrols.DataGridItem.markError</a></div>
+            </div>
+            <hr>
+          </div><a name="moveDown"></a><div id="method" class="detail" override="true">
+            <h3>moveDown()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前数据项向下移动一格。如果是最后一个数据项则位置不变。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#moveDown">mx.datacontrols.DataGridItem.moveDown</a></div>
+            </div>
+            <hr>
+          </div><a name="moveTo"></a><div id="method" class="detail" override="true">
+            <h3>moveTo(p_index)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前节点移动到指定的位置。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">一个 Number 值，表示节点的索引（0 表示第一个节点）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#moveTo">mx.datacontrols.DataGridItem.moveTo</a></div>
+            </div>
+            <hr>
+          </div><a name="moveUp"></a><div id="method" class="detail" override="true">
+            <h3>moveUp()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">将当前数据项向上移动一格。如果是第一个数据项则位置不变。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#moveUp">mx.datacontrols.DataGridItem.moveUp</a></div>
+            </div>
+            <hr>
+          </div><a name="refresh"></a><div id="method" class="detail" override="true">
+            <h3>refresh()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">更新当前项所有字段的显示值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#refresh">mx.datacontrols.DataGridItem.refresh</a></div>
+            </div>
+            <hr>
+          </div><a name="remove"></a><div id="method" class="detail" override="true">
+            <h3>remove()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">请参见 <a href="../../../html/mx/datacontrols/DataGrid.html#removeItem">DataGrid.removeItem</a> 方法。该方法仅当 <a href="#owner">owner</a> 字段不为空时有效。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#remove">mx.datacontrols.DataGridItem.remove</a></div>
+            </div>
+            <hr>
+          </div><a name="select"></a><div id="method" class="detail" override="true">
+            <h3>select([p_triggerEvent])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">请参见 <a href="../../../html/mx/datacontrols/DataGrid.html#selectItem">DataGrid.selectItem</a> 方法。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_triggerEvent</b><div class="paramSummary">可选的。默认值为“null”。一个 Boolean 值，表示是否要触发 <a href="../../../html/mx/datacontrols/DataGrid.html#onselectionchanged">DataGrid.onselectionchanged</a> 事件。如果该值为 true，则触发事件；反之则不触发。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#select">mx.datacontrols.DataGridItem.select</a></div>
+            </div>
+            <hr>
+          </div><a name="setChecked"></a><div id="method" class="detail" override="true">
+            <h3>setChecked(p_checked)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#checked">checked</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_checked</b><div class="paramSummary">一个 Boolean 表示是否选中。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setChecked">mx.datacontrols.DataGridItem.setChecked</a></div>
+            </div>
+            <hr>
+          </div><a name="setEnabled"></a><div id="method" class="detail" override="true">
+            <h3>setEnabled(p_enabled)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置DataGridItem是否可编辑
+p_enabled 一个布尔值，true代表可以编辑，false代表不可编辑</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_enabled</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setEnabled">mx.datacontrols.DataGridItem.setEnabled</a></div>
+            </div>
+            <hr>
+          </div><a name="setImageKey"></a><div id="method" class="detail" override="true">
+            <h3>setImageKey([p_imageKey])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#imageKey">imageKey</a> 字段的值。该方法会在 $/icons 目录中查找相应的 png 图片。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_imageKey</b><div class="paramSummary">可选的。一个字符串，表示图片的名称。如 $/icons 目录中有一张图片为“role_48.png”或“role.png”的图片，那么该参数都是“role”。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setImageKey">mx.datacontrols.DataGridItem.setImageKey</a></div>
+            </div>
+            <hr>
+          </div><a name="setImageUrl"></a><div id="method" class="detail" override="true">
+            <h3>setImageUrl([p_imageUrl])
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#imageUrl">imageUrl</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_imageUrl</b><div class="paramSummary">可选的。默认值为“$/images/space.png”。一个字符串，表示图像的 URL。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setImageUrl">mx.datacontrols.DataGridItem.setImageUrl</a></div>
+            </div>
+            <hr>
+          </div><a name="setItemType"></a><div id="method" class="detail" override="true">
+            <h3>setItemType(p_type)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#itemType">itemType</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_type</b><div class="paramSummary">一个字符串，表示说明数据项的类型（如“folder”，“role”，“job”等）。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setItemType">mx.datacontrols.DataGridItem.setItemType</a></div>
+            </div>
+            <hr>
+          </div><a name="setRowNumber"></a><div id="method" class="detail" override="true">
+            <h3>setRowNumber(p_rownumber)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary"></div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_rownumber</b><div class="paramSummary"></div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setRowNumber">mx.datacontrols.DataGridItem.setRowNumber</a></div>
+            </div>
+            <hr>
+          </div><a name="setValue"></a><div id="method" class="detail" override="true">
+            <h3>setValue(p_index, p_value)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置指定列序号或列名对应的数据项的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_index</b><div class="paramSummary">一个数字（如 0）或者列名。</div>
+                </li>
+                <li><b class="paramName">p_value</b><div class="paramSummary">一个字符串，表示数据项的值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setValue">mx.datacontrols.DataGridItem.setValue</a></div>
+            </div>
+            <hr>
+          </div><a name="setValues"></a><div id="method" class="detail" override="true">
+            <h3>setValues(p_values)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置 <a href="#values">values</a> 字段的值。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_values</b><div class="paramSummary">一个 JSON 对象，表示数据项的数据值。</div>
+                </li>
+              </ul>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#setValues">mx.datacontrols.DataGridItem.setValues</a></div>
+            </div>
+            <hr>
+          </div><a name="toggleChecked"></a><div id="method" class="detail" override="true">
+            <h3>toggleChecked()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">切换选中状态。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#toggleChecked">mx.datacontrols.DataGridItem.toggleChecked</a></div>
+            </div>
+            <hr>
+          </div><a name="_initCheckBoxCell"></a><div id="method" class="detail" override="true">
+            <h3>_initCheckBoxCell()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。初始化复选框单元格,如果复选框单元格已经存在了，就不重复添加
+此方法为内部方法，在表格中调用。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#_initCheckBoxCell">mx.datacontrols.DataGridItem._initCheckBoxCell</a></div>
+            </div>
+            <hr>
+          </div><a name="_initRowNumberCell"></a><div id="method" class="detail" override="true">
+            <h3>_initRowNumberCell()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">受保护的。初始化行号单元格,如果行号单元格已经存在了，就不重复添加
+此方法为内部方法，在表格中调用。
+此方法在成功添加单元格后会返回true,其它情况返回false;</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#_initRowNumberCell">mx.datacontrols.DataGridItem._initRowNumberCell</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="field" class="detailSection">
+          <h2>字段详细信息</h2><a name="checked"></a><div id="field" class="detail" override="true">
+            <h3>checked 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 Boolean 值，表示数据项是否选中。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#checked">mx.datacontrols.DataGridItem.checked</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">false</div>
+            </div>
+            <hr>
+          </div><a name="enabled"></a><div id="field" class="detail" override="true">
+            <h3>enabled 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 布尔值，表示数据项是否可编辑。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#enabled">mx.datacontrols.DataGridItem.enabled</a></div>
+            </div>
+            <hr>
+          </div><a name="id"></a><div id="field" class="detail" override="true">
+            <h3>id 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 的唯一标识。该字段的值是与 <a href="../../../html/mx/datacontrols/DataGrid.html#primaryKey">DataGrid.primaryKey</a> 字段的值有关。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#id">mx.datacontrols.DataGridItem.id</a></div>
+            </div>
+            <hr>
+          </div><a name="imageKey"></a><div id="field" class="detail" override="true">
+            <h3>imageKey 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 图像的名称。请使用 <a href="#setImageKey">setImageKey</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#imageKey">mx.datacontrols.DataGridItem.imageKey</a></div>
+            </div>
+            <hr>
+          </div><a name="imageUrl"></a><div id="field" class="detail" override="true">
+            <h3>imageUrl 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示 <a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 图像的 URL（如“$/icons/save.png”）。请使用 <a href="#setImageUrl">setImageUrl</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#imageUrl">mx.datacontrols.DataGridItem.imageUrl</a></div>
+            </div>
+            <hr>
+          </div><a name="itemType"></a><div id="field" class="detail" override="true">
+            <h3>itemType 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个字符串，表示说明数据项的类型（如“folder”，“role”，“job”等）。该属性的值如果与 <a href="../../../html/mx/datacontrols/DataGrid.html#images">DataGrid.images</a> 集合中的索引值相同，则会显示对应的图片。
+请使用 <a href="#setItemType">setItemType</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#itemType">mx.datacontrols.DataGridItem.itemType</a></div>
+              <h4>默认值</h4>
+              <div class="h4Content">item</div>
+            </div>
+            <hr>
+          </div><a name="owner"></a><div id="field" class="detail" override="true">
+            <h3>owner 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取该对象的父容器的对象，通常是一个 <a href="../../../html/mx/datacontrols/DataGrid.html">DataGrid</a> 类的实例。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#owner">mx.datacontrols.DataGridItem.owner</a></div>
+            </div>
+            <hr>
+          </div><a name="values"></a><div id="field" class="detail" override="true">
+            <h3>values 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取一个 JSON 对象，表示数据项的所有的值。请使用 <a href="#setValues">setValues</a> 方法设置该字段的值。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#values">mx.datacontrols.DataGridItem.values</a></div>
+            </div>
+            <hr>
+          </div><a name="$e"></a><div id="field" class="detail" override="true">
+            <h3>$e 字段
+            </h3>
+            <div class="content">
+              <div class="summary">获取数据项（<a href="../../../html/mx/datacontrols/DataGridItem.html">DataGridItem</a> 类型）容器的 JQuery 对象。数据项容器的 HTML DOM 元素为“tr”。</div>
+              <h4>继承自</h4>
+              <div class="h4Content"><a href="../../../html/mx/datacontrols/DataGridItem.html#$e">mx.datacontrols.DataGridItem.$e</a></div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mx="urn:mx-scripts">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+    <title>mx.utils.ClipboardUtilClass 类</title>
+    <link rel="stylesheet" href="../../../css/common.css"><script src="../../../scripts/jquery.js"></script><script src="../../../scripts/jquery.chili.js"></script><script>
+                    ChiliBook.recipeFolder = "../../../scripts/";
+                    ChiliBook.automatic = true;
+                </script><script src="../../../scripts/class.js"></script></head>
+  <body>
+    <div id="frame" class="class">
+      <div id="head">
+        <div id="links"><a id="openInNewWindow" href="javascript:window.open(window.location);">在新窗口中打开</a><a id="hideOverrides" action="hide" href="javascript:;">隐藏基类成员</a></div><a id="namespace" href="../../../html/mx/utils/index.html">mx.utils</a><h1 id="class">ClipboardUtilClass 类
+                        </h1>
+      </div>
+      <div id="body">
+        <div id="classDetail">
+          <table id="summaryTable">
+            <tr>
+              <td>全称</td>
+              <td>mx.utils.ClipboardUtilClass</td>
+            </tr>
+            <tr>
+              <td>命名空间</td>
+              <td><a href="../../../html/mx/utils/index.html">mx.utils</a></td>
+            </tr>
+            <tr>
+              <td>类</td>
+              <td>ClipboardUtilClass</td>
+            </tr>
+            <tr>
+              <td>继承层次结构</td>
+              <td><span>ClipboardUtilClass</span><span id="inherit"></span><a href="../../../html/Object.html">Object</a></td>
+            </tr>
+            <tr>
+              <td>源文件</td>
+              <td>~\mx\scripts\utils\ClipboardUtil.js</td>
+            </tr>
+          </table>
+          <div class="summary">提供剪贴簿的访问接口。该类在运行时唯一静态实例是 <b>mx.utils.ClipboardUtil</b> 对象。该接口仅对 Internet Explorer 浏览器有效。</div>
+          <p></p>
+          <h4>示例 1</h4>
+          <div class="h4Content">
+        以下是一个通过 <b>mx.utils.ClipboardUtil</b> 获取和设置剪贴板中文本的示例。
+
+        <table class="exampleCode" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td>JavaScript 代码
+                    </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code class="JavaScript">//获取剪贴板中的文本
+var text = mx.utils.ClipboardUtil.getText();
+
+//设置剪贴板中的文本
+mx.utils.ClipboardUtil.setText("我是剪贴板中的文本");</code></td>
+                </tr>
+              </tbody>
+            </table>
+    </div>
+        </div>
+        <hr>
+        <div id="constructorsIndex" class="indexSection">
+          <h2>构造函数</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#ClipboardUtilClass">ClipboardUtilClass()
+    </a></td>
+                <td>构建 ClipboardUtilClass 类的新实例。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="methodsIndex" class="indexSection">
+          <h2>方法</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>名称</td>
+                <td>说明</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="method">
+                <td><a href="#getText">getText()
+    </a></td>
+                <td>获取当前剪贴簿中存放的文本。如果浏览器不支持，则返回 null。</td>
+              </tr>
+              <tr class="method">
+                <td><a href="#setText">setText(p_text)
+    </a></td>
+                <td>设置当前剪贴簿中的文本为 p_text。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="constructor" class="detailSection">
+          <h2>构造函数详细信息</h2><a name="ClipboardUtilClass"></a><div id="method" class="detail">
+            <h3>ClipboardUtilClass()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">构建 ClipboardUtilClass 类的新实例。</div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div id="method" class="detailSection">
+          <h2>方法详细信息</h2><a name="getText"></a><div id="method" class="detail">
+            <h3>getText()
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">获取当前剪贴簿中存放的文本。如果浏览器不支持，则返回 null。</div>
+            </div>
+            <hr>
+          </div><a name="setText"></a><div id="method" class="detail">
+            <h3>setText(p_text)
+     方法
+            </h3>
+            <div class="content">
+              <div class="summary">设置当前剪贴簿中的文本为 p_text。</div>
+              <h4>参数</h4>
+              <ul class="paramList">
+                <li><b class="paramName">p_text</b><div class="paramSummary">一个文本，表示需要放入剪贴簿的文本。</div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
